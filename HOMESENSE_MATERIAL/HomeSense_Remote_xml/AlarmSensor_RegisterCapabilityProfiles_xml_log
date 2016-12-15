@@ -1,0 +1,488 @@
+-------------------AlarmSensor-outbound---------
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<capabilityProfiles>
+    <capabilityProfile>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0~4294967295}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0:Diable, 1:Enable}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Start Test mode}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Key pressed short, 2: key pressed long}</values>
+    </capabilityProfile>
+</capabilityProfiles>
+
+
+--------------------inbound-----------------
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<capabilityProfiles
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/">
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_INVALID_CAPABILITY_TYPE</code>
+            <description>Capability Profile type not valid</description>
+        </resultCode>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+</capabilityProfiles>
+
+
+-----------------log-------------------------------------
+
+
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:CreateCapsProfilesXML:939> [0x2f7ae520:"RemoteWorkerThre"] CreateCapsProfilesXML: SD_GetCapabilityList = 5
+
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:CreateCapsProfilesXML:1031> [0x2f7ae520:"RemoteWorkerThre"] CreateCapsProfilesXML: Capability nCount = 5
+
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:RegisterCapabilityProfiles:1119> [0x2f7ae520:"RemoteWorkerThre"] RegisterCapabilityProfiles: URL = https://api.xbcs.net:8443/apis/http/device/capabilityprofiles
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2f7ae520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2f7ae520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2f7ae520:"RemoteWorkerThre"] Key for plug-in device is 5f00da93-f913-460f-865b-59e0828feea2
+
+WEMO: 15:47:4 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][15:47:04.177094]<sigGen.c:createAuthSignature:111> [0x2f7ae520:"RemoteWorkerThre"] Expires before 1438678024
+
+WEMO: 15:47:4 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][15:47:04.177489]<sigGen.c:createAuthSignature:113> [0x2f7ae520:"RemoteWorkerThre"] Expires after 500 1438678524
+
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0x0D77 msgLen:0x16
+
+Byte Stream:0b 2a 00 14 d6 71 3e 10 94 01 05 0b 03 b4 75 0e 1b 89 cf 02 13 01 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2ebae520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2ebae520:""] GetEndDevices: nPaired(0), nUnpaired(1), ListType(SCAN_LIST)
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebae520:""] Cache Device CapabCapality: 10500 -- bilityValue = 10....dp
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebae520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebae520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2ebae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 10,1,0
+
+WEMO: 15:47:4 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2ebae520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Unpaired</DeviceListType><DeviceInfos><DeviceInfo [ 1718017503 ]
+WEMO: upnp.debug ><DeviceIndex>0</DeviceIndex><DeviceID>94103E71D614002A</DeviceID><FriendlyName>WeMo Alarm Sensor</FriendlyName><IconVersion>1</ [ 1718017503 ]
+WEMO: upnp.debug IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>10,1,0</CurrentSt [ 1718017503 ]
+WEMO: upnp.debug ate><Manufacturer>Belkin</Manufacturer><ModelCode>F7C040</ModelCode><productName>AlarmSensor</productName><WeMoCertified>YES</We [ 1718017503 ]
+WEMO: upnp.debug MoCertified></DeviceInfo></DeviceInfos></DeviceList></DeviceLists>
+ [ 1718017503 ]
+
+
+TF7E47FFA:RX len 4, ep 01, clus 0x0500 WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2f7ae520:"RemoteWorkerThre"] --- inData --- 
+
+WEMO: 15:47:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2f7ae520:"RemoteWorkerThre"] inDataLength = 1042
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><capabilityProfiles><capabilityProfile><capabilityType><type>ZoneCtl</type></capabilityTyp [ 1718017570 ]
+WEMO: remote.debug e><capabilityId>10500</capabilityId><profileName>IASZone</profileName><specification>0</specification><dataType /><values>{0~429 [ 1718017570 ]
+WEMO: remote.debug 4967295}</values></capabilityProfile><capabilityProfile><capabilityType><type /></capabilityType><capabilityId>20500</capability [ 1718017570 ]
+WEMO: remote.debug Id><profileName>SensorConfig</profileName><specification>0</specification><dataType /><values>{0:Diable, 1:Enable}</values></cap [ 1718017570 ]
+WEMO: remote.debug abilityProfile><capabilityProfile><capabilityType><type /></capabilityType><capabilityId>30501</capabilityId><profileName>Sensor [ 1718017570 ]
+WEMO: remote.debug TestMode</profileName><specification>0</specification><dataType /><values>{1:Start Test mode}</values></capabilityProfile><capab [ 1718017570 ]
+WEMO: remote.debug ilityProfile><capabilityType><type /></capabilityType><capabilityId>20502</capabilityId><profileName>SensorKeyPress</profileName [ 1718017570 ]
+WEMO: remote.debug ><specification>0</specification><dataType /><values>{1:Key pressed short, 2: key pressed long}</values></capabilityProfile></ca [ 1718017570 ]
+WEMO: remote.debug pabilityProfiles>
+ [ 1718017570 ]
+(IAS Zone) FC 18 seq 01 cmd 04 payload[00 ]
+
+emberAfPreCommandReceivedCallback
+eui64:94103E71D614002A seq:0x01 source_nodeid:0x0D77 clusterId:0x0500, commandId:0x04, length:4 
+Byte Stream:18 01 04 00 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+WEMO: 15:47:5 | app.debug <logger.c:pluginLog:331> [0x2e7ae520:""] wemoApp[1821:{}]:[2015-08-04][15:47:05.018323]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e7ae520:""] Action found: GetEndDevices
+
+WEMO: 15:47:5 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1539> [0x2e7ae520:""] flag_setup_done is already existed...
+
+WEMO: 15:47:5 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1744> [0x2e7ae520:""] DevUDN uuid:Bridge-1_0-231347B010015A, pReqListType SCAN_LIST....dp
+
+WEMO: 15:47:5 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1765> [0x2e7ae520:""] GetEndDevices: ReqListType is SCAN_LIST
+
+WEMO: [SD] GetDeviceList() 1
+
+WEMO: [SD] PermitJoin()....dp
+
+zigbee_api: zbSendCommand:ZB_CMD_NET_PERMITJOIN
+zbSetPermitJoin:255
+
+Starting IPC Receive:12
+zigbeed node_id:0x0000, endpoint:0
+cmd:105 p1:254 p2:0 p3:0 p4:0 
+Full Name:/tmp/Belkin_settings/zbid.0000000000000000
+No file:[/tmp/Belkin_settings/zbid.0000000000000000]
+zbdSetTimeToAbort s_TimeToAbort:58521
+IPC_CMD_SET_PERMITJOIN 
+pJoin for 254 sec: 0x00
+
+emAfPermitJoin duration:254 b_bcast:1 status:0x0 
+Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Leaving zbdReplyGeneralResponse
+Ember_Status_Code:0x0 
+Leaving IPC Receive:12
+clientNetworkPermitJoin:*****result = 0
+WEMO: [SD] SM_AddJoinedDeviceList()....dp
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [d77 2a0014d6713e1094 done
+]
+
+WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+
+WEMO: [SD] SM_UpdateDeviceList()....dp
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+> POST /apis/http/device/capabilityprofiles HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:okJTMfDYI/a6nqAdwLnd8pXcXwQ=:1438678524
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9462.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 1042
+
+Expect: 100-continue
+
+
+
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+
+Byte Stream:0c fe 00 
+WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2e7ae520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2e7ae520:""] GetEndDevices: nPaired(0), nUnpaired(1), ListType(SCAN_LIST)
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e7ae520:""] Cache Device CapabCapality: 10500 -- bilityValue = 10....dp
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e7ae520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e7ae520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2e7ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 10,1,0
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2e7ae520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Unpaired</DeviceListType><DeviceInfos><DeviceInfo [ 1718017697 ]
+WEMO: upnp.debug ><DeviceIndex>0</DeviceIndex><DeviceID>94103E71D614002A</DeviceID><FriendlyName>WeMo Alarm Sensor</FriendlyName><IconVersion>1</ [ 1718017697 ]
+WEMO: upnp.debug IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>10,1,0</CurrentSt [ 1718017697 ]
+WEMO: upnp.debug ate><Manufacturer>Belkin</Manufacturer><ModelCode>F7C040</ModelCode><productName>AlarmSensor</productName><WeMoCertified>YES</We [ 1718017697 ]
+WEMO: upnp.debug MoCertified></DeviceInfo></DeviceInfos></DeviceList></DeviceLists>
+ [ 1718017697 ]
+< HTTP/1.1 100 Continue
+
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+WEMO: 15:47:6 | app.debug <logger.c:pluginLog:331> [0x2f1ae520:""] wemoApp[1826:{}]:[2015-08-04][15:47:06.280371]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2f1ae520:""] Action found: GetEndDevices
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1539> [0x2f1ae520:""] flag_setup_done is already existed...
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1744> [0x2f1ae520:""] DevUDN uuid:Bridge-1_0-231347B010015A, pReqListType SCAN_LIST....dp
+
+WEMO: 15:47:6 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1765> [0x2f1ae520:""] GetEndDevices: ReqListType is SCAN_LIST
+
+WEMO: [SD] GetDeviceList() 1
+
+WEMO: [SD] SM_AddJoinedDeviceList()....dp
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [d77 2a0014d6713e1094 done
+]
+
+WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+
+WEMO: [SD] SM_UpdateDeviceList()....dp
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0x0D77 msgLen:0x4
+
+Byte Stream:06 77 0d 01 
+WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2f1ae520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2f1ae520:""] GetEndDevices: nPaired(0), nUnpaired(1), ListType(SCAN_LIST)
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2f1ae520:""] Cache Device CapabCapality: 10500 -- bilityValue = 10....dp
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2f1ae520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2f1ae520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2f1ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 10,1,0
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2f1ae520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Unpaired</DeviceListType><DeviceInfos><DeviceInfo [ 1718017813 ]
+WEMO: upnp.debug ><DeviceIndex>0</DeviceIndex><DeviceID>94103E71D614002A</DeviceID><FriendlyName>WeMo Alarm Sensor</FriendlyName><IconVersion>1</ [ 1718017813 ]
+WEMO: upnp.debug IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>10,1,0</CurrentSt [ 1718017813 ]
+WEMO: upnp.debug ate><Manufacturer>Belkin</Manufacturer><ModelCode>F7C040</ModelCode><productName>AlarmSensor</productName><WeMoCertified>YES</We [ 1718017813 ]
+WEMO: upnp.debug MoCertified></DeviceInfo></DeviceInfos></DeviceList></DeviceLists>
+ [ 1718017813 ]
+WEMO: 15:47:7 | app.debug <logger.c:pluginLog:331> [0x2e5ae520:""] wemoApp[1820:{}]:[2015-08-04][15:47:07.412591]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e5ae520:""] Action found: GetEndDevices
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1539> [0x2e5ae520:""] flag_setup_done is already existed...
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1744> [0x2e5ae520:""] DevUDN uuid:Bridge-1_0-231347B010015A, pReqListType SCAN_LIST....dp
+
+WEMO: 15:47:7 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1765> [0x2e5ae520:""] GetEndDevices: ReqListType is SCAN_LIST
+
+WEMO: [SD] GetDeviceList() 1
+
+WEMO: [SD] SM_AddJoinedDeviceList()....dp
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [d77 2a0014d6713e1094 done
+]
+
+WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+
+WEMO: [SD] SM_UpdateDeviceList()....dp
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+
+emberAfPreZDOMessageReceivedCallback emberNodeId:0x0d77, clusterId:0x8021, length:2
+
+08 00 
+Other Incoming ZDO reponses
+
+emberAfPreZDOMessageReceivedCallback emberNodeId:0x0d77, clusterId:0x8021, length:2
+
+0a 00 
+Other Incoming ZDO reponses
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2e5ae520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2e5ae520:""] GetEndDevices: nPaired(0), nUnpaired(1), ListType(SCAN_LIST)
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 10500 -- bilityValue = 10....dp
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2e5ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 10,1,0
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2e5ae520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Unpaired</DeviceListType><DeviceInfos><DeviceInfo [ 1718017926 ]
+WEMO: upnp.debug ><DeviceIndex>0</DeviceIndex><DeviceID>94103E71D614002A</DeviceID><FriendlyName>WeMo Alarm Sensor</FriendlyName><IconVersion>1</ [ 1718017926 ]
+WEMO: upnp.debug IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>10,1,0</CurrentSt [ 1718017926 ]
+WEMO: upnp.debug ate><Manufacturer>Belkin</Manufacturer><ModelCode>F7C040</ModelCode><productName>AlarmSensor</productName><WeMoCertified>YES</We [ 1718017926 ]
+WEMO: upnp.debug MoCertified></DeviceInfo></DeviceInfos></DeviceList></DeviceLists>
+ [ 1718017926 ]
+zbdGetNodeType: index:0, nodeId:0x0D77, node_type:0x0028 
+WEMO: 15:47:8 | app.debug <logger.c:pluginLog:331> [0x2ebae520:""] wemoApp[1823:{}]:[2015-08-04][15:47:08.672958]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2ebae520:""] Action found: GetEndDevices
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1539> [0x2ebae520:""] flag_setup_done is already existed...
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1744> [0x2ebae520:""] DevUDN uuid:Bridge-1_0-231347B010015A, pReqListType SCAN_LIST....dp
+
+WEMO: 15:47:8 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1765> [0x2ebae520:""] GetEndDevices: ReqListType is SCAN_LIST
+
+WEMO: [SD] GetDeviceList() 1
+
+WEMO: [SD] SM_AddJoinedDeviceList()....dp
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [d77 2a0014d6713e1094 done
+]
+
+WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+
+WEMO: [SD] SM_UpdateDeviceList()....dp
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+< HTTP/1.1 206 Partial Content
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Tue, 04 Aug 2015 08:47:08 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 1506
+
+< Connection: keep-alive
+
+< 
+
+WEMO: 15:47:9 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][15:47:09.446450]<httpsWrapper.c:webAppSendData:2671> [0x2f7ae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/capabilityprofiles requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 206
+
+WEMO: 15:47:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2f7ae520:"RemoteWorkerThre"] Length of HTTP Header = 278 
+
+WEMO: 15:47:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:824> [0x2f7ae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 206 
+
+WEMO: 15:47:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:825> [0x2f7ae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+
+WEMO: 15:47:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:852> [0x2f7ae520:"RemoteWorkerThre"] Header retuned by server
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+HTTP/1.1 206 Partial Content
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1 [ 1718018029 ]
+WEMO: remote.debug 
+
+Date: Tue, 04 Aug 2015 08:47:08 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 1506
+
+Co [ 1718018029 ]
+WEMO: remote.debug nnection: keep-alive
+
+ [ 1718018029 ]
+WEMO: 15:47:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:862> [0x2f7ae520:"RemoteWorkerThre"] Data retuned by server
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><capabilityProfiles xmlns:modelns="http://datamodel.components.cs.belkin. [ 1718018029 ]
+WEMO: remote.debug com/"><capabilityProfile><resultCode><code>ERR_INVALID_CAPABILITY_TYPE</code><description>Capability Profile type not valid</des [ 1718018029 ]
+WEMO: remote.debug cription></resultCode><capabilityType><type>ZoneCtl</type></capabilityType><capabilityId>10500</capabilityId><profileName>IASZon [ 1718018029 ]
+WEMO: remote.debug e</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capabilityProfile><resultCode><code>ER [ 1718018029 ]
+WEMO: remote.debug R_CAPABILITY_ID_ALREADY_EXIST</code><description>Capability Id already exists</description></resultCode><capabilityType><type></ [ 1718018029 ]
+WEMO: remote.debug type></capabilityType><capabilityId>20500</capabilityId><profileName>SensorConfig</profileName><specification>0</specification>< [ 1718018029 ]
+WEMO: remote.debug dataType>0</dataType></capabilityProfile><capabilityProfile><resultCode><code>ERR_CAPABILITY_ID_ALREADY_EXIST</code><description [ 1718018029 ]
+WEMO: remote.debug >Capability Id already exists</description></resultCode><capabilityType><type></type></capabilityType><capabilityId>30501</capab [ 1718018029 ]
+WEMO: remote.debug ilityId><profileName>SensorTestMode</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capa [ 1718018029 ]
+WEMO: remote.debug bilityProfile><resultCode><code>ERR_CAPABILITY_ID_ALREADY_EXIST</code><description>Capability Id already exists</description></r [ 1718018029 ]
+WEMO: remote.debug esultCode><capabilityType><type></type></capabilityType><capabilityId>20502</capabilityId><profileName>SensorKeyPress</profileNa [ 1718018029 ]
+WEMO: remote.debug me><specification>0</specification><dataType>0</dataType></capabilityProfile></capabilityProfiles> [ 1718018029 ]

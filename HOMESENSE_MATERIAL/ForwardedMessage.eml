@@ -1,0 +1,3991 @@
+Received: from DM2PR0801MB0943.namprd08.prod.outlook.com (10.160.131.26) by
+ BN3PR0801MB0931.namprd08.prod.outlook.com (10.160.184.25) with Microsoft SMTP
+ Server (TLS) id 15.1.213.14 via Mailbox Transport; Wed, 15 Jul 2015 01:44:44
+ +0000
+Received: from CO2PR0801MB597.namprd08.prod.outlook.com (10.141.246.141) by
+ DM2PR0801MB0943.namprd08.prod.outlook.com (10.160.131.26) with Microsoft SMTP
+ Server (TLS) id 15.1.213.14; Wed, 15 Jul 2015 01:44:43 +0000
+Authentication-Results: belkin.com; dkim=none (message not signed)
+ header.d=none;
+Received: from CO2PR0801MB565.namprd08.prod.outlook.com (10.141.245.27) by
+ CO2PR0801MB597.namprd08.prod.outlook.com (10.141.246.141) with Microsoft SMTP
+ Server (TLS) id 15.1.207.19; Wed, 15 Jul 2015 01:44:40 +0000
+Received: from CO2PR0801MB565.namprd08.prod.outlook.com ([10.141.245.27]) by
+ CO2PR0801MB565.namprd08.prod.outlook.com ([10.141.245.27]) with mapi id
+ 15.01.0213.000; Wed, 15 Jul 2015 01:44:40 +0000
+From: Steven Zhao <Steven.Zhao@belkin.com>
+To: Jean Luc Rault <JeanLuc.Rault@belkin.com>, Rosanne Rogel
+	<Rosanne.Rogel@belkin.com>, Martin Worth <MartinW@belkin.com>, Samuel Yang
+	<Samuel.Yang@belkin.com>, Woody Lee <Woody.lee@belkin.com>, Jeff Yoon
+	<Jeff.Yoon@belkin.com>
+CC: Will Shen <Will.Shen@belkin.com>
+Subject: FW: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status
+ incorrect.
+Thread-Topic: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status
+ incorrect.
+Thread-Index: AdC+VdN2bSt3k5PYTJqm0UryBpE5VwABTRdQAAASRcAAAGZAMAAA7RnwAA/GVJA=
+Date: Wed, 15 Jul 2015 01:44:40 +0000
+Message-ID: <CO2PR0801MB56596B798671669B62FBE369F9A0@CO2PR0801MB565.namprd08.prod.outlook.com>
+References: <BLUPR0801MB59629DB53E4538E32161B43C89B0@BLUPR0801MB596.namprd08.prod.outlook.com>
+ <BN3PR08MB13177D7BEA54C7A5296B50BEF19B0@BN3PR08MB1317.namprd08.prod.outlook.com>
+ <BLUPR0801MB5964709D9F1428F7C12F31AC89B0@BLUPR0801MB596.namprd08.prod.outlook.com>
+ <BN3PR08MB1317D3DA5BB8B0FF34018288F19B0@BN3PR08MB1317.namprd08.prod.outlook.com>
+ <BLUPR0801MB5966A899A8F73C1C27289E2C89B0@BLUPR0801MB596.namprd08.prod.outlook.com>
+In-Reply-To: <BLUPR0801MB5966A899A8F73C1C27289E2C89B0@BLUPR0801MB596.namprd08.prod.outlook.com>
+Accept-Language: zh-CN, en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator: <CO2PR0801MB56596B798671669B62FBE369F9A0@CO2PR0801MB565.namprd08.prod.outlook.com>
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: CO2PR0801MB565.namprd08.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-Originating-IP: [139.226.160.46]
+X-MS-Exchange-Organization-Network-Message-Id: bf400521-c500-4555-de2c-08d28cb6f358
+Return-Path: Steven.Zhao@belkin.com
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:;SRVR:CO2PR0801MB597;UriScan:;BCL:0;PCL:0;RULEID:;SRVR:DM2PR0801MB0943;
+X-MS-Exchange-Organization-AVStamp-Service: 1.0
+X-Exchange-Antispam-Report-Test: UriScan:(108003899814671);
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(601004)(3002001);SRVR:CO2PR0801MB597;BCL:0;PCL:0;RULEID:;SRVR:CO2PR0801MB597;
+X-Forefront-Antispam-Report: SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:CO2PR0801MB597;H:CO2PR0801MB565.namprd08.prod.outlook.com;FPR:;SPF:None;LANG:en;;SKIP:1;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Jul 2015 01:44:40.3462
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: d575bd1b-f925-46eb-a129-0f10b31d94d5
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO2PR0801MB597
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.9832564
+X-Microsoft-Exchange-Diagnostics: 1;CO2PR0801MB597;2:gwv7oJXon1kJW26UDhlEjdUy7ScAph/wZVz8hcLTJhgsADF1eohamBvY9pQMlxJp;3:L5eoreYep6deRbGr0Rc4fLOTA0EIAhhQWpSsSMqBVtHJCUJzp0QaXIgLrScvhVKjNTeQILRmW1D+T6SJlz/wgwJO1rYiRVvsw28y/jbwcBrkWzlvZ5zgC+/xej7cEcIDQrykEKPM2sU6s6mxC1pYjw==;25:Yt9btQUK8XtJeyLKBboHmpQuQGC7DrCyXEZTDpTorcxy63evU1sCrVfpklcb/2Izzrk5Hhji4beRBaMZlm4jIvEV6X6RUU8qcakAiW/FQyRa95fqLUdhXsfIsSyWcXKXHZa479wkZdYr9zHauh7p7y5KV/ipyjQ0HhLRDIpT/WbJjbGM0TzK42iFsAqH2nHhT+lx3ZCJzUA6VcQWGibvpAL4hTTKj3nJRr/HgRC5gXAFX1Bo11uvuMjWMNdAKbulOGbEyOLvYATnDBUw2KY4DA==
+X-Microsoft-Exchange-Diagnostics: 1;CO2PR0801MB597;20:XCgTYHt74JUlc0kvcpDHqPJq1Hmjy7uRWuNt6itWNKwyKcuBzRwMtUisWeymZo+AmqlvVa0FpPgyqJLam2gJ38/DiUDLFo5ZfmpH11dCnuKWI+rvyQzqgskS9+3EfdiFaHXVvP1311eL3KfliaG9ZYXF1sIK9XrdaCtyhPnQbZIKeXx8NvQp03S/8b6wTnuCaR/rvOqQ2YYusqEEZprKPvklpz2vFSEftgMAUV2DjuVK5aQ63dci3OdMK2g6IUeUuNepEyJI/fsk6o1n6Owil+LshLQmQG5ly1ylffgkie4ej0niwiuXUC6WvKu0TG639P3OlitNXSKS/XnQ4txylh8Cpo7rpVtybk+wjN6jMx6o31CgCXQD/tWL4TL9FsnuBD6dfwyxtstmip9ZHpCMHWH/4/oLjDVZgctKQ7c9Fh53dWmSIbm6giZVA4o3WdztxL9Ra1il6TQwAySE4BWyJQhoewKQebcZ6ahXgixqGYwQuu3TXLLv09+HtDjd9SBM;4:XNQSj6gGVz70XLxHkX5b1wvbkfrjdPTY6nFb+x84ZUZwiZj727AsHmWInyuRARGmYUtmgIXB2EJ5xDxnHq0WurbUoajJMGWA7z6EKJBSMHVys765B4XlE8wEMH1GENkDHmzv9xwM63ZZ39dOqjYP1metB0ZlJLg/COC2ilMhOo2dq9dIOqTZUVkDNNEPyZKcMnsNY+TGUSLoaXRHCtW04Xh7Qm9yS7UXLiU2a+7GBqVGpubbXAcr4mb//UsMwKvrE9g8K4W8LgyUD7orvvlkoQ==
+X-Microsoft-Exchange-Diagnostics: 1;CO2PR0801MB597;23:7Sx/ib2xWZp5Yfugt4OutOG1j5LAuGbJsKyT812D8R3ITGW0akiqtO/PAwkfcTY6I+OMshGyLHug9UG/0PeLt7Ol+Ssej88kUu+l08W1LMpAvftwCyPTL+8dgwE5sMcjgHnkBfuVfvhCLhaCI7OP1BjF7TBCLptC11kxT9QaocShlzgk11AGwPsn9IAe0ZgUuXkE+9vFGuBmEoFbhfnjfXg3htq6vi0o19JAdehV52UaKWg07caz5Up3hFM7NKlC;5:49zbJL9kLvZ6mT3Uc/gMZG7z9tw7B/VloVLlHAt79uYdWBgoqf3wsSS/c3ZcO3ZILGVGHgR1sZ/YgwKEazq5dWeBlGBnbRKWzpM/j+Vg5ipoAiJPGE4WXIRaxv6Lw8Wi4hxaJWgrcFKFAe8Nc21rVw==;24:af55Oq996uqmVi+w9GOg9NusLJ4CwunZWONpJBP6mV5XGJK4MCRvQ1sTUQzSFprsw0j++lVghVYRo+UIwkd0JpAfx9CfoV0F9A53nzeDoQo=;20:N6+83eCNOzgAeoxLmZaFGYpkCe/HIMYs0JXbhZOnvqwSBWcY4+Mc2Y7EQe6FuDXYP4YfGKf34GyYqdS7FEIkFQ==
+X-Microsoft-Exchange-Diagnostics: 1;DM2PR0801MB0943;2:XBfLiKSJqxujtENUYkOI4rzMufnNr2uWuPo0H1JtX6FIKw2axeG15evYoEpMvqlF;3:8QOSxiS61t8aljD5My6++4X0JGQiC2yB/S0c9sKqsyoXcbWrmNoJsymc+L7Uiu+2J12x4zBMDYPn0X04I+yXlxhLXhs/AxxyZjTLrBPi9zJW04hxZKRths/M2WBqmupNb1c8w8YlhfDppFjfpu7nFw==;25:2MVr7hCilIkpEyRdkQmEgty4Q+iNQk89kbdXqs6TQ2HCrpZu0q26/X40nP6JMeAkqFmGLu26sOXHZqeabkfTbB8NdvsPchLQc6buE9HkfIDOSQLZvH7GyI2kcOMgk3nJFqsBvKK+Gsmv8zBuIDp7lTBD209bD7ggzowX2MiUOTVPVWDqkXVEX0PIy6YXRjuROXoTEPqBK/6qG5akIPwBHvUcsy+Dv6zDW/Q2AYBMCJnGazKpV0jMbf5NLQHmc3CL4YZ5iUiLwHYfNamy197v8Q==;23:rAyLJQlfW91GlZ7AugnfsTORU2+MckfYRi899a0Ufwd5AaTTBKL6E2etwcboeH+z2rDrO/8CicYRJ2CZsCR4GBzOqfSVaIgoacxTKooPt463dXxXuvhiMEUYFtVB4CqK+2wAD/nxK1nvwaQjngzvpHMN4vk6Yec4UO87/jZaJqNV3FLAFPIZO9ANsg+3aylzW+SUdcpG5ceJXsK/KVU6N8oiDNC8IiMPB6FQsYxytYVWaCueXCI5Ke8USHoCJkuu
+X-Microsoft-Exchange-Diagnostics: 1;BN3PR0801MB0931;9:5GyGvJmiFwCcLhpJsu+U2WasDzdYCL3o3wCajPB3+EoayN17vwuSeijg+pz3d34KA4YTw33AK78AH0DkhAjOGBSZtHgl9oQLNcuGoyjCPSHjBuDkTxMOESv7Yx3u4Jy/
+Content-Type: multipart/mixed; boundary="B_3519893283_1704164940"
+MIME-Version: 1.0
+
+--B_3519893283_1704164940
+Content-Type: multipart/alternative; boundary="B_3519893283_353840623"
+
+--B_3519893283_353840623
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+According to the latest design in Link FW,  the keyfob availability is not=20
+using the tab =E2=80=9CAVAILABLE=3DYES/NO=E2=80=9D anymore.
+
+The 10500 value =E2=80=9C10=E2=80=9D indicate it=E2=80=99s =E2=80=9Cleft=E2=80=9D,  we need a ZB capture =
+of it=20
+(Ajay, can you help in this case?)
+
+=20
+
+The DW sensor missing :  in the response of GetEndDevices, the DW sensor=20
+94103E7AFDD5001B is not returned under  =E2=80=9CDW group=E2=80=9D anymore, but only in=
+=20
+normal device list, I believe this confused app to show it as =E2=80=9Cmissing=E2=80=9D=
+:
+
+
+CC Samuel, Jeff and Woody:  can you please see if following return reveal=20
+a potential Link fw issue? 94103E7AFDD5001B used to be returned in =E2=80=9CDW=20
+group=E2=80=9D also, the DW sensor was left there, but somehow, it is now removed=
+=20
+under =E2=80=9CDW group=E2=80=9D which makes app shows it as =E2=80=9Cmissing=E2=80=9D, I guess it =
+maybe=20
+due to DW sensor did a =E2=80=9Crejoin=E2=80=9D  and it=E2=80=99s not put back to =E2=80=9CDW group=
+=E2=80=9D in=20
+this case.  The return of GetEndDevice cost 39 seconds, I believe there=20
+was something wrong when getting some rejoined device back.
+
+=20
+
+=3D=3D=3D=3DGetEndDevice(ALL_LIST)=3D=3D=3D=3D
+
+UDN:uuid:Bridge-1_0-231451B01002FC
+
+Sending GetEndDevice(ALL_LIST)...
+
+<s:Envelope xmlns:s=3D"http://schemas.xmlsoap.org/soap/envelope/"=20
+s:encodingStyle=3D"http://schemas.xmlsoap.org/soap/encoding/">
+
+  <s:Body>
+
+    <u:GetEndDevicesResponse xmlns:u=3D"urn:Belkin:service:bridge:1">
+
+      <DeviceLists>
+
+        <!--<?xml version=3D"1.0" encoding=3D"utf-8"?>-->
+
+        <DeviceLists>
+
+          <DeviceList>
+
+            <DeviceListType>Paired</DeviceListType>
+
+            <DeviceInfos>
+
+              <DeviceInfo>
+
+                <DeviceIndex>0</DeviceIndex>
+
+                <DeviceID>94103E7AFDD5001B</DeviceID>
+
+                <FriendlyName>WeMo Room Motion Sensor 01</FriendlyName>
+
+                <IconVersion>1</IconVersion>
+
+                <FirmwareVersion>1F</FirmwareVersion>
+
+                <CapabilityIDs>10500,20500,30501</CapabilityIDs>
+
+                <CurrentState>9a00,1,0</CurrentState>
+
+                <Manufacturer>Belkin</Manufacturer>
+
+                <ModelCode>F7C041</ModelCode>
+
+                <productName>PIR</productName>
+
+                <WeMoCertified>YES</WeMoCertified>
+
+              </DeviceInfo>
+
+              <DeviceInfo>
+
+                <DeviceIndex>1</DeviceIndex>
+
+                <DeviceID>94103E71D61400AF</DeviceID>
+
+                <FriendlyName>WeMo Alarm Sensor 01</FriendlyName>
+
+                <IconVersion>1</IconVersion>
+
+                <FirmwareVersion>1F</FirmwareVersion>
+
+                <CapabilityIDs>10500,20500,30501</CapabilityIDs>
+
+                <CurrentState>aa00,1,0</CurrentState>
+
+                <Manufacturer>Belkin</Manufacturer>
+
+                <ModelCode>F7C040</ModelCode>
+
+                <productName>AlarmSensor</productName>
+
+                <WeMoCertified>YES</WeMoCertified>
+
+              </DeviceInfo>
+
+              <DeviceInfo>
+
+                <DeviceIndex>2</DeviceIndex>
+
+                <DeviceID>94103E71D6140316</DeviceID>
+
+                <FriendlyName>WeMo Home and Away Sensor 01</FriendlyName>
+
+                <IconVersion>1</IconVersion>
+
+                <FirmwareVersion>1F</FirmwareVersion>
+
+                <CapabilityIDs>10500,20500,30501,20502</CapabilityIDs>
+
+                <CurrentState>1,1,0,10</CurrentState>
+
+                <Manufacturer>Belkin</Manufacturer>
+
+                <ModelCode>F7C039</ModelCode>
+
+                <productName>Fob</productName>
+
+                <WeMoCertified>YES</WeMoCertified>
+
+              </DeviceInfo>
+
+            </DeviceInfos>
+
+            <GroupInfos>
+
+              <GroupInfo>
+
+                <GroupID>1436819856</GroupID>
+
+                <GroupName>Doors and Windows</GroupName>  -> should=20
+=E2=80=9C94103E7AFDD5001B=E2=80=9D also be returned here too?
+
+                <GroupCapabilityIDs/>
+
+                <GroupCapabilityValues/>
+
+                <DeviceInfos/>
+
+              </GroupInfo>
+
+            </GroupInfos>
+
+          </DeviceList>
+
+        </DeviceLists>
+
+      </DeviceLists>
+
+    </u:GetEndDevicesResponse>
+
+  </s:Body>
+
+</s:Envelope>
+
+=20
+
+Action took: 39095 Milliseconds=20
+
+=20
+
+=20
+
+From: Martin Worth=20
+Sent: Wednesday, July 15, 2015 2:21 AM
+To: Ajay Kumar Goud Badagowni; Steven Zhao
+Cc: Jean Luc Rault; Rosanne Rogel; Martin Worth
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status=20
+incorrect.
+
+=20
+
+Hi Ajay,
+
+=20
+
+That would make sense as the status was never changing on the app, that to=20
+me means there are two bugs.
+
+=20
+
+1.      Why did the Link kick the keyfob off?
+
+2.      Why is the app not showing that the keyfob has lost connection?
+
+=20
+
+I power cycled both the keyfob and the Link but neither solved the issue,=20
+I then tried adding the keyfob again after resetting it but that failed.=20
+After doing that I am now back in the same situation as yesterday  I=20
+originally reported, Alarm sensor and PIR showing greyed out, Keyfob=20
+showing disconnected (Which it is as I reset it) and DW sensor disappeared=20
+from the app.=20
+
+=20
+
+So I captured some more information on this as requested.
+
+=20
+
+GetEndDEvices =E2=80=93 Took 20837 milliseconds to record a response.  (Over 20=20
+seconds).
+
+GetDeviceStatus =E2=80=93 Took less than a second. (DW sensor is showing as=20
+missing).
+
+=20
+
+I=E2=80=99ve attached the FW log from the Link when doing both these as well as=20
+refreshing the app. Clearly there is some sort of Link FW issue here.
+
+=20
+
+I won=E2=80=99t touch anything till you get back to me, I suspect I need to reset=
+=20
+it all and start again to test further.
+
+=20
+
+Martin.
+
+=20
+
+=20
+
+=20
+
+From: Ajay Kumar Goud Badagowni=20
+Sent: Tuesday, July 14, 2015 10:56 AM
+To: Martin Worth; Steven Zhao
+Cc: Jean Luc Rault; Rosanne Rogel
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status=20
+incorrect.
+
+=20
+
+Hi Martin,=20
+
+=20
+
+I see the following detail for the fob in your App logs:=20
+
+=20
+
+<available=3D"YES">94103E71D6140316</DeviceID>
+
+<CapabilityID>10500,20500,30501,20502</CapabilityID>
+
+<CapabilityValue>10,1,0,0</CapabilityValue>
+
+<LastEventTimeStamp>0</LastEventTimeStamp>
+
+</DeviceStatus></DeviceStatusList>
+
+=20
+
+The =E2=80=980=E2=80=99 in the =E2=80=98LastEventTimeStamp=E2=80=99 indicates that there was no=20
+communication/state-change from the fob, since the Link=E2=80=99s setup (or=20
+reboot).=20
+
+=20
+
+But your FW logs show the below: which, I believe, is the fob trying to=20
+comminute with the Link =E2=80=93 but the Link removed it from its list (similar=20
+to the issue Rosanne saw in her testing yesterday).=20
+
+=20
+
+Jul 14 09:46:58 sysinit: NodeId : 0x13BC not in the address table.
+
+Jul 14 09:47:05 sysinit: NodeId : 0x13BC not in the address table.
+
+Jul 14 09:47:12 sysinit: NodeId : 0x13BC not in the address table.
+
+Jul 14 09:47:19 sysinit: NodeId : 0x13BC not in the address table.
+
+Jul 14 09:47:26 sysinit: NodeId : 0x13BC not in the address table.
+
+=20
+
+From above, it looks like it is fairly easy to reproduce for QA and=20
+collect further details. If you want to recover the setup, please feel=20
+free to re-pair the fob to the Link again.
+
+=20
+
+Thanks,=20
+
+Ajay
+
+=20
+
+From: Martin Worth=20
+Sent: Tuesday, July 14, 2015 10:37 AM
+To: Ajay Kumar Goud Badagowni; Steven Zhao
+Cc: Jean Luc Rault; Rosanne Rogel
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status=20
+incorrect.
+
+=20
+
+Hi Ajay,
+
+=20
+
+That sounds exactly like it, the strange thing is that it was working=20
+yesterday when I was removing the battery for short periods, it only=20
+seemed to happen after the Fob has been gone for a while. The status =20
+hasn=E2=80=99t changed it still says =E2=80=9CLeft just now=E2=80=9D and I don=E2=80=99t think it w=
+ill=20
+change. Shall I try power cycling or leave them as they are?
+
+=20
+
+Martin
+
+=20
+
+=20
+
+From: Ajay Kumar Goud Badagowni=20
+Sent: Tuesday, July 14, 2015 10:33 AM
+To: Steven Zhao; Martin Worth
+Cc: Jean Luc Rault; Rosanne Rogel
+Subject: FW: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status=20
+incorrect.
+
+=20
+
+++ Steven
+
+=20
+
+Hi Martin,=20
+
+=20
+
+Thanks for sharing the detailed logs. I have seen similar issues with fob=20
+and FW v9303 yesterday =E2=80=93 I captured my observations in Jira WEMO-42195 =20
+here.=20
+
+=20
+
+In your case, can you please check if the Link has recognized the fob by=20
+now?
+
+=20
+
+Steven, do you see anything from the logs Martin shared?=20
+
+=20
+
+Thanks,=20
+
+Ajay=20
+
+=20
+
+=20
+
+From: Martin Worth=20
+Sent: Tuesday, July 14, 2015 9:55 AM
+To: Ajay Kumar Goud Badagowni; Jean Luc Rault
+Cc: Rosanne Rogel
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors + Keyfob status=20
+incorrect.
+
+=20
+
+Hi Ajay,
+
+=20
+
+Here is my AM update,
+
+=20
+
+I came back in bringing the Keyfob back with me and everything else has=20
+been sitting on the desk all night.=20
+
+=20
+
+Alarm sensor =E2=80=93 Present and working.
+
+PIR =E2=80=93 Present and working.
+
+DW Sensor =E2=80=93 Present but as before the app never shows me any state change=
+.
+
+=20
+
+So the good news is I haven=E2=80=99t seen a repeat of yesterday so far, I=E2=80=99ll k=
+eep=20
+checking.
+
+=20
+
+Keyfob =E2=80=93 This is where the issue lies this morning, it=E2=80=99s showing as=20
+present (It=E2=80=99s not greyed out), but the status is =E2=80=9CLeft just now=E2=80=9D even=
+=20
+though the keyfob is 1ft from the Link and it has its batteries inserted =20
+(See attached screenshot). Unless the battery has gone flat it should be=20
+connected. I tried closing and reopening the app but the status stayed the=20
+same. I checked the UPNP tool, it shows all four sensors are present with=20
+AVL =3D Yes (See attached image). I  generated a WEMO Link FW log, also=20
+attached, this was after I refreshed the app and saw it showing =E2=80=9CLeft jus=
+t=20
+now=E2=80=9D again. Finally I generated a phone log of both me refreshing the lis=
+t=20
+and also fresh loading the app, also attached.
+
+=20
+
+I haven=E2=80=99t power cycled the keyfob or the Link yet, let me know what you=20
+want me to do next.
+
+=20
+
+Thanks.
+
+Martin.
+
+=20
+
+=20
+
+From: Ajay Kumar Goud Badagowni=20
+Sent: Monday, July 13, 2015 5:16 PM
+To: Martin Worth; Jean Luc Rault
+Cc: Rosanne Rogel
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors.
+
+=20
+
+Thanks for sharing the logs and info, Martin. The next time you see this=20
+issue, can you please try this tool to collect the FW logs as well (method=20
+and tool given below)? In this case, I am suspecting that the  FW is=20
+responding, but is slow in its responses and the app may be timing out=20
+within this time. So, both FW seems to be working (as seen from our UPnP=20
+tool) as well as the app, but they are not working together. When you=20
+notice this next time, you can check  the time taken for UPnP responses=20
+(for actions like =E2=80=98GetEndDevices=E2=80=99, =E2=80=98GetDeviceStatus=E2=80=99, etc) and imme=
+diately=20
+know if it is the FW=E2=80=99s responses not reaching the App within its timeout=20
+limits (I believe, it is 5 seconds for iOS).=20
+
+=20
+
+One easy was to collect FW logs is to use the DVT Log Tool (this is=20
+possible since you have DVT firmware), as shown on this Wiki below =E2=80=93 make=
+=20
+sure to note the approximate time-stamp and collect the logs right  after=20
+you see an issue.=20
+
+=20
+
+WeMo  Log Windows Tool (Only work with DVT openwrt Firmware)
+
+=20
+
+Thanks,=20
+
+Ajay
+
+=20
+
+From: Martin Worth=20
+Sent: Monday, July 13, 2015 4:40 PM
+To: Ajay Kumar Goud Badagowni; Jean Luc Rault
+Cc: Rosanne Rogel
+Subject: RE: WEMO Sensors SW - WEMO app not seeing sensors.
+
+=20
+
+Hi Ajay,
+
+=20
+
+As I mentioned I saw an issue when I returned to my desk, I=E2=80=99d taken the=20
+keyfob with me but the rest had sat on my desk with the iPhone. I=E2=80=99m using=
+=20
+v9303 and the XI version of the app as mentioned below. When loading  the=20
+app it only showed the 3 sensors minus the DW Sensor and after some time=20
+it=E2=80=99d show all greyed out except for the keyfob that was disconnected=20
+according to the app. (See screenshot). I tried force closing and=20
+reopening the app.
+
+=20
+
+As you know when we checked with the UPNP app it showed all four sensors=20
+were online and present (See screenshot). I captured an app log as=20
+requested and that=E2=80=99s attached too, it=E2=80=99s me opening the app from cold  a=
+nd=20
+waiting for it to grey out the two devices about 60-90 seconds later.
+
+=20
+
+I finally power cycled the Link and the let it restart, sure enough all=20
+four sensors came back and show their status (With the exception of the DW=20
+sensor that never has). Strange that restarting the Link fixed  it when it=20
+appeared to be an app issue.
+
+=20
+
+I=E2=80=99ll keep testing.
+
+=20
+
+Martin.
+
+=20
+
+=20
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Monday, July 13, 2015 2:26 PM
+To: Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel; Martin Worth
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Ajay,
+
+=20
+
+I=E2=80=99d actually already been testing with v9303 and the XI version of the ap=
+p=20
+as we saw those were the last versions on the v1.13 page, Rosanne and I=20
+have been testing that for the past hour or so. We=E2=80=99re also focusing  on=20
+0x1F as that=E2=80=99s the RC we want to give out in the pre-alpha and so far it=20
+seems to be working well. They are definitely making progress with these=20
+updates, below are my latest findings and a new issue I=E2=80=99ve added. Rosanne=
+=20
+also had an issue with the app size  on the iPad when setting up the Alarm=20
+sensor, she=E2=80=99ll send the details.
+
+=20
+
+<< File: iOS Device list.jpg >>  << File: Multiple DW Sensor.jpg >>=20
+
+=20
+
+Showstoppers
+
+1.     Keyfob never shows away (Always shows =E2=80=9CJust arrived=E2=80=9D no matter=20
+what, tried pairing 5 times. Removed battery to simulate leaving. Appears=20
+to be fixed, working 100% of the time for me.=20
+
+2.     Degradation of reporting of items and communicating with them.=20
+We=E2=80=99ve seen over a period of time that it stops showing notifications for=20
+DW sensor, PIR and possibly even alarm (Can=E2=80=99t speak for Keyfob as its=20
+never worked).  Jean Luc will log this issue before the call. =E2=80=93=20
+Showstopper =E2=80=93 I=E2=80=99ll keep testing now I=E2=80=99m setup with v9303 and will lea=
+ve=20
+things running for the next 24 hours and test the sensor periodically.
+
+3.     Alarm sensor not providing any response or notification in the app=20
+when triggering a valid alarm for 20 seconds. (Should that work) Also=20
+appears to be fixed, working=20
+
+4.    WEMO Link unavailable. =E2=80=93 there has been a defect filed (WEMO-42839)=
+ =20
+to track this behavior, but no ETA yet. But if this is the only issue=20
+blocking pre-alpha, we should consider waiving this defect as a known=20
+limitation, as it is intermittent and has a simple workaround (refresh). =20
+=E2=80=93 If the DW sensor gets fixed we=E2=80=99d proceed knowing this issue, however =
+in=20
+my testing its very consistent when launching the app and doesn=E2=80=99t give a=20
+good experience.
+
+5.     DW sensor with second device not showing open/closed on edit=20
+screen. =E2=80=93 this is a known issue with D/W sensors with this app =E2=80=93 as thi=
+s=20
+is =E2=80=98Work in progress=E2=80=99. So, please use a different app for D/W users (it=
+ is=20
+the same one I=E2=80=99ve been sharing for  D/W sensors since last week) and let=20
+me know if you are still seeing this issue:  - This issue is still=20
+occurring all the time, I tried this app version but now it simply says=20
+=E2=80=9Copen=E2=80=9D on the main screen and on the edit page it never changes to clos=
+ed.=20
+http://app.xbcs.net/wemo2prod/development/development.wr_86df91b
+
+6.     Seeing the DW sensor Multiply =E2=80=93 This is on the XI app version, we=20
+keep seeing it gradually add more and more DW Sensors and to the list (See=20
+attached) with no apparent pattern. We need to solve this before pre-alpha.
+
+=20
+
+So really 5 and 6 stand in our way of starting, 4 would be good to fix but=20
+not required if not. Is there a timeline for 5 and 6 to be fixed and=20
+included in the main app?
+
+=20
+
+Martin.
+
+=20
+
+_____________________________________________
+From: Ajay Kumar Goud Badagowni=20
+Sent: Monday, July 13, 2015 2:05 PM
+To: Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Hohener;=20
+Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Martin,=20
+
+=20
+
+9301 has been provided today and has not been tested enough for=20
+recommending to other teams. Sensor FW v0x1F is under test by Steven=E2=80=99s=20
+team. To reduce frequently changing all firmware/software builds, I=20
+advised  all others teams to stick to 0x1D until 0x1F is cleared by Steven=20
+Zhao (Sanity tests criteria ETA: Wednesday morning, PST). I would=20
+recommend the same for other teams, but if nothing changed with regards to=20
+the joining process between 0x1D and 0x1F, I don=E2=80=99t  see why there should=20
+be any pairing issues or compatibility issues as Rosanne found. Rosanne,=20
+can you please share FW logs and some description regarding this?=20
+
+=20
+
+For the apps, the latest iOS app I see for prod is development.xh_7ed0148.=20
+ They still seem to be posting this on 1.13  Development Release Wiki.=20
+
+=20
+
+For #1, #2 and #3, please let me know if you are still seeing these issues=20
+=E2=80=93 I haven=E2=80=99t seen these with the latest FW (>=3D9278).=20
+
+For #4, there has been a defect filed (WEMO-42839)  to track this=20
+behavior, but no ETA yet. But if this is the only issue blocking=20
+pre-alpha, we should consider waiving this defect as a known limitation,=20
+as it is intermittent and has a simple workaround (refresh).=20
+
+For #5, this is a known issue with D/W sensors with this app =E2=80=93 as this is=
+=20
+=E2=80=98Work in progress=E2=80=99. So, please use a different app for D/W users (it is=
+=20
+the same one I=E2=80=99ve  been sharing for D/W sensors since last week) and let=20
+me know if you are still seeing this issue:=20
+http://app.xbcs.net/wemo2prod/development/development.wr_86df91b
+
+=20
+
+Thanks,=20
+
+Ajay
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Monday, July 13, 2015 12:36 PM
+To: Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel; Martin Worth
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Ajay,
+
+=20
+
+Rosanne and I were wondering which FW and apps you recommend to use for=20
+our testing today? I checked the v1.14 release page and I see v9301 FW up=20
+there but not sure how much it=E2=80=99s been tested, we currently still  have=20
+v9278 installed that you gave us last week.
+
+=20
+
+WeMo_WW_2.00.9301.OWRT.DVT_LED_Light
+
+=20
+
+For iOS it doesn=E2=80=99t appear there has been a build since last week.
+
+=20
+
+Also Rosanne mentioned something about the v1F firmware for sensors not=20
+being compatible with the Link, is that correct or am I misunderstanding?=20
+I don=E2=80=99t think we changed anything that should affect their ability  to=20
+communicate.
+
+=20
+
+I am setting up meeting for tomorrow to review the latest on these items=20
+below, can you work with Arsalan and give us the latest and when we think=20
+we might be ready to test a pre-alpha set of files?
+
+=20
+
+Showstoppers
+
+1.     Keyfob never shows away (Always shows =E2=80=9CJust arrived=E2=80=9D no matter=20
+what, tried pairing 5 times. Removed battery to simulate leaving. =E2=80=93=20
+Showstopper, MW =E2=80=93 Now appears to be working all of the time (So far),=20
+tried it 3 times leaving and coming back and worked.
+
+2.    Degradation of reporting of items and communicating with them. We=E2=80=99v=
+e=20
+seen over a period of time that it stops showing notifications for DW=20
+sensor, PIR and possibly even alarm (Can=E2=80=99t speak for Keyfob as its never=20
+worked).  Jean Luc will log this issue before the call. =E2=80=93 Possibly a=20
+showstopper, perhaps we can run some 24 hour tests and see what happens?=20
+
+Ajay: Please leave your setup online when you leave in the evening and=20
+check next day, if the notifications and status updates are still working=20
+without having to fix the network.=20
+
+MW =E2=80=93 Any further testing news? I=E2=80=99ll setup my units today and test=20
+overnight.
+
+3.    Alarm sensor not providing any response or notification in the app=20
+when triggering a valid alarm for 20 seconds. (Should that work) =E2=80=93=20
+Showstopper.=20
+
+MW =E2=80=93 Is working 100% of the time in my limited testing using my phone
+
+4.    WEMO Link unavailable. =E2=80=93 I will provide more info, a showstopper if=
+=20
+it happens often.
+
+Ajay: I am able to reproduce this very frequently =E2=80=93 Link is actually=20
+available =E2=80=93 but app shows =E2=80=98Unavailable=E2=80=99 as soon as we open the app. A=
+=20
+=E2=80=98Refresh=E2=80=99 fixes the issues and shows the states correctly.=20
+
+MW =E2=80=93 Still seeing this when I could open the app 100%.
+
+5.    DW sensor with second device not showing open/closed on edit screen.=20
+=E2=80=93 A showstopper if it happens when Rosanne tries the single DW sensor
+
+Ajay: Could be related to the drawer issue with D/W sensors =E2=80=93 but the par=
+t=20
+that is important to Alpha is: =E2=80=98Edit=E2=80=99 screen should show all D/W sensor=
+s =E2=80=93=20
+sometimes it shows the list being empty.=20
+
+MW =E2=80=93 Not working well at all, I often see no sensors listed despite=20
+knowing its connected and even if I do the state isn=E2=80=99t changing. I keep=20
+also seeing my DW sensor multiply, I had 18 listed earlier on.
+
+=20
+
+Thanks.
+
+Martin.
+
+=20
+
+=20
+
+_____________________________________________
+From: Ajay Kumar Goud Badagowni=20
+Sent: Thursday, July 09, 2015 6:22 PM
+To: Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Hohener;=20
+Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Thanks for the update, Martin. I haven=E2=80=99t been able to repro #1, #2, #3=20
+today =E2=80=93 so, I am thinking those may have been fixed (for the most part). =
+I=20
+will keep an eye on #4 =E2=80=93 and log it if I can reproduce.=20
+
+=20
+
+For #5, This is a known issue with D/W sensors with this app =E2=80=93 as this is=
+=20
+=E2=80=98Work in progress=E2=80=99. Please use a different app for D/W users (it is the=
+=20
+same one I=E2=80=99ve shared in the morning and yesterday)=20
+http://app.xbcs.net/wemo2prod/development/development.wr_86df91b
+
+=20
+
+Thanks,=20
+
+Ajay
+
+=20
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Thursday, July 09, 2015 6:04 PM
+To: Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel; Martin Worth
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi All,
+
+=20
+
+I tried testing again today with the new=20
+=E2=80=9CWeMo_WW_2.00.9278.OWRT.DVT_LED_Light.bin.gpg=E2=80=9D that Ajay provided, I re=
+set=20
+everything and set it back up and I=E2=80=99m pleased to say there is an=20
+improvement. Ajay here are  some updates on what I saw this afternoon=20
+include your teams comments from earlier. Let us know what you find out=20
+tonight. I sorted into show stoppers and not.
+
+=20
+
+Showstoppers
+
+1.    Keyfob never shows away (Always shows =E2=80=9CJust arrived=E2=80=9D no matter wh=
+at,=20
+tried pairing 5 times. Removed battery to simulate leaving. =E2=80=93 Showstopper=
+,=20
+seems to be working very occasionally but very unreliable  on my app.
+
+Ajay: Could be intermittent =E2=80=93 works 80% of the time for me.=20
+
+MW =E2=80=93 Now appears to be working all of the time (So far), tried it 3 times=
+=20
+leaving and coming back and worked.
+
+2.    Degradation of reporting of items and communicating with them. We=E2=80=99v=
+e=20
+seen over a period of time that it stops showing notifications for DW=20
+sensor, PIR and possibly even alarm (Can=E2=80=99t speak for Keyfob as its never=20
+worked).  Jean Luc will log this issue before the call. =E2=80=93 Possibly a=20
+showstopper, perhaps we can run some 24 hour tests and see what happens?=20
+
+Ajay: Please leave your setup online when you leave in the evening and=20
+check next day, if the notifications and status updates are still working=20
+without having to fix the network.=20
+
+3.    Alarm sensor not providing any response or notification in the app=20
+when triggering a valid alarm for 20 seconds. (Should that work) =E2=80=93=20
+Showstopper.
+
+Ajay: I was unable to repro =E2=80=93 but could be related to #2/#3 (or=20
+WeMo-42777).=20
+
+MW =E2=80=93 Is working 100% of the time in my limited testing using my phone
+
+4.    WEMO Link unavailable. =E2=80=93 I will provide more info, a showstopper if=
+=20
+it happens often.
+
+Ajay: I am able to reproduce this very frequently =E2=80=93 Link is actually=20
+available =E2=80=93 but app shows =E2=80=98Unavailable=E2=80=99 as soon as we open the app. A=
+=20
+=E2=80=98Refresh=E2=80=99 fixes the issues and shows the states correctly.=20
+
+MW =E2=80=93 Still seeing this when I could open the app 100%.
+
+5.    DW sensor with second device not showing open/closed on edit screen.=20
+=E2=80=93 A showstopper if it happens when Rosanne tries the single DW sensor
+
+Ajay: Could be related to the drawer issue with D/W sensors =E2=80=93 but the par=
+t=20
+that is important to Alpha is: =E2=80=98Edit=E2=80=99 screen should show all D/W sensor=
+s =E2=80=93=20
+sometimes it shows the list being empty.=20
+
+MW =E2=80=93 Not working well at all, I often see no sensors listed despite=20
+knowing its connected and even if I do the state isn=E2=80=99t changing. I keep=20
+also seeing my DW sensor multiply, I had 18 listed earlier on.
+
+=20
+
+Not Showstoppers
+
+1.    PIR often appears greyed out at first when launching app, sometimes=20
+takes 5 seconds plus to appear. =E2=80=93 Not a showstopper.
+
+Ajay: I see it too =E2=80=93 100% of the time.=20
+
+MW =E2=80=93 This seems improved in initial tests.
+
+2.    Test mode crashing app and details. =E2=80=93 Not a showstopper, we=E2=80=99ll te=
+ll=20
+them to avoid it.
+
+Ajay: I was unable to reproduce this.=20
+
+3.    Reset function on DW sensor doesn't work. =E2=80=93 Not a showstopper if th=
+e=20
+above works, is it known?
+
+Ajay: I think this is a not yet implemented.=20
+
+=20
+
+=20
+
+Thanks.
+
+Martin.
+
+=20
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Wednesday, July 08, 2015 5:34 PM
+To: Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel; Martin Worth
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Guys,
+
+=20
+
+Thanks for meeting earlier, so the long and short of it is there are a few=20
+issues we=E2=80=99ve bumped into during our own testing, I=E2=80=99ve listed them below=
+=20
+and whether we think it=E2=80=99s a showstopper for pre-alpha and alpha.  Please=20
+can we get the latest version of the app to test for anything that you=20
+think is fixed, Jira ID=E2=80=99s for anything that=E2=80=99s known and an indication i=
+f=20
+you want us to log the issue in Jira tomorrow.
+
+=20
+
+1.    PIR often appears greyed out at first when launching app, sometimes=20
+takes 5 seconds plus to appear. =E2=80=93 Not a showstopper.
+
+2.    Keyfob never shows away (Always shows =E2=80=9CJust arrived=E2=80=9D no matter wh=
+at,=20
+tried pairing 5 times. Removed battery to simulate leaving. =E2=80=93 Showstopper=
+,=20
+seems to be working very occasionally but very unreliable  on my app.
+
+3.    Degradation of reporting of items and communicating with them. We=E2=80=99v=
+e=20
+seen over a period of time that it stops showing notifications for DW=20
+sensor, PIR and possibly even alarm (Can=E2=80=99t speak for Keyfob as its never=20
+worked).  Jean Luc will log this issue before the call. =E2=80=93 Possibly a=20
+showstopper, perhaps we can run some 24 hour tests and see what happens?=20
+
+4.    Alarm sensor not providing any response or notification in the app=20
+when triggering a valid alarm for 20 seconds. (Should that work) =E2=80=93=20
+Showstopper.
+
+5.    WEMO Link unavailable. =E2=80=93 I will provide more info, a showstopper if=
+=20
+it happens often.
+
+6.    Test mode crashing app and details. =E2=80=93 Not a showstopper, we=E2=80=99ll te=
+ll=20
+them to avoid it.
+
+7.    DW sensor with second device not showing open/closed on edit screen.=20
+=E2=80=93 A showstopper if it happens when Rosanne tries the single DW sensor
+
+8.    Reset function on DW sensor doesn't work. =E2=80=93 Not a showstopper if th=
+e=20
+above works, is it known?
+
+=20
+
+If we can get that for tomorrows call and perhaps even an estimate of a=20
+target we can look to close the showstopper items by maybe Monday (The=20
+list, not the fixes) that=E2=80=99d be great. Like we said we have no intention =20
+of changing priorities just understanding the timeline.
+
+=20
+
+Thanks.
+
+Martin.
+
+=20
+
+_____________________________________________
+From: Tom Hudson=20
+Sent: Wednesday, July 08, 2015 2:45 PM
+To: Martin Worth; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc=20
+Rault; John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+I don=E2=80=99t understand the need to re-pair to test H/A Sensor button press=20
+once it=E2=80=99s available.  The app should be able to set up rules upon upgrade=
+,=20
+and that=E2=80=99s it.  Perhaps for first button press, but even that  ought to=20
+work on the first time the button is pressed AFTER the app and Link FW are=20
+upgraded.
+
+=20
+
+PS, I have a personal appointment ongoing during the time you scheduled=20
+this meeting.  I might be able to attend at the beginning, but my calendar=20
+says I won=E2=80=99t be available until 5pm, so I=E2=80=99ll join definitely by then, b=
+ut=20
+only possibly before then.
+
+=20
+
+/Tom
+
+=20
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Monday, July 06, 2015 5:49 PM
+To: Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Rosanne Rogel
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Ok great, let the team know which files to use, Jean Luc and Rosanne will=20
+be testing tomorrow and finalizing the test plan.
+
+=20
+
+Martin.
+
+=20
+
+=20
+
+_____________________________________________
+From: Ajay Kumar Goud Badagowni=20
+Sent: Monday, July 06, 2015 5:43 PM
+To: Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Hohener;=20
+Mike Mouawad
+Cc: Venkat Pathuri
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Martin,=20
+
+=20
+
+I will try the latest versions (newer than the versions I demo=E2=80=99ed last=20
+Thursday) for iOS and let you know if they are better than the initial=20
+versions I last shared.=20
+
+=20
+
+Android App is still has quite a few issues that block users=E2=80=99 normal=20
+navigation within the app.=20
+
+=20
+
+Thanks,=20
+
+Ajay Badagowni
+
+=20
+
+_____________________________________________
+From: Martin Worth=20
+Sent: Monday, July 06, 2015 1:25 PM
+To: Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc Rault;=20
+John Hohener; Mike Mouawad
+Cc: Venkat Pathuri; Martin Worth
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Guys,
+
+=20
+
+Apologies if I sounded overly critical I=E2=80=99m just trying to understand the=20
+readiness and ensure the test plan document that Jean Luc is working on=20
+sets the right expectations to the users. We won=E2=80=99t test the push  button=20
+function at this time until rules are ready, I am concerned about the need=20
+to pair the devices multiple times as it=E2=80=99ll be hard to get users to do=20
+that or understand, do we have any idea when we think that issue will be=20
+solved?
+
+=20
+
+We=E2=80=99re planning on being ready to give out the devices on Wednesday 7/8,=20
+all the sensors will be updated and the test plan document ready by then.=20
+Is there a newer app and FW for Link ready prior to then we should  use?=20
+Ajay what=E2=80=99s the latest version you=E2=80=99ve tested and what does it improve?
+
+=20
+
+Do we think Android will progress enough this week to begin next Monday=20
+7/13?
+
+=20
+
+I=E2=80=99ll schedule a meeting for Wednesday to go through the latest and confir=
+m=20
+the kick off.
+
+=20
+
+Thanks.
+
+Martin.
+
+=20
+
+_____________________________________________
+From: Tom Hudson=20
+Sent: Thursday, July 02, 2015 3:37 PM
+To: Ajay Kumar Goud Badagowni; Martin Worth; Arsalan Haeri; Jean Luc=20
+Rault; John Hohener; Mike Mouawad
+Cc: Venkat Pathuri
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+What Ajay said.
+
+=20
+
+Seriously, though=E2=80=A6. =20
+
+=20
+
+Fob button press never updates status, it=E2=80=99s purely a rule trigger, and=20
+that functionality will be delivered in next sprint.
+
+=20
+
+We always knew the Door/Window Sensor drawers would be wonky at this=20
+juncture, hence using the real-time feedback in setup/edit for test=20
+contact sensor messaging from sensor to Link to app, during pre-alpha.
+
+=20
+
+I saw the Home/Away functionality working in today=E2=80=99s Sprint Demo.  I defe=
+r=20
+to Ajay=E2=80=99s recommendations.
+
+=20
+
+/Tom
+
+=20
+
+_____________________________________________
+From: Ajay Kumar Goud Badagowni=20
+Sent: Thursday, July 02, 2015 3:27 PM
+To: Martin Worth; Arsalan Haeri; Tom Hudson; Jean Luc Rault; John Hohener;=20
+Mike Mouawad
+Cc: Venkat Pathuri
+Subject: RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.
+
+=20
+
+=20
+
+Hi Martin,
+
+=20
+
+I forgot to mention the below point (I mentioned it to JeanLuc to include=20
+in his Pre-Alpha notes to users).=20
+
+=20
+
+=E2=80=9CWhen you first pair, the sensors will continue to show =E2=80=98just now=E2=80=99 un=
+til=20
+you change the state of the devices and change it back.=E2=80=9D
+
+=20
+
+1.     Issue #1 is because, drawers are not supported for pre-alpha.=20
+=E2=80=98Edit=E2=80=99 screen IS the place you can see the real-time feedback of D/W=20
+sensors.=20
+
+2.     Issue #2 is out of scope for pre-Alpha. Fob supports only Home/Away=20
+status messages.=20
+
+3.     Issue #3 could be due to #3 I mentioned below. You may need to try=20
+pairing the Fob a couple of times so that the Link configures it=20
+correctly. Also, note that the fob takes about 35 seconds after you remove=20
+the battery to  register itself as =E2=80=98Away=E2=80=99 and about 8 seconds to regist=
+er=20
+itself as =E2=80=98Home=E2=80=99 after you place the battery in.=20
+
+=20
+
+Thanks,=20
+
+Ajay=20
+
+
+--B_3519893283_353840623
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-priority:9;
+	mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light","sans-serif";
+	color:#2E74B5;
+	font-weight:normal;}
+h2
+	{mso-style-priority:9;
+	mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light","sans-serif";
+	color:#2E74B5;
+	font-weight:normal;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{mso-style-priority:99;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-priority:99;
+	mso-style-link:"Body Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	font-family:"Times New Roman","serif";
+	color:blue;
+	mso-style-textfill-fill-color:blue;
+	mso-style-textfill-fill-alpha:100.0%;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	font-family:"Times New Roman","serif";
+	color:purple;
+	mso-style-textfill-fill-color:purple;
+	mso-style-textfill-fill-alpha:100.0%;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light","sans-serif";
+	color:#2E74B5;
+	mso-style-textfill-fill-color:#2E74B5;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light","sans-serif";
+	color:#2E74B5;
+	mso-style-textfill-fill-color:#2E74B5;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Body Text";
+	font-family:"Times New Roman","serif";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.EmailStyle26
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	mso-style-textfill-fill-color:black;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle27
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle28
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle29
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle30
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle31
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle32
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle33
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle34
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle35
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle36
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle37
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle38
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle39
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle40
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle41
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle42
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle43
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle44
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle45
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle46
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle47
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle48
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle49
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle50
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	mso-style-textfill-fill-color:black;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle51
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle52
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle53
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	mso-style-textfill-fill-color:black;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle54
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;
+	mso-style-textfill-fill-color:#1F497D;
+	mso-style-textfill-fill-alpha:100.0%;}
+span.EmailStyle55
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle56
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle57
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle58
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle59
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EmailStyle60
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle61
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle62
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EmailStyle63
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle64
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1393770881;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2031760696 67698703 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">According to the lates=
+t design in Link FW,&nbsp; the keyfob availability is not using the tab =E2=
+=80=9CAVAILABLE=3DYES/NO=E2=80=9D anymore.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">The 10500 value =E2=80=
+=9C1<b>0</b>=E2=80=9D indicate it=E2=80=99s =E2=80=9Cleft=E2=80=9D,&nbsp; w=
+e need a ZB capture of it (Ajay, can you help in this case?)<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">The DW sensor missing =
+: &nbsp;in the response of GetEndDevices, the DW sensor
+</span><b><span style=3D"color:red">94103E7AFDD5001B</span></b><span style=
+=3D"color:#1F497D"> is not returned under &nbsp;=E2=80=9CDW group=E2=80=9D =
+anymore, but only in normal device list, I believe this confused app to sho=
+w it as =E2=80=9Cmissing=E2=80=9D:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><br>
+CC Samuel, Jeff and Woody:&nbsp; can you please see if following return rev=
+eal a potential Link fw issue?&nbsp;
+</span><b><span style=3D"color:red">94103E7AFDD5001B </span></b><span style=
+=3D"color:black">used to be returned in =E2=80=9CDW group=E2=80=9D also, th=
+e DW sensor was left there, but somehow, it is now removed under =E2=80=9CD=
+W group=E2=80=9D which makes app shows it as =E2=80=9Cmissing=E2=80=9D,
+</span><span style=3D"color:#1F497D">I guess it maybe due to DW sensor did =
+a =E2=80=9Crejoin=E2=80=9D &nbsp;and it=E2=80=99s not put back to =E2=80=9C=
+DW group=E2=80=9D in this case.&nbsp; The return of GetEndDevice cost 39 se=
+conds, I believe there was something wrong when getting some rejoined devic=
+e back.</span><span style=3D"color:black"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">=3D=3D=3D=3DGetEndDevi=
+ce(ALL_LIST)=3D=3D=3D=3D<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">UDN:uuid:Bridge-1_0-23=
+1451B01002FC<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Sending GetEndDevice(A=
+LL_LIST)...<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&lt;s:Envelope xmlns:s=
+=3D&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; s:encodingStyle=3D=
+&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;&gt;<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp; &lt;s:Body&gt;<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp; &lt=
+;u:GetEndDevicesResponse xmlns:u=3D&quot;urn:Belkin:service:bridge:1&quot;&=
+gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp; &lt;DeviceLists&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; &lt;!--&lt;?xml version=3D&quot;1.0&quot; encoding=3D&=
+quot;utf-8&quot;?&gt;--&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; &lt;DeviceLists&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceList&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceListType&gt;Paired&l=
+t;/DeviceListType&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceInfos&gt;<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceInfo&gt;=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceIndex&gt;0&lt;/DeviceIndex&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceID&gt;</span><b><span style=3D"color:red">94103E7AFDD5001B</span></b><s=
+pan style=3D"color:#1F497D">&lt;/DeviceID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Fr=
+iendlyName&gt;WeMo Room Motion Sensor 01&lt;/FriendlyName&gt;<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ic=
+onVersion&gt;1&lt;/IconVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp; &nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Fi=
+rmwareVersion&gt;1F&lt;/FirmwareVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ca=
+pabilityIDs&gt;10500,20500,30501&lt;/CapabilityIDs&gt;<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Cu=
+rrentState&gt;9a00,1,0&lt;/CurrentState&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ma=
+nufacturer&gt;Belkin&lt;/Manufacturer&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Mo=
+delCode&gt;F7C041&lt;/ModelCode&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pr=
+oductName&gt;PIR&lt;/productName&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;We=
+MoCertified&gt;YES&lt;/WeMoCertified&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DeviceInfo&gt=
+;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceInfo&gt;=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceIndex&gt;1&lt;/DeviceIndex&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceID&gt;94103E71D61400AF&lt;/DeviceID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Fr=
+iendlyName&gt;WeMo Alarm Sensor 01&lt;/FriendlyName&gt;<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ic=
+onVersion&gt;1&lt;/IconVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Fi=
+rmwareVersion&gt;1F&lt;/FirmwareVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ca=
+pabilityIDs&gt;10500,20500,30501&lt;/CapabilityIDs&gt;<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Cu=
+rrentState&gt;aa00,1,0&lt;/CurrentState&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ma=
+nufacturer&gt;Belkin&lt;/Manufacturer&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Mo=
+delCode&gt;F7C040&lt;/ModelCode&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pr=
+oductName&gt;AlarmSensor&lt;/productName&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;We=
+MoCertified&gt;YES&lt;/WeMoCertified&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DeviceInfo&gt=
+;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DeviceInfo&gt;=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceIndex&gt;2&lt;/DeviceIndex&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceID&gt;94103E71D6140316&lt;/DeviceID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Fr=
+iendlyName&gt;WeMo Home and Away Sensor 01&lt;/FriendlyName&gt;<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ic=
+onVersion&gt;1&lt;/IconVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Fi=
+rmwareVersion&gt;1F&lt;/FirmwareVersion&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ca=
+pabilityIDs&gt;10500,20500,30501,20502&lt;/CapabilityIDs&gt;<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Cu=
+rrentState&gt;1,1,0,10&lt;/CurrentState&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Ma=
+nufacturer&gt;Belkin&lt;/Manufacturer&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Mo=
+delCode&gt;F7C039&lt;/ModelCode&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pr=
+oductName&gt;Fob&lt;/productName&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;We=
+MoCertified&gt;YES&lt;/WeMoCertified&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DeviceInfo&gt=
+;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DeviceInfos&gt;<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GroupInfos&gt;<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GroupInfo&gt;<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&lt;Gr=
+oupID&gt;1436819856&lt;/GroupID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GroupN=
+ame&gt;Doors and Windows&lt;/GroupName&gt;&nbsp; -&gt; should =E2=80=9C<b>9=
+4103E7AFDD5001B=E2=80=9D
+</b>also be returned here too?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Gr=
+oupCapabilityIDs/&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Gr=
+oupCapabilityValues/&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;De=
+viceInfos/&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/GroupInfo&gt;=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/GroupInfos&gt;<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DeviceList&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; &lt;/DeviceLists&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp; &lt;/DeviceLists&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp;&nbsp;&nbsp; &lt=
+;/u:GetEndDevicesResponse&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&nbsp; &lt;/s:Body&gt;=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&lt;/s:Envelope&gt;<o:=
+p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Action took: 39095 Mil=
+liseconds <o:p>
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b><span style=3D"font-s=
+ize:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Martin W=
+orth
+<br>
+<b>Sent:</b> Wednesday, July 15, 2015 2:21 AM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Steven Zhao<br>
+<b>Cc:</b> Jean Luc Rault; Rosanne Rogel; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors &#43; Key=
+fob status incorrect.<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">That would make sense =
+as the status was never changing on the app, that to me means there are two=
+ bugs.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in;mso-list:l0 level=
+1 lfo2"><![if !supportLists]><span style=3D"color:#1F497D"><span style=3D"m=
+so-list:Ignore">1.<span style=3D"font:7.0pt &quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"color:#1F497D">Why did the Li=
+nk kick the keyfob off?<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in;mso-list:l0 level=
+1 lfo2"><![if !supportLists]><span style=3D"color:#1F497D"><span style=3D"m=
+so-list:Ignore">2.<span style=3D"font:7.0pt &quot;Times New Roman&quot;">&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"color:#1F497D">Why is the app=
+ not showing that the keyfob has lost connection?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I power cycled both th=
+e keyfob and the Link but neither solved the issue, I then tried adding the=
+ keyfob again after resetting it but that failed. After doing that I am now=
+ back in the same situation as yesterday
+ I originally reported, </span><span style=3D"color:red">Alarm sensor and P=
+IR showing greyed out, Keyfob showing disconnected (Which it is as I reset =
+it) and DW sensor disappeared from the app</span><span style=3D"color:#1F49=
+7D">.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">So I captured some mor=
+e information on this as requested.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">GetEndDEvices =E2=80=
+=93 </span><span style=3D"color:red">Took 20837 milliseconds to record a re=
+sponse.&nbsp; (Over 20 seconds).<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">GetDeviceStatus =E2=80=
+=93 Took less than a second. (DW sensor is showing as missing).<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I=E2=80=99ve attached =
+the FW log from the Link when doing both these as well as refreshing the ap=
+p. Clearly there is some sort of Link FW issue here.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I won=E2=80=99t touch =
+anything till you get back to me, I suspect I need to reset it all and star=
+t again to test further.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b><span style=3D"font-s=
+ize:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ajay Kum=
+ar Goud Badagowni
+<br>
+<b>Sent:</b> Tuesday, July 14, 2015 10:56 AM<br>
+<b>To:</b> Martin Worth; Steven Zhao<br>
+<b>Cc:</b> Jean Luc Rault; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors &#43; Key=
+fob status incorrect.<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Martin, <o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I see the following de=
+tail for the fob in your App logs:
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">&lt;available=3D&quot;YES&quot;&gt;94103E=
+71D6140316&lt;/DeviceID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">&lt;CapabilityID&gt;10500,20500,30501,205=
+02&lt;/CapabilityID&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">&lt;CapabilityValue&gt;10,1,0,0&lt;/Capab=
+ilityValue&gt;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;color:#1F497D;bac=
+kground:yellow;mso-highlight:yellow">&lt;LastEventTimeStamp&gt;0&lt;/LastEv=
+entTimeStamp&gt;<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">&lt;/DeviceStatus&gt;&lt;/DeviceStatusLis=
+t&gt;</span><span style=3D"font-size:10.0pt;color:#1F497D"><o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D">The =
+=E2=80=980=E2=80=99 in the =E2=80=98LastEventTimeStamp=E2=80=99 indicates t=
+hat there was no communication/state-change from the fob, since the Link=E2=
+=80=99s setup (or reboot).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D">But y=
+our FW logs show the below: which, I believe, is the fob trying to comminut=
+e with the Link =E2=80=93 but the Link removed it from its list (similar to=
+ the issue Rosanne saw in her testing yesterday).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">Jul 14 09:46:58 sysinit: NodeId : 0x13BC =
+not in the address table.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">Jul 14 09:47:05 sysinit: NodeId : 0x13BC =
+not in the address table.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">Jul 14 09:47:12 sysinit: NodeId : 0x13BC =
+not in the address table.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">Jul 14 09:47:19 sysinit: NodeId : 0x13BC =
+not in the address table.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;backgr=
+ound:yellow;mso-highlight:yellow">Jul 14 09:47:26 sysinit: NodeId : 0x13BC =
+not in the address table.</span><span style=3D"font-size:10.0pt;color:#1F49=
+7D"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D">From =
+above, it looks like it is fairly easy to reproduce for QA and collect furt=
+her details. If you want to recover the setup, please feel free to re-pair =
+the fob to the Link again.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D"><o:p>=
+&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D">Thank=
+s, <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D">Ajay<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Martin Worth <br>
+<b>Sent:</b> Tuesday, July 14, 2015 10:37 AM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Steven Zhao<br>
+<b>Cc:</b> Jean Luc Rault; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors &#43; Key=
+fob status incorrect.<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">That sounds exactly li=
+ke it, the strange thing is that it was working yesterday when I was removi=
+ng the battery for short periods, it only seemed to happen after the Fob ha=
+s been gone for a while. The status
+ hasn=E2=80=99t changed it still says =E2=80=9CLeft just now=E2=80=9D and I=
+ don=E2=80=99t think it will change. Shall I try power cycling or leave the=
+m as they are?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin<o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b><span style=3D"font-s=
+ize:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ajay Kum=
+ar Goud Badagowni
+<br>
+<b>Sent:</b> Tuesday, July 14, 2015 10:33 AM<br>
+<b>To:</b> Steven Zhao; Martin Worth<br>
+<b>Cc:</b> Jean Luc Rault; Rosanne Rogel<br>
+<b>Subject:</b> FW: WEMO Sensors SW - WEMO app not seeing sensors &#43; Key=
+fob status incorrect.<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">&#43;&#43; Steven<o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Martin, <o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks for sharing the=
+ detailed logs. I have seen similar issues with fob and FW v9303 yesterday =
+=E2=80=93 I captured my observations in Jira
+<a href=3D"https://jira.nikleb.com/browse/WEMO-42195"><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black;mso-style-t=
+extfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%"><span style=
+=3D"color:black;mso-style-textfill-fill-color:black;mso-style-textfill-fill=
+-alpha:100.0%">WEMO-42195</span></span></a>
+ here. <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">In your case, can you =
+please check if the Link has recognized the fob by now?<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Steven, do you see any=
+thing from the logs Martin shared?
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay <o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Martin Worth <br>
+<b>Sent:</b> Tuesday, July 14, 2015 9:55 AM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Jean Luc Rault<br>
+<b>Cc:</b> Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors &#43; Key=
+fob status incorrect.<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Here is my AM update,<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I came back in bringin=
+g the Keyfob back with me and everything else has been sitting on the desk =
+all night.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Alarm sensor =E2=80=93=
+ Present and working.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">PIR =E2=80=93 Present =
+and working.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">DW Sensor =E2=80=93 Pr=
+esent but as before the app never shows me any state change.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">So the good news is I =
+haven=E2=80=99t seen a repeat of yesterday so far, I=E2=80=99ll keep checki=
+ng.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Keyfob =E2=80=93 This =
+is where the issue lies this morning, it=E2=80=99s showing as present (It=
+=E2=80=99s not greyed out), but the status is =E2=80=9CLeft just now=E2=80=
+=9D even though the keyfob is 1ft from the Link and it has its batteries in=
+serted
+ (See attached screenshot). Unless the battery has gone flat it should be c=
+onnected. I tried closing and reopening the app but the status stayed the s=
+ame. I checked the UPNP tool, it shows all four sensors are present with AV=
+L =3D Yes (See attached image). I
+ generated a WEMO Link FW log, also attached, this was after I refreshed th=
+e app and saw it showing =E2=80=9CLeft just now=E2=80=9D again. Finally I g=
+enerated a phone log of both me refreshing the list and also fresh loading =
+the app, also attached.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I haven=E2=80=99t powe=
+r cycled the keyfob or the Link yet, let me know what you want me to do nex=
+t.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b><span style=3D"font-s=
+ize:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ajay Kum=
+ar Goud Badagowni
+<br>
+<b>Sent:</b> Monday, July 13, 2015 5:16 PM<br>
+<b>To:</b> Martin Worth; Jean Luc Rault<br>
+<b>Cc:</b> Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors.<o:p></o:=
+p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks for sharing the=
+ logs and info, Martin. The next time you see this issue, can you please tr=
+y this tool to collect the FW logs as well (method and tool given below)? I=
+n this case, I am suspecting that the
+ FW is responding, but is slow in its responses and the app may be timing o=
+ut within this time. So, both FW seems to be working (as seen from our UPnP=
+ tool) as well as the app, but they are not working together. When you noti=
+ce this next time, you can check
+ the time taken for UPnP responses (for actions like =E2=80=98GetEndDevices=
+=E2=80=99, =E2=80=98GetDeviceStatus=E2=80=99, etc) and immediately know if =
+it is the FW=E2=80=99s responses not reaching the App within its timeout li=
+mits (I believe, it is 5 seconds for iOS).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">One easy was to collec=
+t FW logs is to use the DVT Log Tool (this is possible since you have DVT f=
+irmware), as shown on this Wiki below =E2=80=93 make sure to note the appro=
+ximate time-stamp and collect the logs right
+ after you see an issue. <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><a href=3D"http://wiki=
+.nikleb.com:8090/pages/viewpage.action?pageId=3D75282784"><span style=3D"fo=
+nt-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black;mso-sty=
+le-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%"><span st=
+yle=3D"color:black;mso-style-textfill-fill-color:black;mso-style-textfill-f=
+ill-alpha:100.0%">WeMo
+ Log Windows Tool (Only work with DVT openwrt Firmware)</span></span></a><o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Martin Worth <br>
+<b>Sent:</b> Monday, July 13, 2015 4:40 PM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Jean Luc Rault<br>
+<b>Cc:</b> Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW - WEMO app not seeing sensors.<o:p></o:=
+p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">As I mentioned I saw a=
+n issue when I returned to my desk, I=E2=80=99d taken the keyfob with me bu=
+t the rest had sat on my desk with the iPhone. I=E2=80=99m using v9303 and =
+the XI version of the app as mentioned below. When loading
+ the app it only showed the 3 sensors minus the DW Sensor and after some ti=
+me it=E2=80=99d show all greyed out except for the keyfob that was disconne=
+cted according to the app. (See screenshot). I tried force closing and reop=
+ening the app.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">As you know when we ch=
+ecked with the UPNP app it showed all four sensors were online and present =
+(See screenshot). I captured an app log as requested and that=E2=80=99s att=
+ached too, it=E2=80=99s me opening the app from cold
+ and waiting for it to grey out the two devices about 60-90 seconds later.<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I finally power cycled=
+ the Link and the let it restart, sure enough all four sensors came back an=
+d show their status (With the exception of the DW sensor that never has). S=
+trange that restarting the Link fixed
+ it when it appeared to be an app issue.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I=E2=80=99ll keep test=
+ing.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Monday, July 13, 2015 2:26 PM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I=E2=80=99d actually a=
+lready been testing with v9303 and the XI version of the app as we saw thos=
+e were the last versions on the v1.13 page, Rosanne and I have been testing=
+ that for the past hour or so. We=E2=80=99re also focusing
+ on 0x1F as that=E2=80=99s the RC we want to give out in the pre-alpha and =
+so far it seems to be working well. They are definitely making progress wit=
+h these updates, below are my latest findings and a new issue I=E2=80=99ve =
+added. Rosanne also had an issue with the app size
+ on the iPad when setting up the Alarm sensor, she=E2=80=99ll send the deta=
+ils.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal">&lt;&lt; File: iOS Device list.jpg &gt;&gt;&nbsp; &l=
+t;&lt; File: Multiple DW Sensor.jpg &gt;&gt;
+<span style=3D"color:#1F497D"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:#1F497D">Showstoppers<o:p=
+></o:p></span></u></b></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:red">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;;color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Keyfob never shows away (Always sho=
+ws =E2=80=9CJust arrived=E2=80=9D no matter what, tried pairing 5 times. Re=
+moved battery to simulate leaving.<span style=3D"color:red">
+</span><span style=3D"color:#00B050">Appears to be fixed, working 100% of t=
+he time for me.
+</span></span><span style=3D"color:red"><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:red">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;;color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Degradation of reporting of items a=
+nd communicating with them. We=E2=80=99ve seen over a period of time that i=
+t stops showing notifications for DW sensor, PIR and possibly even alarm (C=
+an=E2=80=99t speak for Keyfob as its never worked).
+ Jean Luc will log this issue before the call.<span style=3D"color:red"> =
+=E2=80=93 Showstopper =E2=80=93 I=E2=80=99ll keep testing now I=E2=80=99m s=
+etup with v9303 and will leave things running for the next 24 hours and tes=
+t the sensor periodically.</span></span><span style=3D"color:red"><o:p></o:=
+p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#00B050">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#00B050">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"font-size:12.0pt">Alarm sensor not providing any resp=
+onse or notification in the app when triggering a valid alarm for 20 second=
+s. (Should that work)<span style=3D"color:red">
+</span><span style=3D"color:#00B050">Also appears to be fixed, working </sp=
+an></span><span style=3D"color:#00B050"><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">4.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">WEMO Link unavailable.<span style=
+=3D"color:red"> =E2=80=93
+</span></span><span style=3D"color:#1F497D">there has been a defect filed <=
+/span><span lang=3D"EN" style=3D"color:#1F497D">(<a href=3D"https://jira.be=
+lkin.com/browse/WEMO-42839"><span style=3D"font-family:&quot;Times New Roma=
+n&quot;,&quot;serif&quot;;color:black;mso-style-textfill-fill-color:black;m=
+so-style-textfill-fill-alpha:100.0%"><span style=3D"color:black;mso-style-t=
+extfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%">WEMO-42839</=
+span></span></a>)
+ to track this behavior, but no ETA yet. But if this is the only issue bloc=
+king pre-alpha, we should consider waiving this defect as a known limitatio=
+n, as it is intermittent and has a simple workaround (refresh).
+</span><span lang=3D"EN" style=3D"color:red">&nbsp;=E2=80=93 If the DW sens=
+or gets fixed we=E2=80=99d proceed knowing this issue, however in my testin=
+g its very consistent when launching the app and doesn=E2=80=99t give a goo=
+d experience.</span><span style=3D"font-size:12.0pt"><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#1F497D">5.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"font-size:12.0pt">DW sensor with second device not sh=
+owing open/closed on edit screen.<span style=3D"color:red"> =E2=80=93
+</span></span><span lang=3D"EN" style=3D"color:#1F497D">t</span><span style=
+=3D"color:#1F497D">his is a known issue with D/W sensors with this app =E2=
+=80=93 as this is =E2=80=98Work in progress=E2=80=99. So, please use a diff=
+erent app for D/W users (it is the same one I=E2=80=99ve been sharing for
+ D/W sensors since last week) and let me know if you are still seeing this =
+issue:
+</span><span style=3D"color:red">&nbsp;- This issue is still occurring all =
+the time, I tried this app version but now it simply says =E2=80=9Copen=E2=
+=80=9D on the main screen and on the edit page it never changes to closed.
+</span><span style=3D"color:#1F497D"><a href=3D"http://app.xbcs.net/wemo2pr=
+od/development/development.wr_86df91b"><span style=3D"font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:black;mso-style-textfill-fill-co=
+lor:black;mso-style-textfill-fill-alpha:100.0%"><span style=3D"color:black;=
+mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%">h=
+ttp://app.xbcs.net/wemo2prod/development/development.wr_86df91b</span></spa=
+n></a><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#1F497D">6.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"font-size:12.0pt">Seeing the DW sensor Multiply =E2=
+=80=93</span><span style=3D"color:#1F497D">
+</span><span style=3D"color:red">This is on the XI app version, we keep see=
+ing it gradually add more and more DW Sensors and to the list (See attached=
+) with no apparent pattern. We need to solve this before pre-alpha.</span><=
+span style=3D"color:#1F497D"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">So really 5 and 6 stan=
+d in our way of starting, 4 would be good to fix but not required if not. I=
+s there a timeline for 5 and 6 to be fixed and included in the main app?<o:=
+p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Ajay Kumar Goud Badagowni <br>
+<b>Sent:</b> Monday, July 13, 2015 2:05 PM<br>
+<b>To:</b> Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Ho=
+hener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Martin, <o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">9301 has been provided=
+ today and has not been tested enough for recommending to other teams. Sens=
+or FW v0x1F is under test by Steven=E2=80=99s team. To reduce frequently ch=
+anging all firmware/software builds, I advised
+ all others teams to stick to 0x1D until 0x1F is cleared by Steven Zhao (Sa=
+nity tests criteria ETA: Wednesday morning, PST). I would recommend the sam=
+e for other teams, but if nothing changed with regards to the joining proce=
+ss between 0x1D and 0x1F, I don=E2=80=99t
+ see why there should be any pairing issues or compatibility issues as Rosa=
+nne found. Rosanne, can you please share FW logs and some description regar=
+ding this?
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">For the apps, the late=
+st iOS app I see for prod is
+<a href=3D"http://app.xbcs.net/wemo2prod/development/development.xh_7ed0148=
+"><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alp=
+ha:100.0%"><span style=3D"color:black;mso-style-textfill-fill-color:black;m=
+so-style-textfill-fill-alpha:100.0%">development.xh_7ed0148</span></span></=
+a>.
+ They still seem to be posting this on </span><a href=3D"http://wiki.nikleb=
+.com:8090/display/SWE/Release&#43;1.13&#43;Development&#43;Builds"><span st=
+yle=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:blac=
+k;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%"=
+><span style=3D"color:black;mso-style-textfill-fill-color:black;mso-style-t=
+extfill-fill-alpha:100.0%">1.13
+ Development Release Wiki</span></span></a><span style=3D"color:#1F497D">. =
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">For #1, #2 and #3, ple=
+ase let me know if you are still seeing these issues =E2=80=93 I haven=E2=
+=80=99t seen these with the latest FW (&gt;=3D9278).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">For #4, there has been=
+ a defect filed
+</span><span lang=3D"EN" style=3D"color:#1F497D">(<a href=3D"https://jira.b=
+elkin.com/browse/WEMO-42839"><span style=3D"font-family:&quot;Times New Rom=
+an&quot;,&quot;serif&quot;;color:black;mso-style-textfill-fill-color:black;=
+mso-style-textfill-fill-alpha:100.0%"><span style=3D"color:black;mso-style-=
+textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%">WEMO-42839<=
+/span></span></a>)
+ to track this behavior, but no ETA yet. But if this is the only issue bloc=
+king pre-alpha, we should consider waiving this defect as a known limitatio=
+n, as it is intermittent and has a simple workaround (refresh).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN" style=3D"color:#1F497D">For #5, t<=
+/span><span style=3D"color:#1F497D">his is a known issue with D/W sensors w=
+ith this app =E2=80=93 as this is =E2=80=98Work in progress=E2=80=99. So, p=
+lease use a different app for D/W users (it is the same one I=E2=80=99ve
+ been sharing for D/W sensors since last week) and let me know if you are s=
+till seeing this issue:
+<a href=3D"http://app.xbcs.net/wemo2prod/development/development.wr_86df91b=
+"><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alp=
+ha:100.0%"><span style=3D"color:black;mso-style-textfill-fill-color:black;m=
+so-style-textfill-fill-alpha:100.0%">http://app.xbcs.net/wemo2prod/developm=
+ent/development.wr_86df91b</span></span></a></span><span lang=3D"EN" style=
+=3D"color:#1F497D"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay<o:p></o:p></span>=
+</p>
+<div>
+<p class=3D"MsoNormal">_____________________________________________<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Monday, July 13, 2015 12:36 PM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Ajay,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Rosanne and I were won=
+dering which FW and apps you recommend to use for our testing today? I chec=
+ked the v1.14 release page and I see v9301 FW up there but not sure how muc=
+h it=E2=80=99s been tested, we currently still
+ have v9278 installed that you gave us last week.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><a href=3D"http://app.xbcs.net/firmware/wemo_dev_pro=
+_RC_1_14/openwrt/signed_images/WeMo_WW_2.00.9301.OWRT.DVT_LED_Light.bin.gpg=
+"><span style=3D"font-size:10.5pt;font-family:&quot;Arial&quot;,&quot;sans-=
+serif&quot;;color:black;mso-style-textfill-fill-color:black;mso-style-textf=
+ill-fill-alpha:100.0%;background:white"><span style=3D"color:black;mso-styl=
+e-textfill-fill-color:black;mso-style-textfill-fill-alpha:100.0%">WeMo_WW_2=
+.00.9301.OWRT.DVT_LED_Light</span></span></a><span style=3D"color:#1F497D">=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">For iOS it doesn=E2=80=
+=99t appear there has been a build since last week.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Also Rosanne mentioned=
+ something about the v1F firmware for sensors not being compatible with the=
+ Link, is that correct or am I misunderstanding? I don=E2=80=99t think we c=
+hanged anything that should affect their ability
+ to communicate.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I am setting up meetin=
+g for tomorrow to review the latest on these items below, can you work with=
+ Arsalan and give us the latest and when we think we might be ready to test=
+ a pre-alpha set of files?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:#1F497D">Showstoppers<o:p=
+></o:p></span></u></b></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:red">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;;color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Keyfob never shows away (Always sho=
+ws =E2=80=9CJust arrived=E2=80=9D no matter what, tried pairing 5 times. Re=
+moved battery to simulate leaving.<span style=3D"color:red"> =E2=80=93 Show=
+stopper,
+</span></span><span style=3D"color:red">MW =E2=80=93 Now appears to be work=
+ing all of the time (So far), tried it 3 times leaving and coming back and =
+worked.<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Degradation of reporting of items a=
+nd communicating with them. We=E2=80=99ve seen over a period of time that i=
+t stops showing notifications for DW sensor, PIR and possibly even alarm (C=
+an=E2=80=99t speak for Keyfob as its never worked).
+ Jean Luc will log this issue before the call.<span style=3D"color:red"> =
+=E2=80=93 Possibly a showstopper, perhaps we can run some 24 hour tests and=
+ see what happens?
+</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: Please leave you=
+r setup online when you leave in the evening and check next day, if the not=
+ifications and status updates are still working without having to fix the n=
+etwork.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Any further t=
+esting news? I=E2=80=99ll setup my units today and test overnight.<o:p></o:=
+p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Alarm sensor not providing any resp=
+onse or notification in the app when triggering a valid alarm for 20 second=
+s. (Should that work)<span style=3D"color:red"> =E2=80=93 Showstopper.
+</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Is working 10=
+0% of the time in my limited testing using my phone<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">4.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">WEMO Link unavailable.<span style=
+=3D"color:red"> =E2=80=93 I will provide more info, a showstopper if it hap=
+pens often.</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I am able to rep=
+roduce this very frequently =E2=80=93 Link is actually available =E2=80=93 =
+but app shows =E2=80=98Unavailable=E2=80=99 as soon as we open the app. A =
+=E2=80=98Refresh=E2=80=99 fixes the issues and shows the states correctly.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Still seeing =
+this when I could open the app 100%.<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">5.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">DW sensor with second device not sh=
+owing open/closed on edit screen.<span style=3D"color:red"> =E2=80=93 A sho=
+wstopper if it happens when Rosanne tries the single DW sensor</span><o:p><=
+/o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: Could be related=
+ to the drawer issue with D/W sensors =E2=80=93 but the part that is import=
+ant to Alpha is: =E2=80=98Edit=E2=80=99 screen should show all D/W sensors =
+=E2=80=93 sometimes it shows the list being empty.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Not working w=
+ell at all, I often see no sensors listed despite knowing its connected and=
+ even if I do the state isn=E2=80=99t changing. I keep also seeing my DW se=
+nsor multiply, I had 18 listed earlier on.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Ajay Kumar Goud Badagowni <br>
+<b>Sent:</b> Thursday, July 09, 2015 6:22 PM<br>
+<b>To:</b> Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Ho=
+hener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks for the update,=
+ Martin. I haven=E2=80=99t been able to repro #1, #2, #3 today =E2=80=93 so=
+, I am thinking those may have been fixed (for the most part). I will keep =
+an eye on #4 =E2=80=93 and log it if I can reproduce.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">For #5, This is a know=
+n issue with D/W sensors with this app =E2=80=93 as this is =E2=80=98Work i=
+n progress=E2=80=99. Please use a different app for D/W users (it is the sa=
+me one I=E2=80=99ve shared in the morning and yesterday)
+<a href=3D"http://app.xbcs.net/wemo2prod/development/development.wr_86df91b=
+"><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black;mso-style-textfill-fill-color:black;mso-style-textfill-fill-alp=
+ha:100.0%"><span style=3D"color:black;mso-style-textfill-fill-color:black;m=
+so-style-textfill-fill-alpha:100.0%">http://app.xbcs.net/wemo2prod/developm=
+ent/development.wr_86df91b</span></span></a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal">_____________________________________________<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Thursday, July 09, 2015 6:04 PM<br>
+<b>To:</b> Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi All,<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I tried testing again =
+today with the new =E2=80=9CWeMo_WW_2.00.9278.OWRT.DVT_LED_Light.bin.gpg=E2=
+=80=9D that Ajay provided, I reset everything and set it back up and I=E2=
+=80=99m pleased to say there is an improvement. Ajay here are
+ some updates on what I saw this afternoon include your teams comments from=
+ earlier. Let us know what you find out tonight. I sorted into show stopper=
+s and not.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:#1F497D">Showstoppers<o:p=
+></o:p></span></u></b></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Keyfob never shows away (Always sho=
+ws =E2=80=9CJust arrived=E2=80=9D no matter what, tried pairing 5 times. Re=
+moved battery to simulate leaving.<span style=3D"color:red"> =E2=80=93 Show=
+stopper, seems to be working very occasionally but very unreliable
+ on my app.</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: Could be intermi=
+ttent =E2=80=93 works 80% of the time for me.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Now appears t=
+o be working all of the time (So far), tried it 3 times leaving and coming =
+back and worked.<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Degradation of reporting of items a=
+nd communicating with them. We=E2=80=99ve seen over a period of time that i=
+t stops showing notifications for DW sensor, PIR and possibly even alarm (C=
+an=E2=80=99t speak for Keyfob as its never worked).
+ Jean Luc will log this issue before the call.<span style=3D"color:red"> =
+=E2=80=93 Possibly a showstopper, perhaps we can run some 24 hour tests and=
+ see what happens?
+</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: Please leave you=
+r setup online when you leave in the evening and check next day, if the not=
+ifications and status updates are still working without having to fix the n=
+etwork.
+<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Alarm sensor not providing any resp=
+onse or notification in the app when triggering a valid alarm for 20 second=
+s. (Should that work)<span style=3D"color:red"> =E2=80=93 Showstopper.</spa=
+n><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I was unable to =
+repro =E2=80=93 but could be related to #2/#3 (or WeMo-42777).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Is working 10=
+0% of the time in my limited testing using my phone<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">4.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">WEMO Link unavailable.<span style=
+=3D"color:red"> =E2=80=93 I will provide more info, a showstopper if it hap=
+pens often.</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I am able to rep=
+roduce this very frequently =E2=80=93 Link is actually available =E2=80=93 =
+but app shows =E2=80=98Unavailable=E2=80=99 as soon as we open the app. A =
+=E2=80=98Refresh=E2=80=99 fixes the issues and shows the states correctly.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Still seeing =
+this when I could open the app 100%.<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">5.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">DW sensor with second device not sh=
+owing open/closed on edit screen.<span style=3D"color:red"> =E2=80=93 A sho=
+wstopper if it happens when Rosanne tries the single DW sensor</span><o:p><=
+/o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: Could be related=
+ to the drawer issue with D/W sensors =E2=80=93 but the part that is import=
+ant to Alpha is: =E2=80=98Edit=E2=80=99 screen should show all D/W sensors =
+=E2=80=93 sometimes it shows the list being empty.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 Not working w=
+ell at all, I often see no sensors listed despite knowing its connected and=
+ even if I do the state isn=E2=80=99t changing. I keep also seeing my DW se=
+nsor multiply, I had 18 listed earlier on.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:#1F497D">Not Showstoppers=
+<o:p></o:p></span></u></b></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">PIR often appears greyed out at fir=
+st when launching app, sometimes takes 5 seconds plus to appear.<span style=
+=3D"color:red"> =E2=80=93 Not a showstopper.</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I see it too =E2=
+=80=93 100% of the time.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:red">MW =E2=80=93 This seems im=
+proved in initial tests.<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Test mode crashing app and details.=
+<span style=3D"color:red"> =E2=80=93 Not a showstopper, we=E2=80=99ll tell =
+them to avoid it.</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I was unable to =
+reproduce this.
+<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Reset function on DW sensor doesn't=
+ work.<span style=3D"color:red"> =E2=80=93 Not a showstopper if the above w=
+orks, is it known?</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay: I think this is =
+a not yet implemented.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Wednesday, July 08, 2015 5:34 PM<br>
+<b>To:</b> Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Guys,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks for meeting ear=
+lier, so the long and short of it is there are a few issues we=E2=80=99ve b=
+umped into during our own testing, I=E2=80=99ve listed them below and wheth=
+er we think it=E2=80=99s a showstopper for pre-alpha and alpha.
+ Please can we get the latest version of the app to test for anything that =
+you think is fixed, Jira ID=E2=80=99s for anything that=E2=80=99s known and=
+ an indication if you want us to log the issue in Jira tomorrow.<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">PIR often appears greyed out at fir=
+st when launching app, sometimes takes 5 seconds plus to appear.<span style=
+=3D"color:red"> =E2=80=93 Not a showstopper.</span><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Keyfob never shows away (Always sho=
+ws =E2=80=9CJust arrived=E2=80=9D no matter what, tried pairing 5 times. Re=
+moved battery to simulate leaving.<span style=3D"color:red"> =E2=80=93 Show=
+stopper, seems to be working very occasionally but very unreliable
+ on my app.</span><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Degradation of reporting of items a=
+nd communicating with them. We=E2=80=99ve seen over a period of time that i=
+t stops showing notifications for DW sensor, PIR and possibly even alarm (C=
+an=E2=80=99t speak for Keyfob as its never worked).
+ Jean Luc will log this issue before the call.<span style=3D"color:red"> =
+=E2=80=93 Possibly a showstopper, perhaps we can run some 24 hour tests and=
+ see what happens?
+</span><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">4.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Alarm sensor not providing any resp=
+onse or notification in the app when triggering a valid alarm for 20 second=
+s. (Should that work)<span style=3D"color:red"> =E2=80=93 Showstopper.</spa=
+n><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">5.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">WEMO Link unavailable.<span style=
+=3D"color:red"> =E2=80=93 I will provide more info, a showstopper if it hap=
+pens often.</span><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">6.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Test mode crashing app and details.=
+<span style=3D"color:red"> =E2=80=93 Not a showstopper, we=E2=80=99ll tell =
+them to avoid it.</span><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">7.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">DW sensor with second device not sh=
+owing open/closed on edit screen.<span style=3D"color:red"> =E2=80=93 A sho=
+wstopper if it happens when Rosanne tries the single DW sensor</span><o:p><=
+/o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"f=
+ont-size:12.0pt">8.</span><span style=3D"font-size:7.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:12.0pt">Reset function on DW sensor doesn't=
+ work.<span style=3D"color:red"> =E2=80=93 Not a showstopper if the above w=
+orks, is it known?</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">If we can get that for=
+ tomorrows call and perhaps even an estimate of a target we can look to clo=
+se the showstopper items by maybe Monday (The list, not the fixes) that=E2=
+=80=99d be great. Like we said we have no intention
+ of changing priorities just understanding the timeline.<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Tom Hudson <br>
+<b>Sent:</b> Wednesday, July 08, 2015 2:45 PM<br>
+<b>To:</b> Martin Worth; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc=
+ Rault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I don=E2=80=99t unders=
+tand the need to re-pair to test H/A Sensor button press once it=E2=80=99s =
+available.&nbsp; The app should be able to set up rules upon upgrade, and t=
+hat=E2=80=99s it.&nbsp; Perhaps for first button press, but even that
+ ought to work on the first time the button is pressed AFTER the app and Li=
+nk FW are upgraded.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">PS, I have a personal =
+appointment ongoing during the time you scheduled this meeting.&nbsp; I
+<i>might</i> be able to attend at the beginning, but my calendar says I won=
+=E2=80=99t be available until 5pm, so I=E2=80=99ll join definitely by then,=
+ but only possibly before then.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">/Tom<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Monday, July 06, 2015 5:49 PM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Tom Hudson; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Rosanne Rogel<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ok great, let the team=
+ know which files to use, Jean Luc and Rosanne will be testing tomorrow and=
+ finalizing the test plan.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Ajay Kumar Goud Badagowni <br>
+<b>Sent:</b> Monday, July 06, 2015 5:43 PM<br>
+<b>To:</b> Martin Worth; Tom Hudson; Arsalan Haeri; Jean Luc Rault; John Ho=
+hener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Martin, <o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I will try the latest =
+versions (newer than the versions I demo=E2=80=99ed last Thursday) for iOS =
+and let you know if they are better than the initial versions I last shared=
+.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Android App is still h=
+as quite a few issues that block users=E2=80=99 normal navigation within th=
+e app.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay Badagowni<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal">_____________________________________________<br>
+<b>From:</b> Martin Worth <br>
+<b>Sent:</b> Monday, July 06, 2015 1:25 PM<br>
+<b>To:</b> Tom Hudson; Ajay Kumar Goud Badagowni; Arsalan Haeri; Jean Luc R=
+ault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri; Martin Worth<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Guys,<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Apologies if I sounded=
+ overly critical I=E2=80=99m just trying to understand the readiness and en=
+sure the test plan document that Jean Luc is working on sets the right expe=
+ctations to the users. We won=E2=80=99t test the push
+ button function at this time until rules are ready, I am concerned about t=
+he need to pair the devices multiple times as it=E2=80=99ll be hard to get =
+users to do that or understand, do we have any idea when we think that issu=
+e will be solved?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">We=E2=80=99re planning=
+ on being ready to give out the devices on Wednesday 7/8, all the sensors w=
+ill be updated and the test plan document ready by then. Is there a newer a=
+pp and FW for Link ready prior to then we should
+ use? Ajay what=E2=80=99s the latest version you=E2=80=99ve tested and what=
+ does it improve?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Do we think Android wi=
+ll progress enough this week to begin next Monday 7/13?<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I=E2=80=99ll schedule =
+a meeting for Wednesday to go through the latest and confirm the kick off.<=
+o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Martin.<o:p></o:p></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Tom Hudson <br>
+<b>Sent:</b> Thursday, July 02, 2015 3:37 PM<br>
+<b>To:</b> Ajay Kumar Goud Badagowni; Martin Worth; Arsalan Haeri; Jean Luc=
+ Rault; John Hohener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">What Ajay said.<o:p></=
+o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Seriously, though=E2=
+=80=A6.&nbsp; <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Fob button press never=
+ updates status, it=E2=80=99s purely a rule trigger, and that functionality=
+ will be delivered in next sprint.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">We always knew the Doo=
+r/Window Sensor drawers would be wonky at this juncture, hence using the re=
+al-time feedback in setup/edit for test contact sensor messaging from senso=
+r to Link to app, during pre-alpha.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I saw the Home/Away fu=
+nctionality working in today=E2=80=99s Sprint Demo.&nbsp; I defer to Ajay=
+=E2=80=99s recommendations.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">/Tom<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ta=
+homa&quot;,&quot;sans-serif&quot;">________________________________________=
+_____<br>
+<b>From:</b> Ajay Kumar Goud Badagowni <br>
+<b>Sent:</b> Thursday, July 02, 2015 3:27 PM<br>
+<b>To:</b> Martin Worth; Arsalan Haeri; Tom Hudson; Jean Luc Rault; John Ho=
+hener; Mike Mouawad<br>
+<b>Cc:</b> Venkat Pathuri<br>
+<b>Subject:</b> RE: WEMO Sensors SW plan for pre-alpha/alpha and beta.<o:p>=
+</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi Martin,<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">I forgot to mention th=
+e below point (I mentioned it to JeanLuc to include in his Pre-Alpha notes =
+to users).
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoListParagraph"><span style=3D"color:#1F497D">=E2=80=9CWhen y=
+ou first pair, the sensors will continue to show =E2=80=98just now=E2=80=99=
+ until you change the state of the devices and change it back.=E2=80=9D<o:p=
+></o:p></span></p>
+<p class=3D"MsoListParagraph"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:=
+p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#1F497D">1.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"color:#1F497D">Issue #1 is because, drawers are not s=
+upported for pre-alpha. =E2=80=98Edit=E2=80=99 screen IS the place you can =
+see the real-time feedback of D/W sensors.
+<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#1F497D">2.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"color:#1F497D">Issue #2 is out of scope for pre-Alpha=
+. Fob supports only Home/Away status messages.
+<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-.25in"><span style=3D"c=
+olor:#1F497D">3.</span><span style=3D"font-size:7.0pt;font-family:&quot;Tim=
+es New Roman&quot;,&quot;serif&quot;;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;
+</span><span style=3D"color:#1F497D">Issue #3 could be due to #3 I mentione=
+d below. You may need to try pairing the Fob a couple of times so that the =
+Link configures it correctly. Also, note that the fob takes about 35 second=
+s after you remove the battery to
+ register itself as =E2=80=98Away=E2=80=99 and about 8 seconds to register =
+itself as =E2=80=98Home=E2=80=99 after you place the battery in.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Thanks, <o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Ajay <o:p></o:p></span=
+></p>
+</div>
+</body>
+</html>
+
+
+--B_3519893283_353840623--
+
+--B_3519893283_1704164940
+Content-Type: text/plain;
+	name="uuid-Bridge-1_0-231451B01002FC@192.168.2.2.txt"
+Content-Disposition: attachment;
+	filename="uuid-Bridge-1_0-231451B01002FC@192.168.2.2.txt"
+Content-Transfer-Encoding: base64
+
+VGhlIHNlcnZlcidzIGhvc3Qga2V5IGlzIG5vdCBjYWNoZWQgaW4gdGhlIHJlZ2lzdHJ5LiBZb3UN
+CmhhdmUgbm8gZ3VhcmFudGVlIHRoYXQgdGhlIHNlcnZlciBpcyB0aGUgY29tcHV0ZXIgeW91DQp0
+aGluayBpdCBpcy4NClRoZSBzZXJ2ZXIncyByc2EyIGtleSBmaW5nZXJwcmludCBpczoNCnNzaC1y
+c2EgMTAzOSA4MDo2MzoxYjoxMTo3Zjo5YzpkZDoxOTozZjo0ZjozZTpkMjoxYzplNDoyYjo5NQ0K
+SWYgeW91IHRydXN0IHRoaXMgaG9zdCwgZW50ZXIgInkiIHRvIGFkZCB0aGUga2V5IHRvDQpQdVRU
+WSdzIGNhY2hlIGFuZCBjYXJyeSBvbiBjb25uZWN0aW5nLg0KSWYgeW91IHdhbnQgdG8gY2Fycnkg
+b24gY29ubmVjdGluZyBqdXN0IG9uY2UsIHdpdGhvdXQNCmFkZGluZyB0aGUga2V5IHRvIHRoZSBj
+YWNoZSwgZW50ZXIgIm4iLg0KSWYgeW91IGRvIG5vdCB0cnVzdCB0aGlzIGhvc3QsIHByZXNzIFJl
+dHVybiB0byBhYmFuZG9uIHRoZQ0KY29ubmVjdGlvbi4NClN0b3JlIGtleSBpbiBjYWNoZT8gKHkv
+bikgDQo9PT09TGluayBEaXNjb3ZlcmVkIGF0ID09PT06IDE5Mi4xNjguMi4yDQoNCg0KPT09PU5W
+UkFNX0dFVD09PT06DQoNCg0KPT09PVBTPT09PToNCiAgUElEIFVTRVIgICAgICAgVlNaIFNUQVQg
+Q09NTUFORA0KICAgIDEgcm9vdCAgICAgIDE1ODggUyAgICBpbml0DQogICAgMiByb290ICAgICAg
+ICAgMCBTV04gIFtrc29mdGlycWQvMF0NCiAgICAzIHJvb3QgICAgICAgICAwIFNXICAgW3dhdGNo
+ZG9nLzBdDQogICAgNCByb290ICAgICAgICAgMCBTVzwgIFtldmVudHMvMF0NCiAgICA1IHJvb3Qg
+ICAgICAgICAwIFNXPCAgW2toZWxwZXJdDQogICAgNiByb290ICAgICAgICAgMCBTVzwgIFtrdGhy
+ZWFkXQ0KICAgMTcgcm9vdCAgICAgICAgIDAgU1c8ICBba2Jsb2NrZC8wXQ0KICAgMjggcm9vdCAg
+ICAgICAgIDAgU1c8ICBba3N3YXBkMF0NCiAgIDI5IHJvb3QgICAgICAgICAwIFNXPCAgW2Fpby8w
+XQ0KICA2Njggcm9vdCAgICAgICAgIDAgU1cgICBbbXRkYmxvY2tkXQ0KIDEzNzcgcm9vdCAgICAg
+ICAgIDAgU1dOICBbamZmczJfZ2NkX210ZDhdDQogMTM4OCByb290ICAgICAgMTU4MCBTICAgIHty
+Y1N9IC9iaW4vc2ggL2V0Yy9pbml0LmQvcmNTIFMgYm9vdA0KIDEzOTEgcm9vdCAgICAgIDE1ODAg
+UyAgICBsb2dnZXIgLXMgLXAgNiAtdCBzeXNpbml0DQogMTM5MiByb290ICAgICAgMTU4OCBTICAg
+IGluaXQNCiAxMzk1IHJvb3QgICAgICAxNTg4IFMgICAgaW5pdA0KIDEzOTkgcm9vdCAgICAgIDE1
+NzYgUyAgICBzeXNsb2dkIC1zIDQ1IC1PIC92YXIvbG9nL21lc3NhZ2VzIC1TDQogMTQwMSByb290
+ICAgICAgMTU3NiBTICAgIGtsb2dkDQogMTQxOSByb290ICAgICAgICAgMCBTV04gIFtqZmZzMl9n
+Y2RfbXRkOV0NCiAxNDcxIHJvb3QgICAgICAgODE2IFMgICAgL3NiaW4vaG90cGx1ZzIgLS1vdmVy
+cmlkZSAtLXBlcnNpc3RlbnQgLS1zZXQtd29ya2VyDQogMTU2MyByb290ICAgICAgMTE4OCBTICAg
+IC91c3Ivc2Jpbi9kcm9wYmVhciAtcCAyMiAtUCAvdmFyL3J1bi9kcm9wYmVhci4xLnBpZA0KIDE1
+NjUgcm9vdCAgICAgMjM3NjAgUyAgICAvc2Jpbi9zeXNldmVudGQgLWQNCiAxNTk0IHJvb3QgICAg
+ICAxMTkyIFMgICAgc3lzZXZlbnRkX2ZvcmtfaGVscGVyIDgNCiAxNjIyIHJvb3QgICAgICAgICAw
+IFNXICAgW1J0bXBDbWRRVGFza10NCiAxNjI0IHJvb3QgICAgICAgICAwIFNXICAgW1J0bXBXc2NU
+YXNrXQ0KIDE2Mzcgbm9ib2R5ICAgICA5NTIgUyAgICAvdXNyL3NiaW4vZG5zbWFzcSAtSyAtRCAt
+eSAtWiAtYiAtRSAtcyBsYW4gLVMgL2xhbi8NCiAxNjQzIHJvb3QgICAgICAgNzg4IFMgICAgL3Ni
+aW4vcG1vcnRlbWQNCiAxNjU4IHJvb3QgICAgICAxNTg0IFMgICAgL3NiaW4vd2F0Y2hkb2cgLXQg
+NSAvZGV2L3dhdGNoZG9nDQogMTY4NCByb290ICAgICAgMTIwOCBTICAgIC9zYmluL3ppZ2JlZWQg
+LWQNCiAxNjg2IHJvb3QgICAgICAxMTkyIFMgICAgL3NiaW4vemlnYmVlZCAtZA0KIDE3MDggcm9v
+dCAgICAgIDE1ODQgUyAgICB7emJkbW9uaXRvci5zaH0gL2Jpbi9zaCAvc2Jpbi96YmRtb25pdG9y
+LnNoDQogMTcxNiByb290ICAgICAgMTQ3NiBTICAgIG52cmFtZA0KIDE3MjIgcm9vdCAgICAgIDE1
+ODAgUyAgICBzaCAvc2Jpbi9zdGFydFdlbW8uc2gNCiAxNzI0IHJvb3QgICAgICAgNzg4IFMgICAg
+L3NiaW4vd2Vtb3Rlc3QNCiAxNzI3IHJvb3QgICAgIDIwMTgwIFMgICAgL3NiaW4vbmF0Q2xpZW50
+DQogMTcyOCByb290ICAgICAgMTE2bSBTICAgIC9zYmluL3dlbW9BcHAgLXdlYmRpciAvdG1wL0Jl
+bGtpbl9zZXR0aW5ncy8NCiAxOTU0IHJvb3QgICAgICAxNTkyIFMgICAgdWRoY3BjIC1pIGFwY2xp
+MA0KIDE5ODggcm9vdCAgICAgIDExMjAgUyAgICAvdXNyL3NiaW4vbnRwY2xpZW50IC1zIC1sIC1E
+IC1wIDEyMyAtaCAxMzIuMTYzLjQuMTAyDQogMzQ4NyByb290ICAgICAgMTU3MiBTICAgIHNsZWVw
+IDINCiAzNDg4IHJvb3QgICAgICAxMjQ0IFMgICAgL3Vzci9zYmluL2Ryb3BiZWFyIC1wIDIyIC1Q
+IC92YXIvcnVuL2Ryb3BiZWFyLjEucGlkDQogMzQ4OSByb290ICAgICAgMTU4MCBTICAgIGFzaCAt
+YyBlY2hvO2VjaG8gPT09PUxpbmsgRGlzY292ZXJlZCBhdCA9PT09OiAxOTIuMTYNCiAzNDkxIHJv
+b3QgICAgICAxNTgwIFIgICAgcHMNCg0KDQo9PT09Y2F0IC92YXIvbG9nL21lc3NhZ2VzPT09PToN
+Ckp1bCAxNCAxMToxNzo1OCBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxr
+aW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA3IGZpbGUgaXMgbm90IGV4aXN0ZWQu
+Li4NCkp1bCAxNCAxMToxNzo1OCBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9C
+ZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA4IGZpbGUgaXMgbm90IGV4aXN0
+ZWQuLi4NCkp1bCAxNCAxMToxNzo1OCBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3Rt
+cC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA5IGZpbGUgaXMgbm90IGV4
+aXN0ZWQuLi4NCkp1bCAxNCAxMToxNzo1OCBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTog
+L3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjEwIGZpbGUgaXMgbm90
+IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxNzo1OCBXRU1POiBbU0RdIHNtX1BhcnNlWmlnYmVlQ2x1
+c3RlckpTT046IDdDRTUyNDAwMDAxNDAyMjAubm9kZV9pZCBmaWxlIGlzIG5vdCBleGlzdGVkLi4u
+DQpKdWwgMTQgMTE6MTc6NTggV0VNTzogW1NEXSBzbV9QYXJzZVppZ2JlZUNsdXN0ZXJKU09OOiBS
+ZXR1cm4gU0VORF9aQl9HRVRfRU5EUE9JTlQgPSBbMF0uLi4NCkp1bCAxNCAxMToxNzo1OCBzeXNp
+bml0OiBTdGFydGluZyBJUEMgUmVjZWl2ZTo3DQpKdWwgMTQgMTE6MTc6NTggc3lzaW5pdDogemln
+YmVlZCBub2RlX2lkOjB4ZWI5NSwgZW5kcG9pbnQ6MA0KSnVsIDE0IDExOjE3OjU4IHN5c2luaXQ6
+IGNtZDoxMDggcDE6ODIxNzMyMjg4IHAyOjEgcDM6MCBwNDowIA0KSnVsIDE0IDExOjE3OjU4IHN5
+c2luaXQ6IEZ1bGwgTmFtZTovdG1wL0JlbGtpbl9zZXR0aW5ncy96YmlkLjdDRTUyNDAwMDAxNDAy
+MjANCkp1bCAxNCAxMToxNzo1OCBzeXNpbml0OiAqKiBMQVRFU1QgTk9ERSBJRCB6aWdiZWVkIG5v
+ZGVfaWQ6MHhlYjk1IA0KSnVsIDE0IDExOjE3OjU4IHN5c2luaXQ6IHpiZFNldFRpbWVUb0Fib3J0
+IHNfVGltZVRvQWJvcnQ6NTE2NDANCkp1bCAxNCAxMToxNzo1OCBzeXNpbml0OiBJUENfQ01EX0dF
+VF9FTkRQT0lOVCANCkp1bCAxNCAxMToxNzo1OCBzeXNpbml0OiBbWkJEX1NUX0lQQ19SRUNWXS0t
+LT5bWkJEX1NUX1pCX0dFVF0NCkp1bCAxNCAxMToxNzo1OCBzeXNpbml0OiBbWkJEX1NUX1pCX0dF
+VF0tLS0+W1pCRF9TVF9aQl9NU0dfU0VOVF9TVEFUVVNdDQpKdWwgMTQgMTE6MTc6NTggc3lzaW5p
+dDogemJkU2VuZEdldEFjdGl2ZUVuZHBvaW50OiBkZXN0aW5hdGlvbjoweGViOTUgDQpKdWwgMTQg
+MTE6MTc6NTggc3lzaW5pdDogemJkU2V0U291cmNlUm91dGUgc3VjY2Vzcw0KSnVsIDE0IDExOjE3
+OjU4IHN5c2luaXQ6IHpiZEFjdGl2ZUVuZHBvaW50c1JlcXVlc3Q6IHBhcmFtTm9kZUlkOjB4ZWI5
+NSBzdGF0dXM6MHgwDQpKdWwgMTQgMTE6MTc6NTggc3lzaW5pdDogRW1iZXJfU3RhdHVzX0NvZGU6
+MHgwIA0KSnVsIDE0IDExOjE3OjU5IHN5c2luaXQ6IFNlcnZpY2UgRGlzY292ZXJ5IGRvbmUuIA0K
+SnVsIDE0IDExOjE3OjU5IHN5c2luaXQ6IGVtYmVyQWZNZXNzYWdlU2VudENhbGxiYWNrIA0KSnVs
+IDE0IDExOjE3OjU5IHN5c2luaXQ6IEVtYmVyX1N0YXR1c19Db2RlOiAweDAgdHlwZToweDQgaW5k
+ZXhPckRlc3RpbmF0aW9uOjB4RkZGQyBtc2dMZW46MHgzDQpKdWwgMTQgMTE6MTc6NTkgc3lzaW5p
+dDogQnl0ZSBTdHJlYW06NTIgZmUgMDAgDQpKdWwgMTQgMTE6MTg6MDMgc3lzaW5pdDogRVJST1I6
+IHR4IDY2LCBQcm9maWxlOiBaRE8gKDB4MDAwMCksIENsdXN0ZXI6IDB4MDAwNSwgMyBieXRlcyxe
+TQ0KSnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IGVtYmVyQWZNZXNzYWdlU2VudENhbGxiYWNrIA0K
+SnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IEVtYmVyX1N0YXR1c19Db2RlOiAweDY2IHR5cGU6MHgw
+IGluZGV4T3JEZXN0aW5hdGlvbjoweEVCOTUgbXNnTGVuOjB4Mw0KSnVsIDE0IDExOjE4OjAzIHN5
+c2luaXQ6IEJ5dGUgU3RyZWFtOjUzIDk1IGViIA0KSnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IHN5
+c2V2ZW50IHNldCB6Yl9lcnJvcl9zdGF0dXMgIjdDRTUyNDAwMDAxNDAyMjAgLTMgNSIgDQpKdWwg
+MTQgMTE6MTg6MDMgV0VNTzogW1NEXSBzbV9FdmVudEhhbmRsZXIgOiBaaWdiZWUgZXZlbnQgcmVj
+ZWl2ZWQsIHJhdyBzdHJpbmc6IHpiX2Vycm9yX3N0YXR1cyA3Q0U1MjQwMDAwMTQwMjIwIC0zIDUN
+Ckp1bCAxNCAxMToxODowMyBXRU1POiBbU0RdIHNtX0V2ZW50SGFuZGxlciA6IHpiX2Vycm9yX3N0
+YXR1cywgZGV2aWNlX2lkID0gN0NFNTI0MDAwMDE0MDIyMCwgY2FwYWJpbGl0eV9pZCA9IDEwMDA1
+IA0KSnVsIDE0IDExOjE4OjAzIFdFTU86IFtTRF0gc21fRmluZERldmljZSgxOjdDRTUyNDAwMDAx
+NDAyMjApOiBEZXZpY2UgTm90IEZvdW5kIG9yIGl0J3MgYW4gR3JvdXBJRCANCkp1bCAxNCAxMTox
+ODowMyBzeXNpbml0OiB6YmRJc05vZGVTZW5zb3IgaW5kZXg6NCwgcmV0OjAsIG5vZGVUeXBlOjB4
+MDAwMCANCkp1bCAxNCAxMToxODowMyBzeXNpbml0OiB6YmRTY2hlZHVsZUFkZHJlc3NSZXF1ZXN0
+IA0KSnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IHpiZFNldFNvdXJjZVJvdXRlIHN1Y2Nlc3MNCkp1
+bCAxNCAxMToxODowMyBzeXNpbml0OiBNVE9SUiArZW1iZXJBZlBsdWdpbkNvbmNlbnRyYXRvclF1
+ZXVlRGlzY292ZXJ5OiB0aW1lUVM6MjAgDQpKdWwgMTQgMTE6MTg6MDMgc3lzaW5pdDogemJkU2No
+ZWR1bGVBZGRyZXNzUmVxdWVzdDogbm9kZUlkOjB4RUI5NSwgIHRpbWVRU0FjdGlvbjo1MTY1OSAN
+Ckp1bCAxNCAxMToxODowMyBzeXNpbml0OiBFbnRlcmluZyB6YmRSZXBseUdlbmVyYWxSZXNwb25z
+ZSwgcmVzcFZhbHVlOjB4RkZGRkZGRkQsIGVycm9yQ29kZTotMyANCkp1bCAxNCAxMToxODowMyBz
+eXNpbml0OiBFbnRlcmluZyB6YmRSZXBseU5vUGF5bG9hZFJlc3BvbnNlIGVycm9yQ29kZTotMw0K
+SnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IExlYXZpbmcgemJkUmVwbHlOb1BheWxvYWRSZXNwb25z
+ZQ0KSnVsIDE0IDExOjE4OjAzIHN5c2luaXQ6IFtaQkRfU1RfWkJfTVNHX1NFTlRfU1RBVFVTXS0t
+LT5bWkJEX1NUX0lQQ19SRUNWXQ0KSnVsIDE0IDExOjE4OjAzIFdFTU86IFtTRF0gICAgIHNsZWVw
+IDVzZWNvbmRzIGZvciBNVE9SUiBpbiBzbV9EZXZpY2VTZW5kQ29tbWFuZCANCkp1bCAxNCAxMTox
+ODowOCBzeXNpbml0OiBTdGFydGluZyBJUEMgUmVjZWl2ZTo3DQpKdWwgMTQgMTE6MTg6MDggc3lz
+aW5pdDogemlnYmVlZCBub2RlX2lkOjB4ZWI5NSwgZW5kcG9pbnQ6MA0KSnVsIDE0IDExOjE4OjA4
+IHN5c2luaXQ6IGNtZDoxMDggcDE6ODIxNzMyMjg4IHAyOjEgcDM6MCBwNDowIA0KSnVsIDE0IDEx
+OjE4OjA4IHN5c2luaXQ6IEZ1bGwgTmFtZTovdG1wL0JlbGtpbl9zZXR0aW5ncy96YmlkLjdDRTUy
+NDAwMDAxNDAyMjANCkp1bCAxNCAxMToxODowOCBzeXNpbml0OiAqKiBMQVRFU1QgTk9ERSBJRCB6
+aWdiZWVkIG5vZGVfaWQ6MHhlYjk1IA0KSnVsIDE0IDExOjE4OjA4IHN5c2luaXQ6IHpiZFNldFRp
+bWVUb0Fib3J0IHNfVGltZVRvQWJvcnQ6NTE2ODANCkp1bCAxNCAxMToxODowOCBzeXNpbml0OiBJ
+UENfQ01EX0dFVF9FTkRQT0lOVCANCkp1bCAxNCAxMToxODowOCBzeXNpbml0OiBbWkJEX1NUX0lQ
+Q19SRUNWXS0tLT5bWkJEX1NUX1pCX0dFVF0NCkp1bCAxNCAxMToxODowOCBzeXNpbml0OiBbWkJE
+X1NUX1pCX0dFVF0tLS0+W1pCRF9TVF9aQl9NU0dfU0VOVF9TVEFUVVNdDQpKdWwgMTQgMTE6MTg6
+MDggc3lzaW5pdDogemJkU2VuZEdldEFjdGl2ZUVuZHBvaW50OiBkZXN0aW5hdGlvbjoweGViOTUg
+DQpKdWwgMTQgMTE6MTg6MDggc3lzaW5pdDogemJkU2V0U291cmNlUm91dGUgc3VjY2Vzcw0KSnVs
+IDE0IDExOjE4OjA4IHN5c2luaXQ6IHpiZEFjdGl2ZUVuZHBvaW50c1JlcXVlc3Q6IHBhcmFtTm9k
+ZUlkOjB4ZWI5NSBzdGF0dXM6MHgwDQpKdWwgMTQgMTE6MTg6MDggc3lzaW5pdDogRW1iZXJfU3Rh
+dHVzX0NvZGU6MHgwIA0KSnVsIDE0IDExOjE4OjA5IHN5c2luaXQ6IG5vZGVJZDogMHhFQjk1IA0K
+SnVsIDE0IDExOjE4OjA5IHN5c2luaXQ6IG5vd1FTOjUxNjU5LCBlbWJlckFmRmluZE5vZGVJZCA6
+N0NFNTI0MDAwMDE0MDIyMA0KSnVsIDE0IDExOjE4OjA5IHN5c2luaXQ6IHBlcmlvZGljRXZlbnRI
+YW5kbGVyOiBJbmFjdGl2ZQ0KSnVsIDE0IDExOjE4OjA5IHN5c2luaXQ6IGVtYmVyQWZNZXNzYWdl
+U2VudENhbGxiYWNrIA0KSnVsIDE0IDExOjE4OjA5IHN5c2luaXQ6IEVtYmVyX1N0YXR1c19Db2Rl
+OiAweDAgdHlwZToweDQgaW5kZXhPckRlc3RpbmF0aW9uOjB4RkZGRCBtc2dMZW46MHhCDQpKdWwg
+MTQgMTE6MTg6MDkgc3lzaW5pdDogQnl0ZSBTdHJlYW06NTUgMjAgMDIgMTQgMDAgMDAgMjQgZTUg
+N2MgMDAgMDAgDQpKdWwgMTQgMTE6MTg6MTEgc3lzaW5pdDogU2VydmljZSBEaXNjb3ZlcnkgZG9u
+ZS4gDQpKdWwgMTQgMTE6MTg6MTEgV0VNTzogMTE6MTg6MTEgfCBhcHAuZGVidWcgPGxvZ2dlci5j
+OnBsdWdpbkxvZzozMzA+IFsweDJiZGFiNTIwOiJJbmV0TW9uaXRvclRhc2siXSB3ZW1vQXBwWzE3
+ODg6e0luZXRNb25pdG9yVGFza31dOlsyMDE1LTA3LTE0XVsxMToxODoxMS4yNzI4MDddPHdpZmlI
+bmRsci5jOkluZXRNb25pdG9yVGFzazoyNDY0PiBbMHgyYmRhYjUyMDoiSW5ldE1vbml0b3JUYXNr
+Il0gSW5ldCBjb25uZWN0aXZpdHkgdGhyZWFkIGhlYWx0aCBPSyBbMTE5XS4uLg0KSnVsIDE0IDEx
+OjE4OjEzIFdFTU86IFtTRF0gc21fRXZlbnRIYW5kbGVyIDogWmlnYmVlIGV2ZW50IHJlY2VpdmVk
+LCByYXcgc3RyaW5nOiB6Yl9lcnJvcl9zdGF0dXMgN0NFNTI0MDAwMDE0MDIyMCAtMyA1DQpKdWwg
+MTQgMTE6MTg6MTMgV0VNTzogW1NEXSBzbV9FdmVudEhhbmRsZXIgOiB6Yl9lcnJvcl9zdGF0dXMs
+IGRldmljZV9pZCA9IDdDRTUyNDAwMDAxNDAyMjAsIGNhcGFiaWxpdHlfaWQgPSAxMDAwNSANCkp1
+bCAxNCAxMToxODoxMyBXRU1POiBbU0RdIHNtX0ZpbmREZXZpY2UoMTo3Q0U1MjQwMDAwMTQwMjIw
+KTogRGV2aWNlIE5vdCBGb3VuZCBvciBpdCdzIGFuIEdyb3VwSUQgDQpKdWwgMTQgMTE6MTg6MTMg
+c3lzaW5pdDogRVJST1I6IHR4IDY2LCBQcm9maWxlOiBaRE8gKDB4MDAwMCksIENsdXN0ZXI6IDB4
+MDAwNSwgMyBieXRlcyxeTQ0KSnVsIDE0IDExOjE4OjEzIHN5c2luaXQ6IGVtYmVyQWZNZXNzYWdl
+U2VudENhbGxiYWNrIA0KSnVsIDE0IDExOjE4OjEzIHN5c2luaXQ6IEVtYmVyX1N0YXR1c19Db2Rl
+OiAweDY2IHR5cGU6MHgwIGluZGV4T3JEZXN0aW5hdGlvbjoweEVCOTUgbXNnTGVuOjB4Mw0KSnVs
+IDE0IDExOjE4OjEzIHN5c2luaXQ6IEJ5dGUgU3RyZWFtOjU0IDk1IGViIA0KSnVsIDE0IDExOjE4
+OjEzIHN5c2luaXQ6IHN5c2V2ZW50IHNldCB6Yl9lcnJvcl9zdGF0dXMgIjdDRTUyNDAwMDAxNDAy
+MjAgLTMgNSIgDQpKdWwgMTQgMTE6MTg6MTMgc3lzaW5pdDogemJkSXNOb2RlU2Vuc29yIGluZGV4
+OjQsIHJldDowLCBub2RlVHlwZToweDAwMDAgDQpKdWwgMTQgMTE6MTg6MTMgc3lzaW5pdDogemJk
+U2NoZWR1bGVBZGRyZXNzUmVxdWVzdCANCkp1bCAxNCAxMToxODoxMyBzeXNpbml0OiB6YmRTZXRT
+b3VyY2VSb3V0ZSBzdWNjZXNzDQpKdWwgMTQgMTE6MTg6MTMgc3lzaW5pdDogTVRPUlIgK2VtYmVy
+QWZQbHVnaW5Db25jZW50cmF0b3JRdWV1ZURpc2NvdmVyeTogdGltZVFTOjIwIA0KSnVsIDE0IDEx
+OjE4OjEzIHN5c2luaXQ6IHpiZFNjaGVkdWxlQWRkcmVzc1JlcXVlc3Q6IG5vZGVJZDoweEVCOTUs
+ICB0aW1lUVNBY3Rpb246NTE2OTggDQpKdWwgMTQgMTE6MTg6MTMgc3lzaW5pdDogRW50ZXJpbmcg
+emJkUmVwbHlHZW5lcmFsUmVzcG9uc2UsIHJlc3BWYWx1ZToweEZGRkZGRkZELCBlcnJvckNvZGU6
+LTMgDQpKdWwgMTQgMTE6MTg6MTMgc3lzaW5pdDogRW50ZXJpbmcgemJkUmVwbHlOb1BheWxvYWRS
+ZXNwb25zZSBlcnJvckNvZGU6LTMNCkp1bCAxNCAxMToxODoxMyBzeXNpbml0OiBMZWF2aW5nIHpi
+ZFJlcGx5Tm9QYXlsb2FkUmVzcG9uc2UNCkp1bCAxNCAxMToxODoxMyBzeXNpbml0OiBbWkJEX1NU
+X1pCX01TR19TRU5UX1NUQVRVU10tLS0+W1pCRF9TVF9JUENfUkVDVl0NCkp1bCAxNCAxMToxODox
+MyBXRU1POiBbU0RdICAgICBzbGVlcCA1c2Vjb25kcyBmb3IgTVRPUlIgaW4gc21fRGV2aWNlU2Vu
+ZENvbW1hbmQgDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogW1NEXSBzbV9EZXZpY2VTZW5kQ29tbWFu
+ZCg3KSBmYWlsZWQgDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogW1NEXSBEZXZpY2UgN0NFNTI0MDAw
+MDE0MDIyMDpFQjk1IGNvbW1hbmQgc3RhdHVzIHtzdWNjZXNzOjAsIGZhaWw6Mn0gDQpKdWwgMTQg
+MTE6MTg6MTggV0VNTzogW1NEXSBzbV9HZXREZXZpY2VJbmZvIEV4aXQgOiB1cGRhdGVkID0gWzB4
+MF0uLi4gDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogW1NEXSBzbV9BZGREZXZpY2VQcm9wZXJ0eSA6
+IHVwZGF0ZWQgPSAweDANCkp1bCAxNCAxMToxODoxOCBXRU1POiBbU0RdIHNtX0dldERldmljZUlu
+Zm8gRW50cnkuLi4uIA0KSnVsIDE0IDExOjE4OjE4IFdFTU86IFtTRF0gc21fR2V0RGV2aWNlSW5m
+byBFeGl0IDogdXBkYXRlZCA9IFsweDBdLi4uIA0KSnVsIDE0IDExOjE4OjE4IFdFTU86IFtTRF0g
+c21fR2V0RGV2aWNlSW5mbyBFbnRyeS4uLi4gDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogW1NEXSBz
+bV9HZXREZXZpY2VJbmZvIEV4aXQgOiB1cGRhdGVkID0gWzB4MF0uLi4gDQpKdWwgMTQgMTE6MTg6
+MTggV0VNTzogW1NEXSBzbV9HZXREZXZpY2VJbmZvIEVudHJ5Li4uLiANCkp1bCAxNCAxMToxODox
+OCBXRU1POiBbU0RdIHNtX0dldERldmljZUluZm8gRXhpdCA6IHVwZGF0ZWQgPSBbMHgwXS4uLiAN
+Ckp1bCAxNCAxMToxODoxOCBXRU1POiAxMToxODoxOCB8IHVwbnAuZGVidWcgPGxlZExpZ2h0VVBu
+UEhhbmRsZXIuYzpDcmVhdGVFbmREZXZpY2VMaXN0WE1MOjE0MTA+IFsweDMwZmFiNTIwOiIiXSBH
+ZXRFbmREZXZpY2VzOiBuRGV2aWNlQ250KDMpLCBuR3JvdXBDbnQoMSkNCkp1bCAxNCAxMToxODox
+OCBXRU1POiAxMToxODoxOCB8IHVwbnAuZGVidWcgPGxlZExpZ2h0VVBuUEhhbmRsZXIuYzpHZXRF
+bmREZXZpY2VzOjE3ODc+IFsweDMwZmFiNTIwOiIiXSBHZXRFbmREZXZpY2VzOiA9PT0gcHN6UmVz
+cG9uc2UgPT09DQpKdWwgMTQgMTE6MTg6MTggV0VNTzogdXBucC5kZWJ1ZyA8P3htbCB2ZXJzaW9u
+PSIxLjAiIGVuY29kaW5nPSJ1dGYtOCI/PjxEZXZpY2VMaXN0cz48RGV2aWNlTGlzdD48RGV2aWNl
+TGlzdFR5cGU+UGFpcmVkPC9EZXZpY2VMaXN0VHlwZT48RGV2aWNlSW5mb3M+PERldmljZUluZm8+
+PCBbIDE3MTgwNjk2MzYgXQ0KSnVsIDE0IDExOjE4OjE4IFdFTU86IHVwbnAuZGVidWcgRGV2aWNl
+SW5kZXg+MDwvRGV2aWNlSW5kZXg+PERldmljZUlEPjk0MTAzRTdBRkRENTAwMUI8L0RldmljZUlE
+PjxGcmllbmRseU5hbWU+V2VNbyBSb29tIE1vdGlvbiBTZW5zb3IgMDE8L0ZyaWVuZGx5TmFtZT48
+SWNvblZlcnMgWyAxNzE4MDY5NjM2IF0NCkp1bCAxNCAxMToxODoxOCBXRU1POiB1cG5wLmRlYnVn
+IGlvbj4xPC9JY29uVmVyc2lvbj48RmlybXdhcmVWZXJzaW9uPjFGPC9GaXJtd2FyZVZlcnNpb24+
+PENhcGFiaWxpdHlJRHM+MTA1MDAsMjA1MDAsMzA1MDE8L0NhcGFiaWxpdHlJRHM+PEN1cnJlbnRT
+dGF0ZT45YTAwLDEsMDwvIFsgMTcxODA2OTYzNiBdDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogdXBu
+cC5kZWJ1ZyBDdXJyZW50U3RhdGU+PE1hbnVmYWN0dXJlcj5CZWxraW48L01hbnVmYWN0dXJlcj48
+TW9kZWxDb2RlPkY3QzA0MTwvTW9kZWxDb2RlPjxwcm9kdWN0TmFtZT5QSVI8L3Byb2R1Y3ROYW1l
+PjxXZU1vQ2VydGlmaWVkPllFUzwvVyBbIDE3MTgwNjk2MzYgXQ0KSnVsIDE0IDExOjE4OjE4IFdF
+TU86IHVwbnAuZGVidWcgZU1vQ2VydGlmaWVkPjwvRGV2aWNlSW5mbz48RGV2aWNlSW5mbz48RGV2
+aWNlSW5kZXg+MTwvRGV2aWNlSW5kZXg+PERldmljZUlEPjk0MTAzRTcxRDYxNDAwQUY8L0Rldmlj
+ZUlEPjxGcmllbmRseU5hbWU+V2VNbyBBbGFybSAgWyAxNzE4MDY5NjM2IF0NCkp1bCAxNCAxMTox
+ODoxOCBXRU1POiB1cG5wLmRlYnVnIFNlbnNvciAwMTwvRnJpZW5kbHlOYW1lPjxJY29uVmVyc2lv
+bj4xPC9JY29uVmVyc2lvbj48RmlybXdhcmVWZXJzaW9uPjFGPC9GaXJtd2FyZVZlcnNpb24+PENh
+cGFiaWxpdHlJRHM+MTA1MDAsMjA1MDAsMzA1MDE8L0NhcGFiIFsgMTcxODA2OTYzNiBdDQpKdWwg
+MTQgMTE6MTg6MTggV0VNTzogdXBucC5kZWJ1ZyBpbGl0eUlEcz48Q3VycmVudFN0YXRlPmFhMDAs
+MSwwPC9DdXJyZW50U3RhdGU+PE1hbnVmYWN0dXJlcj5CZWxraW48L01hbnVmYWN0dXJlcj48TW9k
+ZWxDb2RlPkY3QzA0MDwvTW9kZWxDb2RlPjxwcm9kdWN0TmFtZT5BbGFybSBbIDE3MTgwNjk2MzYg
+XQ0KSnVsIDE0IDExOjE4OjE4IFdFTU86IHVwbnAuZGVidWcgU2Vuc29yPC9wcm9kdWN0TmFtZT48
+V2VNb0NlcnRpZmllZD5ZRVM8L1dlTW9DZXJ0aWZpZWQ+PC9EZXZpY2VJbmZvPjxEZXZpY2VJbmZv
+PjxEZXZpY2VJbmRleD4yPC9EZXZpY2VJbmRleD48RGV2aWNlSUQ+OTQxMDNFNzFENjEgWyAxNzE4
+MDY5NjM2IF0NCkp1bCAxNCAxMToxODoxOCBXRU1POiB1cG5wLmRlYnVnIDQwMzE2PC9EZXZpY2VJ
+RD48RnJpZW5kbHlOYW1lPldlTW8gSG9tZSBhbmQgQXdheSBTZW5zb3IgMDE8L0ZyaWVuZGx5TmFt
+ZT48SWNvblZlcnNpb24+MTwvSWNvblZlcnNpb24+PEZpcm13YXJlVmVyc2lvbj4xRjwvRmlybXdh
+IFsgMTcxODA2OTYzNiBdDQpKdWwgMTQgMTE6MTg6MTggV0VNTzogdXBucC5kZWJ1ZyByZVZlcnNp
+b24+PENhcGFiaWxpdHlJRHM+MTA1MDAsMjA1MDAsMzA1MDEsMjA1MDI8L0NhcGFiaWxpdHlJRHM+
+PEN1cnJlbnRTdGF0ZT4xLDEsMCwxMDwvQ3VycmVudFN0YXRlPjxNYW51ZmFjdHVyZXI+QmVsa2lu
+PC9NYW51ZiBbIDE3MTgwNjk2MzYgXQ0KSnVsIDE0IDExOjE4OjE5IHN5c2luaXQ6IG5vZGVJZDog
+MHhFQjk1IA0KSnVsIDE0IDExOjE4OjE5IHN5c2luaXQ6IG5vd1FTOjUxNjk4LCBlbWJlckFmRmlu
+ZE5vZGVJZCA6N0NFNTI0MDAwMDE0MDIyMA0KSnVsIDE0IDExOjE4OjE5IHN5c2luaXQ6IHBlcmlv
+ZGljRXZlbnRIYW5kbGVyOiBJbmFjdGl2ZQ0KSnVsIDE0IDExOjE4OjIwIHN5c2luaXQ6IGVtYmVy
+QWZNZXNzYWdlU2VudENhbGxiYWNrIA0KSnVsIDE0IDExOjE4OjIwIHN5c2luaXQ6IEVtYmVyX1N0
+YXR1c19Db2RlOiAweDAgdHlwZToweDQgaW5kZXhPckRlc3RpbmF0aW9uOjB4RkZGRCBtc2dMZW46
+MHhCDQpKdWwgMTQgMTE6MTg6MjAgc3lzaW5pdDogQnl0ZSBTdHJlYW06NTYgMjAgMDIgMTQgMDAg
+MDAgMjQgZTUgN2MgMDAgMDAgDQpKdWwgMTQgMTE6MTg6MjEgc3lzaW5pdDogU2VydmljZSBEaXNj
+b3ZlcnkgZG9uZS4gDQpKdWwgMTQgMTE6MTg6NDYgV0VNTzogMTE6MTg6NDYgfCBhcHAuZGVidWcg
+PGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0g
+d2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUtMDctMTRdWzExOjE4OjQ2LjY3
+Njc4MF08VURTQ2xpZW50SGFuZGxlci5jOlVEU19nZXRSZW1vdGVEYXRhQnl0ZXM6MzMyPiBbMHgy
+YmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIGNvbW1hbmQ6SVBDX0NNRF9OQVRfR0VUX1JFTU9U
+RV9EQVRBX0JZVEVTDQpKdWwgMTQgMTE6MTg6NDYgV0VNTzogMTE6MTg6NDYgfCBhcHAuZGVidWcg
+PGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0g
+d2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUtMDctMTRdWzExOjE4OjQ2LjY3
+ODA5NF08aXBjVURTQ2xpZW50LmM6U3RhcnRJUENDbGllbnQ6MjEzPiBbMHgyYmJhYjUyMDoiY2hl
+Y2tJbmV0Q29ubmVjdCJdIElQQyBDbGllbnQgc3RhcnRlZCBvbiBTb2NrZXQ6MTUNCkp1bCAxNCAx
+MToxODo0NiBXRU1POiAxMToxODo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMz
+MD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1vQXBwWzE3ODc6e2NoZWNrSW5l
+dENvbm5lY3R9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NDYuNjc4NTAyXTxpcGNVRFNDbGllbnQuYzpT
+ZW5kSVBDQ29tbWFuZDoyNDA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gSVBDIGNs
+aWVudCBTb2NrZXQgU2VudCBzdWNjZXNzOjgsIHJlbWFpbmluZzowDQpKdWwgMTQgMTE6MTg6NDYg
+V0VNTzogMTE6MTg6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJh
+YWIwMzEwOiJTdGFydElwY1Vkc1NlcnZlIl0gbmF0Q2xpZW50WzE3Mjc6e1N0YXJ0SXBjVWRzU2Vy
+dmV9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NDYuNjc5MzYwXTxpcGNVRFNTZXJ2ZXIuYzpTdGFydElw
+Y1Vkc1NlcnZlcjoxNDk+IFsweDJhYWIwMzEwOiJTdGFydElwY1Vkc1NlcnZlIl0gQ3JlYXRlZCB1
+bml4IGRvbWFpbiBjaGlsZCBzZXJ2ZXIgdGhyZWFkLi4uIA0KSnVsIDE0IDExOjE4OjQ2IFdFTU86
+IDExOjE4OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYWFiMDMx
+MDoiU3RhcnRJcGNVZHNTZXJ2ZSJdIG5hdENsaWVudFsxNzI3OntTdGFydElwY1Vkc1NlcnZlfV06
+WzIwMTUtMDctMTRdWzExOjE4OjQ2LjY4MTIzM108aXBjVURTU2VydmVyLmM6U3RhcnRJcGNVZHNT
+ZXJ2ZXI6MTI2PiBbMHgyYWFiMDMxMDoiU3RhcnRJcGNVZHNTZXJ2ZSJdIFdhaXQgb24gQWNjZXB0
+Lg0KSnVsIDE0IDExOjE4OjQ2IFdFTU86IDExOjE4OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpw
+bHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiQ2hpbGRGRFRhc2siXSBuYXRDbGllbnRbMzQxODp7
+Q2hpbGRGRFRhc2t9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NDYuNjgzMzI4XTxpcGNVRFNTZXJ2ZXIu
+YzpDaGlsZEZEVGFzazoxODM+IFsweDJiYmFiNTIwOiJDaGlsZEZEVGFzayJdIEluIENoaWxkIEZE
+IFRhc2s6Mw0KSnVsIDE0IDExOjE4OjQ2IFdFTU86IDExOjE4OjQ2IHwgYXBwLmRlYnVnIDxsb2dn
+ZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIHdlbW9B
+cHBbMTc4Nzp7Y2hlY2tJbmV0Q29ubmVjdH1dOlsyMDE1LTA3LTE0XVsxMToxODo0Ni42ODUzOTZd
+PGlwY1VEU0NsaWVudC5jOlByb2Nlc3NDbGllbnRJUENDb21tYW5kOjE4MD4gWzB4MmJiYWI1MjA6
+ImNoZWNrSW5ldENvbm5lY3QiXSBDbG9zZWQgVURTIENsaWVudCBTb2NrZXQ6MTUNCkp1bCAxNCAx
+MToxODo0NiBXRU1POiAxMToxODo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMz
+MD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1vQXBwWzE3ODc6e2NoZWNrSW5l
+dENvbm5lY3R9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NDYuNjg1NzY5XTxVRFNDbGllbnRIYW5kbGVy
+LmM6VURTX2dldFJlbW90ZURhdGFCeXRlczozMzc+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25u
+ZWN0Il0gY29tbWFuZCBzdGF0dXMgPSAgMA0KSnVsIDE0IDExOjE4OjQ2IFdFTU86IDExOjE4OjQ2
+IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiY2hlY2tJ
+bmV0Q29ubmVjdCJdIHdlbW9BcHBbMTc4Nzp7Y2hlY2tJbmV0Q29ubmVjdH1dOlsyMDE1LTA3LTE0
+XVsxMToxODo0Ni42ODYxMjBdPHdpZmlIbmRsci5jOmNoZWNrRGF0YUJ5dGVzRnJvbVJvdXRlcjoz
+NzI2PiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIFNvbWUgZGF0YSBieXRlcyByZWNl
+aXZlZCBmcm9tIFJvdXRlciwgTG9jYWw6IDE3NCBhbmQgUmVtb3RlOiAwDQpKdWwgMTQgMTE6MTg6
+NDYgV0VNTzogMTE6MTg6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsw
+eDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25u
+ZWN0fV06WzIwMTUtMDctMTRdWzExOjE4OjQ2LjY4NjQwNl08VURTQ2xpZW50SGFuZGxlci5jOlVE
+U19zZXRSZW1vdGVEYXRhQnl0ZXM6MzQzPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJd
+IGNvbW1hbmQ6SVBDX0NNRF9OQVRfU0VUX1JFTU9URV9EQVRBX0JZVEVTDQpKdWwgMTQgMTE6MTg6
+NDYgV0VNTzogMTE6MTg6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsw
+eDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25u
+ZWN0fV06WzIwMTUtMDctMTRdWzExOjE4OjQ2LjY4Njk1OF08aXBjVURTQ2xpZW50LmM6U3RhcnRJ
+UENDbGllbnQ6MjEzPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIElQQyBDbGllbnQg
+c3RhcnRlZCBvbiBTb2NrZXQ6MTUNCkp1bCAxNCAxMToxODo1MiBXRU1POiAxMToxODo1MiB8IGFw
+cC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0Zp
+bGVUaHIiXSB3ZW1vQXBwWzE4Mzg6e3VwbG9hZExvZ0ZpbGVUaHJ9XTpbMjAxNS0wNy0xNF1bMTE6
+MTg6NTIuODYwODc1XTxVRFNDbGllbnRIYW5kbGVyLmM6VURTX1NldE5UUFRpbWVTeW5jU3RhdHVz
+OjQ0MD4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSBjb21tYW5kOklQQ19DTURfTkFU
+X1NFVF9OVFBfVElNRV9TWU5DDQpKdWwgMTQgMTE6MTg6NTIgV0VNTzogMTE6MTg6NTIgfCBhcHAu
+ZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJhYWIwMzEwOiJTdGFydElwY1Vkc1Nl
+cnZlIl0gbmF0Q2xpZW50WzE3Mjc6e1N0YXJ0SXBjVWRzU2VydmV9XTpbMjAxNS0wNy0xNF1bMTE6
+MTg6NTIuODYyOTQ3XTxpcGNVRFNTZXJ2ZXIuYzpTdGFydElwY1Vkc1NlcnZlcjoxNDk+IFsweDJh
+YWIwMzEwOiJTdGFydElwY1Vkc1NlcnZlIl0gQ3JlYXRlZCB1bml4IGRvbWFpbiBjaGlsZCBzZXJ2
+ZXIgdGhyZWFkLi4uIA0KSnVsIDE0IDExOjE4OjUyIFdFTU86IDExOjE4OjUyIHwgYXBwLmRlYnVn
+IDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYWFiMDMxMDoiU3RhcnRJcGNVZHNTZXJ2ZSJd
+IG5hdENsaWVudFsxNzI3OntTdGFydElwY1Vkc1NlcnZlfV06WzIwMTUtMDctMTRdWzExOjE4OjUy
+Ljg2NDk4MF08aXBjVURTU2VydmVyLmM6U3RhcnRJcGNVZHNTZXJ2ZXI6MTI2PiBbMHgyYWFiMDMx
+MDoiU3RhcnRJcGNVZHNTZXJ2ZSJdIFdhaXQgb24gQWNjZXB0Lg0KSnVsIDE0IDExOjE4OjUyIFdF
+TU86IDExOjE4OjUyIHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmRh
+YjUyMDoiQ2hpbGRGRFRhc2siXSBuYXRDbGllbnRbMzQyNjp7Q2hpbGRGRFRhc2t9XTpbMjAxNS0w
+Ny0xNF1bMTE6MTg6NTIuODY3MzQ5XTxpcGNVRFNTZXJ2ZXIuYzpDaGlsZEZEVGFzazoxODM+IFsw
+eDJiZGFiNTIwOiJDaGlsZEZEVGFzayJdIEluIENoaWxkIEZEIFRhc2s6Ng0KSnVsIDE0IDExOjE4
+OjUyIFdFTU86IDExOjE4OjUyIHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBb
+MHgzMDFhYjUyMDoidXBsb2FkTG9nRmlsZVRociJdIHdlbW9BcHBbMTgzODp7dXBsb2FkTG9nRmls
+ZVRocn1dOlsyMDE1LTA3LTE0XVsxMToxODo1Mi44Njk1ODFdPGlwY1VEU0NsaWVudC5jOlN0YXJ0
+SVBDQ2xpZW50OjIxMz4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSBJUEMgQ2xpZW50
+IHN0YXJ0ZWQgb24gU29ja2V0OjE1DQpKdWwgMTQgMTE6MTg6NTIgV0VNTzogMTE6MTg6NTIgfCBh
+cHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJiZGFiNTIwOiJDaGlsZEZEVGFz
+ayJdIG5hdENsaWVudFszNDI2OntDaGlsZEZEVGFza31dOlsyMDE1LTA3LTE0XVsxMToxODo1Mi44
+NzAzMDBdPFVEU1NlcnZlckhhbmRsZXIuYzpVRFNTZXRTZXJ2ZXJOVFBUaW1lU3luY1N0YXR1czo4
+NDY+IFsweDJiZGFiNTIwOiJDaGlsZEZEVGFzayJdIE5UUCB0aW1lIHN5bmMgc2V0IGlzOjENCkp1
+bCAxNCAxMToxODo1MiBXRU1POiAxMToxODo1MiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2lu
+TG9nOjMzMD4gWzB4MmJkYWI1MjA6IkNoaWxkRkRUYXNrIl0gbmF0Q2xpZW50WzM0MjY6e0NoaWxk
+RkRUYXNrfV06WzIwMTUtMDctMTRdWzExOjE4OjUyLjg3MjI4NV08aXBjVURTU2VydmVyLmM6Q2hp
+bGRGRFRhc2s6MjIyPiBbMHgyYmRhYjUyMDoiQ2hpbGRGRFRhc2siXSBDbG9zaW5nIFNlcnZlciBD
+aGlsZCBGRCBUYXNrOjYNCkp1bCAxNCAxMToxODo1MiBXRU1POiAxMToxODo1MiB8IGFwcC5kZWJ1
+ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJkYWI1MjA6IkNoaWxkRkRUYXNrIl0gbmF0
+Q2xpZW50WzM0MjY6e0NoaWxkRkRUYXNrfV06WzIwMTUtMDctMTRdWzExOjE4OjUyLjg3NDM5MV08
+aXBjVURTU2VydmVyLmM6Q2hpbGRGRFRhc2s6MjI5PiBbMHgyYmRhYjUyMDoiQ2hpbGRGRFRhc2si
+XSBFeGl0IGNoaWxkIEZEIFRhc2sNCkp1bCAxNCAxMToxODo1MiBXRU1POiAxMToxODo1MiB8IGFw
+cC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0Zp
+bGVUaHIiXSB3ZW1vQXBwWzE4Mzg6e3VwbG9hZExvZ0ZpbGVUaHJ9XTpbMjAxNS0wNy0xNF1bMTE6
+MTg6NTIuODc2ODM3XTxpcGNVRFNDbGllbnQuYzpTZW5kSVBDQ29tbWFuZDoyNDA+IFsweDMwMWFi
+NTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gSVBDIGNsaWVudCBTb2NrZXQgU2VudCBzdWNjZXNzOjEy
+LCByZW1haW5pbmc6MA0KSnVsIDE0IDExOjE4OjUyIFdFTU86IDExOjE4OjUyIHwgYXBwLmRlYnVn
+IDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgzMDFhYjUyMDoidXBsb2FkTG9nRmlsZVRociJd
+IHdlbW9BcHBbMTgzODp7dXBsb2FkTG9nRmlsZVRocn1dOlsyMDE1LTA3LTE0XVsxMToxODo1Mi44
+Nzc1NTldPGlwY1VEU0NsaWVudC5jOlByb2Nlc3NDbGllbnRJUENDb21tYW5kOjE4MD4gWzB4MzAx
+YWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSBDbG9zZWQgVURTIENsaWVudCBTb2NrZXQ6MTUNCkp1
+bCAxNCAxMToxODo1MiBXRU1POiAxMToxODo1MiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2lu
+TG9nOjMzMD4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSB3ZW1vQXBwWzE4Mzg6e3Vw
+bG9hZExvZ0ZpbGVUaHJ9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NTIuODc4MTE0XTxVRFNDbGllbnRI
+YW5kbGVyLmM6VURTX1NldE5UUFRpbWVTeW5jU3RhdHVzOjQ0NT4gWzB4MzAxYWI1MjA6InVwbG9h
+ZExvZ0ZpbGVUaHIiXSBOVFAgdGltZSBzeW5jIHNldCBzdGF0dXMgPSAxDQpKdWwgMTQgMTE6MTg6
+NTIgV0VNTzogMTE6MTg6NTIgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsw
+eDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gd2Vtb0FwcFsxODM4Ont1cGxvYWRMb2dGaWxl
+VGhyfV06WzIwMTUtMDctMTRdWzExOjE4OjUyLjg3OTE0NF08cnVsZS5jOklzTnRwVXBkYXRlOjM3
+MT4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSAqKioqKioqKioqKioqIElTTlRQVVBE
+QVRFIE5PVyBZRUFSIElTIE5PVCAyMDAwDQpKdWwgMTQgMTE6MTg6NTIgV0VNTzogMTE6MTg6NTIg
+fCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDMwMWFiNTIwOiJ1cGxvYWRM
+b2dGaWxlVGhyIl0gd2Vtb0FwcFsxODM4Ont1cGxvYWRMb2dGaWxlVGhyfV06WzIwMTUtMDctMTRd
+WzExOjE4OjUyLjg4MTQ0MV08cmVtb3RlVXBkYXRlLmM6dXBsb2FkTG9nRmlsZURldlN0YXR1czo0
+MjI+IFsweDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gU2VuZGluZy4uLiAvdmFyL2xvZy9t
+ZXNzYWdlcy4wDQpKdWwgMTQgMTE6MTg6NTQgV0VNTzogMTE6MTg6NTQgfCBhcHAuZGVidWcgPGxv
+Z2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gd2Vt
+b0FwcFsxODM4Ont1cGxvYWRMb2dGaWxlVGhyfV06WzIwMTUtMDctMTRdWzExOjE4OjU0LjgyMDc3
+N108aHR0cHNXcmFwcGVyLmM6d2ViQXBwU2VuZERhdGE6MjY2Nz4gWzB4MzAxYWI1MjA6InVwbG9h
+ZExvZ0ZpbGVUaHIiXSBIVFRQIFJlcXVlc3QgVVJMIGh0dHA6Ly9kZXZpY2VzLnhiY3MubmV0Ojg4
+OTkvVG9vbFNlcnZpY2UvbG9nL3VwbG9hZFdkTG9nRmlsZS85NDEwM0VDREExMzAgcmVxdWVzdGVk
+IGZsYWcgMiBkaXNhYmxlRmxhZyAwIGh0dHBzRmxhZyAwIHJldFZhbCAwIHJlc3BDb2RlIDIwMA0K
+SnVsIDE0IDExOjE4OjU0IFdFTU86IDExOjE4OjU0IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVn
+aW5Mb2c6MzMwPiBbMHgzMDFhYjUyMDoidXBsb2FkTG9nRmlsZVRociJdIHdlbW9BcHBbMTgzODp7
+dXBsb2FkTG9nRmlsZVRocn1dOlsyMDE1LTA3LTE0XVsxMToxODo1NC44MjM1NDBdPHJlbW90ZVVw
+ZGF0ZS5jOnVwbG9hZE1lc3NhZ2VGaWxlOjEyNDA+IFsweDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxl
+VGhyIl0gVXBsb2FkIExvZyBGaWxlOiAvdmFyL2xvZy9tZXNzYWdlcy4wIHN1Y2Nlc3MuLi4NCkp1
+bCAxNCAxMToxODo1NCBXRU1POiAxMToxODo1NCB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2lu
+TG9nOjMzMD4gWzB4MzAxYWI1MjA6InVwbG9hZExvZ0ZpbGVUaHIiXSB3ZW1vQXBwWzE4Mzg6e3Vw
+bG9hZExvZ0ZpbGVUaHJ9XTpbMjAxNS0wNy0xNF1bMTE6MTg6NTQuODYxMDAxXTxsb2dnZXIuYzpv
+cGVuRmlsZToxOTk+IFsweDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gIC0tLWxvY2FsVFo6
+IC04LjAwMDAwMCxMb2NhbFRpbWVab25lOi04LjAsIERTVFZhbDogMA0KSnVsIDE0IDExOjE4OjU0
+IFdFTU86IFdETE9HOiAyMDE1LTA3LTE0VDExOjE4OjU0LTA4MDB8MTgzOHxUaW1lWm9uZTogLTgu
+MDAwMDAwLERTVDogTkEsVmVyOiBXZU1vX1dXXzIuMDAuOTMwMy5EVlQtT1dSVC1MaW5rDQpKdWwg
+MTQgMTE6MTg6NTQgV0VNTzogMTE6MTg6NTQgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxv
+ZzozMzA+IFsweDMwMWFiNTIwOiJ1cGxvYWRMb2dGaWxlVGhyIl0gd2Vtb0FwcFsxODM4Ont1cGxv
+YWRMb2dGaWxlVGhyfV06WzIwMTUtMDctMTRdWzExOjE4OjU0Ljg2MjE4OF08bG9nZ2VyLmM6b3Bl
+bkZpbGU6MjE2PiBbMHgzMDFhYjUyMDoidXBsb2FkTG9nRmlsZVRociJdICoqKioqKioqKioqKioq
+KiBUaW1lWm9uZTogLTguMDAwMDAwLCBEU1QgRW5hYmxlIFZhbHVlOiAwICoqKioqKioqKioqKioq
+Kg0KSnVsIDE0IDExOjE5OjAzIFdFTU86IDExOjE5OjMgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBs
+dWdpbkxvZzozMzA+IFsweDMwZmFiNTIwOiIiXSB3ZW1vQXBwWzIyODc6e31dOlsyMDE1LTA3LTE0
+XVsxMToxOTowMy4yNTQwNDhdPGNvbnRyb2xsZWVkZXZpY2UuYzpDdHJsZWVEZXZpY2VIYW5kbGVB
+Y3Rpb25SZXF1ZXN0OjE5NTE+IFsweDMwZmFiNTIwOiIiXSBBY3Rpb24gZm91bmQ6IEdldERldmlj
+ZVN0YXR1cw0KSnVsIDE0IDExOjE5OjAzIFdFTU86IDExOjE5OjMgfCB1cG5wLmRlYnVnIDxsZWRM
+aWdodFVQblBIYW5kbGVyLmM6R2V0RGV2aWNlU3RhdHVzOjI1NjU+IFsweDMwZmFiNTIwOiIiXSBH
+ZXREZXZpY2VTdGF0dXMgPT09IHN0YXJ0ID09PQ0KSnVsIDE0IDExOjE5OjAzIFdFTU86IDExOjE5
+OjMgfCB1cG5wLmRlYnVnIDxsZWRMaWdodFVQblBIYW5kbGVyLmM6Q3JlYXRlRGV2aWNlU3RhdHVz
+WE1MOjI0NTY+IFsweDMwZmFiNTIwOiIiXSBHZXREZXZpY2VTdGF0dXM6IHN6RGV2aWNlSURzWzBd
+ID0gOTQxMDNFN0FGREQ1MDAxQg0KSnVsIDE0IDExOjE5OjAzIFdFTU86IFtTRF0gLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tDQpKdWwgMTQgMTE6MTk6MDMgV0VNTzogW1NEXSBHZXREZXZpY2VDYXBh
+YmlsaXR5VmFsdWUoOTQxMDNFN0FGREQ1MDAxQiwxMDUwMCwgQXZhaWxhYmxlPTEpIA0KSnVsIDE0
+IDExOjE5OjAzIFdFTU86IFtTRF0gICBSZWFkIGZyb20gY2FjaGU6KDk0MTAzRTdBRkRENTAwMUIs
+MTA1MDAsOWEwMCkNCkp1bCAxNCAxMToxOTowMyBXRU1POiBbU0RdIC0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLQ0KSnVsIDE0IDExOjE5OjAzIFdFTU86IFtTRF0gR2V0RGV2aWNlQ2FwYWJpbGl0eVZh
+bHVlKDk0MTAzRTdBRkRENTAwMUIsMjA1MDAsIEF2YWlsYWJsZT0xKSANCkp1bCAxNCAxMToxOTow
+MyBXRU1POiBbU0RdICAgUmVhZCBmcm9tIGNhY2hlOig5NDEwM0U3QUZERDUwMDFCLDIwNTAwLDEp
+DQpKdWwgMTQgMTE6MTk6MDMgV0VNTzogW1NEXSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCkp1
+bCAxNCAxMToxOTowMyBXRU1POiBbU0RdIEdldERldmljZUNhcGFiaWxpdHlWYWx1ZSg5NDEwM0U3
+QUZERDUwMDFCLDMwNTAxLCBBdmFpbGFibGU9MSkgDQpKdWwgMTQgMTE6MTk6MjAgV0VNTzogMTE6
+MTk6MjAgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDMxYmFiNTIwOiJD
+dHJsUHRSZWRpc2NvdmVyIl0gd2Vtb0FwcFsyMDQxOntDdHJsUHRSZWRpc2NvdmVyfV06WzIwMTUt
+MDctMTRdWzExOjE5OjIwLjYyMzAxOF08cGx1Z2luX2N0cmxwb2ludC5jOkN0cmxQdFJlZGlzY292
+ZXJUYXNrOjI1NT4gWzB4MzFiYWI1MjA6IkN0cmxQdFJlZGlzY292ZXIiXSAjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMgQ29udHJvbCBwb2ludCB0byByZS1kaXNjb3ZlcjogNy8xMCAjIyMjIyMjIyMjIyMj
+IyMjIyMjDQpKdWwgMTQgMTE6MTk6MjAgV0VNTzogICMjIyMjIyMjIyMgVGltZSBvdXQgc2V0IGZv
+ciBqb2IgPTE0MzY4OTc5NjI2MjQgIyMjIyMjIyMjIyMgDQpKdWwgMTQgMTE6MTk6MjAgV0VNTzog
+W1R1ZSBKdWwgMTQgMTE6MTk6MjAgMjAxNSBdOmpvYl9pZFs0NF06UmVjZWl2aW5nIGRpc2NvdmVy
+eSByZXF1ZXN0OiBNWDogMiBmcm9tOiAxOTIuMTY4LjIuMg0KSnVsIDE0IDExOjE5OjIwIFdFTU86
+ICAjIyMjIyMjIyNSZXBseSB0aW1lIHBhc3MgdG8gVGltZXJUaHJlYWRTY2hlZHVsZSA9ODY0bXMg
+IyMjIyMjIyMjIw0KSnVsIDE0IDExOjE5OjIwIFdFTU86ICAjIyMjIyMjIyMjIFRpbWUgb3V0IHNl
+dCBmb3Igam9iID0xNDM2ODk3OTYxNDkwICMjIyMjIyMjIyMjIA0KSnVsIDE0IDExOjE5OjIxIFdF
+TU86IFtUdWUgSnVsIDE0IDExOjE5OjIxIDIwMTUgXTpqb2JfaWRbNDRdOlNlbnQgZGlzY292ZXJ5
+IHJlc3BvbnNlIHRvIGRldmljZToxOTIuMTY4LjIuMg0KSnVsIDE0IDExOjE5OjM4IFdFTU86IFtU
+dWUgSnVsIDE0IDExOjE5OjM4IDIwMTUgXTpqb2JfaWRbNDVdOlJlY2VpdmluZyBkaXNjb3Zlcnkg
+cmVxdWVzdDogTVg6IDUgZnJvbTogMTkyLjE2OC4yLjQNCkp1bCAxNCAxMToxOTozOCBXRU1POiAg
+IyMjIyMjIyMjUmVwbHkgdGltZSBwYXNzIHRvIFRpbWVyVGhyZWFkU2NoZWR1bGUgPTI3MzVtcyAj
+IyMjIyMjIyMjDQpKdWwgMTQgMTE6MTk6MzggV0VNTzogICMjIyMjIyMjIyMgVGltZSBvdXQgc2V0
+IGZvciBqb2IgPTE0MzY4OTc5ODExMDYgIyMjIyMjIyMjIyMgDQpKdWwgMTQgMTE6MTk6NDEgV0VN
+TzogW1R1ZSBKdWwgMTQgMTE6MTk6NDEgMjAxNSBdOmpvYl9pZFs0NV06U2VudCBkaXNjb3Zlcnkg
+cmVzcG9uc2UgdG8gZGV2aWNlOjE5Mi4xNjguMi40DQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6
+MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJj
+aGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUt
+MDctMTRdWzExOjE5OjQ2Ljk0NDgxMl08VURTQ2xpZW50SGFuZGxlci5jOlVEU19nZXRSZW1vdGVE
+YXRhQnl0ZXM6MzMyPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIGNvbW1hbmQ6SVBD
+X0NNRF9OQVRfR0VUX1JFTU9URV9EQVRBX0JZVEVTDQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6
+MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJj
+aGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsxNzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUt
+MDctMTRdWzExOjE5OjQ2Ljk0NTQ3OF08aXBjVURTQ2xpZW50LmM6U3RhcnRJUENDbGllbnQ6MjEz
+PiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIElQQyBDbGllbnQgc3RhcnRlZCBvbiBT
+b2NrZXQ6MTUNCkp1bCAxNCAxMToxOTo0NiBXRU1POiAxMToxOTo0NiB8IGFwcC5kZWJ1ZyA8bG9n
+Z2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1v
+QXBwWzE3ODc6e2NoZWNrSW5ldENvbm5lY3R9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTQ1ODQ1
+XTxpcGNVRFNDbGllbnQuYzpTZW5kSVBDQ29tbWFuZDoyNDA+IFsweDJiYmFiNTIwOiJjaGVja0lu
+ZXRDb25uZWN0Il0gSVBDIGNsaWVudCBTb2NrZXQgU2VudCBzdWNjZXNzOjgsIHJlbWFpbmluZzow
+DQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBs
+dWdpbkxvZzozMzA+IFsweDJhYWIwMzEwOiJTdGFydElwY1Vkc1NlcnZlIl0gbmF0Q2xpZW50WzE3
+Mjc6e1N0YXJ0SXBjVWRzU2VydmV9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTQ3NjA0XTxpcGNV
+RFNTZXJ2ZXIuYzpTdGFydElwY1Vkc1NlcnZlcjoxNDk+IFsweDJhYWIwMzEwOiJTdGFydElwY1Vk
+c1NlcnZlIl0gQ3JlYXRlZCB1bml4IGRvbWFpbiBjaGlsZCBzZXJ2ZXIgdGhyZWFkLi4uIA0KSnVs
+IDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5M
+b2c6MzMwPiBbMHgyYWFiMDMxMDoiU3RhcnRJcGNVZHNTZXJ2ZSJdIG5hdENsaWVudFsxNzI3OntT
+dGFydElwY1Vkc1NlcnZlfV06WzIwMTUtMDctMTRdWzExOjE5OjQ2Ljk0OTQ5Nl08aXBjVURTU2Vy
+dmVyLmM6U3RhcnRJcGNVZHNTZXJ2ZXI6MTI2PiBbMHgyYWFiMDMxMDoiU3RhcnRJcGNVZHNTZXJ2
+ZSJdIFdhaXQgb24gQWNjZXB0Lg0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBw
+LmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmRhYjUyMDoiQ2hpbGRGRFRhc2si
+XSBuYXRDbGllbnRbMzQ4MTp7Q2hpbGRGRFRhc2t9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTUx
+Nzg2XTxpcGNVRFNTZXJ2ZXIuYzpDaGlsZEZEVGFzazoxODM+IFsweDJiZGFiNTIwOiJDaGlsZEZE
+VGFzayJdIEluIENoaWxkIEZEIFRhc2s6OA0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2
+IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiY2hlY2tJ
+bmV0Q29ubmVjdCJdIHdlbW9BcHBbMTc4Nzp7Y2hlY2tJbmV0Q29ubmVjdH1dOlsyMDE1LTA3LTE0
+XVsxMToxOTo0Ni45NTQwNDBdPGlwY1VEU0NsaWVudC5jOlByb2Nlc3NDbGllbnRJUENDb21tYW5k
+OjE4MD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSBDbG9zZWQgVURTIENsaWVudCBT
+b2NrZXQ6MTUNCkp1bCAxNCAxMToxOTo0NiBXRU1POiAxMToxOTo0NiB8IGFwcC5kZWJ1ZyA8bG9n
+Z2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1v
+QXBwWzE3ODc6e2NoZWNrSW5ldENvbm5lY3R9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTU0NDY3
+XTxVRFNDbGllbnRIYW5kbGVyLmM6VURTX2dldFJlbW90ZURhdGFCeXRlczozMzc+IFsweDJiYmFi
+NTIwOiJjaGVja0luZXRDb25uZWN0Il0gY29tbWFuZCBzdGF0dXMgPSAgMA0KSnVsIDE0IDExOjE5
+OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBb
+MHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIHdlbW9BcHBbMTc4Nzp7Y2hlY2tJbmV0Q29u
+bmVjdH1dOlsyMDE1LTA3LTE0XVsxMToxOTo0Ni45NTQ3NzRdPHdpZmlIbmRsci5jOmNoZWNrRGF0
+YUJ5dGVzRnJvbVJvdXRlcjozNzI2PiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIFNv
+bWUgZGF0YSBieXRlcyByZWNlaXZlZCBmcm9tIFJvdXRlciwgTG9jYWw6IDEzMyBhbmQgUmVtb3Rl
+OiAwDQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5j
+OnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsx
+Nzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUtMDctMTRdWzExOjE5OjQ2Ljk1NTA2MV08VURT
+Q2xpZW50SGFuZGxlci5jOlVEU19zZXRSZW1vdGVEYXRhQnl0ZXM6MzQzPiBbMHgyYmJhYjUyMDoi
+Y2hlY2tJbmV0Q29ubmVjdCJdIGNvbW1hbmQ6SVBDX0NNRF9OQVRfU0VUX1JFTU9URV9EQVRBX0JZ
+VEVTDQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5j
+OnBsdWdpbkxvZzozMzA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gd2Vtb0FwcFsx
+Nzg3OntjaGVja0luZXRDb25uZWN0fV06WzIwMTUtMDctMTRdWzExOjE5OjQ2Ljk1NTYwOF08aXBj
+VURTQ2xpZW50LmM6U3RhcnRJUENDbGllbnQ6MjEzPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29u
+bmVjdCJdIElQQyBDbGllbnQgc3RhcnRlZCBvbiBTb2NrZXQ6MTUNCkp1bCAxNCAxMToxOTo0NiBX
+RU1POiAxMToxOTo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJi
+YWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1vQXBwWzE3ODc6e2NoZWNrSW5ldENvbm5lY3R9
+XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTU1OTc0XTxpcGNVRFNDbGllbnQuYzpTZW5kSVBDQ29t
+bWFuZDoyNDA+IFsweDJiYmFiNTIwOiJjaGVja0luZXRDb25uZWN0Il0gSVBDIGNsaWVudCBTb2Nr
+ZXQgU2VudCBzdWNjZXNzOjgsIHJlbWFpbmluZzowDQpKdWwgMTQgMTE6MTk6NDYgV0VNTzogMTE6
+MTk6NDYgfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJhYWIwMzEwOiJT
+dGFydElwY1Vkc1NlcnZlIl0gbmF0Q2xpZW50WzE3Mjc6e1N0YXJ0SXBjVWRzU2VydmV9XTpbMjAx
+NS0wNy0xNF1bMTE6MTk6NDYuOTU3ODczXTxpcGNVRFNTZXJ2ZXIuYzpTdGFydElwY1Vkc1NlcnZl
+cjoxNDk+IFsweDJhYWIwMzEwOiJTdGFydElwY1Vkc1NlcnZlIl0gQ3JlYXRlZCB1bml4IGRvbWFp
+biBjaGlsZCBzZXJ2ZXIgdGhyZWFkLi4uIA0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2
+IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYWFiMDMxMDoiU3RhcnRJ
+cGNVZHNTZXJ2ZSJdIG5hdENsaWVudFsxNzI3OntTdGFydElwY1Vkc1NlcnZlfV06WzIwMTUtMDct
+MTRdWzExOjE5OjQ2Ljk2MDEwNl08aXBjVURTU2VydmVyLmM6U3RhcnRJcGNVZHNTZXJ2ZXI6MTI2
+PiBbMHgyYWFiMDMxMDoiU3RhcnRJcGNVZHNTZXJ2ZSJdIFdhaXQgb24gQWNjZXB0Lg0KSnVsIDE0
+IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6
+MzMwPiBbMHgyYmRhYjUyMDoiQ2hpbGRGRFRhc2siXSBuYXRDbGllbnRbMzQ4MTp7Q2hpbGRGRFRh
+c2t9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTYyMTgxXTxpcGNVRFNTZXJ2ZXIuYzpDaGlsZEZE
+VGFzazoyMjI+IFsweDJiZGFiNTIwOiJDaGlsZEZEVGFzayJdIENsb3NpbmcgU2VydmVyIENoaWxk
+IEZEIFRhc2s6OA0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRlYnVnIDxs
+b2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmRhYjUyMDoiQ2hpbGRGRFRhc2siXSBuYXRDbGll
+bnRbMzQ4MTp7Q2hpbGRGRFRhc2t9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTYzOTc4XTxpcGNV
+RFNTZXJ2ZXIuYzpDaGlsZEZEVGFzazoyMjk+IFsweDJiZGFiNTIwOiJDaGlsZEZEVGFzayJdIEV4
+aXQgY2hpbGQgRkQgVGFzaw0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRl
+YnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiQ2hpbGRGRFRhc2siXSBu
+YXRDbGllbnRbMzQ4Mjp7Q2hpbGRGRFRhc2t9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTY2Mjk1
+XTxpcGNVRFNTZXJ2ZXIuYzpDaGlsZEZEVGFzazoxODM+IFsweDJiYmFiNTIwOiJDaGlsZEZEVGFz
+ayJdIEluIENoaWxkIEZEIFRhc2s6Ng0KSnVsIDE0IDExOjE5OjQ2IFdFTU86IDExOjE5OjQ2IHwg
+YXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0
+Q29ubmVjdCJdIHdlbW9BcHBbMTc4Nzp7Y2hlY2tJbmV0Q29ubmVjdH1dOlsyMDE1LTA3LTE0XVsx
+MToxOTo0Ni45NjgyNzVdPGlwY1VEU0NsaWVudC5jOlByb2Nlc3NDbGllbnRJUENDb21tYW5kOjE4
+MD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSBDbG9zZWQgVURTIENsaWVudCBTb2Nr
+ZXQ6MTUNCkp1bCAxNCAxMToxOTo0NiBXRU1POiAxMToxOTo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2Vy
+LmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJiYWI1MjA6ImNoZWNrSW5ldENvbm5lY3QiXSB3ZW1vQXBw
+WzE3ODc6e2NoZWNrSW5ldENvbm5lY3R9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDYuOTY4NzUyXTxV
+RFNDbGllbnRIYW5kbGVyLmM6VURTX3NldFJlbW90ZURhdGFCeXRlczozNDg+IFsweDJiYmFiNTIw
+OiJjaGVja0luZXRDb25uZWN0Il0gY29tbWFuZCBzdGF0dXMgPSAgMA0KSnVsIDE0IDExOjE5OjQ2
+IFdFTU86IDExOjE5OjQ2IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgy
+YmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIHdlbW9BcHBbMTc4Nzp7Y2hlY2tJbmV0Q29ubmVj
+dH1dOlsyMDE1LTA3LTE0XVsxMToxOTo0Ni45NjkwOTRdPHdpZmlIbmRsci5jOmNoZWNrSW5ldENv
+bm5lY3Rpdml0eTozNzk4PiBbMHgyYmJhYjUyMDoiY2hlY2tJbmV0Q29ubmVjdCJdIFJvdXRlciBj
+b25uZWN0aXZpdHkgYWxyZWFkeSBjaGVja2VkLi4NCkp1bCAxNCAxMToxOTo0NiBXRU1POiAxMTox
+OTo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MmJiYWI1MjA6IkNo
+aWxkRkRUYXNrIl0gbmF0Q2xpZW50WzM0ODI6e0NoaWxkRkRUYXNrfV06WzIwMTUtMDctMTRdWzEx
+OjE5OjQ2Ljk2OTgxM108aXBjVURTU2VydmVyLmM6Q2hpbGRGRFRhc2s6MjIyPiBbMHgyYmJhYjUy
+MDoiQ2hpbGRGRFRhc2siXSBDbG9zaW5nIFNlcnZlciBDaGlsZCBGRCBUYXNrOjYNCkp1bCAxNCAx
+MToxOTo0NiBXRU1POiAxMToxOTo0NiB8IGFwcC5kZWJ1ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMz
+MD4gWzB4MmJiYWI1MjA6IkNoaWxkRkRUYXNrIl0gbmF0Q2xpZW50WzM0ODI6e0NoaWxkRkRUYXNr
+fV06WzIwMTUtMDctMTRdWzExOjE5OjQ2Ljk3MjE3N108aXBjVURTU2VydmVyLmM6Q2hpbGRGRFRh
+c2s6MjI5PiBbMHgyYmJhYjUyMDoiQ2hpbGRGRFRhc2siXSBFeGl0IGNoaWxkIEZEIFRhc2sNCkp1
+bCAxNCAxMToxOTo0NyBXRU1POiBbVHVlIEp1bCAxNCAxMToxOTo0NyAyMDE1IF06am9iX2lkWzQ2
+XTpSZWNlaXZpbmcgZGlzY292ZXJ5IHJlcXVlc3Q6IE1YOiAxIGZyb206IDE5Mi4xNjguMi4zDQpK
+dWwgMTQgMTE6MTk6NDcgV0VNTzogICMjIyMjIyMjI1JlcGx5IHRpbWUgcGFzcyB0byBUaW1lclRo
+cmVhZFNjaGVkdWxlID0xMDBtcyAjIyMjIyMjIyMjDQpKdWwgMTQgMTE6MTk6NDcgV0VNTzogICMj
+IyMjIyMjIyMgVGltZSBvdXQgc2V0IGZvciBqb2IgPTE0MzY4OTc5ODc5NzIgIyMjIyMjIyMjIyMg
+DQpKdWwgMTQgMTE6MTk6NDcgV0VNTzogW1R1ZSBKdWwgMTQgMTE6MTk6NDcgMjAxNSBdOmpvYl9p
+ZFs0Nl06U2VudCBkaXNjb3ZlcnkgcmVzcG9uc2UgdG8gZGV2aWNlOjE5Mi4xNjguMi4zDQpKdWwg
+MTQgMTE6MTk6NDggV0VNTzogMTE6MTk6NDggfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxv
+ZzozMzA+IFsweDMwZmFiNTIwOiIiXSB3ZW1vQXBwWzIyODc6e31dOlsyMDE1LTA3LTE0XVsxMTox
+OTo0OC4wNzQxNDldPGNvbnRyb2xsZWVkZXZpY2UuYzpDdHJsZWVEZXZpY2VIYW5kbGVBY3Rpb25S
+ZXF1ZXN0OjE5NTE+IFsweDMwZmFiNTIwOiIiXSBBY3Rpb24gZm91bmQ6IEdldEluZm9ybWF0aW9u
+DQpKdWwgMTQgMTE6MTk6NDggV0VNTzogMTE6MTk6NDggfCBhcHAuZGVidWcgPGxvZ2dlci5jOnBs
+dWdpbkxvZzozMzA+IFsweDMwZmFiNTIwOiIiXSB3ZW1vQXBwWzIyODc6e31dOlsyMDE1LTA3LTE0
+XVsxMToxOTo0OC4wNzQ2MTJdPGNvbnRyb2xsZWVkZXZpY2UuYzpoYW5kbGVUaW1lU3luYzo2ODIz
+PiBbMHgzMGZhYjUyMDoiIl0gc2V0IHRpbWU6IHV0YzogMTQzNjg5Nzk5NywgdGltZXpvbmU6IC0w
+Ny4wLCBkc3Q6IDEsIHN6SXNMb2NhbERzdDogMQ0KSnVsIDE0IDExOjE5OjQ4IFdFTU86IDExOjE5
+OjQ4IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgzMGZhYjUyMDoiIl0g
+d2Vtb0FwcFsyMjg3Ont9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDguMDc1ODk0XTxjb250cm9sbGVl
+ZGV2aWNlLmM6Z2V0RGV2aWNlVUROU3RyaW5nOjEwMDI+IFsweDMwZmFiNTIwOiIiXSBEZXZpY2Ug
+dHlwZTogMSBhbmQgdGVtcCB0eXBlOiA1DQpKdWwgMTQgMTE6MTk6NDggV0VNTzogV0RMT0c6IDIw
+MTUtMDctMTRUMTE6MTk6NDgtMDgwMHx3ZW1vQXBwWzIyODc6e31dOnxnZXREZXZpY2VVRE5TdHJp
+bmd8RGV2aWNlIHR5cGU6IDEgYW5kIHRlbXAgdHlwZTogNQ0KSnVsIDE0IDExOjE5OjQ4IFdFTU86
+IDExOjE5OjQ4IHwgYXBwLmRlYnVnIDxsb2dnZXIuYzpwbHVnaW5Mb2c6MzMwPiBbMHgzMGZhYjUy
+MDoiIl0gd2Vtb0FwcFsyMjg3Ont9XTpbMjAxNS0wNy0xNF1bMTE6MTk6NDguMDc2NTIzXTxjb250
+cm9sbGVlZGV2aWNlLmM6Z2V0RGV2aWNlVUROU3RyaW5nOjEwMDU+IFsweDMwZmFiNTIwOiIiXSBE
+ZXZpY2UgVUROOiBCcmlkZ2UNCkp1bCAxNCAxMToxOTo0OCBXRU1POiBXRExPRzogMjAxNS0wNy0x
+NFQxMToxOTo0OC0wODAwfHdlbW9BcHBbMjI4Nzp7fV06fGdldERldmljZVVETlN0cmluZ3xEZXZp
+Y2UgVUROOiBCcmlkZ2UNCkp1bCAxNCAxMToxOTo0OCBXRU1POiAxMToxOTo0OCB8IGFwcC5kZWJ1
+ZyA8bG9nZ2VyLmM6cGx1Z2luTG9nOjMzMD4gWzB4MzBmYWI1MjA6IiJdIHdlbW9BcHBbMjI4Nzp7
+fV06WzIwMTUtMDctMTRdWzExOjE5OjQ4LjA3ODYyN108Y29udHJvbGxlZWRldmljZS5jOkdldElu
+Zm9ybWF0aW9uOjY5MDA+IFsweDMwZmFiNTIwOiIiXSBEZXZpY2UgaW5mb3JtYXRpb246IDxEZXZp
+Y2U+PERldmljZUluZm9ybWF0aW9uPjxmaXJtd2FyZVZlcnNpb24+V2VNb19XV18yLjAwLjkzMDMu
+RFZULU9XUlQtTGluazwvZmlybXdhcmVWZXJzaW9uPjxpY29uVmVyc2lvbj4wPC9pY29uVmVyc2lv
+bj48aWNvblBvcnQ+NDkxNTM8L2ljb25Qb3J0PjxtYWNBZGRyZXNzPjk0MTAzRUNEQTEzMDwvbWFj
+QWRkcmVzcz48RnJpZW5kbHlOYW1lPldlTW8gTGluazwvRnJpZW5kbHlOYW1lPjxiaW5hcnlTdGF0
+ZT4wPC9iaW5hcnlTdGF0ZT48aHdWZXJzaW9uPnYxPC9od1ZlcnNpb24+PENvdW50ZG93bkVuZFRp
+bWU+MDwvQ291DQpKdWwgMTQgMTE6MTk6NDggV0VNTzogMTE6MTk6NDggfCBhcHAuZGVidWcgPGxv
+Z2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDMwYmFiNTIwOiIiXSB3ZW1vQXBwWzM0ODU6e31dOlsy
+MDE1LTA3LTE0XVsxMToxOTo0OC4wODMzNDhdPGNvbnRyb2xsZWVkZXZpY2UuYzpJc0FwcGx5VGlt
+ZVN5bmM6NDY4Nz4gWzB4MzBiYWI1MjA6IiJdIFRpbWVTeW5jOiAxNDM2ODk3OTk3Oi03LjAwMDAw
+MDoxNDM2ODk2ODM4Oi04LjAwMDAwMDoxDQpKdWwgMTQgMTE6MTk6NDggV0VNTzogMTE6MTk6NDgg
+fCBhcHAuZGVidWcgPGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDMwYmFiNTIwOiIiXSB3ZW1v
+QXBwWzM0ODU6e31dOlsyMDE1LTA3LTE0XVsxMToxOTo0OC4wODM5NDRdPGNvbnRyb2xsZWVkZXZp
+Y2UuYzp0aW1lU3luY1RocmVhZDo2NTg5PiBbMHgzMGJhYjUyMDoiIl0gOiAqKioqKk5PVCBBUFBM
+WUlORyBUSU1FIFNZTkMNCkp1bCAxNCAxMToxOTo0OCBXRU1POiBbVHVlIEp1bCAxNCAxMToxOTo0
+OCAyMDE1IF06am9iX2lkWzQ3XTpSZWNlaXZpbmcgZGlzY292ZXJ5IHJlcXVlc3Q6IE1YOiAyIGZy
+b206IDE5Mi4xNjguMi4zDQpKdWwgMTQgMTE6MTk6NDggV0VNTzogICMjIyMjIyMjI1JlcGx5IHRp
+bWUgcGFzcyB0byBUaW1lclRocmVhZFNjaGVkdWxlID02NjBtcyAjIyMjIyMjIyMjDQpKdWwgMTQg
+MTE6MTk6NDggV0VNTzogICMjIyMjIyMjIyMgVGltZSBvdXQgc2V0IGZvciBqb2IgPTE0MzY4OTc5
+ODg3NDYgIyMjIyMjIyMjIyMgDQpKdWwgMTQgMTE6MTk6NDggV0VNTzogW1R1ZSBKdWwgMTQgMTE6
+MTk6NDggMjAxNSBdOmpvYl9pZFs0N106U2VudCBkaXNjb3ZlcnkgcmVzcG9uc2UgdG8gZGV2aWNl
+OjE5Mi4xNjguMi4zDQpKdWwgMTQgMTE6MTk6NDkgV0VNTzogMTE6MTk6NDkgfCBhcHAuZGVidWcg
+PGxvZ2dlci5jOnBsdWdpbkxvZzozMzA+IFsweDJlYmFiNTIwOiIiXSB3ZW1vQXBwWzIwMjY6e31d
+OlsyMDE1LTA3LTE0XVsxMToxOTo0OS4xNTA0MzhdPGNvbnRyb2xsZWVkZXZpY2UuYzpDdHJsZWVE
+ZXZpY2VIYW5kbGVBY3Rpb25SZXF1ZXN0OjE5NTE+IFsweDJlYmFiNTIwOiIiXSBBY3Rpb24gZm91
+bmQ6IEdldEVuZERldmljZXMNCkp1bCAxNCAxMToxOTo0OSBXRU1POiAxMToxOTo0OSB8IHVwbnAu
+ZGVidWcgPGxlZExpZ2h0VVBuUEhhbmRsZXIuYzpJc1ppZ2JlZVNldHVwRG9uZToxNTM0PiBbMHgy
+ZWJhYjUyMDoiIl0gZmxhZ19zZXR1cF9kb25lIGlzIGFscmVhZHkgZXhpc3RlZC4uLg0KSnVsIDE0
+IDExOjE5OjQ5IFdFTU86IDExOjE5OjQ5IHwgdXBucC5kZWJ1ZyA8bGVkTGlnaHRVUG5QSGFuZGxl
+ci5jOkdldEVuZERldmljZXM6MTc2MD4gWzB4MmViYWI1MjA6IiJdIEdldEVuZERldmljZXM6IFJl
+cUxpc3RUeXBlIGlzIFBBSVJFRF9MSVNUDQpKdWwgMTQgMTE6MTk6NDkgV0VNTzogW1NEXSBHZXRE
+ZXZpY2VMaXN0KCkgMw0KSnVsIDE0IDExOjE5OjQ5IFdFTU86IFtTRF0gUGVybWl0Sm9pbigpDQpK
+dWwgMTQgMTE6MTk6NDkgV0VNTzogW1NEXSBzbV9Mb2FkSm9pbmVkRGV2aWNlTGlzdCgpOiBMaXN0
+UHJvY2Vzc2VkID0gWzJdDQpKdWwgMTQgMTE6MTk6NDkgV0VNTzogW1NEXSBzbV9Mb2FkSm9pbmVk
+RGV2aWNlTGlzdCgpOiBmaWVsZFswXSA9IFsyYzgwIDE2MDMxNGQ2NzEzZTEwOTQgZG9uZSBdDQpK
+dWwgMTQgMTE6MTk6NDkgV0VNTzogW1NEXSBzbV9Mb2FkSm9pbmVkRGV2aWNlTGlzdCgpOiBmaWVs
+ZFswXSA9IFtlYjk1XSwgZmllbGRbMV0gPSBbMjAwMjE0MDAwMDI0ZTU3Y10NCkp1bCAxNCAxMTox
+OTo0OSBXRU1POiBbU0RdIFNNX0FkZEpvaW5lZERldmljZUxpc3QgOiBMb2FkSm9pbmVkRGV2aWNl
+IGNvdW50ID0gMQ0KSnVsIDE0IDExOjE5OjQ5IFdFTU86IFtTRF0gSm9pbmVkIERldmljZSBMaXN0
+ID0gWzJdDQpKdWwgMTQgMTE6MTk6NDkgc3lzaW5pdDogU3RhcnRpbmcgSVBDIFJlY2VpdmU6Nw0K
+SnVsIDE0IDExOjE5OjQ5IHN5c2luaXQ6IHppZ2JlZWQgbm9kZV9pZDoweDAwMDAsIGVuZHBvaW50
+OjANCkp1bCAxNCAxMToxOTo0OSBzeXNpbml0OiBjbWQ6MTA1IHAxOjI1NCBwMjowIHAzOjAgcDQ6
+MCANCkp1bCAxNCAxMToxOTo0OSBzeXNpbml0OiBGdWxsIE5hbWU6L3RtcC9CZWxraW5fc2V0dGlu
+Z3MvemJpZC4wMDAwMDAwMDAwMDAwMDAwDQpKdWwgMTQgMTE6MTk6NDkgc3lzaW5pdDogTm8gZmls
+ZTpbL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC4wMDAwMDAwMDAwMDAwMDAwXQ0KSnVsIDE0IDEx
+OjE5OjQ5IHN5c2luaXQ6IHpiZFNldFRpbWVUb0Fib3J0IHNfVGltZVRvQWJvcnQ6NTIwNzINCkp1
+bCAxNCAxMToxOTo0OSBzeXNpbml0OiBJUENfQ01EX1NFVF9QRVJNSVRKT0lOIA0KSnVsIDE0IDEx
+OjE5OjQ5IHN5c2luaXQ6IHBKb2luIGZvciAyNTQgc2VjOiAweDAwXk0NCkp1bCAxNCAxMToxOTo0
+OSBzeXNpbml0OiBlbUFmUGVybWl0Sm9pbiBkdXJhdGlvbjoyNTQgYl9iY2FzdDoxIHN0YXR1czow
+eDAgDQpKdWwgMTQgMTE6MTk6NDkgc3lzaW5pdDogRW50ZXJpbmcgemJkUmVwbHlHZW5lcmFsUmVz
+cG9uc2UsIHJlc3BWYWx1ZToweDAwMDAwMDAwLCBlcnJvckNvZGU6MCANCkp1bCAxNCAxMToxOTo0
+OSBzeXNpbml0OiBMZWF2aW5nIHpiZFJlcGx5R2VuZXJhbFJlc3BvbnNlDQpKdWwgMTQgMTE6MTk6
+NDkgc3lzaW5pdDogRW1iZXJfU3RhdHVzX0NvZGU6MHgwIA0KSnVsIDE0IDExOjE5OjQ5IHN5c2lu
+aXQ6IExlYXZpbmcgSVBDIFJlY2VpdmU6Nw0KSnVsIDE0IDExOjE5OjQ5IFdFTU86IFtTRF0gU01f
+QWRkSm9pbmVkRGV2aWNlTGlzdCA6IGxpc3RbMF0tPkRldmljZUlELm5vZGVfaWQgPSBbN0NFNTI0
+MDAwMDE0MDIyMF0NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0FkZEpvaW5pbmdEZXZp
+Y2VMaXN0OiBkZXZpY2UgPSA3Q0U1MjQwMDAwMTQwMjIwDQpKdWwgMTQgMTE6MTk6NDkgV0VNTzog
+W1NEXSBEZXZpY2UgSm9pbmVkOiA3Q0U1MjQwMDAwMTQwMjIwOkVCOTUgDQpKdWwgMTQgMTE6MTk6
+NDkgV0VNTzogW1NEXSBzbV9HZXREZXZpY2VJbmZvIEVudHJ5Li4uLiANCkp1bCAxNCAxMToxOTo0
+OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJp
+ZC43Q0U1MjQwMDAwMTQwMjIwLjAxIGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMTox
+OTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3Mv
+emJpZC43Q0U1MjQwMDAwMTQwMjIwLjAyIGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAx
+MToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGlu
+Z3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjAzIGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAx
+NCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0
+dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA0IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1
+bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5f
+c2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA1IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4N
+Ckp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxr
+aW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA2IGZpbGUgaXMgbm90IGV4aXN0ZWQu
+Li4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9C
+ZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA3IGZpbGUgaXMgbm90IGV4aXN0
+ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3Rt
+cC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjAxIGZpbGUgaXMgbm90IGV4
+aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmlsZTog
+L3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjAyIGZpbGUgaXMgbm90
+IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVlRmls
+ZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjAzIGZpbGUgaXMg
+bm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmlnYmVl
+RmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA0IGZpbGUg
+aXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNrWmln
+YmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA1IGZp
+bGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0NoZWNr
+WmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIwLjA2
+IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNtX0No
+ZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQwMjIw
+LjA3IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0RdIHNt
+X0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAwMTQw
+MjIwLjA4IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBbU0Rd
+IHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQwMDAw
+MTQwMjIwLjA5IGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1POiBb
+U0RdIHNtX0NoZWNrWmlnYmVlRmlsZTogL3RtcC9CZWxraW5fc2V0dGluZ3MvemJpZC43Q0U1MjQw
+MDAwMTQwMjIwLjEwIGZpbGUgaXMgbm90IGV4aXN0ZWQuLi4NCkp1bCAxNCAxMToxOTo0OSBXRU1P
+OiBbU0RdIHNtX1BhcnNlWmlnYmVlQ2x1c3RlckpTT046IDdDRTUyNDAwMDAxNDAyMjAubm9kZV9p
+ZCBmaWxlIGlzIG5vdCBleGlzdGVkLi4uDQpKdWwgMTQgMTE6MTk6NDkgV0VNTzogW1NEXSBzbV9Q
+YXJzZVppZ2JlZUNsdXN0ZXJKU09OOiBSZXR1cm4gU0VORF9aQl9HRVRfRU5EUE9JTlQgPSBbMF0u
+Li4NCkp1bCAxNCAxMToxOTo0OSBzeXNpbml0OiBTdGFydGluZyBJUEMgUmVjZWl2ZTo3DQpKdWwg
+MTQgMTE6MTk6NDkgc3lzaW5pdDogemlnYmVlZCBub2RlX2lkOjB4ZWI5NSwgZW5kcG9pbnQ6MA0K
+SnVsIDE0IDExOjE5OjQ5IHN5c2luaXQ6IGNtZDoxMDggcDE6NzgzOTgzNTUyIHAyOjEgcDM6MCBw
+NDowIA0KSnVsIDE0IDExOjE5OjQ5IHN5c2luaXQ6IEZ1bGwgTmFtZTovdG1wL0JlbGtpbl9zZXR0
+aW5ncy96YmlkLjdDRTUyNDAwMDAxNDAyMjANCkp1bCAxNCAxMToxOTo0OSBzeXNpbml0OiAqKiBM
+QVRFU1QgTk9ERSBJRCB6aWdiZWVkIG5vZGVfaWQ6MHhlYjk1IA0KSnVsIDE0IDExOjE5OjQ5IHN5
+c2luaXQ6IHpiZFNldFRpbWVUb0Fib3J0IHNfVGltZVRvQWJvcnQ6NTIwNzMNCkp1bCAxNCAxMTox
+OTo0OSBzeXNpbml0OiBJUENfQ01EX0dFVF9FTkRQT0lOVCANCkp1bCAxNCAxMToxOTo0OSBzeXNp
+bml0OiBbWkJEX1NUX0lQQ19SRUNWXS0tLT5bWkJEX1NUX1pCX0dFVF0NCkp1bCAxNCAxMToxOTo0
+OSBzeXNpbml0OiBbWkJEX1NUX1pCX0dFVF0tLS0+W1pCRF9TVF9aQl9NU0dfU0VOVF9TVEFUVVNd
+DQpKdWwgMTQgMTE6MTk6NDkgc3lzaW5pdDogemJkU2VuZEdldEFjdGl2ZUVuZHBvaW50OiBkZXN0
+aW5hdGlvbjoweGViOTUgDQpKdWwgMTQgMTE6MTk6NDkgc3lzaW5pdDogemJkU2V0U291cmNlUm91
+dGUgc3VjY2Vzcw0KSnVsIDE0IDExOjE5OjQ5IHN5c2luaXQ6IHpiZEFjdGl2ZUVuZHBvaW50c1Jl
+cXVlc3Q6IHBhcmFtTm9kZUlkOjB4ZWI5NSBzdGF0dXM6MHgwDQpKdWwgMTQgMTE6MTk6NDkgc3lz
+aW5pdDogRW1iZXJfU3RhdHVzX0NvZGU6MHgwIA0KSnVsIDE0IDExOjE5OjQ5IGRyb3BiZWFyWzM0
+ODhdOiBDaGlsZCBjb25uZWN0aW9uIGZyb20gMTkyLjE2OC4yLjQ6NjEwNTQNCkp1bCAxNCAxMTox
+OTo1MCBzeXNpbml0OiBlbWJlckFmTWVzc2FnZVNlbnRDYWxsYmFjayANCkp1bCAxNCAxMToxOTo1
+MCBzeXNpbml0OiBFbWJlcl9TdGF0dXNfQ29kZTogMHgwIHR5cGU6MHg0IGluZGV4T3JEZXN0aW5h
+dGlvbjoweEZGRkMgbXNnTGVuOjB4Mw0KSnVsIDE0IDExOjE5OjUwIHN5c2luaXQ6IEJ5dGUgU3Ry
+ZWFtOjU3IGZlIDAwIA0KSnVsIDE0IDExOjE5OjUwIFdFTU86IFtUdWUgSnVsIDE0IDExOjE5OjUw
+IDIwMTUgXTpqb2JfaWRbNDhdOlJlY2VpdmluZyBkaXNjb3ZlcnkgcmVxdWVzdDogTVg6IDIgZnJv
+bTogMTkyLjE2OC4yLjMNCkp1bCAxNCAxMToxOTo1MCBXRU1POiAgIyMjIyMjIyMjUmVwbHkgdGlt
+ZSBwYXNzIHRvIFRpbWVyVGhyZWFkU2NoZWR1bGUgPTM2NW1zICMjIyMjIyMjIyMNCkp1bCAxNCAx
+MToxOTo1MCBXRU1POiAgIyMjIyMjIyMjIyBUaW1lIG91dCBzZXQgZm9yIGpvYiA9MTQzNjg5Nzk5
+MDc3NCAjIyMjIyMjIyMjIyANCkp1bCAxNCAxMToxOTo1MCBkcm9wYmVhclszNDg4XTogcGFzc3dv
+cmQgYXV0aCBzdWNjZWVkZWQgZm9yICdyb290JyBmcm9tIDE5Mi4xNjguMi40OjYxMDU0DQpKdWwg
+MTQgMTE6MTk6NTAgc3lzbG9nOiBudnJhbS8zNDkwL052cmFtR2V0OiBFcnJvciAtIGFyZ3VtZW50
+IGlzIE5VTEwNCg0KDQo9PT09Y2F0IC92YXIvbG9nL21lc3NhZ2VzLjA9PT09Og0KDQoNCj09PT1j
+YXQgL3RtcC9CZWxraW5fc2V0dGluZ3MvYnJfcnVsZT09PT06DQoNCg0KPT09PWNhdCAvdG1wL0Jl
+bGtpbl9zZXR0aW5ncy9iYV9ydWxlPT09PToNCmNhdDogY2FuJ3Qgb3BlbiAnL3Zhci9sb2cvbWVz
+c2FnZXMuMCc6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkNCmNhdDogY2FuJ3Qgb3BlbiAnL3Rt
+cC9CZWxraW5fc2V0dGluZ3MvYnJfcnVsZSc6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkNCmNh
+dDogY2FuJ3Qgb3BlbiAnL3RtcC9CZWxraW5fc2V0dGluZ3MvYmFfcnVsZSc6IE5vIHN1Y2ggZmls
+ZSBvciBkaXJlY3RvcnkNClBsaW5rIGVycm9yOiBSZW1vdGUgY29tbWFuZCBmYWlsZWQNCihFeGl0
+IGNvZGUgMSkNCg0KPT09PUdldE1ldGFJbmZvPT09PQ0KU2VuZGluZyBHZXRNZXRhSW5mby4uLiwg
+VVJMOmh0dHA6Ly8xOTIuMTY4LjIuMjo0OTE1My91cG5wL2NvbnRyb2wvbWV0YWluZm8xDQo8czpF
+bnZlbG9wZSB4bWxuczpzPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3Bl
+LyIgczplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29k
+aW5nLyI+DQogIDxzOkJvZHk+DQogICAgPHU6R2V0TWV0YUluZm9SZXNwb25zZSB4bWxuczp1PSJ1
+cm46QmVsa2luOnNlcnZpY2U6bWV0YWluZm86MSI+DQogICAgICA8TWV0YUluZm8+OTQxMDNFQ0RB
+MTMwfDIzMTQ1MUIwMTAwMkZDfFBsdWdpbiBEZXZpY2V8V2VNb19XV18yLjAwLjkzMDMuRFZULU9X
+UlQtTGlua3xXZU1vLkxpbmsuMkZDfEJyaWRnZTwvTWV0YUluZm8+DQogICAgPC91OkdldE1ldGFJ
+bmZvUmVzcG9uc2U+DQogIDwvczpCb2R5Pg0KPC9zOkVudmVsb3BlPg0KDQpBY3Rpb24gdG9vazog
+MTMwIE1pbGxpc2Vjb25kcw0KDQo9PT09R2V0RW5kRGV2aWNlKEFMTF9MSVNUKT09PT0NClVETjp1
+dWlkOkJyaWRnZS0xXzAtMjMxNDUxQjAxMDAyRkMNClNlbmRpbmcgR2V0RW5kRGV2aWNlKEFMTF9M
+SVNUKS4uLg0KPHM6RW52ZWxvcGUgeG1sbnM6cz0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcv
+c29hcC9lbnZlbG9wZS8iIHM6ZW5jb2RpbmdTdHlsZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5v
+cmcvc29hcC9lbmNvZGluZy8iPg0KICA8czpCb2R5Pg0KICAgIDx1OkdldEVuZERldmljZXNSZXNw
+b25zZSB4bWxuczp1PSJ1cm46QmVsa2luOnNlcnZpY2U6YnJpZGdlOjEiPg0KICAgICAgPERldmlj
+ZUxpc3RzPg0KICAgICAgICA8IS0tPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi
+Pz4tLT4NCiAgICAgICAgPERldmljZUxpc3RzPg0KICAgICAgICAgIDxEZXZpY2VMaXN0Pg0KICAg
+ICAgICAgICAgPERldmljZUxpc3RUeXBlPlBhaXJlZDwvRGV2aWNlTGlzdFR5cGU+DQogICAgICAg
+ICAgICA8RGV2aWNlSW5mb3M+DQogICAgICAgICAgICAgIDxEZXZpY2VJbmZvPg0KICAgICAgICAg
+ICAgICAgIDxEZXZpY2VJbmRleD4wPC9EZXZpY2VJbmRleD4NCiAgICAgICAgICAgICAgICA8RGV2
+aWNlSUQ+OTQxMDNFN0FGREQ1MDAxQjwvRGV2aWNlSUQ+DQogICAgICAgICAgICAgICAgPEZyaWVu
+ZGx5TmFtZT5XZU1vIFJvb20gTW90aW9uIFNlbnNvciAwMTwvRnJpZW5kbHlOYW1lPg0KICAgICAg
+ICAgICAgICAgIDxJY29uVmVyc2lvbj4xPC9JY29uVmVyc2lvbj4NCiAgICAgICAgICAgICAgICA8
+RmlybXdhcmVWZXJzaW9uPjFGPC9GaXJtd2FyZVZlcnNpb24+DQogICAgICAgICAgICAgICAgPENh
+cGFiaWxpdHlJRHM+MTA1MDAsMjA1MDAsMzA1MDE8L0NhcGFiaWxpdHlJRHM+DQogICAgICAgICAg
+ICAgICAgPEN1cnJlbnRTdGF0ZT45YTAwLDEsMDwvQ3VycmVudFN0YXRlPg0KICAgICAgICAgICAg
+ICAgIDxNYW51ZmFjdHVyZXI+QmVsa2luPC9NYW51ZmFjdHVyZXI+DQogICAgICAgICAgICAgICAg
+PE1vZGVsQ29kZT5GN0MwNDE8L01vZGVsQ29kZT4NCiAgICAgICAgICAgICAgICA8cHJvZHVjdE5h
+bWU+UElSPC9wcm9kdWN0TmFtZT4NCiAgICAgICAgICAgICAgICA8V2VNb0NlcnRpZmllZD5ZRVM8
+L1dlTW9DZXJ0aWZpZWQ+DQogICAgICAgICAgICAgIDwvRGV2aWNlSW5mbz4NCiAgICAgICAgICAg
+ICAgPERldmljZUluZm8+DQogICAgICAgICAgICAgICAgPERldmljZUluZGV4PjE8L0RldmljZUlu
+ZGV4Pg0KICAgICAgICAgICAgICAgIDxEZXZpY2VJRD45NDEwM0U3MUQ2MTQwMEFGPC9EZXZpY2VJ
+RD4NCiAgICAgICAgICAgICAgICA8RnJpZW5kbHlOYW1lPldlTW8gQWxhcm0gU2Vuc29yIDAxPC9G
+cmllbmRseU5hbWU+DQogICAgICAgICAgICAgICAgPEljb25WZXJzaW9uPjE8L0ljb25WZXJzaW9u
+Pg0KICAgICAgICAgICAgICAgIDxGaXJtd2FyZVZlcnNpb24+MUY8L0Zpcm13YXJlVmVyc2lvbj4N
+CiAgICAgICAgICAgICAgICA8Q2FwYWJpbGl0eUlEcz4xMDUwMCwyMDUwMCwzMDUwMTwvQ2FwYWJp
+bGl0eUlEcz4NCiAgICAgICAgICAgICAgICA8Q3VycmVudFN0YXRlPmFhMDAsMSwwPC9DdXJyZW50
+U3RhdGU+DQogICAgICAgICAgICAgICAgPE1hbnVmYWN0dXJlcj5CZWxraW48L01hbnVmYWN0dXJl
+cj4NCiAgICAgICAgICAgICAgICA8TW9kZWxDb2RlPkY3QzA0MDwvTW9kZWxDb2RlPg0KICAgICAg
+ICAgICAgICAgIDxwcm9kdWN0TmFtZT5BbGFybVNlbnNvcjwvcHJvZHVjdE5hbWU+DQogICAgICAg
+ICAgICAgICAgPFdlTW9DZXJ0aWZpZWQ+WUVTPC9XZU1vQ2VydGlmaWVkPg0KICAgICAgICAgICAg
+ICA8L0RldmljZUluZm8+DQogICAgICAgICAgICAgIDxEZXZpY2VJbmZvPg0KICAgICAgICAgICAg
+ICAgIDxEZXZpY2VJbmRleD4yPC9EZXZpY2VJbmRleD4NCiAgICAgICAgICAgICAgICA8RGV2aWNl
+SUQ+OTQxMDNFNzFENjE0MDMxNjwvRGV2aWNlSUQ+DQogICAgICAgICAgICAgICAgPEZyaWVuZGx5
+TmFtZT5XZU1vIEhvbWUgYW5kIEF3YXkgU2Vuc29yIDAxPC9GcmllbmRseU5hbWU+DQogICAgICAg
+ICAgICAgICAgPEljb25WZXJzaW9uPjE8L0ljb25WZXJzaW9uPg0KICAgICAgICAgICAgICAgIDxG
+aXJtd2FyZVZlcnNpb24+MUY8L0Zpcm13YXJlVmVyc2lvbj4NCiAgICAgICAgICAgICAgICA8Q2Fw
+YWJpbGl0eUlEcz4xMDUwMCwyMDUwMCwzMDUwMSwyMDUwMjwvQ2FwYWJpbGl0eUlEcz4NCiAgICAg
+ICAgICAgICAgICA8Q3VycmVudFN0YXRlPjEsMSwwLDEwPC9DdXJyZW50U3RhdGU+DQogICAgICAg
+ICAgICAgICAgPE1hbnVmYWN0dXJlcj5CZWxraW48L01hbnVmYWN0dXJlcj4NCiAgICAgICAgICAg
+ICAgICA8TW9kZWxDb2RlPkY3QzAzOTwvTW9kZWxDb2RlPg0KICAgICAgICAgICAgICAgIDxwcm9k
+dWN0TmFtZT5Gb2I8L3Byb2R1Y3ROYW1lPg0KICAgICAgICAgICAgICAgIDxXZU1vQ2VydGlmaWVk
+PllFUzwvV2VNb0NlcnRpZmllZD4NCiAgICAgICAgICAgICAgPC9EZXZpY2VJbmZvPg0KICAgICAg
+ICAgICAgPC9EZXZpY2VJbmZvcz4NCiAgICAgICAgICAgIDxHcm91cEluZm9zPg0KICAgICAgICAg
+ICAgICA8R3JvdXBJbmZvPg0KICAgICAgICAgICAgICAgIDxHcm91cElEPjE0MzY4MTk4NTY8L0dy
+b3VwSUQ+DQogICAgICAgICAgICAgICAgPEdyb3VwTmFtZT5Eb29ycyBhbmQgV2luZG93czwvR3Jv
+dXBOYW1lPg0KICAgICAgICAgICAgICAgIDxHcm91cENhcGFiaWxpdHlJRHMvPg0KICAgICAgICAg
+ICAgICAgIDxHcm91cENhcGFiaWxpdHlWYWx1ZXMvPg0KICAgICAgICAgICAgICAgIDxEZXZpY2VJ
+bmZvcy8+DQogICAgICAgICAgICAgIDwvR3JvdXBJbmZvPg0KICAgICAgICAgICAgPC9Hcm91cElu
+Zm9zPg0KICAgICAgICAgIDwvRGV2aWNlTGlzdD4NCiAgICAgICAgPC9EZXZpY2VMaXN0cz4NCiAg
+ICAgIDwvRGV2aWNlTGlzdHM+DQogICAgPC91OkdldEVuZERldmljZXNSZXNwb25zZT4NCiAgPC9z
+OkJvZHk+DQo8L3M6RW52ZWxvcGU+DQoNCkFjdGlvbiB0b29rOiAzOTA5NSBNaWxsaXNlY29uZHMN
+Cg==
+
+--B_3519893283_1704164940--
+

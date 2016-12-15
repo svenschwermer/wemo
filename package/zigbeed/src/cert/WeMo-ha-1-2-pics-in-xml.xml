@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<!--
+To evaluate conformance of a particular implementation, it is necessary to have a statement of which capabilities and options have been implemented for a given standard. Such a statement is called a protocol implementation conformance statement (PICS).
+
+Scope
+This document provides the protocol implementation conformance statement (PICS) proforma for the ZigBee specifications 080006r05 in compliance with the relevant requirements, and in accordance with the relevant guidance, given in ISO/IEC 9646-7.
+This document addresses the ZigBee Home Automation Application Profile.  
+
+Purpose
+The supplier of a protocol implementation claiming to conform to the ZigBee Home Automation Application Profile shall complete the following PICS proforma and accompany it with the information necessary to identify fully both the supplier and the implementation.
+
+The PICS is in the form of answers to a set of questions in the PICS proforma. The questions in a proforma consist of a systematic list of protocol capabilities and options as well as their implementation requirements. The implementation requirement indicates whether implementation of a capability is mandatory, optional, or conditional depending on options selected. When a protocol implementer answers questions in a PICS proforma, they would indicate whether an item is implemented or not, and provide explanations if an item is not implemented.
+
+Instructions for completion
+This document provides a template for the Home Automation PICS. The document should be filled out with document content appropriate to each element. Some document elements contain a "mandatory" attribute. Generally each tag that contains a mandatory attribute should also contain document content of "TRUE" indicating that the item described in the document element is supported. 
+
+Clusters contain ZigBee attributes and commands. Entering content of "TRUE" for a ZigBee attribute indicates that the device contains that attribute and the attribute can be read from the device. Entering content of "TRUE" for a command indicates that the device can receive that command. If an attribute is mandatory and the source="server" this indicates that the attribute must be supported by all servers of that cluster. If a command is mandatory and the receivedBy="server" it indicates that the command must be supported as a command received by all servers of that cluster.
+
+A completed PICS document need only contain the portion of the PICS that are supported. Any of the zigBeeDeviceTypes, HADeviceTypes or clusters that are not supported can be removed from the completed document.
+
+Example:
+
+<?xml version="1.0"?>
+<homeAutomationPICs version="">
+  <implementationIdentification>
+    <IUTIdentification>
+  	  <description>Implemenation Under Test Identification</description>
+  	  <UITName    mandatory="true">Acme Device</UITName>
+  	  <UITVersion mandatory="true">1.0</UITVersion>
+    </IUTIdentification>
+    <SUTIdentification>
+  	  <description>System Under Test Identification</description>
+  	  <SUTName></SUTName>
+  	  <SUTSoftwareVersion mandatory="true">1.0</SUTSoftwareVersion>
+  	  <SUTHardwareVersion mandatory="true">1.0</SUTHardwareVersion>
+  	  <SUTOperatingSystem mandatory="false">1.0</SUTOperatingSystem>
+    </SUTIdentification>
+    <productSupplier>
+  	  <description>Product Supplier</description>
+  	  <name>ACME Device Manufacturer</name>
+  	  <address>10 Congress Street</address>
+  	  <telephoneNumber>617-447-4444</telephoneNumber>
+  	  <faxNumber>617-447-4441</faxNumber>
+  	  <emailAddress>acme@acme.com</emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </productSupplier>
+    <client>
+  	  <description>Client</description>
+  	  <name>John Doe</name>
+  	  <address>10 Congress Street</address>
+  	  <telephoneNumber>617-447-4444</telephoneNumber>
+  	  <faxNumber>617-447-4441</faxNumber>
+  	  <emailAddress>acme@acme.com</emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </client>
+    <picsContactPerson>
+  	  <description>PICS Contact Person</description>
+  	  <name>John Doe</name>
+  	  <address>10 Congress Street</address>
+  	  <telephoneNumber>617-447-4444</telephoneNumber>
+  	  <faxNumber>617-447-4441</faxNumber>
+  	  <emailAddress>acme@acme.com</emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </picsContactPerson>
+  </implementationIdentification>
+  
+  <globalStatementOfConformance>
+    <specVersion name="ZigBee Home Automation" version="053520r29" mandatory="true">TRUE</specVersion>
+  </globalStatementOfConformance>
+  
+  <picsProforma>
+    <zigBeeDeviceTypes>
+      <type>
+        <name>coordinator</name>
+        <description>Is this device capable of acting as a ZigBee coordinator?</description>
+        <support>TRUE</support>
+        <profileItem>
+          <name>Join Mode</name>
+  	    <description>Does the device support a method for the user to put the device in join mode?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Network Form</name>
+  	    <description>Does the device support a method for the user to use the device to form a network?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Permit Join</name>
+  	    <description>Does the device support a method for allowing others to join the network?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+      </type>
+    </zigBeeDeviceTypes>
+  
+    <stackProfile>
+      <profileItem>
+        <name>ZigBee Stack Profile</name>
+        <mandatory>true</mandatory>
+        <description>Is the device built on a ZigBee Compliant Platform certified for ZigBee or ZigBee PRO stack profile 080006r05?</description>
+        <mandatory>true</mandatory>
+        <supported>TRUE</supported>
+      </profileItem>
+  	  <profileItem>
+          <name>Binding Table Size</name>
+          <description>Does the device implement source binding with a binding table whose number of available entries is greater than or equal to the number of supported clusters that may initiate normal operational transactions. It should be noted that operational transactions are not one time transactions or commissioning transactions. Operational transactions are those that are used to perform the device function, such attribute reporting or actuation commands  (e.g. On, Off, Toggle, etc).</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+          <name>Polling Rate</name>
+          <description>Does the device adhere to the polling rate specifications given in 053520r29</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+          <name>Link Keys</name>
+          <description>Does the device support Trust Center Link Keys including the Default Trust Center Link Key?</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+    </stackProfile>
+  
+    <HAProfile>
+      <profileItem>
+  	  <name>Cluster Library PICs</name>
+  	  <description>Does the device support the ZigBee Cluster Library PICS as defined in 064118r08</description>
+  	  <mandatory>true</mandatory>
+  	  <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Reset to Factory Defaults</name>
+  	    <description>Does the device support a method for allowing a user to restore factory settings?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Reporting generation</name>
+  	    <description>Does the device have attributes that are reportable?</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+        <profileItem>
+  	    <name>Default Reporting Configuration</name>
+  	    <description>Does the device have a default reporting configuration for each reportable attribute</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+        <profileItem>
+  	    <name>Read Reporting Configuration</name>
+  	    <description>Does the device support configuring and  reading a report configuration for all reportable attributes?</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+    </HAProfile>
+    
+    <ZDPCommands>                                       
+  	  <command code="0x8000" name="NWK_addr_rsp"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8001" name="IEEE_addr_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8002" name="Node_Desc_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8003" name="Power_Desc_rsp"              source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8004" name="Simple_Desc_rsp"             source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8005" name="Active_EP_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8006" name="Match_Desc_rsp"              source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8013" name="Device_annce"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8021" name="Bind_rsp"                    source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8022" name="Unbind_rsp"                  source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8031" name="Mgmt_Lqi_rsp"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8033" name="Mgmt_Bind_rsp"               source="either" mandatory="true">TRUE</command>	
+    </ZDPCommands>
+  
+    <ZCLGlobalCommands>
+      <command code="0x01" name="ReadAttributesResponse"             source="either" mandatory="true"   >TRUE</command>
+      <command code="0x04" name="WriteAttributesResponse"            source="either" mandatory="true"   >TRUE</command>
+      <command code="0x07" name="ConfigureReportingResponse"         source="either" mandatory="true"   >TRUE</command>
+      <command code="0x09" name="ReadReportingConfigurationResponse" source="either" mandatory="true"   >TRUE</command>
+      <command code="0x0B" name="DefaultResponse"                    source="either" mandatory="true"   >TRUE</command>
+      <command code="0x0D" name="DiscoverAttributesResponse"         source="either" mandatory="true"   >TRUE</command>
+      <command code="0x10" name="WriteAttributesStructuredResponse"  source="either" mandatory="true"   >TRUE</command>
+      <command code="0x12" name="DiscoverCommandsReceivedResponse"   source="either" mandatory="false"  >TRUE</command>
+      <command code="0x14" name="DiscoverCommandsGeneratedResponse"  source="either" mandatory="false"  >TRUE</command>
+      <command code="0x16" name="DiscoverAttributesExtendedResponse" source="either" mandatory="false"  >TRUE</command>
+    </ZCLGlobalCommands>
+    
+    <HADeviceTypes>
+      <deviceType>
+        <name>HA-onoff</name>
+        <domain>HA</domain>
+        <typeName>HA On/Off Switch</typeName>
+        <zigbeeType>Coordinator</zigbeeType>
+        <profileId>0x0104</profileId>
+        <deviceId>0x0000</deviceId>
+        <supported>TRUE</supported>
+        <commissioning>
+          <type name="ezMode" role="initiator" mandatory="true"  >TRUE</type>
+          <type name="ezMode" role="target"    mandatory="false" >TRUE</type>
+  	    </commissioning>
+        <clusters>
+          <include name="Basic"                            source="server" mandatory="true"   >TRUE</include>
+          <include name="Identify"                         source="server" mandatory="true"   >TRUE</include>
+          <include name="Power Configuration"              source="server" mandatory="false"  >FALSE</include>
+          <include name="Device Temperature Configuration" source="server" mandatory="false"  >FALSE</include>
+          <include name="Alarms"                           source="server" mandatory="false"  >FALSE</include>
+          <include name="Poll Control"                     source="server" mandatory="false"  >FALSE</include>
+          <include name="Electrical Measurement"           source="server" mandatory="false"  >FALSE</include>
+          <include name="Time"                             source="client" mandatory="false"  >FALSE</include>
+          <include name="Over the Air Bootloading Cluster" source="client" mandatory="false"  >FALSE</include>
+          <include name="Partition"                        source="client" mandatory="false"  >FALSE</include>
+          <include name="Partition"                        source="server" mandatory="false"  >FALSE</include>
+          <include name="On/Off"                           source="client" mandatory="true"   >TRUE</include>
+          <include name="Identify"                         source="client" mandatory="true"   >TRUE</include>
+          <include name="Scenes"                           source="client" mandatory="false"  >FALSE</include>
+          <include name="Groups"                           source="client" mandatory="false"  >FALSE</include>
+          <include name="On/Off Switch Configuration"      source="server" mandatory="false"  >FALSE</include>
+        </clusters>
+      </deviceType>
+    </HADeviceTypes>
+    
+    <HAClusters>
+      <cluster>
+        <name>Basic</name>
+        <code>0x0000</code>
+        <define>BASIC_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="VERSION"              mandatory="true"   name="ZCL version"            >TRUE</attribute>
+        <attribute source="server" code="0x0001" define="APPLICATION_VERSION"  mandatory="false"  name="application version"    >FALSE</attribute>
+        <attribute source="server" code="0x0002" define="STACK_VERSION"        mandatory="false"  name="stack version"          >FALSE</attribute>
+        <attribute source="server" code="0x0003" define="HW_VERSION"           mandatory="false"  name="hardware version"       >FALSE</attribute>
+        <attribute source="server" code="0x0004" define="MANUFACTURER_NAME"    mandatory="false"  name="manufacturer name"      >FALSE</attribute>
+        <attribute source="server" code="0x0005" define="MODEL_IDENTIFIER"     mandatory="false"  name="model identifier"       >FALSE</attribute>
+        <attribute source="server" code="0x0006" define="DATE_CODE"            mandatory="false"  name="date code"              >FALSE</attribute>
+        <attribute source="server" code="0x0007" define="POWER_SOURCE"         mandatory="true"   name="power source"           >TRUE</attribute>
+        <attribute source="server" code="0x0010" define="LOCATION_DESCRIPTION" mandatory="false"  name="location description"   >FALSE</attribute>
+        <attribute source="server" code="0x0011" define="PHYSICAL_ENVIRONMENT" mandatory="false"  name="physical environment"   >FALSE</attribute>
+        <attribute source="server" code="0x0012" define="DEVICE_ENABLED"       mandatory="false"  name="device enabled"         >FALSE</attribute>
+        <attribute source="server" code="0x0013" define="ALARM_MASK"           mandatory="false"  name="alarm mask"             >FALSE</attribute>
+        <attribute source="server" code="0x0014" define="DISABLE_LOCAL_CONFIG" mandatory="false"  name="disable local config"   >FALSE</attribute>
+        <command receivedBy="server" code="0x00" name="ResetToFactoryDefaults" mandatory="false"></command>
+      </cluster>
+          
+      <cluster>
+        <name>Identify</name>
+        <code>0x0003</code>
+        <define>IDENTIFY_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="IDENTIFY_TIME" mandatory="true" name="identify time"                          >TRUE</attribute>
+        <command receivedBy="server" code="0x00" name="Identify" mandatory="true"                                                          >TRUE</command>
+        <command receivedBy="server" code="0x01" name="IdentifyQuery" mandatory="true"                                                     >TRUE</command>
+        <command receivedBy="client" code="0x00" name="IdentifyQueryResponse" mandatory="true"                                             >TRUE</command>
+      </cluster>      
+
+      <cluster>
+        <name>On/off</name>
+        <code>0x0006</code>
+        <define>ON_OFF_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="ON_OFF" mandatory="true" name="on/off" >TRUE</attribute>
+        <command receivedBy="server" code="0x00" name="Off" mandatory="true">TRUE</command>
+        <command receivedBy="server" code="0x01" name="On" mandatory="true">TRUE</command>
+        <command receivedBy="server" code="0x02" name="Toggle" mandatory="true">TRUE</command>
+      </cluster>
+      
+    </HAClusters>
+  </picsProforma>
+</homeAutomationPICs>
+
+
+-->
+<homeAutomationPICs version="">
+  <implementationIdentification>
+    <IUTIdentification>
+  	  <description>Implemenation Under Test Identification</description>
+  	  <UITName    mandatory="true">WeMo</UITName>
+  	  <UITVersion mandatory="true">1.0</UITVersion>
+    </IUTIdentification>
+    <SUTIdentification>
+  	  <description>System Under Test Identification</description>
+  	  <SUTName></SUTName>
+  	  <SUTSoftwareVersion mandatory="true">1.0</SUTSoftwareVersion>
+  	  <SUTHardwareVersion mandatory="true">1.0</SUTHardwareVersion>
+  	  <SUTOperatingSystem mandatory="false" ></SUTOperatingSystem>
+    </SUTIdentification>
+    <productSupplier>
+  	  <description>Product Supplier</description>
+  	  <name></name>
+  	  <address></address>
+  	  <telephoneNumber></telephoneNumber>
+  	  <faxNumber></faxNumber>
+  	  <emailAddress></emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </productSupplier>
+    <client>
+  	  <description>Client</description>
+  	  <name></name>
+  	  <address></address>
+  	  <telephoneNumber></telephoneNumber>
+  	  <faxNumber></faxNumber>
+  	  <emailAddress></emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </client>
+    <picsContactPerson>
+  	  <description>PICS Contact Person</description>
+  	  <name>Samuel Yang</name>
+  	  <address>8F Bosung Bldg, 1005-8, Daechi-dong, Gangnam-gu, Seoul, Korea</address>
+  	  <telephoneNumber>82+10-9349-8307</telephoneNumber>
+  	  <faxNumber>82+2-2088-7317</faxNumber>
+  	  <emailAddress>Samuel.Yang@belkin.com</emailAddress>
+  	  <additionalInformation></additionalInformation>
+    </picsContactPerson>
+  </implementationIdentification>
+  
+  <globalStatementOfConformance>
+    <specVersion name="ZigBee Home Automation" version="053520r29" mandatory="true">TRUE</specVersion>
+  </globalStatementOfConformance>
+  
+  <picsProforma>
+    <zigBeeDeviceTypes>
+      <type>
+        <name>coordinator</name>
+        <description>Is this device capable of acting as a ZigBee coordinator?</description>
+        <support>TRUE</support>
+        <profileItem>
+          <name>Join Mode</name>
+  	    <description>Does the device support a method for the user to put the device in join mode?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Network Form</name>
+  	    <description>Does the device support a method for the user to use the device to form a network?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Permit Join</name>
+  	    <description>Does the device support a method for allowing others to join the network?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+      </type>
+    </zigBeeDeviceTypes>
+  
+    <stackProfile>
+      <profileItem>
+        <name>ZigBee Stack Profile</name>
+        <mandatory>true</mandatory>
+        <description>Is the device built on a ZigBee Compliant Platform certified for ZigBee or ZigBee PRO stack profile 080006r05?</description>
+        <mandatory>true</mandatory>
+        <supported>TRUE</supported>
+      </profileItem>
+  	  <profileItem>
+          <name>Binding Table Size</name>
+          <description>Does the device implement source binding with a binding table whose number of available entries is greater than or equal to the number of supported clusters that may initiate normal operational transactions. It should be noted that operational transactions are not one time transactions or commissioning transactions. Operational transactions are those that are used to perform the device function, such attribute reporting or actuation commands  (e.g. On, Off, Toggle, etc).</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+          <name>Link Keys</name>
+          <description>Does the device support Trust Center Link Keys including the Default Trust Center Link Key?</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+          <name>APS Layer Multicast (CCB 1773)</name>
+          <description>Does the device use only APS layer multicast for multicast messages?</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+          <name>Network Use Multicast (CCB 1773)</name>
+          <description>Does the device have the stack primitive nwkUseMulticast set to FALSE?</description>
+          <mandatory>true</mandatory>
+          <supported>TRUE</supported>
+  	  </profileItem>
+    </stackProfile>
+  
+    <HAProfile>
+      <profileItem>
+  	  <name>Cluster Library PICs</name>
+  	  <description>Does the device support the ZigBee Cluster Library PICS as defined in 064118r08</description>
+  	  <mandatory>true</mandatory>
+  	  <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Reset to Factory Defaults</name>
+  	    <description>Does the device support a method for allowing a user to restore factory settings?</description>
+  	    <mandatory>true</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+  	  <profileItem>
+  	    <name>Reporting generation</name>
+  	    <description>Does the device have attributes that are reportable?</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>FALSE</supported>
+  	  </profileItem>
+        <profileItem>
+  	    <name>Default Reporting Configuration</name>
+  	    <description>Does the device have a default reporting configuration for each reportable attribute</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>FALSE</supported>
+  	  </profileItem>
+        <profileItem>
+  	    <name>Read Reporting Configuration</name>
+  	    <description>Does the device support configuring and  reading a report configuration for all reportable attributes?</description>
+  	    <mandatory>false</mandatory>
+  	    <supported>TRUE</supported>
+  	  </profileItem>
+    </HAProfile>
+    
+    <ZDPCommands>                                       
+  	  <command code="0x8000" name="NWK_addr_rsp"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8001" name="IEEE_addr_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8002" name="Node_Desc_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8003" name="Power_Desc_rsp"              source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8004" name="Simple_Desc_rsp"             source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8005" name="Active_EP_rsp"               source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8006" name="Match_Desc_rsp"              source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8013" name="Device_annce"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8021" name="Bind_rsp"                    source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8022" name="Unbind_rsp"                  source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8031" name="Mgmt_Lqi_rsp"                source="either" mandatory="true">TRUE</command>
+  	  <command code="0x8033" name="Mgmt_Bind_rsp"               source="either" mandatory="true">TRUE</command>	
+    </ZDPCommands>
+  
+    <ZCLGlobalCommands>
+      <command code="0x01" name="ReadAttributesResponse"             source="either" mandatory="true"   >TRUE</command>
+      <command code="0x04" name="WriteAttributesResponse"            source="either" mandatory="true"   >TRUE</command>
+      <command code="0x07" name="ConfigureReportingResponse"         source="either" mandatory="true"   >TRUE</command>
+      <command code="0x09" name="ReadReportingConfigurationResponse" source="either" mandatory="true"   >TRUE</command>
+      <command code="0x0B" name="DefaultResponse"                    source="either" mandatory="true"   >TRUE</command>
+      <command code="0x0D" name="DiscoverAttributesResponse"         source="either" mandatory="true"   >TRUE</command>
+      <command code="0x10" name="WriteAttributesStructuredResponse"  source="either" mandatory="false"   >FALSE</command>
+      <command code="0x12" name="DiscoverCommandsReceivedResponse"   source="either" mandatory="false"  >FALSE</command>
+      <command code="0x14" name="DiscoverCommandsGeneratedResponse"  source="either" mandatory="false"  >FALSE</command>
+      <command code="0x16" name="DiscoverAttributesExtendedResponse" source="either" mandatory="false"  >FALSE</command>
+    </ZCLGlobalCommands>
+    
+    <HADeviceTypes>
+      <deviceType>
+        <name>HA-homegatewayems</name>
+        <domain>HA</domain>
+        <typeName>HA Home Gateway / Energy Management System</typeName>
+        <zigbeeType>Coordinator</zigbeeType>
+        <profileId>0x0104</profileId>
+        <deviceId>0x0050</deviceId>
+        <supported>TRUE</supported>
+        <commissioning>
+          <type name="ezMode" role="initiator" mandatory="false"  >FALSE</type>
+          <type name="ezMode" role="target"    mandatory="false"  >FALSE</type>
+  	  </commissioning>
+        <clusters>
+          <include name="Basic"                                   source="client" mandatory="false"  >TRUE</include>
+          <include name="Basic"                                   source="server" mandatory="true"   >TRUE</include>
+          <include name="Identify"                                source="client" mandatory="false"  >TRUE</include>
+          <include name="Identify"                                source="server" mandatory="true"   >TRUE</include>
+          <include name="Groups"                                  source="client" mandatory="false"  >TRUE</include>
+          <include name="Scenes"                                  source="client" mandatory="false"  >TRUE</include>
+	  <include name="On/off"                                  source="client" mandatory="false"  >TRUE</include>
+	  <include name="Level Control"                           source="client" mandatory="false"  >TRUE</include>
+          <include name="Time"                                    source="server" mandatory="true"   >TRUE</include>
+	  <include name="Color Control"                           source="client" mandatory="false"  >TRUE</include>
+          <include name="Power Profile"                           source="client" mandatory="true"   >TRUE</include>
+          <include name="Meter Identification"                    source="client" mandatory="true"   >TRUE</include>
+          <include name="Appliance Statistics"                    source="client" mandatory="true"   >TRUE</include>
+          <include name="Over the Air Bootloading"                source="server" mandatory="false"  >TRUE</include>
+          <include name="Simple Metering"                         source="client" mandatory="true"   >TRUE</include>
+        </clusters>
+      </deviceType>
+    </HADeviceTypes>
+    
+    <HAClusters>
+
+      <cluster>
+        <name>Basic</name>
+        <code>0x0000</code>
+        <define>BASIC_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="VERSION"              mandatory="true"   name="ZCL version"            >TRUE</attribute>
+        <attribute source="server" code="0x0001" define="APPLICATION_VERSION"  mandatory="false"  name="application version"    >FALSE</attribute>
+        <attribute source="server" code="0x0002" define="STACK_VERSION"        mandatory="false"  name="stack version"          >FALSE</attribute>
+        <attribute source="server" code="0x0003" define="HW_VERSION"           mandatory="false"  name="hardware version"       >FALSE</attribute>
+        <attribute source="server" code="0x0004" define="MANUFACTURER_NAME"    mandatory="false"  name="manufacturer name"      >FALSE</attribute>
+        <attribute source="server" code="0x0005" define="MODEL_IDENTIFIER"     mandatory="false"  name="model identifier"       >FALSE</attribute>
+        <attribute source="server" code="0x0006" define="DATE_CODE"            mandatory="false"  name="date code"              >FALSE</attribute>
+        <attribute source="server" code="0x0007" define="POWER_SOURCE"         mandatory="true"   name="power source"           >TRUE</attribute>
+        <attribute source="server" code="0x0010" define="LOCATION_DESCRIPTION" mandatory="false"  name="location description"   >FALSE</attribute>
+        <attribute source="server" code="0x0011" define="PHYSICAL_ENVIRONMENT" mandatory="false"  name="physical environment"   >FALSE</attribute>
+        <attribute source="server" code="0x0012" define="DEVICE_ENABLED"       mandatory="false"  name="device enabled"         >FALSE</attribute>
+        <attribute source="server" code="0x0013" define="ALARM_MASK"           mandatory="false"  name="alarm mask"             >FALSE</attribute>
+        <attribute source="server" code="0x0014" define="DISABLE_LOCAL_CONFIG" mandatory="false"  name="disable local config"   >FALSE</attribute>
+        <command receivedBy="server" code="0x00" name="ResetToFactoryDefaults" mandatory="false">FALSE</command>
+      </cluster>
+
+      <cluster>
+        <name>Identify</name>
+        <code>0x0003</code>
+        <define>IDENTIFY_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="IDENTIFY_TIME" mandatory="true" name="identify time"                   >TRUE</attribute>
+        <attribute source="server" code="0x0001" define="COMMISSION_STATE" mandatory="false" name="commission state"            >FALSE</attribute>
+        <command receivedBy="server" code="0x00" name="Identify" mandatory="true"                                               >TRUE</command>
+        <command receivedBy="server" code="0x01" name="IdentifyQuery" mandatory="true"                                          >TRUE</command>
+        <command receivedBy="client" code="0x00" name="IdentifyQueryResponse" mandatory="true"                                  >TRUE</command>
+      </cluster>
+
+      <cluster>
+        <name>Groups</name>
+        <code>0x0004</code>
+        <define>GROUPS_CLUSTER</define>
+        <command receivedBy="client" code="0x00" name="AddGroupResponse" mandatory="true"                                       >TRUE</command>
+        <command receivedBy="client" code="0x01" name="ViewGroupResponse" mandatory="true"                                      >TRUE</command>
+        <command receivedBy="client" code="0x02" name="GetGroupMembershipResponse" mandatory="true"                             >TRUE</command>
+        <command receivedBy="client" code="0x03" name="RemoveGroupResponse" mandatory="true"                                    >TRUE</command>
+      </cluster>
+
+      <cluster>
+        <name>Scenes</name>
+        <code>0x0005</code>
+        <define>SCENES_CLUSTER</define>
+        <command receivedBy="client" code="0x00" name="AddSceneResponse" mandatory="true"                                       >TRUE</command>
+        <command receivedBy="client" code="0x01" name="ViewSceneResponse" mandatory="true"                                      >TRUE</command>
+        <command receivedBy="client" code="0x02" name="RemoveSceneResponse" mandatory="true"                                    >TRUE</command>
+        <command receivedBy="client" code="0x03" name="RemoveAllSceneResponse" mandatory="true"                                 >TRUE</command>
+        <command receivedBy="client" code="0x04" name="StoreSceneResponse" mandatory="true"                                     >TRUE</command>
+        <command receivedBy="client" code="0x06" name="GetSceneMembershipResponse" mandatory="true"                             >TRUE</command>
+      </cluster>
+
+      <cluster>
+        <name>On/off</name>
+        <code>0x0006</code>
+        <define>ON_OFF_CLUSTER</define>
+      </cluster>
+
+      <cluster>
+        <name>Level Control</name>
+        <code>0x0008</code>
+        <define>LEVEL_CONTROL_CLUSTER</define>
+      </cluster>
+
+      <cluster>
+        <name>Time</name>
+        <code>0x000A</code>
+        <define>TIME_CLUSTER</define>
+        <attribute source="server" code="0x0000" define="TIME"                 mandatory="true"   name="time"            >TRUE</attribute>
+        <attribute source="server" code="0x0001" define="TIME_STATUS"          mandatory="true"   name="time status"     >TRUE</attribute>
+      </cluster>
+
+      <cluster>
+        <name>Color Control</name>
+        <code>0x0300</code>
+        <define>COLOR_CONTROL_CLUSTER</define>
+      </cluster>
+
+      <cluster>
+        <name>Power Profile</name>
+        <code>0x001A</code>
+        <define>POWER_PROFILE_CLUSTER</define>
+        <command receivedBy="client" code="0x00" name="PowerProfileNotification" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x01" name="PowerProfileResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x02" name="PowerProfileStateResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x03" name="GetPowerProfilePrice" mandatory="false">TRUE</command>
+        <command receivedBy="client" code="0x04" name="PowerProfilesStateNotification" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x05" name="GetOverallSchedulePrice" mandatory="false">FALSE</command>
+        <command receivedBy="client" code="0x06" name="EnergyPhasesScheduleRequest" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x07" name="EnergyPhasesScheduleStateResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x08" name="EnergyPhasesScheduleStateNotification" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x09" name="PowerProfileScheduleConstraintsNotification" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x0A" name="PowerProfileScheduleConstraintsResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x0B" name="GetPowerProfilePriceExtended" mandatory="false">FALSE</command>
+      </cluster>
+
+      <cluster>
+        <name>Meter Identification</name>
+        <code>0x0B01</code>
+        <define>METER_IDENTIFICATION_CLUSTER</define>
+      </cluster>
+
+      <cluster>
+        <name>Appliance Statistics</name>
+        <code>0x0B03</code>
+        <define>APPLIANCE_STATISTICS_CLUSTER</define>
+        <command receivedBy="client" code="0x00" name="LogNotification" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x01" name="LogResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x02" name="LogQueueResponse" mandatory="true">TRUE</command>
+        <command receivedBy="client" code="0x03" name="StatisticsAvailable" mandatory="true">TRUE</command>
+      </cluster>
+
+      <cluster>
+        <name>Over the Air Bootloading</name>
+        <code>0x0019</code>
+        <define>OVER_THE_AIR_BOOTLOADING_CLUSTER</define>
+        <command receivedBy="server" code="0x01" name="QueryNextImageRequest" mandatory="true">TRUE</command>
+        <command receivedBy="server" code="0x03" name="ImageBlockRequest" mandatory="true">TRUE</command>
+        <command receivedBy="server" code="0x04" name="ImagePageRequest" mandatory="fale">FALSE</command>
+        <command receivedBy="server" code="0x06" name="UpgradeEndRequest" mandatory="true">TRUE</command>
+        <command receivedBy="server" code="0x08" name="QuerySpecificFileRequest" mandatory="false">FALSE</command>
+      </cluster>
+
+      <cluster>
+        <name>Simple Metering</name>
+        <code>0x0702</code>
+        <define>SIMPLE_METERING_CLUSTER</define>
+      </cluster>
+
+    </HAClusters>
+  </picsProforma>
+</homeAutomationPICs>

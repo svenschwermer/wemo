@@ -1,0 +1,29 @@
+# NetCam configuration
+choice
+     prompt "Netcam version selection"
+     depends on PACKAGE_WeMo_NetCam
+
+     config NETCAM_NetCam
+     	    bool "Netcam SD support"
+	    help
+		NetCam SD version support
+	    default y
+	   
+     config NETCAM_HD_V1
+     	    bool "Netcam HD Version 1 support"
+	    help
+		Netcam HD version 1 support
+	    default n
+
+      config NETCAM_HD_V2
+            bool "NetCam HD Version 2 support"
+	    help
+		Netcam HD Version 2 support
+	    default n
+
+       config NETCAM_LS
+       	     bool "NetCam Linksys support"
+	     help
+		NetCam Linksys support
+	     default n
+endchoice

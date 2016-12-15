@@ -1,0 +1,369 @@
+-------create group to cloud-------
+
+      -----1 DWs--------------
+
+ <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupNam [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug e><iconVersion>1</iconVersion><devices><device><deviceId></deviceId></device></devices><capabilities><capability><capabilityId>1 [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug 0500</capabilityId><currentValue></currentValue></capability><capability><capabilityId>20500</capabilityId><currentValue>1</curr [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug entValue></capability></capabilities></group></groups>
+
+-------response---------
+
+5:53:00 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_INVALID_NO_OF_DEVICES</code><descripti [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug on>Invalid number of Devices</description></resultCode><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupN [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug ame><iconVersion>1</iconVersion><devices><device/></devices><capabilities><capability><capabilityId>20500</capabilityId><current [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug Value>1</currentValue></capability><capability><capabilityId>10500</capabilityId><currentValue></currentValue></capability></cap [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug abilities></group></groups> [ 1718254649 ]
+
+      -------2 DWs-------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718180004 ]
+Aug  3 12:06:28 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_FIELD_VALIDATION_ERROR</code><descript [ 1718180004 ]
+Aug  3 12:06:28 WEMO: remote.debug ion>Validation Error: addGroup.plugin.pluginId Field value is nulll|</description></resultCode><referenceId>1438578380</referenc [ 1718180004 ]
+Aug  3 12:06:28 WEMO: remote.debug eId><groupName>Doors and Windows</groupName><iconVersion>1</iconVersion><devices><device/><device/></devices><capabilities><capa [ 1718180004 ]
+Aug  3 12:06:28 WEMO: remote.debug bility><capabilityId>20500</capabilityId><currentValue>1</currentValue></capability><capabilAug  3 12:06:28 WEMO: 12:6:28 | remote.debug <event_queue.c:wait_event:463> [0x2ffae520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Aug  3 12:06:28 WEMO: 12:6:28 | remote.debug <event_queue.c:pop_event:409> [0x2ffae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5adfb0
+Aug  3 12:06:28 WEMO: 12:6:28 | remote.debug <event_quCached MAC Address = B4:75:0E:1E:1D:84 
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Aug  3 12:06:28 WEMO: remote.debug Address><friendlyName>WeMo Door and Window Sensor 01</friendlyName><modelCode>F7C038</modelCode><productName>DWSensor</productNa [ 1718180011 ]
+Aug  3 12:06:28 WEMO: remote.debug me><productType>AlertSensor</productType><status>0</status><statusTS>1438578388</statusTS><firmwareVersion>1F</firmwareVersion>< [ 1718180011 ]
+Aug  3 12:06:28 WEMO: remote.debug fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><deviceCapabilityProfiles><deviceCapabilityProfile><capab [ 1718180011 ]
+Aug  3 12:06:28 WEMO: remote.debug ilityId>10500</capabilityId><currentValue>0</currentValue><ts>1438578373</ts></deviceCapabilityProfile></deviceCapabilityProfile [ 1718180011 ]
+Aug  3 12:06:28 WEMO: remote.debug s></device></devices>  [ 1718180011 ]
+
+
+
+-------------log1-----------
+
+
+Jul 31 15:52:56 WEMO: 15:52:56 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:653> [0x2fbae520:"RemoteWorkerThre"] Handle groupdevice...
+Jul 31 15:52:56 WEMO: 15:52:56 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:471> [0x2fbae520:"RemoteWorkerThre"] Create Group in handleGroupDevice...............
+Jul 31 15:52:56 WEMO: [SD] GetGroupCapabilityValueCache(1438332765,10500) 
+Jul 31 15:52:56 WEMO: [SD] 1438332765 
+Jul 31 15:52:56 WEMO: [SD] GetGroupCapabilityValueCache(1438332765,20500) 
+Jul 31 15:52:56 WEMO: [SD] 1438332765 1
+Jul 31 15:52:56 WEMO: 15:52:56 | remote.debug <ledLightRemoteHandler.c:CreateGroups:1862> [0x2fbae520:"RemoteWorkerThre"] CreateGroups: URL = https://api.xbcs.net:8443/apis/http/device/groups/1892859
+Jul 31 15:52:56 WEMO: 15:52:56 | remote.debug <ledLightRemoteHandler.c:CreateGroups:1863> [0x2fbae520:"RemoteWorkerThre"] CreateGroups: reqXML....dp:::: <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupName><iconVersion>1</iconVersion><devices><device><deviceId></deviceId></device></devices><capabilities><capability><capabilityId>10500</capabilityId><currentValue></currentValue></capability><capability><capabilityId>20500</cap
+Jul 31 15:52:56 WEMO: 15:52:56 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2ebae520:""] push_work_event(device, update, 0x5b77d0, 146)
+Jul 31 15:52:56 WEMO: 15:52:56 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1539> [0x2e5ae520:""] flag_setup_done is already existed...
+Jul 31 15:52:57 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupNam [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug e><iconVersion>1</iconVersion><devices><device><deviceId></deviceId></device></devices><capabilities><capability><capabilityId>1 [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug 0500</capabilityId><currentValue></currentValue></capability><capability><capabilityId>20500</capabilityId><currentValue>1</curr [ 1718254360 ]
+Jul 31 15:52:57 WEMO: remote.debug entValue></capability></capabilities></group></groups>  [ 1718254360 ]
+Jul 31 15:52:57 WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2e5ae520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(1)
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2e5ae520:""] GetEndDevices: nPaired(1), nUnpaired(0), ListType(PAIRED_LIST)
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 10500 -- bilityValue = 11....dp
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2e5ae520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2e5ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 11,1,0
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2e5ae520:""] GetEndDevices: === pszResponse ===
+Jul 31 15:52:57 WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Paired</DeviceListType><DeviceInfos /><GroupInfos [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug ><GroupInfo><GroupID>1438332765</GroupID><GroupName>Doors and Windows</GroupName><GroupCapabilityIDs>10500,20500,30501</GroupCap [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug abilityIDs><GroupCapabilityValues>,1,0</GroupCapabilityValues><DeviceInfos><DeviceInfo><DeviceIndex>0</DeviceIndex><DeviceID>941 [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug 03E71D6140189</DeviceID><FriendlyName>WeMo Door and Window Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion> [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug 1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>11,1,0</CurrentState><Manufacturer>Belkin</Man [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug ufacturer><ModelCode>F7C038</ModelCode><productName>DWSensor</productName><WeMoCertified>YES</WeMoCertified></DeviceInfo></Devic [ 1718254398 ]
+Jul 31 15:52:57 WEMO: upnp.debug eInfos></GroupInfo></GroupInfos></DeviceList></DeviceLists>  [ 1718254398 ]
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2573> [0x2e3ae520:""] GetDeviceStatus === start ===
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:CreateDeviceStatusXML:2464> [0x2e3ae520:""] GetDeviceStatus: szDeviceIDs[0] = 1438332765
+Jul 31 15:52:57 WEMO: [SD] sm_FindDevice(1:1438332765): Device Not Found or it's an GroupID 
+Jul 31 15:52:57 WEMO: [SD] GetGroupCapabilityValueCache(1438332765,10500) 
+Jul 31 15:52:57 WEMO: [SD] 1438332765 
+Jul 31 15:52:57 WEMO: [SD] GetGroupCapabilityValueCache(1438332765,20500) 
+Jul 31 15:52:57 WEMO: [SD] 1438332765 1
+Jul 31 15:52:57 WEMO: [SD] GetGroupCapabilityValueCache(1438332765,30501) 
+Jul 31 15:52:57 WEMO: [SD] 1438332765 0
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:GetGroupCapabilityValues:1048> [0x2e3ae520:""] Group CapabilityValues = ,1,0
+Jul 31 15:52:57 WEMO: 15:52:57 | upnp.debug <ledLightUPnPHandler.c:CreateDeviceStatusXML:2464> [0x2e3ae520:""] GetDeviceStatus: szDeviceIDs[1] = 94103E71D6140189
+Jul 31 15:52:57 WEMO: Jul 31 15:52:57 WEMO: 15:52:57 | core.debug <sd_Jul 31 15:52:57 WEMO: 15:52:57 | app.debug <logger.c:pluginLog:330> [0x2e1ae520:""] wemoApp[2756:{}]:[2015-07-31][15:52:57.924957]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e1ae520:""] Action found: GetDeviceStatus
+Jul 31 15:52:57 WEMO: 15:52:57 | upnpJul 31 15:52:57 WEMO: 15:52:57 | core.debug <sd_Jul 31 15:52:58 WEMO: 15:52:58 | app.debug <logger.c:pluginLog:330> [0x2dbae520:""] wemoApp[3259:{}]:[2015-07-31][15:52:58.008601]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2dbae520:""] Action found: GetDeviceStatus
+Jul 31 15:52:58 WEMO: 15:52:58 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2573> [0x2dbae520:""] GetDeviceStatus === start ===
+Jul 31 15:52:58 WEMO: 15:52:58 | upnp.debug <ledLightUPnPHandler.c:CreateDeviJul 31 15:52:58 WEMO: 15:52:58 |Jul 31 15:52:58 > POST /apis/http/device/groups/1892859 HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:QHzaPS7Xx16b2aRkA3hhKzLgn7Q=:1438333277
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9460.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 439
+
+
+
+< HTTP/1.1 400 Bad Request
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Fri, 31 Jul 2015 08:53:00 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 667
+
+< Connection: keep-alive
+
+< 
+
+Jul 31 15:53:00 WEMO: 15:53:0 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-07-31][15:53:00.374889]<httpsWrapper.c:webAppSendData:2671> [0x2fbae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/groups/1892859 requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fbae520:"RemoteWorkerThre"] Length of HTTP Header = 250 
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fbae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 400 
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fbae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fbae520:"RemoteWorkerThre"] Header retuned by server
+Jul 31 15:53:00 WEMO: remote.debug HTTP/1.1 400 Bad Request^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Fri, 31 Jul 2015 08 [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug :53:00 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 667^M Connection: keep-alive^M  [ 1718254649 ]
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fbae520:"RemoteWorkerThre"] Data retuned by server
+Jul 31 15:53:00 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_INVALID_NO_OF_DEVICES</code><descripti [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug on>Invalid number of Devices</description></resultCode><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupN [ 1718254649 ]
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:877> [0x2fbae520:"RemoteWorkerThre"] --- Data returned by server ---
+Jul 31 15:53:00 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_INVALID_NO_OF_DEVICES</code><descripti [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug on>Invalid number of Devices</description></resultCode><referenceId>1438332765</referenceId><groupName>Doors and Windows</groupN [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug ame><iconVersion>1</iconVersion><devices><device/></devices><capabilities><capability><capabilityId>20500</capabilityId><current [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug Value>1</currentValue></capability><capability><capabilityId>10500</capabilityId><currentValue></currentValue></capability></cap [ 1718254649 ]
+Jul 31 15:53:00 WEMO: remote.debug abilities></group></groups> [ 1718254649 ]
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:248> [0x2fbae520:"RemoteWorkerThre"] pStatusCode = F
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:255> [0x2fbae520:"RemoteWorkerThre"] pErrorCode = ERR_INVALID_NO_OF_DEVICES
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:485> [0x2fbae520:"RemoteWorkerThre"] handleGroupDevice(event = 1008, HomeId = 1892859, GroupID = 1438332765, StatusCode = 400)
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <event_queue.c:wait_event:463> [0x2fbae520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <event_queue.c:pop_event:409> [0x2fbae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x4d2f18
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <event_queue.c:pop_event:410> [0x2fbae520:"RemoteWorkerThre"] pop_event: event->pData = 0x58bcb0
+Jul 31 15:53:00 WEMO: 15:53:0 | remote.debug <evCached MAC Address = B4:75:0E:1E:1D:84 
+
+
+
+--------------------------log2---------------------------
+
+
+Aug  3 10:28:47 WEMO: 10:28:47 | remote.debug <event_queue.c:wait_event:463> [0x2fbae520:"RemoteWorkerThre"] wait_event: name = group, value = create
+Aug  3 10:28:47 WEMO: 10:28:47 | remote.debug <event_queue.c:pop_event:409> [0x2fbae520:"RemoteWorkerThre"] pop_event: event_queue[0] -Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <loggAug  3 10:28:47 Aug  3 10:28:47 WEMO: 10:28:47 | app.de
+bug <logger.c:pluginLog:330> [0x2d1ae520:""] wemoApp[3015:{}]:[2015-08-03][10:28:47.700229]<plugin_ctrlpoAug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x2ddae520:""] wemoApp[3016:{}]:[2015-08-03][10:28:47.730899]<pl
+ugin_ctrlpoint.c:CtrlPointProcessDeviceDiscAug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x2d1ae520:route: SIOCDELRT: No such process
+SetBelkinParameter - ParameterName = RouterMac , ParameterValue = B4750E55D6EA
+SetBelkinParameter - ParameterName = RouterSsid , ParameterValue = VEriK
+thready: Destructor freeing name "CloseApWaitingTh".
+Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x2bdae520:"CloseApWaitingTh"] wemoApp[3004:{CloseApWaitingTh}]:[2015-08-03][10:28:47.818635]<plugin_ctrthready: Setting thread name to "CtrlPtRediscoverTask" (tid:83852
+6240).
+Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x2dfae520:""] wemoApp[3019:{}]:[2015-08-03][10:28:47.829311]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1714> [0x2dfae520:""] Downloading XML document...http://10
+.0.0.102:49153/setup.xml
+Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x30fae520:""] wemoApp[3040:{}]:[2015-08-03][10:28:47.832855]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1714> [0x30fae520:""] Downloading XML document...http://10
+.0.0.102:49153/setup.xml
+Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x2dfae520:""] wemoApp[3019:{}]:[2015-08-03][10:28:47.859427]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1292> [0x2dfae520:""] UDN uuid:Bridge-1_0-231347B01001
+5A found
+Aug  3 10:28:47 WEMO: 10:28:47 | app.debug <logger.c:pluginLog:330> [0x30fae520:""] wemoApp[3040:{}]:[2015-08-03][10:28:47.876806]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1292> [0x30fae520:""] UDN uuid:Bridge-1_0-231347B01001
+5A found
+Aug  3 10:28:47 WEMO: [Mon Aug  3 10:28:47 2015 ]:job_id[0]:Sent discovery response to device:10.0.0.102
+Aug  3 10:28:48 WEMO: 10:28:48 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"main"] wemoApp[1741:{main}]:[2015-08-03][10:28:48.092611]<controlleedevice.c:ProcessItcEvent:9523> [0x2aab0310:"main"] META_SAVE_DATA
+> POST /apis/http/device/groups/1892859 HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: B4750E1E1D84:jOKxy5NZlEOL+utruAJhWozQDBQ=:1438573027
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9460.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 439
+
+Aug  3 10:28:49 dnsmasq-dhcp[1652]: no address range available for DHCP request via apcli0
+< HTTP/1.1 400 Bad Request
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Mon, 03 Aug 2015 03:28:50 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 667
+< Connection: keep-alive
+< 
+Aug  3 10:28:50 WEMO: 10:28:50 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-08-03][10:28:50.782042]<httpsWrapper.c:webAppSendData:2671> [0x2fbae520:"RemoteWorkerThre"] HTTP Re
+quest URL https://api.xbcs.net:8443/apis/http/device/groups/1892859 requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fbae520:"RemoteWorkerThre"] Length of HTTP Header = 250 
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fbae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 400 
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fbae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fbae520:"RemoteWorkerThre"] Header retuned by server
+Aug  3 10:28:50 WEMO: remote.debug HTTP/1.1 400 Bad Request^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Mon, 03 Aug 2015 03 [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug :28:50 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 667^M Connection: keep-alive^M  [ 1718007934 ]
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fbae520:"RemoteWorkerThre"] Data retuned by server
+Aug  3 10:28:50 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_INVALID_NO_OF_DEVICES</code><descripti [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug on>Invalid number of Devices</description></resultCode><referenceId>1438572520</referenceId><groupName>Doors and Windows</groupN [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug ame><iconVersion>1</iconVersion><devices><device/></devices><capabilities><capability><capabilityId>10500</capabilityId><current [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug Value></currentValue></capability><capability><capabilityId>20500</capabilityId><currentValue>1</currentValue></capability></cap [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug abilities></group></groups> [ 1718007934 ]
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:868> [0x2fbae520:"RemoteWorkerThre"] --- Header Data returned by server ---
+Aug  3 10:28:50 WEMO: remote.debug HTTP/1.1 400 Bad Request^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Mon, 03 Aug 2015 03 [ 1718007934 ]
+Aug  3 10:28:50 WEMO: remote.debug :28:50 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 667^M Connection: keep-alive^M  [ 1718007934 ]
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:877> [0x2fbae520:"RemoteWorkerThre"] --- Data returned by server ---
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:248> [0x2fbae520:"RemoteWorkerThre"] pStatusCode = F
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:255> [0x2fbae520:"RemoteWorkerThre"] pErrorCode = ERR_INVALID_NO_OF_DEVICES
+Aug  3 10:28:50 WEMO: 10:28:50 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:485> [0x2fbae520:"RemoteWorkerThre"] handleGroupDevice(event = 1008, HomeId = 1892859, GroupID = 1438572520, StatusCode = 400)
+
+
+---------------------------log3---------------------------
+
+Aug  3 11:43:01 WEMO: [Mon Aug  3 11:43:01 2015 ]:job_id[1]:Sent discovery response to device:10.0.0.102
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <event_queue.c:wait_event:463> [0x2ffae520:"RemoteWorkerThre"] wait_event: name = group, value = create
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <event_queue.c:pop_event:409> [0x2ffae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5bade0
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <event_queue.c:pop_event:410> [0x2ffae520:"RemoteWorkerThre"] pop_event: event->pData = 0x590ca0
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <event_queue.c:pop_event:425> [0x2ffae520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <event_queue.c:wait_event:467> [0x2ffae520:"RemoteWorkerThre"] pop_event(name = group, value = create)
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:653> [0x2ffae520:"RemoteWorkerThre"] Handle groupdevice...
+Aug  3 11:43:01 WEMO: 11:43:1 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:471> [0x2ffae520:"RemoteWorkerThre"] Create Group in handleGroupDevice...............
+Aug  3 11:43:01 WEMO: [SD] GetGroupCapabilityValueCache(1438576974,10500) 
+Aug  3 11:43:01 WEMO: [SD] 1438576974 
+Aug  3 11:43:01 WEMO: [SD] GetGroupCapabilityValueCache(1438576974,20500) 
+Aug  3 11:43:01 WEMO: [SD] 1438576974 1
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Aug  3 11:43:02 WEMO: 11:43:2 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2ffae520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+Aug  3 11:43:02 WEMO: 11:43:2 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2ffae520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+Aug  3 11:43:02 WEMO: 11:43:2 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2ffae520:"RemoteWorkerThre"] Key for plug-in device is 5f00da93-f913-460f-865b-59e0828feea2
+Aug  3 11:43:02 WEMO: 11:43:2 | app.debug <logger.c:pluginLog:330> [0x2ffae520:"RemoteWorkerThre"] wemoApp[1814:{RemoteWorkerThre}]:[2015-08-03][11:43:02.469708]<sigGen.c:createAuthSignature:111> [0x2ffae520:"RemoteWorkerThre"] Expires before 1438576982
+Aug  3 11:43:02 WEMO: 11:43:2 | app.debug <logger.c:pluginLog:330> [0x2ffae520:"RemoteWorkerThre"] wemoApp[1814:{RemoteWorkerThre}]:[2015-08-03][11:43:02.470035]<sigGen.c:createAuthSignature:113> [0x2ffae520:"RemoteWorkerThre"] Expires after 500 1438577482
+Aug  3 11:43:02 WEMO: 11:43:2 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2ffae520:"RemoteWorkerThre"] --- inData --- 
+Aug  3 11:43:02 WEMO: 11:43:2 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2ffae520:"RemoteWorkerThre"] inDataLength = 439
+Aug  3 11:43:02 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1438576974</referenceId><groupName>Doors and Windows</groupNam [ 1718039385 ]
+Aug  3 11:43:02 WEMO: remote.debug e><iconVersion>1</iconVersion><devices><device><deviceId></deviceId></device></devices><capabilities><capability><capabilityId>1 [ 1718039385 ]
+Aug  3 11:43:02 WEMO: remote.debug 0500</capabilityId><currentValue></currentValue></capability><capability><capabilityId>20500</capabilityId><currentValue>1</curr [ 1718039385 ]
+Aug  3 11:43:02 WEMO: remote.debug entValue></capability></capabilities></group></groups>  [ 1718039385 ]
+SetBelkinParameter - ParameterName = RouterMac , ParameterValue = B4750E55D6EA
+SetBelkinParameter - ParameterName = RouterSsid , ParameterValue = VEriK
+thready: Destructor freeing name "CloseApWaitingTh".
+Aug  3 11:43:02 WEMO: 11:43:2 | app.debug <logger.c:pluginLog:330> [0x2c5ae520:"CloseApWaitingTh"] wemoApp[3716:{CloseApWaitingTh}]:[2015-08-03][11:43:02.480257]<plugin_cthready: Setting thread name to "CtrlPtRediscoverTask" (tid:796583200).
+Aug  3 11:43:02 WEMO: 11:43:2 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"main"] wemoApp[1723:{main}]:[2015-08-03][11:43:02.794556]<controlleedevice.c:ProcessItcEvent:9523> [0x2aab0310:"main"] META_SAVE_DATA
+> POST /apis/http/device/groups/1892859 HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:iNVO3mQkyRTqGenj//iWePbqpWE=:1438577482
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9460.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 439
+
+
+
+< HTTP/1.1 400 Bad Request
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Mon, 03 Aug 2015 04:43:04 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 667
+
+< Connection: keep-alive
+
+< 
+
+Aug  3 11:43:05 WEMO: 11:43:5 | app.debug <logger.c:pluginLog:330> [0x2ffae520:"RemoteWorkerThre"] wemoApp[1814:{RemoteWorkerThre}]:[2015-08-03][11:43:05.129376]<httpsWrapper.c:webAppSendData:2671> [0x2ffae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/groups/1892859 requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2ffae520:"RemoteWorkerThre"] Length of HTTP Header = 250 
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2ffae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 400 
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2ffae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2ffae520:"RemoteWorkerThre"] Header retuned by server
+Aug  3 11:43:05 WEMO: remote.debug HTTP/1.1 400 Bad Request^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Mon, 03 Aug 2015 04 [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug :43:04 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 667^M Connection: keep-alive^M  [ 1718039651 ]
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2ffae520:"RemoteWorkerThre"] Data retuned by server
+Aug  3 11:43:05 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_INVALID_NO_OF_DEVICES</code><descripti [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug on>Invalid number of Devices</description></resultCode><referenceId>1438576974</referenceId><groupName>Doors and Windows</groupN [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug ame><iconVersion>1</iconVersion><devices><device/></devices><capabilities><capability><capabilityId>20500</capabilityId><current [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug Value>1</currentValue></capability><capability><capabilityId>10500</capabilityId><currentValue></currentValue></capability></cap [ 1718039651 ]
+Aug  3 11:43:05 WEMO: remote.debug abilities></group></groups> [ 1718039651 ]
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:868> [0x2ffae520:"RemoteWorkerThre"] --- Header Data returned by server ---
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:248> [0x2ffae520:"RemoteWorkerThre"] pStatusCode = F
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:GetErrorCodeStr:255> [0x2ffae520:"RemoteWorkerThre"] pErrorCode = ERR_INVALID_NO_OF_DEVICES
+Aug  3 11:43:05 WEMO: 11:43:5 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:485> [0x2ffae520:"RemoteWorkerThre"] handleGroupDevice(event = 1008, HomeId = 1892859, GroupID = 1438576974, StatusCode = 400)
+
+
+
+--------------------------Delete Group-------------------
+
+
+root@OpenWrt:/# Jul 31 15:50:59 WEMO: 15:50:59 | app.debug <logger.c:pluginLog:330> [0x2e1ae520:""] wemoApp[2756:{}]:[2015-07-31][15:50:59.408374]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e1ae520:""] Action found: DeleteGroup
+Jul 31 15:50:59 WEMO: 15:50:59 | upnp.debug <ledLightUPnPHandler.c:DeleteGroup:3307> [0x2e1ae520:""] DeleteGroup: GroupID = 1438332469
+Jul 31 15:50:59 WEMO: [SD] sm_FindCapability(4:30008): Capability Not Found 
+Jul 31 15:50:59 WEMO: [SD] sm_FindCapability(4:30008): Capability Not Found 
+Jul 31 15:50:59 WEMO: [SD] DeleteGroup(1438332469) 
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:push_event:317> [0x2e1ae520:""] push_event: eventno = [0]
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:push_event:337> [0x2e1ae520:""] push_event: event_queue[0] address = 0x5adeb8
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:push_event:339> [0x2e1ae520:""] push_event: event_queue[0] --> name = group, value = delete
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:push_event:347> [0x2e1ae520:""] push_event: event_queue[0] --> data = 0x5a2c00, len = 36
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:push_event:358> [0x2e1ae520:""] sysevent(group, delete) : 0
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2e1ae520:""] push_work_event(group, delete, 0x5a0008, 36)
+Jul 31 15:50:59 WEMO: 15:50:59 | upnp.debug <ledLightUPnPHandler.c:deleteAllPreset:6300> [0x2e1ae520:""] deleteAllPreset: presetID=1438332469
+Jul 31 15:50:59 WEMO: 15:50:59 | app.debug <logger.c:pluginLog:330> [0x2e1ae520:""] wemoApp[2756:{}]:[2015-07-31][15:50:59.449191]<WemoDB.c:WeMoDBDeleteEntry:290> [0x2e1ae520:""] SQL Delete statement: DELETE FROM DEVICEPRESETINFO WHERE id="1438332469";
+Jul 31 15:50:59 WEMO: 15:50:59 | app.debug <logger.c:pluginLog:330> [0x2e1ae520:""] wemoApp[2756:{}]:[2015-07-31][15:50:59.452072]<WemoDB.c:WeMoDBDeleteEntry:290> [0x2e1ae520:""] SQL Delete statement: DELETE FROM DEVICEPRESETVERSIONINFO WHERE id="1438332469";
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:wait_event:463> [0x2fbae520:"RemoteWorkerThre"] wait_event: name = group, value = delete
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:pop_event:409> [0x2fbae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5adeb8
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:pop_event:410> [0x2fbae520:"RemoteWorkerThre"] pop_event: event->pData = 0x5a2c00
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:pop_event:425> [0x2fbae520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <event_queue.c:wait_event:467> [0x2fbae520:"RemoteWorkerThre"] pop_event(name = group, value = delete)
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:653> [0x2fbae520:"RemoteWorkerThre"] Handle groupdevice...
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <ledLightRemoteHandler.c:DeleteGroups:1898> [0x2fbae520:"RemoteWorkerThre"] DeleteGroups: URL = https://api.xbcs.net:8443/apis/http/device/groups/1892859/1438332469
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fbae520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2fbae520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+Jul 31 15:50:59 WEMO: 15:50:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2fbae520:"RemoteWorkerThre"] Key for plug-in device is 5f00da93-f913-460f-865b-59e0828feea2
+Jul 31 15:50:59 WEMO: 15:50:59 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-07-31][15:50:59.461332]<sigGen.c:createAuthSignature:111> [0x2fbae520:"RemoteWorkerThre"] Expires before 1438332659
+Jul 31 15:50:59 WEMO: 15:50:59 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-07-31][15:50:59.465269]<httpsWrapper.c:webAppSendDataDelete:1084> [0x2fbae520:"RemoteWorkerThre"] inDataLength = 0
+> DELETE /apis/http/device/groups/1892859/1438332469 HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:3EZm0PMWpAslGDUesF/Ho3SbWGA=:1438333159
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9460.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+
+
+< HTTP/1.1 400 Bad Request
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Fri, 31 Jul 2015 08:51:00 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 324
+
+< Connection: keep-alive
+
+< 
+
+Jul 31 15:51:01 WEMO: 15:51:1 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-07-31][15:51:01.294319]<httpsWrapper.c:webAppSendDataDelete:1103> [0x2fbae520:"RemoteWorkerThre"] webAppSendDataDelete is OK
+Jul 31 15:51:01 WEMO: 15:51:1 | app.debug <logger.c:pluginLog:330> [0x2fbae520:"RemoteWorkerThre"] wemoApp[1831:{RemoteWorkerThre}]:[2015-07-31][15:51:01.294765]<httpsWrapper.c:webAppSendData:2671> [0x2fbae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/groups/1892859/1438332469 requested flag 8 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+Jul 31 15:51:01 WEMO: 15:51:1 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fbae520:"RemoteWorkerThre"] Length of HTTP Header = 250 
+Jul 31 15:51:01 WEMO: 15:51:1 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fbae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 400 
+Jul 31 15:51:01 WEMO: 15:51:1 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fbae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 31 15:51:01 WEMO: 15:51:1 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fbae520:"RemoteWorkerThre"] Header retuned by server
+Jul 31 15:51:01 WEMO: remote.debug HTTP/1.1 400 Bad Request^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Fri, 31 Jul 2015 08 [ 1718242740 ]
+Jul 31 15:51:01 WEMO: remote.debug :51:00 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 324^M Connection: keep-alive^M  [ 1718242740 ]
+Jul 31 15:51:01 WEMO: 15:51:1 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fbae520:"RemoteWorkerThre"] Data retuned by server
+Jul 31 15:51:01 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><error xmlns:modelns="http://datamodel.components.cs.belkin.com/" success [ 1718242741 ]
+Jul 31 15:51:01 WEMO: remote.debug ="S" fail="F" partial_success="P"><statusCode>F</statusCode><resultCode><code>ERR_INVALID_GROUP_ID</code><description>Group ID s [ 1718242741 ]
+Jul 31 15:51:01 WEMO: remote.debug pecified is invalid or not exists</description></resultCode></error> [ 1718242741 ]

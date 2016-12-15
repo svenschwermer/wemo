@@ -1,0 +1,48 @@
+SeSamplePCT {
+  name=Smart Energy PCT
+  dir=zse/SeSamplePCT
+  isc=zse/SeSamplePCT/SeSamplePCTEM35X.isc
+  This is a Programmable Communicating Thermostat application for a Smart Energy 1.x network.
+}
+
+SeSampleEsi {
+  name=Smart Energy ESI
+  dir=zse/SeSampleEsi
+  isc=zse/SeSampleEsi/SeSampleEsiEM35X.isc
+  This is an Energy Services interface application for a Smart Energy 1.x network.
+}
+
+ZllSampleController {
+  name=ZigBee Light Link Controller
+  dir=zll/ZllSampleController
+  isc=zll/ZllSampleController/ZllSampleControllerEM35X.isc
+  This is a controller application for a ZLL network.
+}
+
+ZllSampleLight {
+  name=ZigBee Light Link Light
+  dir=zll/ZllSampleLight
+  isc=zll/ZllSampleLight/ZllSampleLightEM35X.isc
+  This is a simple on/off light application for a ZLL network.
+}
+
+HaSampleLight {
+  name=ZigBee Home Automation Light
+  dir=zha/HaSampleLight
+  isc=zha/HaSampleLight/HaSampleLightEM35X.isc
+  This is a on/off light for a Home Automation network.
+}
+
+HaSampleSwitch {
+  name=ZigBee Home Automation Switch
+  dir=zha/HaSampleSwitch
+  isc=zha/HaSampleSwitch/HaSampleSwitchEM35X.isc
+  This is a switch application for a Home Automation Network.
+}
+
+HaSampleGateway {
+  name=ZigBee Home Automation Gateway
+  dir=zha/HaSampleGateway
+  isc=zha/HaSampleGateway/HaSampleGatewayEM35X.isc
+  This is a gateway application for a Home Automation Network.
+}

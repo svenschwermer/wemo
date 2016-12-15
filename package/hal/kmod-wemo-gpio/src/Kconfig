@@ -1,0 +1,5 @@
+config CONFIG_WEMO_GPIO
+	tristate "Wemo GPIO driver"
+	help
+	  This is a customized Ralink GPIO driver for WeMO products.
+

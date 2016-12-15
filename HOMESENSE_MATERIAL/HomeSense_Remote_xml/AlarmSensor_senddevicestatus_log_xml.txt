@@ -1,0 +1,305 @@
+-----------------outbound------------------
+<?xml version="1.0" encoding="utf-8"?>
+<devices>
+    <device>
+        <parentPluginId>1678347</parentPluginId>
+        <macAddress>94103E71D614002A</macAddress>
+        <friendlyName>WeMo Alarm Sensor 01</friendlyName>
+        <modelCode>F7C040</modelCode>
+        <productName>AlarmSensor</productName>
+        <productType>AlertSensor</productType>
+        <status>10</status>
+        <statusTS>1439280087</statusTS>
+        <firmwareVersion>1F</firmwareVersion>
+        <fwUpgradeStatus>4</fwUpgradeStatus>
+        <signalStrength>100</signalStrength>
+        <deviceCapabilityProfiles>
+            <deviceCapabilityProfile>
+                <capabilityId>10500</capabilityId>
+                <currentValue>10</currentValue>
+                <ts>0</ts>
+            </deviceCapabilityProfile>
+        </deviceCapabilityProfiles>
+    </device>
+</devices>
+
+----------------inbound--------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<devices
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P">
+    <resultCode>
+        <code>PLGN_200</code>
+        <description>Successful</description>
+    </resultCode>
+    <statusCode>S</statusCode>
+    <device>
+        <resultCode>
+            <code>PLGN_200</code>
+            <description>Successful</description>
+        </resultCode>
+        <parentPluginId>1678347</parentPluginId>
+        <macAddress>94103E71D614002A</macAddress>
+    </device>
+</devices>
+----------------log------------------------------
+
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:29db5656-1dd2-11b2-8be6-be96b0947cb5, key: 1
+WEMO: Worker thread started in thread-pool[0x2ad58d40]
+WEMO: 15:1:26 | remote.debug <event_queue.c:wait_event:463> [0x2fbb0520:"RemoteWorkerThre"] wait_event: name = device, value = update
+
+WEMO: 15:1:26 | remote.debug <event_queue.c:pop_event:409> [0x2fbb0520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5da9c8
+
+WEMO: 15:1:27 | remote.debug <event_queue.c:pop_event:410> [0x2fbb0520:"RemoteWorkerThre"] pop_event: event->pData = 0x578598
+
+WEMO: 15:1:27 | remote.debug <event_queue.c:pop_event:425> [0x2fbb0520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+
+WEMO: 15:1:27 | remote.debug <event_queue.c:wait_event:467> [0x2fbb0520:"RemoteWorkerThre"] pop_event(name = device, value = update)
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:661> [0x2fbb0520:"RemoteWorkerThre"] Send subdevice status notification...
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:527> [0x2fbb0520:"RemoteWorkerThre"] updateSubdevice: pluginId = 1678347
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:528> [0x2fbb0520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->szDeviceID = 94103E71D614002A
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:530> [0x2fbb0520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->CapInfo.szCapabilityID = 10500
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:532> [0x2fbb0520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->CapInfo.szCapabilityValue = 10
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:GetSubDeviceAvailableStatus:302> [0x2fbb0520:"RemoteWorkerThre"] DeviceID = 94103E71D614002A, Value = 10
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:GetSubDeviceAvailableStatus:313> [0x2fbb0520:"RemoteWorkerThre"] GetSubDeviceAvailableStatus: DeviceID = 94103E71D614002A, Status = 10
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:makeSubdeviceNode:2035> [0x2fbb0520:"RemoteWorkerThre"] makeSubdeviceNode: Bulb FirmwareUpgrade = 4
+
+WEMO: 15:1:27 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:27.668683]<ledLightRemoteHandler.c:makeSubdeviceNode:2074> [0x2fbb0520:"RemoteWorkerThre"] Capability Value:10
+
+WEMO: 15:1:27 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:27.669123]<rule.c:doesNotificationRuleExist:3298> [0x2fbb0520:"RemoteWorkerThre"] Entering fn:doesNotificationRuleExist
+
+WEMO: 15:1:27 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:27.669499]<rule.c:doesNotificationRuleExist:3304> [0x2fbb0520:"RemoteWorkerThre"] No notification rule exist for this device
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2305> [0x2fbb0520:"RemoteWorkerThre"] SendDeviceStateNotification: URL = https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>1678347</parentPluginId><macAddress>94103E71D614002A</mac [ 1718046494 ]
+WEMO: remote.debug Address><friendlyName>WeMo Alarm Sensor 01</friendlyName><modelCode>F7C040</modelCode><productName>AlarmSensor</productName><pro [ 1718046494 ]
+WEMO: remote.debug ductType>AlertSensor</productType><status>10</status><statusTS>1439280087</statusTS><firmwareVersion>1F</firmwareVersion><fwUpgr [ 1718046494 ]
+WEMO: remote.debug adeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><deviceCapabilityProfiles><deviceCapabilityProfile><capabilityI [ 1718046494 ]
+WEMO: remote.debug d>10500</capabilityId><currentValue>10</currentValue><ts>0</ts></deviceCapabilityProfile></deviceCapabilityProfiles></device></d [ 1718046494 ]
+WEMO: remote.debug evices>
+ [ 1718046494 ]
+Cached MAC Address = B4:75:0E:1E:1C:F4 
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fbb0520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1C:F4
+
+Cached MAC Address = B4:75:0E:1E:1C:F4 
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2fbb0520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B0100136
+
+WEMO: 15:1:27 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2fbb0520:"RemoteWorkerThre"] Key for plug-in device is c148f3a9-394a-4316-a3d9-17da872904ad
+
+WEMO: 15:1:28 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:28.339225]<sigGen.c:createAuthSignature:111> [0x2fbb0520:"RemoteWorkerThre"] Expires before 1439280088
+
+WEMO: 15:1:28 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:28.339639]<sigGen.c:createAuthSignature:113> [0x2fbb0520:"RemoteWorkerThre"] Expires after 500 1439280588
+
+WEMO: 15:1:28 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2fbb0520:"RemoteWorkerThre"] --- inData --- 
+
+WEMO: 15:1:28 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2fbb0520:"RemoteWorkerThre"] inDataLength = 648
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>1678347</parentPluginId><macAddress>94103E71D614002A</mac [ 1718046561 ]
+WEMO: remote.debug Address><friendlyName>WeMo Alarm Sensor 01</friendlyName><modelCode>F7C040</modelCode><productName>AlarmSensor</productName><pro [ 1718046561 ]
+WEMO: remote.debug ductType>AlertSensor</productType><status>10</status><statusTS>1439280087</statusTS><firmwareVersion>1F</firmwareVersion><fwUpgr [ 1718046561 ]
+WEMO: remote.debug adeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><deviceCapabilityProfiles><deviceCapabilityProfile><capabilityI [ 1718046561 ]
+WEMO: remote.debug d>10500</capabilityId><currentValue>10</currentValue><ts>0</ts></deviceCapabilityProfile></deviceCapabilityProfiles></device></d [ 1718046561 ]
+WEMO: remote.debug evices>
+ [ 1718046561 ]
+WEMO: SubscriptionRequest for event URL path: /upnp/event/firmwareupdate1
+WEMO:  from IP : 192.168.0.101
+WEMO: Found existing subscription: uuid:29057702-1dd2-11b2-8be6-be96b0947cb5, removing it!!!
+WEMO: Creating new subscription: uuid:2b7cf8e8-1dd2-11b2-8be6-be96b0947cb5!!!
+WEMO: 15:1:28 | app.debug <logger.c:pluginLog:332> [0x2e9b0520:""] wemoApp[2025:{}]:[2015-08-11][15:01:28.350279]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2e9b0520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B0100136 serviceID - urn:Belkin:serviceId:firmwareupdate1, Sid - uuid:2b7cf8e8-1dd2-11b2-8be6-be96b0947cb5: success
+
+WEMO: 15:1:28 | app.debug <logger.c:pluginLog:332> [0x2e9b0520:""] wemoApp[2025:{}]:[2015-08-11][15:01:28.350814]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2e9b0520:""] Service subscription: urn:Belkin:serviceId:firmwareupdate1: success
+
+WEMO: 15:1:28 | app.debug <logger.c:pluginLog:332> [0x309b0520:""] wemoApp[2030:{}]:[2015-08-11][15:01:27.110107]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x309b0520:""] Action found: GetDeviceStatus
+
+WEMO: [SD] *list = (SD_DeviceList)sDevConfig.DeviceList;....dp
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1415> [0x2ebb0520:""] GetEndDevices: nDeviceCnt(3), nGroupCnt(0)
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1435> [0x2ebb0520:""] GetEndDevices: nPaired(3), nUnpaired(0), ListType(PAIRED_LIST)
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:MakePairedDeviceInfos:1157> [0x2ebb0520:""] Device[0]: EUID:B4750E1B9578006E--FriendlyName:Lightbulb 02--CapCount:6....dp
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 10006 -- bilityValue = 0....dp
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 10008 -- bilityValue = ....dp
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 30008 -- bilityValue = ....dp
+
+WEMO: 15:1:28 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 30009 -- bilityValue = ....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 3000A -- bilityValue = ....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2ebb0520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 0,,,,
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:MakePairedDeviceInfos:1157> [0x2ebb0520:""] Device[1]: EUID:94103E7AFDD50006--FriendlyName:WeMo Room Motion Sensor 01--CapCount:4....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 10500 -- bilityValue = 0....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1:900....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2ebb0520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 0,1:900,0
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:MakePairedDeviceInfos:1157> [0x2ebb0520:""] Device[2]: EUID:94103E71D614002A--FriendlyName:WeMo Alarm Sensor 01--CapCount:4....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 10500 -- bilityValue = 10....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 20500 -- bilityValue = 1....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:835> [0x2ebb0520:""] Cache Device CapabCapality: 30501 -- bilityValue = 0....dp
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:850> [0x2ebb0520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 10,1,0
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1792> [0x2ebb0520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Paired</DeviceListType><DeviceInfos><DeviceInfo>< [ 1718046630 ]
+WEMO: upnp.debug DeviceIndex>0</DeviceIndex><DeviceID>B4750E1B9578006E</DeviceID><FriendlyName>Lightbulb 02</FriendlyName><IconVersion>1</IconVer [ 1718046630 ]
+WEMO: upnp.debug sion><FirmwareVersion>83</FirmwareVersion><CapabilityIDs>10006,10008,30008,30009,3000A</CapabilityIDs><CurrentState>0,,,,</Curre [ 1718046630 ]
+WEMO: upnp.debug ntState><Manufacturer>MRVL</Manufacturer><ModelCode>MZ100</ModelCode><productName>Lighting</productName><WeMoCertified>YES</WeMo [ 1718046630 ]
+WEMO: upnp.debug Certified></DeviceInfo><DeviceInfo><DeviceIndex>1</DeviceIndex><DeviceID>94103E7AFDD50006</DeviceID><FriendlyName>WeMo Room Moti [ 1718046630 ]
+WEMO: upnp.debug on Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</Ca [ 1718046630 ]
+WEMO: upnp.debug pabilityIDs><CurrentState>0,1:900,0</CurrentState><Manufacturer>Belkin</Manufacturer><ModelCode>F7C041</ModelCode><productName>P [ 1718046630 ]
+WEMO: upnp.debug IR</productName><WeMoCertified>YES</WeMoCertified></DeviceInfo><DeviceInfo><DeviceIndex>2</DeviceIndex><DeviceID>94103E71D614002 [ 1718046630 ]
+WEMO: upnp.debug A</DeviceID><FriendlyName>WeMo Alarm Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion>1F</FirmwareVersion><C [ 1718046630 ]
+WEMO: upnp.debug apabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>10,1,0</CurrentState><Manufacturer>Belkin</Manufacturer><ModelCode>F [ 1718046630 ]
+WEMO: upnp.debug 7C040</ModelCode><productName>AlarmSensor</productName><WeMoCertified>YES</WeMoCertified></DeviceInfo></DeviceInfos></DeviceList [ 1718046630 ]
+WEMO: upnp.debug ></DeviceLists>
+ [ 1718046630 ]
+WEMO: 15:1:29 | app.debug <logger.c:pluginLog:332> [0x309b0520:""] wemoApp[2030:{}]:[2015-08-11][15:01:29.699822]<upnpCommon.c:Util_GetFirstDocumentItem:185> [0x309b0520:""] /home/duyphan/WeMoProject/WeMo_corewifi/wemo_dev_pro_RC_1_14/package/UPnP/src/upnpCommon.c(185): (BUG) ixmlNode_getFirstChild(DeviceIDs) returned NULL
+
+WEMO: 15:1:29 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2566> [0x309b0520:""] GetDeviceStatus: DeviceIDs is not existed
+
+WEMO: 15:1:29 | app.debug <logger.c:pluginLog:332> [0x309b0520:""] wemoApp[2030:{}]:[2015-08-11][15:01:29.700626]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1990> [0x309b0520:""] Action GetDeviceStatus: Error = -501, Invalid Argument
+
+> PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1CF4:WQ5fiGTShjz3MdDrMNOXufoNIK4=:1439280588
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9526.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 648
+
+Expect: 100-continue
+
+
+
+< HTTP/1.1 100 Continue
+
+WEMO: Sending to IP: 192.168.0.101:39500 failed, return_code: -207, SID: uuid:2b7cf8e8-1dd2-11b2-8be6-be96b0947cb5, key: 0, fail_cnt: 0
+WEMO: Failed 1 to send SID: uuid:2b7cf8e8-1dd2-11b2-8be6-be96b0947cb5 notification to: 192.168.0.101
+WEMO: push notification failure, service id: uuid:2b7cf8e8-1dd2-11b2-8be6-be96b0947cb5 to be removed -207, failCnt: 1
+WEMO: In advThread
+WEMO: sending out UPnP advertisement, dev_handle=1, ipaddr: 192.168.0.101
+WEMO: Sending Advertisement to : 192.168.0.101
+WEMO: UnicastAdvertisement to 192.168.0.101 ret: 0
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: Sending service Advertisement to : 192.168.0.101
+WEMO: sent out UPnP advertisement, dev_handle=1
+< HTTP/1.1 200 OK
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Tue, 11 Aug 2015 08:01:34 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 464
+
+< Connection: keep-alive
+
+< 
+
+WEMO: 15:1:34 | app.debug <logger.c:pluginLog:332> [0x2fbb0520:"RemoteWorkerThre"] wemoApp[1839:{RemoteWorkerThre}]:[2015-08-11][15:01:34.135579]<httpsWrapper.c:webAppSendData:2671> [0x2fbb0520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fbb0520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:824> [0x2fbb0520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:825> [0x2fbb0520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:852> [0x2fbb0520:"RemoteWorkerThre"] Header retuned by server
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1
+
+Date: Tue,  [ 1718047140 ]
+WEMO: remote.debug 11 Aug 2015 08:01:34 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 464
+
+Connection: keep [ 1718047140 ]
+WEMO: remote.debug -alive
+
+ [ 1718047140 ]
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:862> [0x2fbb0520:"RemoteWorkerThre"] Data retuned by server
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1718047140 ]
+WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1718047140 ]
+WEMO: remote.debug de>S</statusCode><device><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><parentPluginId>1678 [ 1718047140 ]
+WEMO: remote.debug 347</parentPluginId><macAddress>94103E71D614002A</macAddress></device></devices> [ 1718047140 ]
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:870> [0x2fbb0520:"RemoteWorkerThre"] --- Header Data returned by server ---
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1
+
+Date: Tue,  [ 1718047141 ]
+WEMO: remote.debug 11 Aug 2015 08:01:34 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 464
+
+Connection: keep [ 1718047141 ]
+WEMO: remote.debug -alive
+
+ [ 1718047141 ]
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:879> [0x2fbb0520:"RemoteWorkerThre"] --- Data returned by server ---
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:880> [0x2fbb0520:"RemoteWorkerThre"] <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCode>S</statusCode><device><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><parentPluginId>1678347</parentPluginId><macAddress>94103E71D614002A</macAddress></device></devices>
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2311> [0x2fbb0520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode : 200
+
+WEMO: 15:1:34 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:541> [0x2fbb0520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode = 200

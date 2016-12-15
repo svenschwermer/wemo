@@ -1,0 +1,24 @@
+if PACKAGE_kmod-wemo-gpio
+
+choice
+       prompt "Belkin GPIO type"
+       default WEMO_GPIO_SNS
+
+config WEMO_GPIO_SNS
+       bool "WeMo Switch and Sensor"
+
+config WEMO_GPIO_BABYMON
+       bool "WeMo Baby Monitor"
+
+config WEMO_GPIO_INSIGHT
+       bool "WeMo Insight Switch"
+
+config WEMO_GPIO_GUARDIAN
+       bool "WeMo Guardian"
+
+config WEMO_GPIO_CROCKPOT
+       bool "WeMo CrockPot"
+
+endchoice
+
+endif

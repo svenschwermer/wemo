@@ -1,0 +1,19 @@
+--- libupnp-1.6.19.orig/upnp/src/genlib/net/http/webserver.c
++++ libupnp-1.6.19/upnp/src/genlib/net/http/webserver.c
+@@ -1174,6 +1174,16 @@
+ 			membuffer_delete(filename, filename->length - 1, 1);
+ 		}
+ 
++		//[WEMO-41986] - check global buffer before using. 
++		//		It might be NULL in un-expected cases and crash in strstr()
++		if (gDocumentRootDir.buf == NULL) {
++			if(gUPnPLogEnable)
++				printme(LOG_DEBUG, "gDocumentRootDir.buf is NULL");
++			else
++				syslog(LOG_DEBUG, "gDocumentRootDir.buf is NULL");
++			goto error_handler;
++		}
++
+ 		/* BT: not process request for webroot symlink */
+ 		memset(abspath, 0x0, sizeof(abspath));
+ 		ptr = realpath (filename->buf, abspath);

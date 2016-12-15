@@ -1,0 +1,29 @@
+Index: libupnp-1.6.19/upnp/src/gena/gena_device.c
+===================================================================
+--- libupnp-1.6.19.orig/upnp/src/gena/gena_device.c	2015-07-29 12:40:58.905162917 +0530
++++ libupnp-1.6.19/upnp/src/gena/gena_device.c	2015-07-29 14:01:51.117305984 +0530
+@@ -501,6 +501,7 @@
+ 			printme(LOG_DEBUG, "free_notify_struct");
+ 		else
+ 			syslog(LOG_DEBUG, "free_notify_struct");
++
+ 		free_notify_struct(in);
+ 		HandleUnlock();
+ 		return;
+@@ -514,6 +515,7 @@
+ 		else
+ 			syslog(LOG_DEBUG, "sid: %s", in->sid);
+ 
++
+ 		free_notify_struct(in);
+ 		HandleUnlock();
+ 		return;
+@@ -534,7 +536,7 @@
+ 		else
+ 			syslog(LOG_DEBUG, "push notification failure, service id: %s to be removed %d, failCnt: %d", in->sid,return_code, sub->failCnt);
+ 
+-		RemoveSubscriptionSID(in->sid, service);
++		//RemoveSubscriptionSID(in->sid, service);
+ 
+ 		/* Send UPnP advertisement */
+ 		if((data != NULL) && (thread == -1) && ipaddr)

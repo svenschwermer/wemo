@@ -1,0 +1,11 @@
+#!/bin/sh /etc/rc.common
+
+START=70
+
+start() {
+   /sbin/wemotest>/tmp/wemotestlog.txt &
+}
+
+stop() {
+   killall -KILL ated
+}

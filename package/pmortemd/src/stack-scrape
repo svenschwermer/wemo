@@ -1,0 +1,233 @@
+#!/usr/bin/env ruby
+
+#
+# stack-scrape
+#
+# Created by Belkin International, Software Engineering on XX/XX/XX.
+# Copyright (c) 2012-2013 Belkin International, Inc. and/or its affiliates. All rights reserved.
+#
+# Belkin International, Inc. retains all right, title and interest (including all
+# intellectual property rights) in and to this computer program, which is
+# protected by applicable intellectual property laws.  Unless you have obtained
+# a separate written license from Belkin International, Inc., you are not authorized
+# to utilize all or a part of this computer program for any purpose (including
+# reproduction, distribution, modification, and compilation into object code)
+# and you must immediately destroy or return to Belkin International, Inc
+# all copies of this computer program.  If you are licensed by Belkin International, Inc., your
+# rights to utilize this computer program are limited by the terms of that license.
+#
+# To obtain a license, please contact Belkin International, Inc.
+#
+# This computer program contains trade secrets owned by Belkin International, Inc.
+# and, unless unauthorized by Belkin International, Inc. in writing, you agree to
+# maintain the confidentiality of this computer program and related information
+# and to not disclose this computer program and related information to any
+# other person or entity.
+#
+# THIS COMPUTER PROGRAM IS PROVIDED AS IS WITHOUT ANY WARRANTIES, AND BELKIN INTERNATIONAL, INC.
+# EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING THE WARRANTIES OF
+# MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+
+
+
+require 'getoptlong'
+opts = GetoptLong.new([ '--help', '-h', GetoptLong::NO_ARGUMENT ],
+                      [ '--toolchain', '-t', GetoptLong::REQUIRED_ARGUMENT ],
+                      [ '--executables', '-e', GetoptLong::REQUIRED_ARGUMENT ])
+help_text = <<-EOF
+trace.rb: [OPTION] <file>
+    -h, --help:        Show this text
+    -t, --toolchain:   Toolchain directory
+    -e, --executable:  Directory containing executables (repeatable)
+EOF
+
+$toolchain = nil
+$executables = []
+$sym_addr = {}
+$fn_frame = {}
+$library = {}
+
+opts.each do |opt, arg|
+  case opt
+    when '--help'
+      puts help_text
+      exit 1
+    when '--toolchain'
+      if ! File.directory?(arg) or ! File.directory?(arg + 'bin') or ! File.directory?(arg + 'usr')
+        $stderr.print("#{arg} does not appear to be a toolchain directory.\n")
+        exit 1
+      end
+      $toolchain = (arg =~ /\/$/) ? arg : arg + '/'
+    when '--executables'
+      $executables.push arg
+  end
+end
+
+# Find toolchain executable
+def tc_program(name)
+  if !$toolchain
+    return nil
+  end
+  tc = []
+  tc += Dir.glob($toolchain + 'bin/*' + name)
+  tc += Dir.glob($toolchain + 'usr/bin/*' + name)
+  tc[0]
+end
+
+# Find a toolchain library
+def find_lib(name)
+  return nil if ! $toolchain
+  candidate = $toolchain + "lib/" + name
+  return candidate if File.file?(candidate)
+  candidate = $toolchain + "usr/lib/" + name
+  return candidate if File.file?(candidate)
+end
+
+# Find an executable, which might be an application program, or
+# library.  It might also be a library from the toolchain.
+def find_executable(name)
+  index = name.rindex(/\//)
+  name = name.slice(index + 1 .. -1) if index
+  libname = find_lib(name)
+  return libname if libname
+  for dir in $executables
+    dir = (dir =~ /\/$/) ? dir : dir + '/'
+    if File.executable?(dir + name)
+      return dir + name
+    end
+  end
+  nil
+end
+
+# Build a vector of [ address, name ] pairs from the executable
+# program (or library).  The vector is sorted by address.
+def build_map(file)
+  nm = tc_program("nm")
+  exe = find_executable(file)
+
+  print "Cannot find nm\n" if !nm
+  print "Cannot find #{file}\n" if !exe
+  return :none if !nm or !exe
+
+  # Read the ELF headers to find entrypoint (used to cull
+  # uninteresting symbols) and and indication of whether this is a
+  # main program or a library.
+  entrypoint = 0
+  is_lib = false
+  IO.popen("readelf -h " + exe) do |pipe|
+    pipe.each do |line|
+      entrypoint = $1.hex if line =~ /Entry point address: \s+(\S+)/
+      is_lib = true if line =~ /Type: \s+DYN/
+    end
+  end
+
+  # Read the executable's symbol table.  Ignore symbols that precede
+  # the entrypoint to avoid cluttering up the output with refecences
+  # to _PROCEDURE_LINKAGE_TABLE_
+  sym_addr = []
+  IO.popen(nm + ' ' + exe + ' | sort') do |pipe|
+    pipe.each do |line|
+      
+      sym_addr.push([ $1.hex, $2 ]) if $1.hex >= entrypoint if line =~ /^([[:xdigit:]]{8}) [Tt] (\S+)/
+    end
+  end
+
+  return sym_addr, is_lib
+end
+
+# Disassemble the executable, extracting stack frame size and offset
+# to RA where available.
+def disassemble(file)
+  objdump = tc_program("objdump")
+  exe = find_executable(file)
+  print "Cannot find objdump\n" if !objdump
+  print "Cannot find #{file}\n" if !exe
+  return :none if !objdump or !exe
+
+  fn = nil
+  frame_size = nil
+  ra_offset = nil
+  fn_frame = {}
+  IO.popen(objdump + ' -dr ' + exe) do |pipe|
+    pipe.each do |line|
+      if line =~ /^[[:xdigit:]]{8} <([^>]+)>/
+        fn_frame[fn] = [ frame_size, ra_offset ] if fn
+        fn = $1
+        frame_size = nil
+        ra_offset = nil
+      end
+      frame_size = $1 if line =~ /addiu\s+sp,sp,-(\d+)/
+      ra_offset = $1 if line =~ /sw\s+ra,(\d+).sp/
+    end
+    fn_frame[fn] = [ frame_size, ra_offset ] if fn
+  end
+  fn_frame
+end
+
+# Translate an address to a symbol and offset from the executable
+# file's address/symbol map
+def address(addr, start, file)
+  $sym_addr[file], $library[file] = build_map(file) if !$sym_addr[file]
+  $fn_frame[file] = disassemble(file) if ! $fn_frame[file]
+  offset = addr
+  offset = addr - start if $library[file]
+  if $sym_addr[file] and $sym_addr[file] != :none and offset >= $sym_addr[file][0][0]
+    last_addr = 0
+    last_name = ""
+    for m in $sym_addr[file]
+      if m[0] == offset
+        return m[1] + ' + 0x0 (' + file + ')'
+      end
+      if m[0] > offset
+        return last_name + ' + 0x' + (offset - last_addr).to_s(16) + ' (' + file + ')'
+      end
+      last_addr = m[0]
+      last_name = m[1]
+    end
+  end
+  return file + ' + 0x' + offset.to_s(16)  
+end
+
+input = $stdin
+if ARGV.length > 0
+  input = File.open(ARGV[0], "r")
+end
+
+$code = []
+$stack = []
+input.each do |line|
+  if line =~ /([[:xdigit:]]{8})-([[:xdigit:]]{8}) ..x. [[:xdigit:]]{8} \S+ \S+\s+(\S+)/
+    start = $1.hex
+    limit = $2.hex
+    prog  = $3.sub(/\/rom/, "")
+    $code.push [start, limit, prog]
+  end
+  if line =~ /([[:xdigit:]]{8}): ([[:xdigit:]]{8}) ([[:xdigit:]]{8}) ([[:xdigit:]]{8}) ([[:xdigit:]]{8})\s+([[:xdigit:]]{8}) ([[:xdigit:]]{8}) ([[:xdigit:]]{8}) ([[:xdigit:]]{8})/
+    $stack.push [ $2.hex, $3.hex, $4.hex, $5.hex, $6.hex, $7.hex, $8.hex, $9.hex ]
+  end
+end
+
+functions = {}
+for stack in $stack
+  for stack_data in stack
+    for code in $code
+      if code[2] !~ /stack/
+        if stack_data >= code[0] and stack_data <= code[1]
+          addr = address(stack_data, code[0], code[2])
+          printf("%08x: %s\n", stack_data, addr)
+          fields = addr.split(' ')
+          functions[code[2] + ':' + fields[0]] = 1 if fields
+        end
+      end
+    end
+  end
+end
+
+printf("function                   frame size,  offset to RA\n");
+functions.keys.sort.each do |file_fn|
+  file, fn = file_fn.split(':')
+  frames = $fn_frame[file]
+  fn_frame = frames[fn] if frames
+  printf("%-32.32s %4d, %4d\n", fn, fn_frame[0], fn_frame[1]) if fn_frame
+end

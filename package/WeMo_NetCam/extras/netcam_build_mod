@@ -1,0 +1,134 @@
+#!/bin/bash
+#
+# As of 2013-09-30, one needs to perform 2 build environment
+# modifications build NetCam.  These changes are relative to
+# /opt/buildroot-gcc342/:
+#
+# 1. The normal time.h file in .../include is replaced
+#    with a custom version from Seedonk
+#
+# 2. The utility "lzma_alone" is likewise placed in .../bin
+#
+#
+# In the case of time.h, the original is renamed time.h.STDBYORIGINAL.
+# This script will restore that version if run with the "restore"
+# argument.  If there is already a .ORIGINAL file, it will not be
+# overwritten.
+#
+# 2013-09-30 Version 1.0 by dash
+#
+DEST_ROOT="/opt/buildroot-gcc342"
+SAVE_SUFFIX=".ORIGINAL"
+
+SRC_DIR=$(dirname $0)
+
+TIME="time.h"
+TIME_DEST_DIR="${DEST_ROOT}/include"
+TIME_DEST="${TIME_DEST_DIR}/${TIME}"
+TIME_SAVED="${TIME_DEST}${SAVE_SUFFIX}"
+TIME_SRC="${SRC_DIR}/${TIME}"
+LZMA_FNAME="lzma_alone"
+LZMA_SRC="${SRC_DIR}/${LZMA_FNAME}"
+LZMA_DEST="${DEST_ROOT}/bin/${LZMA_FNAME}"
+
+# Uncomment this to see debug messages
+# DEBUG=1
+
+# time.h portion of install
+install_time() {
+  [ -n "$DEBUG" ] && echo "Installing time"
+  # Preserve original if needed
+  if [ -f "$TIME_DEST" ]; then
+    if [ ! -f "$TIME_SAVED" ]; then
+      [ -n "$DEBUG" ] && echo "target & no save; saving"
+      mv $TIME_DEST $TIME_SAVED
+    else
+      [ -n "$DEBUG" ] && echo "target and save"
+    fi
+  else
+    [ -n "$DEBUG" ] && echo "No target to save"
+  fi
+
+  cp $TIME_SRC $TIME_DEST
+}
+
+install_lzma() {
+  [ -n "$DEBUG" ] && echo "Installing lzma"
+  cp $LZMA_SRC $LZMA_DEST
+  cp ${SRC_DIR}/lzma ${DEST_ROOT}/bin/lzma
+}
+
+
+# Copy the new files into place.  When a file is being replaced,
+# make a copy for possible later restoration
+install() {
+  install_lzma
+  install_time
+}
+
+restore_time() {
+  [ -n "$DEBUG" ] && echo "Restore time.h"
+
+  # Restore original if possible
+  if [ -f "$TIME_SAVED" ]; then
+    [ -n "$DEBUG" ] && echo "save found; restoring"
+      mv $TIME_SAVED $TIME_DEST
+  else
+    [ -n "$DEBUG" ] && echo "No original to restore"
+  fi
+}
+
+restore_lzma() {
+  [ -n "$DEBUG" ] && echo "Restore lzma"
+  rm ${LZMA_DEST}
+}
+
+restore() {
+    restore_lzma
+    restore_time
+}
+
+lzma_status() {
+  [ -f "${LZMA_SRC}" ]  && echo "${LZMA_FNAME} source found"
+  if [ -f "${LZMA_DEST}" ];then
+    echo "${LZMA_FNAME} installed"
+  else
+    echo "${LZMA_FNAME} not installed"
+  fi
+}
+
+time_status() {
+  [ -f $TIME_DEST ] && echo "Time target found"
+
+  if [ -f "$TIME_SRC" ]; then
+    echo "Time src found"
+  else
+    echo "Source time.h file not found in $SRC_DIR"
+  fi
+  if [ -f $TIME_SAVED ]; then
+    echo "Saved original found"
+  else
+    echo "No saved original"
+  fi
+}
+
+status() {
+    time_status
+    lzma_status
+}
+
+case "$1" in
+  "install")
+    install ;;
+
+  "restore")
+    restore ;;
+
+  "status")
+    status ;;
+
+  *)
+    echo "Usage: $(basename $0) {install|restore|status}"
+    ;;
+esac
+

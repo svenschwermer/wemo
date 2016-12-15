@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+
+JARDEND=/usr/sbin/cjardend
+START=50
+STOP=50
+
+start()
+{
+	$JARDEND -a -p sbiron -D /dev/ttyS0
+}
+
+stop()
+{
+	$JARDEND -e
+}
+
+

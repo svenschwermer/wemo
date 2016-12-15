@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+
+CROCKPOTD=/usr/sbin/crockpotd
+START=50
+STOP=50
+
+start()
+{
+	$INSIGHTD -D /dev/ttyS0
+}
+
+stop()
+{
+	$INSIGHTD -e
+}
+
+

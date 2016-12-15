@@ -1,0 +1,12 @@
+# @ Run after creating the device.
+# $ Run before removing the device.
+# * Run both after creating and before removing the device.
+::sysinit:echo "-sd[a-z][1-9] 0:0 0660 */etc/mdev_mount_umount.sh \$MDEV" > /etc/mdev.conf
+::sysinit:echo "-sd[a-z] 0:0 0660 */etc/mdev_mount_umount.sh \$MDEV" >> /etc/mdev.conf
+::sysinit:mount -t sysfs sysfs /sys
+::sysinit:mdev -s
+::sysinit:echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+::sysinit:/etc/init.d/rcS S boot
+::shutdown:/etc/init.d/rcS K stop
+ttyS1::askfirst:/bin/ash --login
+tty1::askfirst:/bin/ash --login

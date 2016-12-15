@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<capabilityProfiles
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/">
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+</capabilityProfiles>

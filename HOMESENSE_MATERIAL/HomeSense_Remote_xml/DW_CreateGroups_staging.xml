@@ -1,0 +1,65 @@
+-----------outbound-----------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<groups>
+    <group>
+        <referenceId>1438834290</referenceId>
+        <groupName>Doors and Windows</groupName>
+        <iconVersion>1</iconVersion>
+        <devices>
+            <device>
+                <deviceId>1677819</deviceId>
+            </device>
+            <device>
+                <deviceId>1677821</deviceId>
+            </device>
+        </devices>
+        <capabilities>
+            <capability>
+                <capabilityId>10500</capabilityId>
+                <currentValue></currentValue>
+            </capability>
+            <capability>
+                <capabilityId>20500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+        </capabilities>
+    </group>
+</groups>
+
+------------------inbound-------------------------
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groups
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P">
+    <statusCode>F</statusCode>
+    <group>
+        <resultCode>
+            <code>ERR_FIELD_VALIDATION_ERROR</code>
+            <description>Validation Error: addGroup.capability.currentValue Field value is nulll|</description>
+        </resultCode>
+        <referenceId>1438834290</referenceId>
+        <groupName>Doors and Windows</groupName>
+        <iconVersion>1</iconVersion>
+        <devices>
+            <device>
+                <deviceId>1677821</deviceId>
+            </device>
+            <device>
+                <deviceId>1677819</deviceId>
+            </device>
+        </devices>
+        <capabilities>
+            <capability>
+                <capabilityId>20500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+            <capability>
+                <capabilityId>10500</capabilityId>
+                <currentValue></currentValue>
+            </capability>
+        </capabilities>
+    </group>
+</groups>
+
+

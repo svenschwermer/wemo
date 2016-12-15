@@ -1,0 +1,50 @@
+********PIR**************
+-------outbound----------
+
+<?xml version="1.0" encoding="utf-8"?>
+<capabilityProfiles>
+    <capabilityProfile>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0~4294967295}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0:Diable, 1:Enable}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Start Test mode}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Key pressed short, 2: key pressed long}</values>
+    </capabilityProfile>
+</capabilityProfiles>
+
+----------inbound-------------
+
+

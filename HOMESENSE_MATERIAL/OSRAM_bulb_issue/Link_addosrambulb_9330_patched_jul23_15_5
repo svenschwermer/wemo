@@ -1,0 +1,905 @@
+
+root@OpenWrt:/# 
+root@OpenWrt:/# 
+root@OpenWrt:/# Jul 23 14:37:43 WEMO: [Thu Jul 23 14:37:43 2015 ]:job_id[2]:Receiving discovery request: MX: 1 from: 10.0.0.109
+Jul 23 14:37:43 WEMO:  #########Reply time pass to TimerThreadSchedule =100ms ##########
+Jul 23 14:37:43 WEMO:  ########## Time out set for job =1437637063335 ########### 
+Jul 23 14:37:43 WEMO: [Thu Jul 23 14:37:43 2015 ]:job_id[2]:Sent discovery response to device:10.0.0.109
+Jul 23 14:37:43 WEMO: [Thu Jul 23 14:37:43 2015 ]:job_id[3]:Receiving discovery request: MX: 2 from: 10.0.0.109
+Jul 23 14:37:43 WEMO:  #########Reply time pass to TimerThreadSchedule =333ms ##########
+Jul 23 14:37:43 WEMO:  ########## Time out set for job =1437637063774 ########### 
+Jul 23 14:37:43 WEMO: 14:37:43 | app.debug <logger.c:pluginLog:330> [0x2ee29520:""] wemoApp[2013:{}]:[2015-07-23][14:37:43.542423]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ee29520:""] Action found: GetEndDevices
+Jul 23 14:37:43 WEMO: 14:37:43 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ee29520:""] flag_setup_done is already existed...
+Jul 23 14:37:43 WEMO: 14:37:43 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2ee29520:""] GetEndDevices: ReqListType is PAIRED_LIST
+Jul 23 14:37:43 WEMO: [SD] GetDeviceList() 0
+Jul 23 14:37:43 WEMO: 14:37:43 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x2ee29520:""] GetEndDevices: nDeviceCnt(0), nGroupCnt(0)
+Jul 23 14:37:43 WEMO: [Thu Jul 23 14:37:43 2015 ]:job_id[3]:Sent discovery response to device:10.0.0.109
+Jul 23 14:37:44 WEMO: [Thu Jul 23 14:37:44 2015 ]:job_id[4]:Receiving discovery request: MX: 1 from: 10.0.0.109
+Jul 23 14:37:44 WEMO:  #########Reply time pass to TimerThreadSchedule =100ms ##########
+Jul 23 14:37:44 WEMO:  ########## Time out set for job =1437637064349 ########### 
+Jul 23 14:37:44 WEMO: [Thu Jul 23 14:37:44 2015 ]:job_id[4]:Sent discovery response to device:10.0.0.109
+Jul 23 14:37:44 WEMO: [Thu Jul 23 14:37:44 2015 ]:job_id[5]:Receiving discovery request: MX: 2 from: 10.0.0.109
+Jul 23 14:37:44 WEMO:  #########Reply time pass to TimerThreadSchedule =563ms ##########
+Jul 23 14:37:44 WEMO:  ########## Time out set for job =1437637065013 ########### 
+Jul 23 14:37:45 WEMO: [Thu Jul 23 14:37:45 2015 ]:job_id[5]:Sent discovery response to device:10.0.0.109
+Jul 23 14:37:45 WEMO: [Thu Jul 23 14:37:45 2015 ]:job_id[6]:Receiving discovery request: MX: 2 from: 10.0.0.109
+Jul 23 14:37:45 WEMO:  #########Reply time pass to TimerThreadSchedule =807ms ##########
+Jul 23 14:37:45 WEMO:  ########## Time out set for job =1437637066560 ########### 
+Jul 23 14:37:46 WEMO: [Thu Jul 23 14:37:46 2015 ]:job_id[6]:Sent discovery response to device:10.0.0.109
+Jul 23 14:37:53 WEMO: 14:37:53 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:37:53.903702]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30a29520:""] Action found: GetDeviceInformation
+Jul 23 14:37:53 WEMO: 14:37:53 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:37:53.904900]<controlleedevice.c:handleTimeSync:6823> [0x30a29520:""] set time: utc: 1437550771, timezone: 7, dst: 0, szIsLocalDst: 0
+Jul 23 14:37:53 WEMO: 14:37:53 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:37:53.907288]<controlleedevice.c:GetDeviceInformation:6954> [0x30a29520:""] CountdownTime: 0
+Jul 23 14:37:53 WEMO: 14:37:53 | app.debug <logger.c:pluginLog:330> [0x2e629520:""] wemoApp[2325:{}]:[2015-07-23][14:37:53.910523]<controlleedevice.c:IsApplyTimeSync:4687> [0x2e629520:""] TimeSync: 1437550771:7.000000:1437636803:7.000000:0
+Jul 23 14:37:53 WEMO: 14:37:53 | app.debug <logger.c:pluginLog:330> [0x2e629520:""] wemoApp[2325:{}]:[2015-07-23][14:37:53.911298]<controlleedevice.c:timeSyncThread:6589> [0x2e629520:""] : *****NOT APPLYING TIME SYNC
+thready: Destructor freeing name "".
+Jul 23 14:37:55 WEMO: 14:37:55 | app.debug <logger.c:pluginLog:330> [0x2ec29520:""] wemoApp[2012:{}]:[2015-07-23][14:37:55.843377]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ec29520:""] Action found: OpenNetwork
+Jul 23 14:37:55 WEMO: 14:37:55 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ec29520:""] flag_setup_done is already existed...
+Jul 23 14:37:55 WEMO: [SD] OpenNetwork()
+zigbee_api: zbSendCommand:ZB_CMD_NET_PERMITJOIN
+zbSetPermitJoin:255
+clientNetworkPermitJoin:*****result = 0
+Jul 23 14:37:56 WEMO: 14:37:56 | upnp.debug <ledLightUPnPHandler.c:OpenNetwork:1618> [0x2ec29520:""] OpenNetwork is Success...
+Jul 23 14:37:56 sysinit: Starting IPC Receive:7
+Jul 23 14:37:56 sysinit: zigbeed node_id:0x0000, endpoint:0
+Jul 23 14:37:56 sysinit: cmd:105 p1:254 p2:0 p3:0 p4:0 
+Jul 23 14:37:56 sysinit: Full Name:/tmp/Belkin_settings/zbid.0000000000000000
+Jul 23 14:37:56 sysinit: No file:[/tmp/Belkin_settings/zbid.0000000000000000]
+Jul 23 14:37:56 sysinit: zbdSetTimeToAbort s_TimeToAbort:55545
+Jul 23 14:37:56 sysinit: IPC_CMD_SET_PERMITJOIN 
+Jul 23 14:37:56 sysinit: pJoin for 254 sec: 0x00^M
+Jul 23 14:37:56 sysinit: emAfPermitJoin duration:254 b_bcast:1 status:0x0 
+Jul 23 14:37:56 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:37:56 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:37:56 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:37:56 sysinit: Leaving IPC Receive:7
+Jul 23 14:37:56 WEMO: 14:37:56 | app.debug <logger.c:pluginLog:330> [0x2ee29520:""] wemoApp[2013:{}]:[2015-07-23][14:37:56.210182]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ee29520:""] Action found: GetEndDevices
+Jul 23 14:37:56 WEMO: 14:37:56 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ee29520:""] flag_setup_done is already existed...
+Jul 23 14:37:56 WEMO: 14:37:56 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2ee29520:""] GetEndDevices: ReqListType is SCAN_LIST
+Jul 23 14:37:56 WEMO: [SD] GetDeviceList() 0
+Jul 23 14:37:56 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 23 14:37:57 sysinit: emberAfMessageSentCallback 
+Jul 23 14:37:57 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+Jul 23 14:37:57 sysinit: Byte Stream:01 fe 00 
+Jul 23 14:37:57 sysinit: NodeId : 0xFFFC not in the address table.
+Jul 23 14:37:57 WEMO: 14:37:57 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x2ee29520:""] GetEndDevices: nDeviceCnt(0), nGroupCnt(0)
+Jul 23 14:37:58 WEMO: 14:37:58 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:37:58.722923]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30a29520:""] Action found: GetEndDevices
+Jul 23 14:37:58 WEMO: 14:37:58 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x30a29520:""] flag_setup_done is already existed...
+Jul 23 14:37:58 WEMO: 14:37:58 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x30a29520:""] GetEndDevices: ReqListType is SCAN_LIST
+Jul 23 14:37:58 WEMO: [SD] GetDeviceList() 0
+Jul 23 14:37:58 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 23 14:37:59 WEMO: 14:37:59 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x30a29520:""] GetEndDevices: nDeviceCnt(0), nGroupCnt(0)
+Jul 23 14:38:01 WEMO: 14:38:1 | app.debug <logger.c:pluginLog:330> [0x2ee29520:""] wemoApp[2013:{}]:[2015-07-23][14:38:01.217290]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ee29520:""] Action found: GetEndDevices
+Jul 23 14:38:01 WEMO: 14:38:1 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ee29520:""] flag_setup_done is already existed...
+Jul 23 14:38:01 WEMO: 14:38:1 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2ee29520:""] GetEndDevices: ReqListType is SCAN_LIST
+Jul 23 14:38:01 WEMO: [SD] GetDeviceList() 0
+Jul 23 14:38:01 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 23 14:38:02 sysinit: emberAfTrustCenterJoinCallback:
+Jul 23 14:38:02 sysinit: TC Join Callback 0xF6FC 0x841826000000CE9C STANDARD_SECURITY_UNSECURED_JOIN use preconfigured key
+Jul 23 14:38:02 sysinit: JOIN status: 1
+Jul 23 14:38:02 sysinit: zbdUpdateDBNodeId eui:841826000000CE9C nodeid:0xf6fc 
+Jul 23 14:38:02 sysinit: INDEX 1:  0 0xf6fc^M
+Jul 23 14:38:02 sysinit: Node ID Change:  was 0x5494, is 0xf6fc
+Jul 23 14:38:02 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C 
+Jul 23 14:38:02 sysinit: zbdScheduleEndpointsRequest 0xf6fc, timeQS:55553 
+Jul 23 14:38:02 sysinit: zbdScheduleCommandRequest: nodeId:0xF6FC, nodeState:1, action after QS:6 
+Jul 23 14:38:02 WEMO: 14:38:2 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x2ee29520:""] GetEndDevices: nDeviceCnt(0), nGroupCnt(0)
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.281859]<UDSClientHandler.c:UDS_SetNTPTimeSyncStatus:440> [0x30229520:"uploadLogFileThr"] command:IPC_CMD_NAT_SET_NTP_TIME_SYNC
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1719:{StartIpcUdsServe}]:[2015-07-23][14:38:02.283233]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1719:{StartIpcUdsServe}]:[2015-07-23][14:38:02.285306]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+thready: Setting thread name to "ChildFDTask" (tid:734172448).
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2334:{ChildFDTask}]:[2015-07-23][14:38:02.287572]<ipcUDSServer.c:ChildFDTask:183> [0x2bc29520:"ChildFDTask"] In Child FD Task:3
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.289577]<ipcUDSClient.c:StartIPCClient:213> [0x30229520:"uploadLogFileThr"] IPC Client started on Socket:17
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2334:{ChildFDTask}]:[2015-07-23][14:38:02.290588]<UDSServerHandler.c:UDSSetServerNTPTimeSyncStatus:846> [0x2bc29520:"ChildFDTask"] NTP time sync set is:1
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2334:{ChildFDTask}]:[2015-07-23][14:38:02.292597]<ipcUDSServer.c:ChildFDTask:222> [0x2bc29520:"ChildFDTask"] Closing Server Child FD Task:3
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2334:{ChildFDTask}]:[2015-07-23][14:38:02.294729]<ipcUDSServer.c:ChildFDTask:229> [0x2bc29520:"ChildFDTask"] Exit child FD Task
+thready: Destructor freeing name "ChildFDTask".
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.297023]<ipcUDSClient.c:SendIPCCommand:240> [0x30229520:"uploadLogFileThr"] IPC client Socket Sent success:12, remaining:0
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.298129]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x30229520:"uploadLogFileThr"] Closed UDS Client Socket:17
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.298773]<UDSClientHandler.c:UDS_SetNTPTimeSyncStatus:445> [0x30229520:"uploadLogFileThr"] NTP time sync set status = 1
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.299355]<rule.c:IsNtpUpdate:375> [0x30229520:"uploadLogFileThr"] ************* ISNTPUPDATE NOW YEAR IS NOT 2000
+Jul 23 14:38:02 WEMO: 14:38:2 | app.debug <logger.c:pluginLog:330> [0x30229520:"uploadLogFileThr"] wemoApp[1839:{uploadLogFileThr}]:[2015-07-23][14:38:02.300380]<remoteUpdate.c:uploadMessageFile:1220> [0x30229520:"uploadLogFileThr"] Messages log file: /var/log/messages.0 doesn't exists
+Jul 23 14:38:02 sysinit: ias-zone addServer i:255^M
+Jul 23 14:38:02 sysinit: emberAfPreZDOMessageReceivedCallback emberNodeId:0xf6fc, clusterId:0x0013, length:12
+Jul 23 14:38:02 sysinit: 00 fc f6 9c ce 00 00 00 26 18 84 0e 
+Jul 23 14:38:02 sysinit: END_DEVICE_ANNOUNCE
+Jul 23 14:38:02 sysinit: zbdScheduleEndpointsRequest 0xf6fc, timeQS:55548 
+Jul 23 14:38:02 sysinit: zbdScheduleCommandRequest: nodeId:0xF6FC, nodeState:1, action after QS:0 
+Jul 23 14:38:02 sysinit: zbdSetSourceRoute success
+Jul 23 14:38:02 sysinit: zbdActiveEndpointsRequest: paramNodeId:0xf6fc status:0x0
+Jul 23 14:38:02 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:02 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x9
+Jul 23 14:38:02 sysinit: Byte Stream:02 fc f6 04 01 01 00 05 00 
+Jul 23 14:38:02 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:02 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x3
+Jul 23 14:38:02 sysinit: Byte Stream:03 fc f6 
+Jul 23 14:38:02 sysinit: emberAfPreZDOMessageReceivedCallback emberNodeId:0xf6fc, clusterId:0x8005, length:6
+Jul 23 14:38:02 sysinit: 03 00 fc f6 01 03 
+Jul 23 14:38:02 sysinit: ACTIVE_ENDPOINTS_RESPONSE
+Jul 23 14:38:02 sysinit: zbdSaveClusters fullpath_file:/tmp/Belkin_settings/zbid.841826000000CE9C.03 
+Jul 23 14:38:02 sysinit: zbdAddressSetEndpoint nodeId:0xf6fc, endpoint:3
+Jul 23 14:38:02 sysinit: endpoint[0]:3
+Jul 23 14:38:02 sysinit: emberSimpleDescriptorRequest nodeid:0xf6fc, endpoint:3, status:0 
+Jul 23 14:38:02 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:02 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x4
+Jul 23 14:38:02 sysinit: Byte Stream:04 fc f6 03 
+Jul 23 14:38:02 sysinit: emberAfPreZDOMessageReceivedCallback emberNodeId:0xf6fc, clusterId:0x8004, length:33
+Jul 23 14:38:02 sysinit: 04 00 fc f6 1c 03 04 01 02 01 00 09 00 00 03 00 04 00 05 00 06 00 08 00 00 03 04 0b 0f fc 01 19 00 
+Jul 23 14:38:02 sysinit: SIMPLE_DESCRIPTOR_RESPONSE
+Jul 23 14:38:02 sysinit: len_msg:28 endpoint:3, profileid:0x0104, deviceid:0x0102, device_version:0x0, reserved:0x0
+Jul 23 14:38:02 sysinit: node id:0xf6fc
+Jul 23 14:38:02 sysinit: inClusterCount:9
+Jul 23 14:38:02 sysinit: inCluster[0]:0x0000
+Jul 23 14:38:02 sysinit: inCluster[1]:0x0003
+Jul 23 14:38:02 sysinit: inCluster[2]:0x0004
+Jul 23 14:38:02 sysinit: inCluster[3]:0x0005
+Jul Jul 23 14:38:02 Jul 23 14:38:02 Jul 23 14:38:02 Jul 23 14:38:02 Jul 23 14:38:03 WEMO: 14:38:3 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:38:03.751231]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30a29520:""] Action found: GetEndDevices
+Jul 23 14:38:03 WEMO: 14:38:3 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x30a29520:""] flag_setup_done is already existed...
+Jul 23 14:38:03 WEMO: 14:38:3 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x30a29520:""] GetEndDevices: ReqListType is SCAN_LIST
+Jul 23 14:38:03 WEMO: [SD] GetDeviceList() 0
+Jul 23 14:38:03 WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [0]
+Jul 23 14:38:03 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = []
+Jul 23 14:38:03 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [f6fc], field[1] = [9cce000000261884]
+Jul 23 14:38:03 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 1
+Jul 23 14:38:03 WEMO: [SD] Joined Device List = [0]
+Jul 23 14:38:03 WEMO: [SD] SM_AddJoinedDeviceList : list[0]->DeviceID.node_id = [841826000000CE9C]
+Jul 23 14:38:03 WEMO: [SD] sm_AddJoiningDeviceList: device = 841826000000CE9C
+Jul 23 14:38:03 WEMO: [SD] Device Joined: 841826000000CE9C:F6FC 
+Jul 23 14:38:03 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 23 14:38:03 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.01 file is not existed...
+Jul 23 14:38:03 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.02 file is not existed...
+Jul 23 14:38:03 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.03 file is existed...
+======== /tmp/Belkin_settings/zbid.841826000000CE9C.03 --> json : read byte 195 ==========
+Jul 23 14:38:03 WEMO: [SD] Json Object = 7
+Jul 23 14:38:03 WEMO: [SD] key = device id
+Jul 23 14:38:03 WEMO: [SD] value = 0x0102
+Jul 23 14:38:03 WEMO: [SD] key = clusters
+Jul 23 14:38:03 WEMO: [SD] Json Array = 12
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0000
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0003
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0004
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0005
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0006
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0008
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0300
+Jul 23 14:38:03 WEMO: [SD] array value = 0x0B04
+Jul 23 14:38:03 WEMO: [SD] array value = 0xFC0F
+Jul 23 14:38:03 WEMO: [SD] sm_ParseZigbeeClusterJSON: EUID = 841826000000CE9C, nCluster = 9, device_type = 102
+zigbee_api: zbSendCommand:ZB_CMD_GET_MODELCODE
+Entering clientGetStringCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Success str_len:4, str_ret:[]
+Leaving clientGetStringCommand:*****result = 0
+Jul 23 14:38:03 sysinit: Starting IPC Receive:7
+Jul 23 14:38:03 sysinit: zigbeed node_id:0xf6fc, endpoint:0
+Jul 23 14:38:03 sysinit: cmd:115 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:03 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:03 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:03 sysinit: zbdSetTimeToAbort s_TimeToAbort:55577
+Jul 23 14:38:03 sysinit: IPC_CMD_GET_MODELCODE 
+Jul 23 14:38:03 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:03 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:03 sysinit: Msg: clus 0x0000, cmd 0x00, len 9^M
+Jul 23 14:38:03 sysinit: buffer: 10 00 00 01 00 04 00 05 00 ^M
+Jul 23 14:38:03 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:38:03 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:38:03 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:38:03 sysinit: Leaving IPC Receive:7
+Jul 23 14:38:04 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:04 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x9
+Jul 23 14:38:04 sysinit: Byte Stream:10 00 00 01 00 04 00 05 00 
+Jul 23 14:38:04 sysinit: emberAfPreZDOMessageReceivedCallback emberNodeId:0xf6fc, clusterId:0x8000, length:12
+Jul 23 14:38:04 sysinit: 10 81 00 00 01 00 04 00 05 00 fc f6 
+Jul 23 14:38:04 sysinit: NETWORK_ADDRESS_RESPONSE
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_BASIC_CLUSTER: send ZB_CMD_GET_MODELCODE command... 
+Jul 23 14:38:04 WEMO: [SD] sm_DeviceSendCommand called to GET_MODELCODE
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->DeviceType = [Color Light] 
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->FriendlyName = [Color Light] 
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->ManufacturerName = [Unknown] 
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->ModelCode = [] 
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.01 file is not existed...
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.02 file is not existed...
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.03 file is existed...
+Jul 23 14:38:04 WEMO: [SD] sm_GetEndPoint: EUID = 841826000000CE9C, endpoint = 3
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->ModelCode = [] 
+======== /tmp/Belkin_settings/zbid.841826000000CE9C.03.0000 --> json : read byte 88 ==========
+Jul 23 14:38:04 WEMO: [SD] sm_GetDeviceInfo:DA_JOINED device->ModelCode = [] 
+Jul 23 14:38:04 WEMO: [SD] sm_ParseZigbeeBasicClusterJSON: , Unknown,  ...dp
+Jul 23 14:38:04 WEMO: [SD] sm_ParseZigbeeBasicClusterJSON: 841826000000CE9C [dp]
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.01 file is not existed...
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.02 file is not existed...
+Jul 23 14:38:04 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.841826000000CE9C.03 file is existed...
+Jul 23 14:38:04 WEMO: [SD] Json Object = 7
+Jul 23 14:38:04 WEMO: [SD] key = 0x0001
+Jul 23 14:38:04 WEMO: [SD] value = 0x03
+Jul 23 14:38:04 WEMO: [SD] key = 0x0004
+Jul 23 14:38:04 WEMO: [SD] value = OSRAM
+Jul 23 14:38:04 WEMO: [SD] Cluster[6]: 0300 
+Jul 23 14:38:04 WEMO: [SD] Capability[3] ColorControl
+Jul 23 14:38:04 WEMO: [SD] Cluster[7]: 0B04 
+Jul 23 14:38:04 WEMO: [SD] Capability Not Found 
+Jul 23 14:38:04 WEMO: [SD] Cluster[8]: FC0F 
+Jul 23 14:38:04 WEMO: [SD] Capability Not Found 
+Jul 23 14:38:04 WEMO: [SD] Cluster[9]: 20008 
+Jul 23 14:38:04 WEMO: [SD] Capability[4] SleepFader
+Jul 23 14:38:04 WEMO: [SD] Cluster[10]: 20009 
+Jul 23 14:38:04 WEMO: [SD] Capability[5] LevelControl.Move
+Jul 23 14:38:04 WEMO: [SD] Cluster[11]: 2000A 
+Jul 23 14:38:04 WEMO: [SD] Capability[6] LevelControl.Stop
+Jul 23 14:38:04 WEMO: [SD] Cluster[12]: 20301 
+Jul 23 14:38:04 WEMO: [SD] Capability[7] ColorTemperature
+Jul 23 14:Jul 23 14:38:04 Jul 23 14:38:04 Jul 23 14:38:04 sysinit: nodeCommandEventHandler: Inactive
+Jul 23 14:38:06 WEMO: 14:38:6 | app.debug <logger.c:pluginLog:330> [0x2ee29520:""] wemoApp[2013:{}]:[2015-07-23][14:38:06.286322]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ee29520:""] Action found: GetEndDevices
+Jul 23 14:38:06 WEMO: 14:38:6 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ee29520:""] flag_setup_done is already existed...
+Jul 23 14:38:06 WEMO: 14:38:6 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2ee29520:""] GetEndDevices: ReqListType is SCAN_LIST
+Jul 23 14:38:06 WEMO: [SD] GetDeviceList() 1
+Jul 23 14:38:06 WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+Jul 23 14:38:06 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [f6fc 9cce000000261884 done ]
+Jul 23 14:38:06 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 23 14:38:06 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 23 14:38:06 WEMO: [SD] sm_ParseZigbeeBasicClusterJSON: 03, OSRAM, LIGHTIFY A19 Tunable White ...dp
+Jul 23 14:38:06 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 23 14:38:07 WEMO: 14:38:7 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x2ee29520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+Jul 23 14:38:07 WEMO: 14:38:7 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1430> [0x2ee29520:""] GetEndDevices: nPaired(0), nUnpaired(1), ListType(SCAN_LIST)
+Jul 23 14:38:07 WEMO: 14:38:7 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:845> [0x2ee29520:""] GetCacheDeviceCapabilityValues: CapabilityValues = ,,,,,,
+Jul 23 14:38:07 WEMO: 14:38:7 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1787> [0x2ee29520:""] GetEndDevices: === pszResponse ===
+Jul 23 14:38:07 WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Unpaired</DeviceListType><DeviceInfos><DeviceInfo [ 1717991915 ]
+Jul 23 14:38:07 WEMO: upnp.debug ><DeviceIndex>0</DeviceIndex><DeviceID>841826000000CE9C</DeviceID><FriendlyName>Osram Lightify TW60</FriendlyName><IconVersion>1 [ 1717991915 ]
+Jul 23 14:38:07 WEMO: upnp.debug </IconVersion><FirmwareVersion>03</FirmwareVersion><CapabilityIDs>10006,10008,10300,30008,30009,3000A,30301</CapabilityIDs><Curr [ 1717991915 ]
+Jul 23 14:38:07 WEMO: upnp.debug entState>,,,,,,</CurrentState><Manufacturer>OSRAM</Manufacturer><ModelCode>LIGHTIFY A19 Tunable White</ModelCode><productName>Te [ 1717991915 ]
+Jul 23 14:38:07 WEMO: upnp.debug mperatureBulb</productName><WeMoCertified>NO</WeMoCertified></DeviceInfo></DeviceInfos></DeviceList></DeviceLists>  [ 1717991915 ]
+Jul 23 14:38:08 WEMO: 14:38:8 | app.debug <logger.c:pluginLog:330> [0x2e029520:""] wemoApp[2010:{}]:[2015-07-23][14:38:08.043651]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2e029520:""] Action found: AddDeviceName
+Jul 23 14:38:08 WEMO: [SD] SD_AddDevice (841826000000CE9C)
+Jul 23 14:38:08 WEMO: 14:38:8 | upnp.debug <ledLightUPnPHandler.c:AddDeviceName:1894> [0x2e029520:""] SD_AddDevice(1, 841826000000CE9C) is Success...
+Jul 23 14:38:08 WEMO: [SD] SetDeviceProperty(841826000000CE9C,1,Osram Lightify TW60 01)
+Jul 23 14:38:08 WEMO: 14:38:8 | upnp.debug <ledLightUPnPHandler.c:AddDeviceName:1901> [0x2e029520:""] SD_SetDeviceProperty(841826000000CE9C, Osram Lightify TW60 01) is Success...
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:push_event:317> [0x2e029520:""] push_event: eventno = [0]
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:push_event:337> [0x2e029520:""] push_event: event_queue[0] address = 0x5a2300
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:push_event:339> [0x2e029520:""] push_event: event_queue[0] --> name = subdevice, value = add
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:push_event:347> [0x2e029520:""] push_event: event_queue[0] --> data = 0x575ba0, len = 1796
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = subdevice, value = add
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:push_event:358> [0x2e029520:""] sysevent(subdevice, add) : 0
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5a2300
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:pop_event:410> [0x2fc29520:"RemoteWorkerThre"] pop_event: event->pData = 0x575ba0
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:pop_event:425> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <event_queue.c:wait_event:467> [0x2fc29520:"RemoteWorkerThre"] pop_event(name = subdevice, value = add)
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:639> [0x2fc29520:"RemoteWorkerThre"] Add subdevice...
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:CreateSubDevicesXML:1363> [0x2fc29520:"RemoteWorkerThre"] CreateSubDevicesXML: Device nCount = 1
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:RegisterSubDevices:1492> [0x2fc29520:"RemoteWorkerThre"] RegisterSubDevices: URL = https://api.xbcs.net:8443/apis/http/device/devices
+Jul 23 14:38:08 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>7093635</parentPluginId><macAddress>841826000000CE9C</mac [ 1717992000 ]
+Jul 23 14:38:08 WEMO: remote.debug Address><friendlyName>Osram Lightify TW60 01</friendlyName><modelCode>LIGHTIFY A19 Tunable White</modelCode><productName>Tempera [ 1717992000 ]
+Jul 23 14:38:08 WEMO: remote.debug tureBulb</productName><productType>Lighting</productType><firmwareVersion>03</firmwareVersion><iconVersion>Unknown</iconVersion> [ 1717992000 ]
+Jul 23 14:38:08 WEMO: remote.debug <deviceCapabilityProfiles><deviceCapabilityProfile><capabilityId>10006</capabilityId></deviceCapabilityProfile><deviceCapability [ 1717992000 ]
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fc29520:"RemoteWorkerThre"] MAC Address of plug-in device is 00:0C:43:7A:6D:AC
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2fc29520:"RemoteWorkerThre"] Serial Number of plug-in device is 231407B0100024
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2fc29520:"RemoteWorkerThre"] Key for plug-in device is 85b034d1-bad6-48ce-a44c-f392287d09fc
+Jul 23 14:38:08 WEMO: 14:38:8 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:08.151691]<sigGen.c:createAuthSignature:111> [0x2fc29520:"RemoteWorkerThre"] Expires before 1437637088
+Jul 23 14:38:08 WEMO: 14:38:8 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:08.151997]<sigGen.c:createAuthSignature:113> [0x2fc29520:"RemoteWorkerThre"] Expires after 500 1437637588
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2fc29520:"RemoteWorkerThre"] --- inData --- 
+Jul 23 14:38:08 WEMO: 14:38:8 | remote.debug <ledLigJul 23 14:38:08 Jul 23 14:38:08 WEMO: 14:38:8 | app.debug <logger.c:pluginLog:330> [0x30a29520:""] wemoApp[2016:{}]:[2015-07-23][14:38:08.325020]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30a29520:""] Action found: CloseNetwork
+Jul 23 14:38:08 WEMO: [SD] CloseNetwork()
+zigbee_api: zbSendCommand:ZB_CMD_NET_PERMITJOIN_CLOSE
+zbSetPermitJoinClose:
+clientNetworkPermitJoin:*****result = 0
+Jul 23 14:38:08 WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+Jul 23 14:38:08 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [f6fc 9cce000000261884 done ]
+Jul 23 14:38:08 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 23 14:38:08 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 23 14:38:08 WEMO: [SD] sm_ParseZigbeeBasicClusterJSON: 03, OSRAM, LIGHTIFY A19 Tunable White ...dp
+Jul 23 14:38:08 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 23 14:38:08 sysinit: Starting IPC Receive:7
+Jul 23 14:38:08 sysinit: zigbeed node_id:0x0000, endpoint:0
+Jul 23 14:38:08 sysinit: cmd:105 p1:0 p2:0 p3:0 p4:0 
+Jul 23 14:38:08 sysinit: Full Name:/tmp/Belkin_settings/zbid.0000000000000000
+Jul 23 14:38:08 Jul 23 14:38:08 Jul 23 14:38:08 Jul 23 14:38:08 sysinit: ^M
+Jul 23 14:38:08 sysinit: TB9D9146E:RX len 12, ep 01, clus 0x0019 (Over the Air BootJul 23 14:38:08 Jul 23 14:38:08 Jul 23 14:38:08 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:08 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x4
+Jul 23 14:38:08 sysinit: Byte Stream:19 00 02 98 
+> POST /apis/http/device/devices HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:MZrv2xyiBS6hiNom27ew2QcdtLQ=:1437637588
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1049
+Expect: 100-continue
+
+Jul 23 14:38:09 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:09 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+Jul 23 14:38:09 sysinit: Byte Stream:05 00 00 
+Jul 23 14:38:09 sysinit: NodeId : 0xFFFC not in the address table.
+< HTTP/1.1 100 Continue
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:11 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 1404
+< Connection: keep-alive
+< 
+Jul 23 14:38:11 WEMO: 14:38:11 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:11.794131]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 265 
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:11 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug 23 Jul 2015 07:38:11 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 1404^M Connection: kee [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug p-alive^M  [ 1717992365 ]
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:11 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug ss="S" fail="F" partial_success="P"><statusCode>S</statusCode><resultCode><code>PLGN_200</code><description>Successful</descript [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug pabilityProfile></deviceCapabilityProfile><deviceCapabilityProfile><capabilityProfile><Id>13</Id><capabilityId>30301</capability [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug Id></capabilityProfile></deviceCapabilityProfile></deviceCapabilityProfiles><friendlyName>Osram Lightify TW60 01</friendlyName>< [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug manufacturer>OSRAM</manufacturer><wemoCertified>NO</wemoCertified><attributeLists><attribute><name>Manufacturer</name><value>OSR [ 1717992365 ]
+Jul 23 14:38:11 WEMO: remote.debug AM</value></attribute><attribute><name>WeMoCertified</name><value>NO</value></attribute></attributeLists></device></devices> [ 1717992365 ]
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:868> [0x2fc29520:"RemoteWorkerThre"] --- Header Data returned by server ---
+Jul 23 14:38:11 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717992366 ]
+Jul 23 14:38:11 WEMO: remote.debug 23 Jul 2015 07:38:11 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 1404^M Connection: kee [ 1717992366 ]
+Jul 23 14:38:11 WEMO: remote.debug p-alive^M  [ 1717992366 ]
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:877> [0x2fc29520:"RemoteWorkerThre"] --- Data returned by server ---
+Jul 23 14:38:11 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717992366 ]
+Jul 23 14:38:11 WEMO: remote.debug ss="S" fail="F" partial_success="P"><statusCode>S</statusCode><resultCode><code>PLGN_200</code><description>Successful</descript [ 1717992366 ]
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:parseSubDevicesResp:1415> [0x2fc29520:"RemoteWorkerThre"] pluginId = 7113881
+Jul 23 14:38:11 WEMO: 14Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <ledLightRemoteHandler.c:parseSubDevicesResp:1454>Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <lJul 23 14:38:11 WEMO: 14:38:11 |Jul 23 14:38:11 Jul 23 14:38:11 WEMO: [SD] SetCapabilityRegisterJul 23 14:38:11 WEMO: 14:38:11 | remote.debug <lJul 23 14:38:11 WEMO: 14:38:11 | remote.debug <lJul 23 14:38:11 Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <event_queue.c:push_event:358> [0x2fc29520:"RemoteWorkerThre"] sysevent(device, update) : 0
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <remoteJul 23 14:38:11 WEMO: 14:38:11 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 23 14:38:11 WEMO: 14:38:11 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address Jul 23 14:38:11 Jul 23 14:38:11 Jul 23 14:38:11 Jul 23 14:38:11 WEMO: [SD] -----Jul 23 14:38:11 Cached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+zigbee_api: zbSendCommand:ZB_CMD_GET_LEVEL
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:11 WEMO: [SD] sm_CommandThread: SM_GetDeviceBasicCapabilityValue(841826000000CE9C:10008) 
+Jul 23 14:38:12 WEMO: 14:38:12 | app.debug <logger.c:pluginLog:330> [0x31229520:"CtrlPtRediscover"] wemoApp[2022:{CtrlPtRediscover}]:[2015-07-23][14:38:12.565825]<plugin_ctrlpoint.c:CtrlPtRediscoverTask:256> [0x31229520:"CtrlPtRediscover"] ##################### Control point to re-discover: 2/10 ###################
+Jul 23 14:38:12 WEMO: 14:38:12 | app.debug <logger.c:pluginLog:330> [0x31229520:"CtrlPtRediscover"] wemoApp[2022:{CtrlPtRediscover}]:[2015-07-23][14:38:12.566222]<plugin_ctrlpoint.c:CtrlPointDiscoverDevices:433> [0x31229520:"CtrlPtRediscover"] sending search request 1
+Jul 23 14:38:12 WEMO:  ########## Time out set for job =1437637094566 ########### 
+Jul 23 14:38:12 WEMO: [Thu Jul 23 14:38:12 2015 ]:job_id[7]:Receiving discovery request: MX: 2 from: 10.0.0.206
+Jul 23 14:38:12 WEMO:  #########Reply time pass to TimerThreadSchedule =527ms ##########
+Jul 23 14:38:12 WEMO:  ########## Time out set for job =1437637093095 ########### 
+Jul 23 14:38:12 WEMO: 14:38:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fc29520:"RemoteWorkerThre"] MAC Address of plug-in device is 00:0C:43:7A:6D:AC
+Jul 23 14:38:12 WEMO: 14:38:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2fc29520:"RemoteWorkerThre"] Serial Number of plug-in device is 231407B0100024
+Jul 23 14:38:12 WEMO: 14:38:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2fc29520:"RemoteWorkerThre"] Key for plug-in device is 85b034d1-bad6-48ce-a44c-f392287d09fc
+Jul 23 14:38:12 WEMO: 14:38:12 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:12.650811]<sigGen.c:createAuthSignature:111> [0x2fc29520:"RemoteWorkerThre"] Expires before 1437637092
+Jul 23 14:38:12 WEMO: 14:38:12 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:12.651111]<sigGen.c:createAuthSignature:113> [0x2fc29520:"RemoteWorkerThre"] Expires after 500 1437637592
+clientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:12 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[12] is running as Cache Mode...
+Jul 23 14:38:12 sysinit: Starting IPC Receive:7
+Jul 23 14:38:12 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:12 sysinit: cmd:113 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:12 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:12 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:12 sysinit: zbdSetTimeToAbort s_TimeToAbort:55611
+Jul 23 14:38:12 sysinit: IPC_CMD_GET_LEVEL 
+Jul 23 14:38:12 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:12 sysinit: zbdSendGlobalRead: destination:0xf6fc dstEndpoint:0x3 cluster_id:8 attrib_id:0
+Jul 23 14:38:12 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:12 sysinit: Msg: clus 0x0008, cmd 0x00, len 5^M
+Jul 23 14:38:12 sysinit: buffer: 10 01 00 00 00 ^M
+Jul 23 14:38:12 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:38:12 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:38:12 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:38:12 sysinit: Leaving IPC Receive:7
+zigbee_api: zbSendCommand:ZB_CMD_GET_COLOR
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:12 WEMO: [SD] sm_CommandThread: SM_GetDeviceBasicCapabilityValue(841826000000CE9C:10300) 
+Jul 23 14:38:12 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:12 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:12 sysinit: Byte Stream:10 01 00 00 00 
+clientGeneralCommand: *prespValue = 0xF6FC
+Leaving clientGeneralCommand:*****result = 0
+zbGetColor x:0xf6fc, y:0x0 
+Jul 23 14:38:12 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[14] is running as Cache Mode...
+Jul 23 14:38:12 sysinit: Starting IPC Receive:7
+Jul 23 14:38:12 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:12 sysinit: cmd:135 p1:1 p2:0 p3:0 p4:0 
+zigbee_api: zbSendCommand:ZB_CMD_GET_COLOR_TEMP
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:12 WEMO: [SD] sm_CommandThread: SM_GetDeviceBasicCapabilityValue(841826000000CE9C:30301) 
+Jul 23 14:38:12 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:12 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:12 sysinit: zbdSetTimeToAbort s_TimeToAbort:55611
+Jul 23 14:38:12 sysinit: IPC_CMD_GET_COLOR 
+Jul 23 14:38:12 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:12 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:12 sysinit: Msg: clus 0x0300, cmd 0x00, len 7^M
+Jul 23 14:38:12 Jul 23 14:38:12 Jul 23 14:38:12 Jul 23 14:38:12 WEMO: [SD] sm_EventHandler : Zigbee event receivclientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+zbSyncSleep
+Jul 23 14:38:13 WEMO: 14:38:13 | remote.debug <event_queue.c:push_event:358> [0x2b829520:""] sysevent(device, update) : 0
+Jul 23 14:38:13 WEMO: 14:38:13 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2b829520:""] push_work_event(device, update, 0x5bc110, 146)
+Jul 23 14:38:13 WEMO: [SD] SM_UpdateDeviceCommandStatus: command[12] is status [2] 
+Jul 23 14:38:13 sysinit: Starting IPC Receive:7
+Jul 23 14:38:13 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:13 sysinit: cmd:127 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:13 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:13 sysinit: ** LATEST NODE ID zigbeJul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 WEMO: 14:38:13 | remote.debug <event_queue.c:push_event:358> [0x2b829520:""] sysevent(device, update) : 0
+Jul 23 14:38:13 WEMO: 14:38:13 | remote.debug <remote_event.c:trigger_remote_event:10Jul 23 14:38:13 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:13 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestinatioJul 23 14:38:13 WEMO: [Thu Jul 23 14:38:13 2015 Jul 23 14:38:13 Jul 23 14:38:13 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[29] is running as Cache Mode...
+Jul 23 14:38:13 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:13 sysinit: Ember_Status_Code: 0x0 typeJul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 WEMO: 14:38:13 |Jul 23 14:38:13 WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: Jul 23 14:38:13 Jul 23 14:38:13 Jul 23 14:38:13 WEMO: 14:38:13 | app.debug <logger.c:pluginLog:3Jul 23 14:38:13 WEMO: 14:38:13 | remote.debug <event_queue.c:push_event:358> [0x2b829520:""] sysevent(device, update) : 0
+Jul 23 14:38:13 WEMO: 14:38:13 | remoJul 23 14:38:13 Jul 23 14:38:13 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:13 sysinit: Ember_Status_CodeJul 23 14:38:13 Jul 23 14:38:13 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:13 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:13 sysinit: Byte Stream:00 03 0b 01 00 
+Jul 23 14:38:13 WEMO: [Thu Jul 23 14:38:13 2015 ]:job_id[8]:Sent discovery response to device:10.0.0.206
+Jul 23 14:38:13 WEMO: 14:38:13 | app.debug <logger.c:pluginLog:330> [0x31029520:""] wemoApp[2019:{}]:[2015-07-23][14:38:13.402412]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x31029520:""] Downloading XML document...http://10.0.0.206:49153/setup.xml
+Jul 23 14:38:13 WEMO: 14:38:13 | app.debug <logger.c:pluginLog:330> [0x31029520:""] wemoApp[2019:{}]:[2015-07-23][14:38:13.425562]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x31029520:""] UDN uuid:Bridge-1_0-231407B0100024 found
+Jul 23 14:38:13 WEMO: 14:38:13 | app.debug <logger.c:pluginLog:330> [0x31029520:""] wemoApp[2019:{}]:[2015-07-23][14:38:13.427613]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x31029520:""] Downloading XML document...http://10.0.0.206:49153/setup.xml
+Jul 23 14:38:13 WEMO: 14:38:13 | app.debug <logger.c:pluginLog:330> [0x31029520:""] wemoApp[2019:{}]:[2015-07-23][14:38:13.450026]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x31> PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:ZEA9f2a7PemMjTDx2G8GUkqLVmU=:1437637592
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1114
+Expect: 100-continue
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:16 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 464
+< Connection: keep-alive
+< 
+Jul 23 14:38:16 WEMO: 14:38:16 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:16.369202]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:16 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug 23 Jul 2015 07:38:16 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug -alive^M  [ 1717992823 ]
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:16 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug de>S</statusCode><device><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><parentPluginId>7093 [ 1717992823 ]
+Jul 23 14:38:16 WEMO: remote.debug 635</parentPluginId><macAddress>841826000000CE9C</macAddress></device></devices> [ 1717992823 ]
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2306> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode : 200
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:541> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode = 200
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5b3388
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <event_queue.c:pop_event:410> [0x2fc29520:"RemoteWorkerThre"] pop_event: event->pData = 0x5b3438
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <event_queue.c:pop_event:425> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue_no = 2
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <event_queue.c:wait_event:467> [0x2fc29520:"RemoteWorkerThre"] pop_event(name = device, value = update)
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:661> [0x2fc29520:"RemoteWorkerThre"] Send subdevice status notification...
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:527> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pluginId = 7093635
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:528> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->szDeviceID = 841826000000CE9C
+Jul Cached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+zigbee_api: zbSendCommand:ZB_CMD_GET_ONOFF
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:16 WEMO: [SD]   Read from cache:(841826000000CE9C,30008,)
+Jul 23 14:38:16 WEMO: 14:38:16 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:16.447320]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:255
+Jul 23 14:38:16 WEMO: [SD] ------------------------
+Jul 23 14:38:16 WEMO: [SD] GetDeviceCapabilityValue(841826000000CE9C,30301, Available=1) 
+Jul 23 14:38:16 WEMO: [SD]   Read from cache:(841826000000CE9C,30301,370:0)
+Jul 23 14:38:16 WEMO: 14:38:16 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:16.448059]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:255
+Jul 23 14:38:16 WEMO: 14:38:16 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2300> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: URL = https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false
+Jul 23 14:38:16 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>7093635</parentPluginId><macAddress>841826000000CE9C</mac [ 1717992831 ]
+Jul 23 14:38:16 WEMO: remote.debug Address><friendlyName>Osram Lightify TW60 01</friendlyName><modelCode>LIGHTIFY A19 Tunable White</modelCode><productName>Tempera [ 1717992831 ]
+Jul 23 14:38:16 WEMO: remote.debug tureBulb</productName><productType>Lighting</productType><status>0</status><statusTS>1437637096</statusTS><firmwareVersion>03</f [ 1717992831 ]
+Jul 23 14:38:16 WEMO: remote.debug irmwareVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><deviceCapabilityProfiles><deviceCapabili [ 1717992831 ]
+Jul 23 14:38:17 WEMO: 14:38:17 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fc29520:"RemoteWorkerThre"] MAC Address of plug-in device is 00:0C:43:7A:6D:AC
+Jul 23 14:38:17 WEMO: remote.debug ityId><currentValue>370:0</currentValue></deviceCapabilityProfile></deviceCapabilityProfiles></device></devices>  [ 1717992898 ]
+clientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:17 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[10] is running as Cache Mode...
+Jul 23 14:38:17 sysinit: Starting IPC Receive:7
+Jul 23 14:38:17 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:17 sysinit: cmd:111 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:17 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:17 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:17 sysinit: zbdSetTimeToAbort s_TimeToAbort:55628
+Jul 23 14:38:17 sysinit: IPC_CMD_GET_ONOFF 
+Jul 23 14:38:17 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:17 sysinit: zbdSendGlobalRead: destination:0xf6fc dstEndpoint:0x3 cluster_id:6 attrib_id:0
+Jul 23 14:38:17 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:17 sysinit: Msg: clus 0x0006, cmd 0x00, len 5^M
+Jul 23 14:38:17 sysinit: buffer: 10 04 00 00 00 ^M
+Jul 23 14:38:17 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:38:17 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:38:17 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:38:17 sysinit: Leaving IPC Receive:7
+Jul 23 14:38:17 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:17 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:17 sysinit: Byte Stream:10 04 00 00 00 
+Jul 23 14:38:17 sysinit: ^M
+Jul 23 14:38:17 sysinit: TB9D93705:RX len 8, ep 01, clus 0x0006 (On/off) FC 08 seq 04 cmd 01 payload[00 00 00 10 01 ]^M
+Jul 23 14:38:17 sysinit: emberAfPreCommandReceivedCallback
+Jul 23 14:38:17 sysinit: eui64:841826000000CE9C seq:0x04 source_nodeid:0xF6FC clusterId:0x0006, commandId:0x01, length:8 
+Jul 23 14:38:17 sysinit: Byte Stream:08 04 01 00 00 00 10 01 
+Jul 23 14:38:17 sysinit: attribute:0x0000 cluster:0x0006 status:0x00 
+Jul 23 14:38:17 sysinit: sysevent set zb_onoff_status "841826000000CE9C 1" 
+Jul 23 14:38:17 WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: zb_onoff_status 841826000000CE9C 1
+Jul 23 14:38:17 WEMO: [SD] sm_EventHandler : device_id = 841826000000CE9C, on_off_status = 1
+Jul 23 14:38:17 WEMO: 14:38:17 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:422> [0x2b829520:""] UpnpNotify: return = 0
+Jul 23 14:38:17 WEMO: 14:38:17 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:424> [0x2b829520:""] UpnpNotify: EventType = StatusChange, Capability = 100Jul 23 14:38:17 WEMO: 14:38:17 | remote.debug <event_queue.c:push_event:358> [0x2b829520:""] sysevent(device, update) : 0
+Jul 23 14:38:17 WEMO: 14:38:17 | remote.debug <remoteJul 23 14:38:17 Jul 23 14:38:17 > PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:9I6SxVp/0qqEJEKOgqA3gncHtME=:1437637597
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1137
+Expect: 100-continue
+
+< HTTP/1.1 100 Continue
+Jul 23 14:38:21 WEMO: 14:38:21 | app.debug <logger.c:pluginLog:330> [0x2e029520:""] wemoApp[2010:{}]:[2015-07-23][14:38:21.210794]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2e029520:""] Action found: GetEndDevices
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2e029520:""] flag_setup_done is already existed...
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2e029520:""] GetEndDevices: ReqListType is PAIRED_LIST
+Jul 23 14:38:21 WEMO: [SD] GetDeviceList() 1
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x2e029520:""] GetEndDevices: nDeviceCnt(1), nGroupCnt(0)
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1430> [0x2e029520:""] GetEndDevices: nPaired(1), nUnpaired(0), ListType(PAIRED_LIST)
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:845> [0x2e029520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 1,255:0,24939:24701:0,,,,370:0
+Jul 23 14:38:21 WEMO: 14:38:21 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1787> [0x2e029520:""] GetEndDevices: === pszResponse ===
+Jul 23 14:38:21 WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Paired</DeviceListType><DeviceInfos><DeviceInfo>< [ 1717993307 ]
+Jul 23 14:38:21 WEMO: upnp.debug DeviceIndex>0</DeviceIndex><DeviceID>841826000000CE9C</DeviceID><FriendlyName>Osram Lightify TW60 01</FriendlyName><IconVersion> [ 1717993307 ]
+Jul 23 14:38:21 WEMO: upnp.debug 1</IconVersion><FirmwareVersion>03</FirmwareVersion><CapabilityIDs>10006,10008,10300,30008,30009,3000A,30301</CapabilityIDs><Cur [ 1717993307 ]
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:21 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 464
+< Connection: keep-alive
+< 
+Jul 23 14:38:21 WEMO: 14:38:21 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:21.698653]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:21 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug 23 Jul 2015 07:38:21 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug -alive^M  [ 1717993356 ]
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:21 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug 23 Jul 2015 07:38:21 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug -alive^M  [ 1717993356 ]
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:877> [0x2fc29520:"RemoteWorkerThre"] --- Data returned by server ---
+Jul 23 14:38:21 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug de>S</statusCode><device><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><parentPluginId>7093 [ 1717993356 ]
+Jul 23 14:38:21 WEMO: remote.debug 635</parentPluginId><macAddress>841826000000CE9C</macAddress></device></devices> [ 1717993356 ]
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2306> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode : 200
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:541> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode = 200
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x57add8
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <event_queue.c:pop_event:410> [0x2fc29520:"RemoteWorkerThre"] pop_event: event->pData = 0x57ae88
+Jul 23 14:38:21 WEMO: 14:38:21 | remote.debug <event_queue.c:pop_event:425> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue_no = 2
+Jul 23 14:38:21 WEMO: 14:38:21 | remotCached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Jul 23 14:38:21 WEMO: [SD]   2nd Read from zigbee:(841826000000CE9C,10006,1) in Cache mode
+Jul 23 14:38:21 WEMO: [SD]   2nd Read from cache(841826000000CE9C,10006,1)
+Jul 23 14:38:21 WEMO: 14:38:21 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:21.771036]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:24939
+Jul 23 14:38:21 WEMO: [SD] ------------------------
+Jul 23 14:38:21 WEMO: [SD] GetDeviceCapabilityValue(841826000000CE9C,10008, Available=1) 
+Jul 23 14:38:21 WEMO: [SD]   Read from cache:(841826000000CE9C,10008,255:0)
+Jul 23 14:38:21 WEMO: 14:38:21 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:21.771748]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:24939
+Jul 23 14:38:21 WEMO: 14:38:21 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:21.772220]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:24939
+Jul 23 14:38:21 WEMO: [SD] ------------------------
+Jul 23 14:38:21 WEMO: [SD] GetDeviceCapabilityValue(841826000000CE9C,30008, Available=1) 
+Jul 23 14:38:21 WEMO: [SD]   Read from cache:(841826000000CE9C,30008,)
+Jul 23 14:38:21 WEMO: [SD] sm_CommandThread: SM_GetDeviceBasicCapabilityValue(841826000000CE9C:10006) 
+zigbee_api: zbSendCommand:ZB_CMD_GET_ONOFF
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:22 WEMO: remote.debug >30008</capabilityId><currentValue></currentValue></deviceCapabilityProfile><deviceCapabilityProfile><capabilityId>30301</capabi [ 1717993431 ]
+Jul 23 14:38:22 WEMO: remote.debug lityId><currentValue>370:0</currentValue></deviceCapabilityProfile></deviceCapabilityProfiles></device></devices>  [ 1717993431 ]
+clientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:22 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[10] is running as Cache Mode...
+Jul 23 14:38:22 sysinit: Starting IPC Receive:7
+Jul 23 14:38:22 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:22 sysinit: cmd:111 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:22 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:22 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:22 sysinit: zbdSetTimeToAbort s_TimeToAbort:55649
+Jul 23 14:38:22 sysinit: IPC_CMD_GET_ONOFF 
+Jul 23 14:38:22 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:22 sysinit: zbdSendGlobalRead: destination:0xf6fc dstEndpoint:0x3 cluster_id:6 attrib_id:0
+Jul 23 14:38:22 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:22 sysinit: Msg: clus 0x0006, cmd 0x00, len 5^M
+Jul 23 14:38:22 sysinit: buffer: 10 05 00 00 00 ^M
+Jul 23 14:38:22 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:38:22 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:38:22 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:38:22 sysinit: Leaving IPC Receive:7
+zigbee_api: zbSendCommand:ZB_CMD_GET_ONOFF
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:22 WEMO: [SD] sm_CommandThread: SM_GetDeviceBasicCapabilityValue(841826000000CE9C:10006) 
+clientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:22 WEMO: [SD] SM_GetDeviceBasicCapabilityValue: command[10] is running as Cache Mode...
+Jul 23 14:38:22 sysinit: Starting IPC Receive:7
+Jul 23 14:38:22 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:22 sysinit: cmd:111 p1:1 p2:0 p3:0 p4:0 
+Jul 23 14:38:22 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:22 sysinit: ** LATEST NODE ID zigbeed node_id:0xf6fc 
+Jul 23 14:38:22 sysinit: zbdSetTimeToAbort s_TimeToAbort:55649
+Jul 23 14:38:22 sysinit: IPC_CMD_GET_ONOFF 
+Jul 23 14:38:22 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_IPC_RECV]
+Jul 23 14:38:22 sysinit: zbdSendGlobalRead: destination:0xf6fc dstEndpoint:0x3 cluster_id:6 attrib_id:0
+Jul 23 14:38:22 sysinit: zclBufferSetup appZclBufferLen 3^M
+Jul 23 14:38:22 sysinit: Msg: clus 0x0006, cmd 0x00, len 5^M
+Jul 23 14:38:22 sysinit: buffer: 10 06 00 00 00 ^M
+Jul 23 14:38:22 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 23 14:38:22 sysinit: Leaving zbdReplyGeneralResponse
+Jul 23 14:38:22 sysinit: Ember_Status_Code:0x0 
+Jul 23 14:38:22 sysinit: Leaving IPC Receive:7
+Jul 23 14:38:22 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:22 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:22 sysinit: Byte Stream:10 05 00 00 00 
+Jul 23 14:38:22 sysinit: ^M
+Jul 23 14:38:22 sysinit: TB9D94C1A:RX len 8, ep 01, clus 0x0006 (On/off) FC 08 seq 05 cmd 01 payload[00 00 00 10 01 ]^M
+Jul 23 14:38:22 sysinitJul 23 14:38:22 Jul 23 14:38:22 Jul 23 14:38:22 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:22 sysinit: Ember_Status_CodeJul 23 14:38:22 sysinit: ^M
+Jul 23 14:38:22 sysinit: TB9D94C75:RX len 8, ep 01, clus 0x0006 (On/off) FC 08 seq 06 cmd 01 payload[00 00 00 10 01 ]^M
+Jul 23 14:38:22 sysinit: emberAfPreCommandReceivedCallback
+Jul 23 14:38:22 sysinit: eui64:841826000000CE9C seq:0x06 source_nodeid:0xF6FC clusterId:0x0006, commandId:0x01, length:8 
+Jul 23 14:38:22 sysinit: Byte StreaJul 23 14:38:22 WEMO: [SD] sm_EventHandler : ZigJul 23 14:38:22 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:22 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:22 sysinit: Byte Stream:00 05 0b 01 00 
+Jul 23 14:38:22 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:22 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:22 sysinit: Byte Stream:00 06 0b 01 00 
+> PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:UGCVW3pdloq9qGwCcS9+/UKM7Lw=:1437637602
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1138
+Expect: 100-continue
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:26 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 464
+< Connection: keep-alive
+< 
+Jul 23 14:38:26 WEMO: 14:38:26 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:26.175054]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:26 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717993803 ]
+Jul 23 14:38:26 WEMO: remote.debug 23 Jul 2015 07:38:26 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717993803 ]
+Jul 23 14:38:26 WEMO: remote.debug -alive^M  [ 1717993803 ]
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:26 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717993803 ]
+Jul 23 14:38:26 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717993803 ]
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+zigbee_api: zbSendCommand:ZB_CMD_GET_ONOFF
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+clientGeneralCommand: *prespValue = 0x0
+Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x57af20
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <event_queue.c:pop_event:410> [0x2fc29520:"RemoteWorkerThre"] pop_event: event->pData = 0x5a1bf8
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <event_queue.c:pop_event:425> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue_no = 1
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <event_queue.c:wait_event:467> [0x2fc29520:"RemoteWorkerThre"] pop_event(name = device, value = update)
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:661> [0x2fc29520:"RemoteWorkerThre"] Send subdevice status notification...
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:527> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pluginId = 7093635
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:528> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->szDeviceID = 841826000000CE9C
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:530> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->CapInfo.szCapabilityID = 30301
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:532> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pDevInfo->CapInfo.szCapabilityValue = 370:0
+Jul 23 14:38:26 WEMO: 14:38:26 | remote.debug <ledLightRemoteHandler.c:GetSubDeviceAvailableStatus:302> [0x2fc29520:"RemoteWorkerThre"] DeviceID = 841826000000CE9C, Value = 1
+Jul 23 14:38:26 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:26 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:38:26 sysinit: Byte Stream:10 07 00 00 00 
+Jul 23 14:38:26 sysinit: ^M
+Jul 23 14:38:26 sysinit: TB9D95AA9:RX len 8, ep 01, clus 0x0006 (On/off) FC 08 seq 07 cmd 01 payload[00 00 00 10 01 ]^M
+Jul 23 14:38:26 sysinit: emberAfPreCommandReceivedCallback
+Jul 23 14:38:26 sysinit: eui64:841826000000CE9C seq:0x07 source_nodeid:0xF6FC clusterId:0x0006, commandId:0x01, length:8 
+Jul 23 14:38:26 sysinit: Byte Stream:08 07 01 00 00 00 10 01 
+Jul 23 14:38:26 sysinit: attribute:0x0000 cluster:0x0006 status:0x00 
+Jul 23 14:38:26 sysinit: sysevent set zb_onoff_status "841826000000CE9C 1" 
+Jul 23 14:38:26 WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: zb_onoff_status 841826000000CE9C 1
+Jul 23 14:38:26 WEMO: [SD] sm_EventHandler : device_id = 841826000000CE9C, on_off_status = 1
+Jul 23 14:38:26 WEMO: [SD] SM_UpdateDeviceCommandStatus: command[10] iJul 23 14:38:26 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:26 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xF6FC msgLen:0x5
+Jul 23 14:3> PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:x0LoL/7CHIxn5jDlXw0WfJSQ9Cg=:1437637606
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1138
+Expect: 100-continue
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:30 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 464
+< Connection: keep-alive
+< 
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:30.472841]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:30 WEMO: 14:38:30 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+Jul 23 14:38:30 WEMO: 14:38:30 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:30 WEMO: 14:38:30 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:30 WEMO: 14:38:30 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:30 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717994233 ]
+Jul 23 14:38:30 WEMO: remote.debug 23 Jul 2015 07:38:30 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717994233 ]
+Jul 23 14:38:30 WEMO: remote.debug -alive^M  [ 1717994233 ]
+Jul 23 14:38:30 WEMO: 14:38:30 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:30 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717994233 ]
+Jul 23 14:38:30 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717994233 ]
+thready: Setting thread name to "ChildFDTask" (tid:734172448).
+thready: Setting thread name to "ChildFDTask" (tid:732075296).
+getIPAddress : address for apcli0: 10.0.0.206
+thready: Destructor freeing name "ChildFDTask".
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"checkInetConnect"] wemoApp[1780:{checkInetConnect}]:[2015-07-23][14:38:30.513817]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x2bc29520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"checkInetConnect"] wemoApp[1780:{checkInetConnect}]:[2015-07-23][14:38:30.514640]<ipcUDSClient.c:StartIPCClient:213> [0x2bc29520:"checkInetConnect"] IPC Client started on Socket:17
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"checkInetConnect"] wemoApp[1780:{checkInetConnect}]:[2015-07-23][14:38:30.514999]<ipcUDSClient.c:SendIPCCommand:240> [0x2bc29520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1719:{StartIpcUdsServe}]:[2015-07-23][14:38:30.515846]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1719:{StartIpcUdsServe}]:[2015-07-23][14:38:30.517707]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2389:{ChildFDTask}]:[2015-07-23][14:38:30.519805]<ipcUDSServer.c:ChildFDTask:183> [0x2bc29520:"ChildFDTask"] In Child FD Task:8
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"checkInetConnect"] wemoApp[1780:{checkInetConnect}]:[2015-07-23][14:38:30.521837]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2bc29520:"checkInetConnect"] Closed UDS Client Socket:17
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"checkInetConnect"] wemoApp[1780:{checkInetConnect}]:[2015-07-2Cached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2389:Jul 23 14:38:30 thready: Destructor freeing name "ChildFDTask".
+Jul 23 14:38:30 WEMO: 14:38:30 | app.debug <logger.c:pluginLog:330> [0x2bc29520:"ChildFDTask"] natClient[2389:{ChildFDTask}]:[2015-07-23][14:38:30.572735]<ipcUDSServer.c:ChildFDTask:229> [0x2bc29520:"ChildFDTask"] Exit child FD Task
+Jul 23 14:38:31 WEMO: 14:38:31 | app.debug <logger.c:pluginLog:330> [0x2e029520:""] wemoApp[2010:{}]:[2015-07-23][14:38:31.105387]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2e029520:""] Action found: SetDeviceStatus
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:PerformSetDeviceStatus:2243> [0x2e029520:""] IsGroupAction = NO
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:PerformSetDeviceStatus:2244> [0x2e029520:""] DeviceID = 841826000000CE9C
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:PerformSetDeviceStatus:2245> [0x2e029520:""] CapabilityID = 10006,10008,30008
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:PerformSetDeviceStatus:2246> [0x2e029520:""] CapabilityValue = 1,2:0,0:0
+Jul 23 14:38:31 WEMO: [SD] ------------------------
+Jul 23 14:38:31 WEMO: [SD] SetDeviceCapabilityValue(841826000000CE9C,10006,(1), 1) 
+Jul 23 14:38:31 WEMO: [SD] SM_ReserveNotification 
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:422> [0x2e029520:""] UpnpNotify: return = 0
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:424> [0x2e029520:""] UpnpNotify: EventType = StatusChange, Capability = 10006, EventValue = 1
+Jul 23 14:38:31 WEMO: upnp.debug &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;StateEvent&gt;&lt;DeviceID available=&quot;YES&quot;&gt;8418 [ 1717994296 ]
+zigbee_api: zbSendCommand:ZB_CMD_SET_ONOFF
+zbSetOnOff:1
+Entering clientSetOnOff:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:push_event:358> [0x2e029520:""] sysevent(device, update) : 0
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2e029520:""] push_work_event(device, update, 0x58e3d0, 146)
+Jul 23 14:38:31 WEMO: [SD]   Cache updated(841826000000CE9C,10008,2:0)
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:PerformSetDeviceStatus:2319> [0x2e029520:""] SD_SetDeviceValue(841826000000CE9C,10008,2:0) is Success...
+Jul 23 14:38:31 WEMO: [SD] Check Sleep Fader diff: 1437637111, now:1437637111 (0:0) 
+Jul 23 14:38:31 WEMO: [SD] ------------------------
+Jul 23 14:38:31 WEMO: [SD] SetDeviceCapabilityValue(841826000000CE9C,30008,(0:0), 1) 
+Jul 23 14:38:31 WEMO: [SD]     Sleep Fader time 0: Will not send ZB 
+Jul 23 14:38:31 WEMO: [SD] SM_ReserveNotification 
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:422> [0x2e029520:""] UpnpNotify: return = 0
+Jul 23 14:38:31 WEMO: 14:38:31 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:424> [0x2e029520:""] UpnpNotify: EventType = StatusChange, Capability = 30008, EventValue = 0:0
+Jul 23 14:38:31 WEMO: upnp.debug &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;StateEvent&gt;&lt;DeviceID available=&quot;YES&quot;&gt;8418 [ 1717994311 ]
+Jul 23 14:38:31 WEMO: upnp.debug 26000000CE9C&lt;/DeviceID&gt;&lt;CapabilityId&gt;30008&lt;/CapabilityId&gt;&lt;Value&gt;0:0&lt;/Value&gt;&lt;/StateEvent&gt;  [ 1717994311 ]
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:push_event:317> [0x2e029520:""] push_event: eventno = [2]
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:push_event:337> [0x2e029520:""] push_event: event_queue[2] address = 0x5becd8
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:push_event:339> [0x2e029520:""] push_event: event_queue[2] --> name = device, value = update
+Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:push_event:347> [Leaving clientSetOnOff:*****result = 0
+zigbee_api: zbSendCommand:ZB_CMD_SET_LEVEL
+zbSetLevel level:2 time:0
+Entering clientGeneralCommand:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:31 WEMO: [SD] sm_CommandThread: SM_SetJul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Leaving clientGeneralCommand:*****result = 0
+Jul 23 14:38:31 sysinit: Starting IPC Receive:7
+Jul 23 14:38:31 sysinit: zigbeed Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 Jul 23 14:38:31 WEMO: 14:38:31 | remote.debug <event_queue.c:pusJul 23 14:38:31 Jul 23 14:38:31 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:31 sysinit: Ember_Status_Code: 0x0 type:0x0 iJul 23 14:38:31 Jul 23 14:38:31 > PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:o9vvc7aOLrIU9VVB9oyvSNLNZ1s=:1437637610
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1138
+Expect: 100-continue
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Thu, 23 Jul 2015 07:38:34 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 464
+< Connection: keep-alive
+< 
+Jul 23 14:38:34 WEMO: 14:38:34 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:34.420628]<httpsWrapper.c:webAppSendData:2667> [0x2fc29520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fc29520:"RemoteWorkerThre"] Length of HTTP Header = 264 
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fc29520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fc29520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fc29520:"RemoteWorkerThre"] Header retuned by server
+Jul 23 14:38:34 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug 23 Jul 2015 07:38:34 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug -alive^M  [ 1717994628 ]
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fc29520:"RemoteWorkerThre"] Data retuned by server
+Jul 23 14:38:34 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug ss="S" fail="F" partial_success="P"><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><statusCo [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug de>S</statusCode><device><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><parentPluginId>7093 [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug 635</parentPluginId><macAddress>841826000000CE9C</macAddress></device></devices> [ 1717994628 ]
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:868> [0x2fc29520:"RemoteWorkerThre"] --- Header Data returned by server ---
+Jul 23 14:38:34 WEMO: remote.debug HTTP/1.1 100 Continue^M HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Thu,  [ 1717994628 ]
+Jul 23 14:38:34 WEMO: remote.debug 23 Jul 2015 07:38:34 GMT^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 464^M Connection: keep [ 1717994628 ]
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2306> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode : 200
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:541> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: StatusCode = 200
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <event_queue.c:wait_event:463> [0x2fc29520:"RemoteWorkerThre"] wait_event: name = device, value = update
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <event_queue.c:pop_event:409> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5a0240
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <event_queue.c:pop_event:410> [0x2fc29520:"RemoteWorkerThre"] pop_event: event->pData = 0x58e338
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <event_queue.c:pop_event:425> [0x2fc29520:"RemoteWorkerThre"] pop_event: event_queue_no = 2
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <event_queue.c:wait_event:467> [0x2fc29520:"RemoteWorkerThre"] pop_event(name = device, value = update)
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:661> [0x2fc29520:"RemoteWorkerThre"] Send subdevice status notification...
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:updateSubdevice:527> [0x2fc29520:"RemoteWorkerThre"] updateSubdevice: pluginId = 7093635
+Jul 23Cached MAC Address = 00:0C:43:7A:6D:AC 
+Cached MAC Address = 00:0C:43:7A:6D:AC 
+Jul 23 14:38:34 WEMO: [SD] GetDeviceCapabilityValue(841826000000CE9C,30008, Available=1) 
+Jul 23 14:38:34 WEMO: [SD]   Read from cache:(841826000000CE9C,30008,0:0)
+Jul 23 14:38:34 WEMO: 14:38:34 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:34.499440]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:1
+Jul 23 14:38:34 WEMO: [SD] ------------------------
+Jul 23 14:38:34 WEMO: [SD] GetDeviceCapabilityValue(841826000000CE9C,30301, Available=1) 
+Jul 23 14:38:34 WEMO: [SD]   Read from cache:(841826000000CE9C,30301,370:0)
+Jul 23 14:38:34 WEMO: 14:38:34 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:34.500193]<ledLightRemoteHandler.c:makeSubdeviceNode:2070> [0x2fc29520:"RemoteWorkerThre"] Capability Value:1
+Jul 23 14:38:34 WEMO: 14:38:34 | remote.debug <ledLightRemoteHandler.c:SendDeviceStateNotification:2300> [0x2fc29520:"RemoteWorkerThre"] SendDeviceStateNotification: URL = https://api.xbcs.net:8443/apis/http/device/devices?notifyApp=false
+Jul 23 14:38:34 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>7093635</parentPluginId><macAddress>841826000000CE9C</mac [ 1717994636 ]
+Jul 23 14:38:34 WEMO: remote.debug Address><friendlyName>Osram Lightify TW60 01</friendlyName><modelCode>LIGHTIFY A19 Tunable White</modelCode><productName>Tempera [ 1717994636 ]
+Jul 23 14:38:34 WEMO: remote.debug tureBulb</productName><productType>Lighting</productType><status>1</status><statusTS>1437637114</statusTS><firmwareVersion>03</f [ 1717994636 ]
+Jul 23 14:38:34 WEMO: 14:38:34 | app.debug <logger.c:pluginLog:330> [0x2e029520:""] wemoApp[2010:{}]:[2015-07-23][14:38:34.506406]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2e029520:""] Action found: SetDeviceStatus
+zigbee_api: zbSendCommand:ZB_CMD_SET_ONOFF
+zbSetOnOff:0
+Entering clientSetOnOff:
+node_id:0xF6FC 
+node_eui:0x841826000000CE9C
+Jul 23 14:38:35 WEMO: 14:38:35 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:35.169405]<sigGen.c:createAuthSignature:111> [0x2fc29520:"RemoteWorkerThre"] Expires before 1437637115
+Jul 23 14:38:35 WEMO: 14:38:35 | app.debug <logger.c:pluginLog:330> [0x2fc29520:"RemoteWorkerThre"] wemoApp[1836:{RemoteWorkerThre}]:[2015-07-23][14:38:35.171489]<sigGen.c:createAuthSignature:113> [0x2fc29520:"RemoteWorkerThre"] Expires after 500 1437637615
+Jul 23 14:38:35 WEMO: 14:38:35 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2fc29520:"RemoteWorkerThre"] --- inData --- 
+Jul 23 14:38:35 WEMO: 14:38:35 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2fc29520:"RemoteWorkerThre"] inDataLength = 1139
+Jul 23 14:38:35 WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><devices><device><parentPluginId>7093635</parentPluginId><macAddress>841826000000CE9C</mac [ 1717994703 ]
+Jul 23 14:38:35 WEMO: remote.debug Address><friendlyName>Osram Lightify TW60 01</friendlyName><modelCode>LIGHTIFY A19 Tunable White</modelCode><productName>Tempera [ 1717994703 ]
+Jul 23 14:38:35 WEMO: remote.debug tureBulb</productName><productType>Lighting</productType><status>1</status><statusTS>1437637114</statusTS><firmwareVersion>03</f [ 1717994703 ]
+Jul 23 14:38:35 WEMO: remote.debug irmwareVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><deviceCapabilityProfiles><deviceCapabili [ 1717994703 ]
+Jul 23 14:38:35 WEMO: remote.debug tyProfile><capabilityId>10006</capabilityId><currentValue>1</currentValue></deviceCapabilityProfile><deviceCapabilityProfile><ca [ 1717994703 ]
+Jul 23 14:38:35 WEMO: remote.debug pabilityId>10008</capabilityId><currentValueLeaving clientSetOnOff:*****result = 0
+Jul 23 14:38:35 sysinit: Starting IPC Receive:7
+Jul 23 14:38:35 sysinit: zigbeed node_id:0xf6fc, endpoint:3
+Jul 23 14:38:35 sysinit: cmd:110 p1:0 p2:0 p3:0 p4:0 
+Jul 23 14:38:35 sysinit: Full Name:/tmp/Belkin_settings/zbid.841826000000CE9C
+Jul 23 14:38:35 sysinit: ** LATEST NODE ID zigbeed nJul 23 14:38:35 Jul 23 14:38:35 Jul 23 14:38:35 Jul 23 14:38:35 sysinit: emberAfMessageSentCallback 
+Jul 23 14:38:35 sysinit: Ember_Status_Code: 0x0 type:0x0 indexOrDestinatio> PUT /apis/http/device/devices?notifyApp=false HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: 000C437A6DAC:lK48SzQqgwPS66YeQkUF6eg9Xsc=:1437637615
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9330.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+Content-Length: 1139
+Expect: 100-continue
+
+Jul 23 14:38:36 WEMO: [Thu Jul 23 14:38:36 2015 ]:job_id[9]:Receiving discovery request: MX: 3 from: 10.0.0.84
+< HTTP/1.1 100 Continue
+Jul 23 14:38:36 WEMO:  #########Reply time pass to TimerThreadSchedule =1076ms ##########
+Jul 23 14:38:36 WEMO:  ########## Time out set for job =1437637117552 ########### 
+Jul 23 14:38:37 WEMO: [Thu Jul 23 14:38:37 2015 ]:job_id[9]:Sent discovery response to device:10.0.0.84

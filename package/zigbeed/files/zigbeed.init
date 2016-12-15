@@ -1,0 +1,102 @@
+#!/bin/sh /etc/rc.common
+
+START=69
+
+DIR_IMG="/etc/em357-fw"
+FILE_IMG=`ls $DIR_IMG/em357-ncp-uart-rts-cts-use-with-serial-uart-bl-*`
+
+FLAG_SETUP_DONE="/tmp/Belkin_settings/flag_setup_done"
+
+NcpModeUpdate() {
+	echo "1" > /proc/GPIO11
+	sleep 1
+}
+
+NcpModeDbgPortEnable() {
+	cat /proc/GPIO11
+}
+
+WeMoResetNcp() {
+	killall zigbeed
+	sleep 1
+
+	echo "0" > /proc/GPIO2
+	sleep 1
+	echo "1" > /proc/GPIO2
+	sleep 1
+}
+
+WeMoWaitForzigbeed() {
+	COUNTER=0
+	while [ $COUNTER -lt 5 ]; do
+		sleep 1
+		pidof zigbeed > /dev/null
+		if [ $? -eq 0 ]; then
+			break
+		fi
+		COUNTER=$(expr $COUNTER + 1)
+	done
+}
+
+WeMoStartZigBee() {
+	killall zigbeed
+	sleep 1
+
+	/sbin/zigbeed -d &
+
+	WeMoWaitForzigbeed
+}
+
+WeMoUpdateNcpImage() {
+	if [ ! -f $FILE_IMG ]; then
+		echo "${FILE_IMG} does not exist."
+		return
+	fi
+
+	killall zigbeed
+	sleep 1
+
+	COUNTER=0
+	while [ $COUNTER -lt 3 ]; do
+		echo "$COUNTER Updating EM357... $FILE_IMG" > /dev/console
+		NcpModeUpdate
+		xmodem -p /dev/ttyS0 -i $FILE_IMG
+		if [ $? -eq 0 ]; then
+			echo "$COUNTER Success: NCP Update to :$FILE_IMG" > /dev/console
+			NcpModeDbgPortEnable
+			break
+		fi
+		COUNTER=$(expr $COUNTER + 1)
+		WeMoResetNcp
+	done
+}
+
+WeMoNCPCheckAndUpdate() {
+	WeMoResetNcp
+	WeMoStartZigBee
+	VER_NCP=`cat /tmp/em357.ver`
+	FILE_NCP="$DIR_IMG/em357-ncp-uart-rts-cts-use-with-serial-uart-bl-$VER_NCP.ebl"
+	if [ $FILE_IMG != $FILE_NCP ]; then
+		WeMoUpdateNcpImage
+	fi
+}
+
+start() {
+	mknod /dev/gpio c 252 1
+	WeMoNCPCheckAndUpdate
+	ZB_NVRAM=ClientSSID
+	ZB_SSID=$(nvram_get ${ZB_NVRAM} | cut -f2 -d =)
+	if [ ! -z ${ZB_SSID} ] || [ -e ${FLAG_SETUP_DONE} ]; then
+		pidof zigbeed > /dev/null || { echo "Starting ZigBee..." ; WeMoStartZigBee ; }
+		killall zbdmonitor.sh
+		/sbin/zbdmonitor.sh &
+	else
+		echo "Stopping ZigBee radio..."
+		WeMoResetNcp
+	fi
+}
+
+stop() {
+	killall zbdmonitor.sh
+	killall -KILL zigbeed
+}

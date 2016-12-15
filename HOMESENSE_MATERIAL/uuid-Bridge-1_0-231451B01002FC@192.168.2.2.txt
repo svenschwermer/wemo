@@ -1,0 +1,426 @@
+The server's host key is not cached in the registry. You
+have no guarantee that the server is the computer you
+think it is.
+The server's rsa2 key fingerprint is:
+ssh-rsa 1039 80:63:1b:11:7f:9c:dd:19:3f:4f:3e:d2:1c:e4:2b:95
+If you trust this host, enter "y" to add the key to
+PuTTY's cache and carry on connecting.
+If you want to carry on connecting just once, without
+adding the key to the cache, enter "n".
+If you do not trust this host, press Return to abandon the
+connection.
+Store key in cache? (y/n) 
+====Link Discovered at ====: 192.168.2.2
+
+
+====NVRAM_GET====:
+
+
+====PS====:
+  PID USER       VSZ STAT COMMAND
+    1 root      1588 S    init
+    2 root         0 SWN  [ksoftirqd/0]
+    3 root         0 SW   [watchdog/0]
+    4 root         0 SW<  [events/0]
+    5 root         0 SW<  [khelper]
+    6 root         0 SW<  [kthread]
+   17 root         0 SW<  [kblockd/0]
+   28 root         0 SW<  [kswapd0]
+   29 root         0 SW<  [aio/0]
+  668 root         0 SW   [mtdblockd]
+ 1377 root         0 SWN  [jffs2_gcd_mtd8]
+ 1388 root      1580 S    {rcS} /bin/sh /etc/init.d/rcS S boot
+ 1391 root      1580 S    logger -s -p 6 -t sysinit
+ 1392 root      1588 S    init
+ 1395 root      1588 S    init
+ 1399 root      1576 S    syslogd -s 45 -O /var/log/messages -S
+ 1401 root      1576 S    klogd
+ 1419 root         0 SWN  [jffs2_gcd_mtd9]
+ 1471 root       816 S    /sbin/hotplug2 --override --persistent --set-worker
+ 1563 root      1188 S    /usr/sbin/dropbear -p 22 -P /var/run/dropbear.1.pid
+ 1565 root     23760 S    /sbin/syseventd -d
+ 1594 root      1192 S    syseventd_fork_helper 8
+ 1622 root         0 SW   [RtmpCmdQTask]
+ 1624 root         0 SW   [RtmpWscTask]
+ 1637 nobody     952 S    /usr/sbin/dnsmasq -K -D -y -Z -b -E -s lan -S /lan/
+ 1643 root       788 S    /sbin/pmortemd
+ 1658 root      1584 S    /sbin/watchdog -t 5 /dev/watchdog
+ 1684 root      1208 S    /sbin/zigbeed -d
+ 1686 root      1192 S    /sbin/zigbeed -d
+ 1708 root      1584 S    {zbdmonitor.sh} /bin/sh /sbin/zbdmonitor.sh
+ 1716 root      1476 S    nvramd
+ 1722 root      1580 S    sh /sbin/startWemo.sh
+ 1724 root       788 S    /sbin/wemotest
+ 1727 root     20180 S    /sbin/natClient
+ 1728 root      116m S    /sbin/wemoApp -webdir /tmp/Belkin_settings/
+ 1954 root      1592 S    udhcpc -i apcli0
+ 1988 root      1120 S    /usr/sbin/ntpclient -s -l -D -p 123 -h 132.163.4.102
+ 3487 root      1572 S    sleep 2
+ 3488 root      1244 S    /usr/sbin/dropbear -p 22 -P /var/run/dropbear.1.pid
+ 3489 root      1580 S    ash -c echo;echo ====Link Discovered at ====: 192.16
+ 3491 root      1580 R    ps
+
+
+====cat /var/log/messages====:
+Jul 14 11:17:58 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.07 file is not existed...
+Jul 14 11:17:58 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.08 file is not existed...
+Jul 14 11:17:58 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.09 file is not existed...
+Jul 14 11:17:58 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.10 file is not existed...
+Jul 14 11:17:58 WEMO: [SD] sm_ParseZigbeeClusterJSON: 7CE5240000140220.node_id file is not existed...
+Jul 14 11:17:58 WEMO: [SD] sm_ParseZigbeeClusterJSON: Return SEND_ZB_GET_ENDPOINT = [0]...
+Jul 14 11:17:58 sysinit: Starting IPC Receive:7
+Jul 14 11:17:58 sysinit: zigbeed node_id:0xeb95, endpoint:0
+Jul 14 11:17:58 sysinit: cmd:108 p1:821732288 p2:1 p3:0 p4:0 
+Jul 14 11:17:58 sysinit: Full Name:/tmp/Belkin_settings/zbid.7CE5240000140220
+Jul 14 11:17:58 sysinit: ** LATEST NODE ID zigbeed node_id:0xeb95 
+Jul 14 11:17:58 sysinit: zbdSetTimeToAbort s_TimeToAbort:51640
+Jul 14 11:17:58 sysinit: IPC_CMD_GET_ENDPOINT 
+Jul 14 11:17:58 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_ZB_GET]
+Jul 14 11:17:58 sysinit: [ZBD_ST_ZB_GET]--->[ZBD_ST_ZB_MSG_SENT_STATUS]
+Jul 14 11:17:58 sysinit: zbdSendGetActiveEndpoint: destination:0xeb95 
+Jul 14 11:17:58 sysinit: zbdSetSourceRoute success
+Jul 14 11:17:58 sysinit: zbdActiveEndpointsRequest: paramNodeId:0xeb95 status:0x0
+Jul 14 11:17:58 sysinit: Ember_Status_Code:0x0 
+Jul 14 11:17:59 sysinit: Service Discovery done. 
+Jul 14 11:17:59 sysinit: emberAfMessageSentCallback 
+Jul 14 11:17:59 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+Jul 14 11:17:59 sysinit: Byte Stream:52 fe 00 
+Jul 14 11:18:03 sysinit: ERROR: tx 66, Profile: ZDO (0x0000), Cluster: 0x0005, 3 bytes,^M
+Jul 14 11:18:03 sysinit: emberAfMessageSentCallback 
+Jul 14 11:18:03 sysinit: Ember_Status_Code: 0x66 type:0x0 indexOrDestination:0xEB95 msgLen:0x3
+Jul 14 11:18:03 sysinit: Byte Stream:53 95 eb 
+Jul 14 11:18:03 sysinit: sysevent set zb_error_status "7CE5240000140220 -3 5" 
+Jul 14 11:18:03 WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: zb_error_status 7CE5240000140220 -3 5
+Jul 14 11:18:03 WEMO: [SD] sm_EventHandler : zb_error_status, device_id = 7CE5240000140220, capability_id = 10005 
+Jul 14 11:18:03 WEMO: [SD] sm_FindDevice(1:7CE5240000140220): Device Not Found or it's an GroupID 
+Jul 14 11:18:03 sysinit: zbdIsNodeSensor index:4, ret:0, nodeType:0x0000 
+Jul 14 11:18:03 sysinit: zbdScheduleAddressRequest 
+Jul 14 11:18:03 sysinit: zbdSetSourceRoute success
+Jul 14 11:18:03 sysinit: MTORR +emberAfPluginConcentratorQueueDiscovery: timeQS:20 
+Jul 14 11:18:03 sysinit: zbdScheduleAddressRequest: nodeId:0xEB95,  timeQSAction:51659 
+Jul 14 11:18:03 sysinit: Entering zbdReplyGeneralResponse, respValue:0xFFFFFFFD, errorCode:-3 
+Jul 14 11:18:03 sysinit: Entering zbdReplyNoPayloadResponse errorCode:-3
+Jul 14 11:18:03 sysinit: Leaving zbdReplyNoPayloadResponse
+Jul 14 11:18:03 sysinit: [ZBD_ST_ZB_MSG_SENT_STATUS]--->[ZBD_ST_IPC_RECV]
+Jul 14 11:18:03 WEMO: [SD]     sleep 5seconds for MTORR in sm_DeviceSendCommand 
+Jul 14 11:18:08 sysinit: Starting IPC Receive:7
+Jul 14 11:18:08 sysinit: zigbeed node_id:0xeb95, endpoint:0
+Jul 14 11:18:08 sysinit: cmd:108 p1:821732288 p2:1 p3:0 p4:0 
+Jul 14 11:18:08 sysinit: Full Name:/tmp/Belkin_settings/zbid.7CE5240000140220
+Jul 14 11:18:08 sysinit: ** LATEST NODE ID zigbeed node_id:0xeb95 
+Jul 14 11:18:08 sysinit: zbdSetTimeToAbort s_TimeToAbort:51680
+Jul 14 11:18:08 sysinit: IPC_CMD_GET_ENDPOINT 
+Jul 14 11:18:08 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_ZB_GET]
+Jul 14 11:18:08 sysinit: [ZBD_ST_ZB_GET]--->[ZBD_ST_ZB_MSG_SENT_STATUS]
+Jul 14 11:18:08 sysinit: zbdSendGetActiveEndpoint: destination:0xeb95 
+Jul 14 11:18:08 sysinit: zbdSetSourceRoute success
+Jul 14 11:18:08 sysinit: zbdActiveEndpointsRequest: paramNodeId:0xeb95 status:0x0
+Jul 14 11:18:08 sysinit: Ember_Status_Code:0x0 
+Jul 14 11:18:09 sysinit: nodeId: 0xEB95 
+Jul 14 11:18:09 sysinit: nowQS:51659, emberAfFindNodeId :7CE5240000140220
+Jul 14 11:18:09 sysinit: periodicEventHandler: Inactive
+Jul 14 11:18:09 sysinit: emberAfMessageSentCallback 
+Jul 14 11:18:09 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFD msgLen:0xB
+Jul 14 11:18:09 sysinit: Byte Stream:55 20 02 14 00 00 24 e5 7c 00 00 
+Jul 14 11:18:11 sysinit: Service Discovery done. 
+Jul 14 11:18:11 WEMO: 11:18:11 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"InetMonitorTask"] wemoApp[1788:{InetMonitorTask}]:[2015-07-14][11:18:11.272807]<wifiHndlr.c:InetMonitorTask:2464> [0x2bdab520:"InetMonitorTask"] Inet connectivity thread health OK [119]...
+Jul 14 11:18:13 WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: zb_error_status 7CE5240000140220 -3 5
+Jul 14 11:18:13 WEMO: [SD] sm_EventHandler : zb_error_status, device_id = 7CE5240000140220, capability_id = 10005 
+Jul 14 11:18:13 WEMO: [SD] sm_FindDevice(1:7CE5240000140220): Device Not Found or it's an GroupID 
+Jul 14 11:18:13 sysinit: ERROR: tx 66, Profile: ZDO (0x0000), Cluster: 0x0005, 3 bytes,^M
+Jul 14 11:18:13 sysinit: emberAfMessageSentCallback 
+Jul 14 11:18:13 sysinit: Ember_Status_Code: 0x66 type:0x0 indexOrDestination:0xEB95 msgLen:0x3
+Jul 14 11:18:13 sysinit: Byte Stream:54 95 eb 
+Jul 14 11:18:13 sysinit: sysevent set zb_error_status "7CE5240000140220 -3 5" 
+Jul 14 11:18:13 sysinit: zbdIsNodeSensor index:4, ret:0, nodeType:0x0000 
+Jul 14 11:18:13 sysinit: zbdScheduleAddressRequest 
+Jul 14 11:18:13 sysinit: zbdSetSourceRoute success
+Jul 14 11:18:13 sysinit: MTORR +emberAfPluginConcentratorQueueDiscovery: timeQS:20 
+Jul 14 11:18:13 sysinit: zbdScheduleAddressRequest: nodeId:0xEB95,  timeQSAction:51698 
+Jul 14 11:18:13 sysinit: Entering zbdReplyGeneralResponse, respValue:0xFFFFFFFD, errorCode:-3 
+Jul 14 11:18:13 sysinit: Entering zbdReplyNoPayloadResponse errorCode:-3
+Jul 14 11:18:13 sysinit: Leaving zbdReplyNoPayloadResponse
+Jul 14 11:18:13 sysinit: [ZBD_ST_ZB_MSG_SENT_STATUS]--->[ZBD_ST_IPC_RECV]
+Jul 14 11:18:13 WEMO: [SD]     sleep 5seconds for MTORR in sm_DeviceSendCommand 
+Jul 14 11:18:18 WEMO: [SD] sm_DeviceSendCommand(7) failed 
+Jul 14 11:18:18 WEMO: [SD] Device 7CE5240000140220:EB95 command status {success:0, fail:2} 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 14 11:18:18 WEMO: [SD] sm_AddDeviceProperty : updated = 0x0
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 14 11:18:18 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+Jul 14 11:18:18 WEMO: 11:18:18 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1410> [0x30fab520:""] GetEndDevices: nDeviceCnt(3), nGroupCnt(1)
+Jul 14 11:18:18 WEMO: 11:18:18 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1787> [0x30fab520:""] GetEndDevices: === pszResponse ===
+Jul 14 11:18:18 WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Paired</DeviceListType><DeviceInfos><DeviceInfo>< [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug DeviceIndex>0</DeviceIndex><DeviceID>94103E7AFDD5001B</DeviceID><FriendlyName>WeMo Room Motion Sensor 01</FriendlyName><IconVers [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug ion>1</IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>9a00,1,0</ [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug CurrentState><Manufacturer>Belkin</Manufacturer><ModelCode>F7C041</ModelCode><productName>PIR</productName><WeMoCertified>YES</W [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug eMoCertified></DeviceInfo><DeviceInfo><DeviceIndex>1</DeviceIndex><DeviceID>94103E71D61400AF</DeviceID><FriendlyName>WeMo Alarm  [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</Capab [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug ilityIDs><CurrentState>aa00,1,0</CurrentState><Manufacturer>Belkin</Manufacturer><ModelCode>F7C040</ModelCode><productName>Alarm [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug Sensor</productName><WeMoCertified>YES</WeMoCertified></DeviceInfo><DeviceInfo><DeviceIndex>2</DeviceIndex><DeviceID>94103E71D61 [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug 40316</DeviceID><FriendlyName>WeMo Home and Away Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion>1F</Firmwa [ 1718069636 ]
+Jul 14 11:18:18 WEMO: upnp.debug reVersion><CapabilityIDs>10500,20500,30501,20502</CapabilityIDs><CurrentState>1,1,0,10</CurrentState><Manufacturer>Belkin</Manuf [ 1718069636 ]
+Jul 14 11:18:19 sysinit: nodeId: 0xEB95 
+Jul 14 11:18:19 sysinit: nowQS:51698, emberAfFindNodeId :7CE5240000140220
+Jul 14 11:18:19 sysinit: periodicEventHandler: Inactive
+Jul 14 11:18:20 sysinit: emberAfMessageSentCallback 
+Jul 14 11:18:20 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFD msgLen:0xB
+Jul 14 11:18:20 sysinit: Byte Stream:56 20 02 14 00 00 24 e5 7c 00 00 
+Jul 14 11:18:21 sysinit: Service Discovery done. 
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.676780]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x2bbab520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.678094]<ipcUDSClient.c:StartIPCClient:213> [0x2bbab520:"checkInetConnect"] IPC Client started on Socket:15
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.678502]<ipcUDSClient.c:SendIPCCommand:240> [0x2bbab520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:18:46.679360]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:18:46.681233]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"ChildFDTask"] natClient[3418:{ChildFDTask}]:[2015-07-14][11:18:46.683328]<ipcUDSServer.c:ChildFDTask:183> [0x2bbab520:"ChildFDTask"] In Child FD Task:3
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.685396]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2bbab520:"checkInetConnect"] Closed UDS Client Socket:15
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.685769]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x2bbab520:"checkInetConnect"] command status =  0
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.686120]<wifiHndlr.c:checkDataBytesFromRouter:3726> [0x2bbab520:"checkInetConnect"] Some data bytes received from Router, Local: 174 and Remote: 0
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.686406]<UDSClientHandler.c:UDS_setRemoteDataBytes:343> [0x2bbab520:"checkInetConnect"] command:IPC_CMD_NAT_SET_REMOTE_DATA_BYTES
+Jul 14 11:18:46 WEMO: 11:18:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:18:46.686958]<ipcUDSClient.c:StartIPCClient:213> [0x2bbab520:"checkInetConnect"] IPC Client started on Socket:15
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.860875]<UDSClientHandler.c:UDS_SetNTPTimeSyncStatus:440> [0x301ab520:"uploadLogFileThr"] command:IPC_CMD_NAT_SET_NTP_TIME_SYNC
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:18:52.862947]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:18:52.864980]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3426:{ChildFDTask}]:[2015-07-14][11:18:52.867349]<ipcUDSServer.c:ChildFDTask:183> [0x2bdab520:"ChildFDTask"] In Child FD Task:6
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.869581]<ipcUDSClient.c:StartIPCClient:213> [0x301ab520:"uploadLogFileThr"] IPC Client started on Socket:15
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3426:{ChildFDTask}]:[2015-07-14][11:18:52.870300]<UDSServerHandler.c:UDSSetServerNTPTimeSyncStatus:846> [0x2bdab520:"ChildFDTask"] NTP time sync set is:1
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3426:{ChildFDTask}]:[2015-07-14][11:18:52.872285]<ipcUDSServer.c:ChildFDTask:222> [0x2bdab520:"ChildFDTask"] Closing Server Child FD Task:6
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3426:{ChildFDTask}]:[2015-07-14][11:18:52.874391]<ipcUDSServer.c:ChildFDTask:229> [0x2bdab520:"ChildFDTask"] Exit child FD Task
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.876837]<ipcUDSClient.c:SendIPCCommand:240> [0x301ab520:"uploadLogFileThr"] IPC client Socket Sent success:12, remaining:0
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.877559]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x301ab520:"uploadLogFileThr"] Closed UDS Client Socket:15
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.878114]<UDSClientHandler.c:UDS_SetNTPTimeSyncStatus:445> [0x301ab520:"uploadLogFileThr"] NTP time sync set status = 1
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.879144]<rule.c:IsNtpUpdate:371> [0x301ab520:"uploadLogFileThr"] ************* ISNTPUPDATE NOW YEAR IS NOT 2000
+Jul 14 11:18:52 WEMO: 11:18:52 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:52.881441]<remoteUpdate.c:uploadLogFileDevStatus:422> [0x301ab520:"uploadLogFileThr"] Sending... /var/log/messages.0
+Jul 14 11:18:54 WEMO: 11:18:54 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:54.820777]<httpsWrapper.c:webAppSendData:2667> [0x301ab520:"uploadLogFileThr"] HTTP Request URL http://devices.xbcs.net:8899/ToolService/log/uploadWdLogFile/94103ECDA130 requested flag 2 disableFlag 0 httpsFlag 0 retVal 0 respCode 200
+Jul 14 11:18:54 WEMO: 11:18:54 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:54.823540]<remoteUpdate.c:uploadMessageFile:1240> [0x301ab520:"uploadLogFileThr"] Upload Log File: /var/log/messages.0 success...
+Jul 14 11:18:54 WEMO: 11:18:54 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:54.861001]<logger.c:openFile:199> [0x301ab520:"uploadLogFileThr"]  ---localTZ: -8.000000,LocalTimeZone:-8.0, DSTVal: 0
+Jul 14 11:18:54 WEMO: WDLOG: 2015-07-14T11:18:54-0800|1838|TimeZone: -8.000000,DST: NA,Ver: WeMo_WW_2.00.9303.DVT-OWRT-Link
+Jul 14 11:18:54 WEMO: 11:18:54 | app.debug <logger.c:pluginLog:330> [0x301ab520:"uploadLogFileThr"] wemoApp[1838:{uploadLogFileThr}]:[2015-07-14][11:18:54.862188]<logger.c:openFile:216> [0x301ab520:"uploadLogFileThr"] *************** TimeZone: -8.000000, DST Enable Value: 0 ***************
+Jul 14 11:19:03 WEMO: 11:19:3 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:03.254048]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30fab520:""] Action found: GetDeviceStatus
+Jul 14 11:19:03 WEMO: 11:19:3 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2565> [0x30fab520:""] GetDeviceStatus === start ===
+Jul 14 11:19:03 WEMO: 11:19:3 | upnp.debug <ledLightUPnPHandler.c:CreateDeviceStatusXML:2456> [0x30fab520:""] GetDeviceStatus: szDeviceIDs[0] = 94103E7AFDD5001B
+Jul 14 11:19:03 WEMO: [SD] ------------------------
+Jul 14 11:19:03 WEMO: [SD] GetDeviceCapabilityValue(94103E7AFDD5001B,10500, Available=1) 
+Jul 14 11:19:03 WEMO: [SD]   Read from cache:(94103E7AFDD5001B,10500,9a00)
+Jul 14 11:19:03 WEMO: [SD] ------------------------
+Jul 14 11:19:03 WEMO: [SD] GetDeviceCapabilityValue(94103E7AFDD5001B,20500, Available=1) 
+Jul 14 11:19:03 WEMO: [SD]   Read from cache:(94103E7AFDD5001B,20500,1)
+Jul 14 11:19:03 WEMO: [SD] ------------------------
+Jul 14 11:19:03 WEMO: [SD] GetDeviceCapabilityValue(94103E7AFDD5001B,30501, Available=1) 
+Jul 14 11:19:20 WEMO: 11:19:20 | app.debug <logger.c:pluginLog:330> [0x31bab520:"CtrlPtRediscover"] wemoApp[2041:{CtrlPtRediscover}]:[2015-07-14][11:19:20.623018]<plugin_ctrlpoint.c:CtrlPtRediscoverTask:255> [0x31bab520:"CtrlPtRediscover"] ##################### Control point to re-discover: 7/10 ###################
+Jul 14 11:19:20 WEMO:  ########## Time out set for job =1436897962624 ########### 
+Jul 14 11:19:20 WEMO: [Tue Jul 14 11:19:20 2015 ]:job_id[44]:Receiving discovery request: MX: 2 from: 192.168.2.2
+Jul 14 11:19:20 WEMO:  #########Reply time pass to TimerThreadSchedule =864ms ##########
+Jul 14 11:19:20 WEMO:  ########## Time out set for job =1436897961490 ########### 
+Jul 14 11:19:21 WEMO: [Tue Jul 14 11:19:21 2015 ]:job_id[44]:Sent discovery response to device:192.168.2.2
+Jul 14 11:19:38 WEMO: [Tue Jul 14 11:19:38 2015 ]:job_id[45]:Receiving discovery request: MX: 5 from: 192.168.2.4
+Jul 14 11:19:38 WEMO:  #########Reply time pass to TimerThreadSchedule =2735ms ##########
+Jul 14 11:19:38 WEMO:  ########## Time out set for job =1436897981106 ########### 
+Jul 14 11:19:41 WEMO: [Tue Jul 14 11:19:41 2015 ]:job_id[45]:Sent discovery response to device:192.168.2.4
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.944812]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x2bbab520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.945478]<ipcUDSClient.c:StartIPCClient:213> [0x2bbab520:"checkInetConnect"] IPC Client started on Socket:15
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.945845]<ipcUDSClient.c:SendIPCCommand:240> [0x2bbab520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:19:46.947604]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:19:46.949496]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3481:{ChildFDTask}]:[2015-07-14][11:19:46.951786]<ipcUDSServer.c:ChildFDTask:183> [0x2bdab520:"ChildFDTask"] In Child FD Task:8
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.954040]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2bbab520:"checkInetConnect"] Closed UDS Client Socket:15
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.954467]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x2bbab520:"checkInetConnect"] command status =  0
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.954774]<wifiHndlr.c:checkDataBytesFromRouter:3726> [0x2bbab520:"checkInetConnect"] Some data bytes received from Router, Local: 133 and Remote: 0
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.955061]<UDSClientHandler.c:UDS_setRemoteDataBytes:343> [0x2bbab520:"checkInetConnect"] command:IPC_CMD_NAT_SET_REMOTE_DATA_BYTES
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.955608]<ipcUDSClient.c:StartIPCClient:213> [0x2bbab520:"checkInetConnect"] IPC Client started on Socket:15
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.955974]<ipcUDSClient.c:SendIPCCommand:240> [0x2bbab520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:19:46.957873]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1727:{StartIpcUdsServe}]:[2015-07-14][11:19:46.960106]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3481:{ChildFDTask}]:[2015-07-14][11:19:46.962181]<ipcUDSServer.c:ChildFDTask:222> [0x2bdab520:"ChildFDTask"] Closing Server Child FD Task:8
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bdab520:"ChildFDTask"] natClient[3481:{ChildFDTask}]:[2015-07-14][11:19:46.963978]<ipcUDSServer.c:ChildFDTask:229> [0x2bdab520:"ChildFDTask"] Exit child FD Task
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"ChildFDTask"] natClient[3482:{ChildFDTask}]:[2015-07-14][11:19:46.966295]<ipcUDSServer.c:ChildFDTask:183> [0x2bbab520:"ChildFDTask"] In Child FD Task:6
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.968275]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2bbab520:"checkInetConnect"] Closed UDS Client Socket:15
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.968752]<UDSClientHandler.c:UDS_setRemoteDataBytes:348> [0x2bbab520:"checkInetConnect"] command status =  0
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"checkInetConnect"] wemoApp[1787:{checkInetConnect}]:[2015-07-14][11:19:46.969094]<wifiHndlr.c:checkInetConnectivity:3798> [0x2bbab520:"checkInetConnect"] Router connectivity already checked..
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"ChildFDTask"] natClient[3482:{ChildFDTask}]:[2015-07-14][11:19:46.969813]<ipcUDSServer.c:ChildFDTask:222> [0x2bbab520:"ChildFDTask"] Closing Server Child FD Task:6
+Jul 14 11:19:46 WEMO: 11:19:46 | app.debug <logger.c:pluginLog:330> [0x2bbab520:"ChildFDTask"] natClient[3482:{ChildFDTask}]:[2015-07-14][11:19:46.972177]<ipcUDSServer.c:ChildFDTask:229> [0x2bbab520:"ChildFDTask"] Exit child FD Task
+Jul 14 11:19:47 WEMO: [Tue Jul 14 11:19:47 2015 ]:job_id[46]:Receiving discovery request: MX: 1 from: 192.168.2.3
+Jul 14 11:19:47 WEMO:  #########Reply time pass to TimerThreadSchedule =100ms ##########
+Jul 14 11:19:47 WEMO:  ########## Time out set for job =1436897987972 ########### 
+Jul 14 11:19:47 WEMO: [Tue Jul 14 11:19:47 2015 ]:job_id[46]:Sent discovery response to device:192.168.2.3
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:48.074149]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x30fab520:""] Action found: GetInformation
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:48.074612]<controlleedevice.c:handleTimeSync:6823> [0x30fab520:""] set time: utc: 1436897997, timezone: -07.0, dst: 1, szIsLocalDst: 1
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:48.075894]<controlleedevice.c:getDeviceUDNString:1002> [0x30fab520:""] Device type: 1 and temp type: 5
+Jul 14 11:19:48 WEMO: WDLOG: 2015-07-14T11:19:48-0800|wemoApp[2287:{}]:|getDeviceUDNString|Device type: 1 and temp type: 5
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:48.076523]<controlleedevice.c:getDeviceUDNString:1005> [0x30fab520:""] Device UDN: Bridge
+Jul 14 11:19:48 WEMO: WDLOG: 2015-07-14T11:19:48-0800|wemoApp[2287:{}]:|getDeviceUDNString|Device UDN: Bridge
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30fab520:""] wemoApp[2287:{}]:[2015-07-14][11:19:48.078627]<controlleedevice.c:GetInformation:6900> [0x30fab520:""] Device information: <Device><DeviceInformation><firmwareVersion>WeMo_WW_2.00.9303.DVT-OWRT-Link</firmwareVersion><iconVersion>0</iconVersion><iconPort>49153</iconPort><macAddress>94103ECDA130</macAddress><FriendlyName>WeMo Link</FriendlyName><binaryState>0</binaryState><hwVersion>v1</hwVersion><CountdownEndTime>0</Cou
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30bab520:""] wemoApp[3485:{}]:[2015-07-14][11:19:48.083348]<controlleedevice.c:IsApplyTimeSync:4687> [0x30bab520:""] TimeSync: 1436897997:-7.000000:1436896838:-8.000000:1
+Jul 14 11:19:48 WEMO: 11:19:48 | app.debug <logger.c:pluginLog:330> [0x30bab520:""] wemoApp[3485:{}]:[2015-07-14][11:19:48.083944]<controlleedevice.c:timeSyncThread:6589> [0x30bab520:""] : *****NOT APPLYING TIME SYNC
+Jul 14 11:19:48 WEMO: [Tue Jul 14 11:19:48 2015 ]:job_id[47]:Receiving discovery request: MX: 2 from: 192.168.2.3
+Jul 14 11:19:48 WEMO:  #########Reply time pass to TimerThreadSchedule =660ms ##########
+Jul 14 11:19:48 WEMO:  ########## Time out set for job =1436897988746 ########### 
+Jul 14 11:19:48 WEMO: [Tue Jul 14 11:19:48 2015 ]:job_id[47]:Sent discovery response to device:192.168.2.3
+Jul 14 11:19:49 WEMO: 11:19:49 | app.debug <logger.c:pluginLog:330> [0x2ebab520:""] wemoApp[2026:{}]:[2015-07-14][11:19:49.150438]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1951> [0x2ebab520:""] Action found: GetEndDevices
+Jul 14 11:19:49 WEMO: 11:19:49 | upnp.debug <ledLightUPnPHandler.c:IsZigbeeSetupDone:1534> [0x2ebab520:""] flag_setup_done is already existed...
+Jul 14 11:19:49 WEMO: 11:19:49 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1760> [0x2ebab520:""] GetEndDevices: ReqListType is PAIRED_LIST
+Jul 14 11:19:49 WEMO: [SD] GetDeviceList() 3
+Jul 14 11:19:49 WEMO: [SD] PermitJoin()
+Jul 14 11:19:49 WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [2]
+Jul 14 11:19:49 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [2c80 160314d6713e1094 done ]
+Jul 14 11:19:49 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [eb95], field[1] = [200214000024e57c]
+Jul 14 11:19:49 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 1
+Jul 14 11:19:49 WEMO: [SD] Joined Device List = [2]
+Jul 14 11:19:49 sysinit: Starting IPC Receive:7
+Jul 14 11:19:49 sysinit: zigbeed node_id:0x0000, endpoint:0
+Jul 14 11:19:49 sysinit: cmd:105 p1:254 p2:0 p3:0 p4:0 
+Jul 14 11:19:49 sysinit: Full Name:/tmp/Belkin_settings/zbid.0000000000000000
+Jul 14 11:19:49 sysinit: No file:[/tmp/Belkin_settings/zbid.0000000000000000]
+Jul 14 11:19:49 sysinit: zbdSetTimeToAbort s_TimeToAbort:52072
+Jul 14 11:19:49 sysinit: IPC_CMD_SET_PERMITJOIN 
+Jul 14 11:19:49 sysinit: pJoin for 254 sec: 0x00^M
+Jul 14 11:19:49 sysinit: emAfPermitJoin duration:254 b_bcast:1 status:0x0 
+Jul 14 11:19:49 sysinit: Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Jul 14 11:19:49 sysinit: Leaving zbdReplyGeneralResponse
+Jul 14 11:19:49 sysinit: Ember_Status_Code:0x0 
+Jul 14 11:19:49 sysinit: Leaving IPC Receive:7
+Jul 14 11:19:49 WEMO: [SD] SM_AddJoinedDeviceList : list[0]->DeviceID.node_id = [7CE5240000140220]
+Jul 14 11:19:49 WEMO: [SD] sm_AddJoiningDeviceList: device = 7CE5240000140220
+Jul 14 11:19:49 WEMO: [SD] Device Joined: 7CE5240000140220:EB95 
+Jul 14 11:19:49 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.01 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.02 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.03 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.04 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.05 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.06 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.07 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.01 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.02 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.03 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.04 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.05 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.06 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.07 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.08 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.09 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_CheckZigbeeFile: /tmp/Belkin_settings/zbid.7CE5240000140220.10 file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_ParseZigbeeClusterJSON: 7CE5240000140220.node_id file is not existed...
+Jul 14 11:19:49 WEMO: [SD] sm_ParseZigbeeClusterJSON: Return SEND_ZB_GET_ENDPOINT = [0]...
+Jul 14 11:19:49 sysinit: Starting IPC Receive:7
+Jul 14 11:19:49 sysinit: zigbeed node_id:0xeb95, endpoint:0
+Jul 14 11:19:49 sysinit: cmd:108 p1:783983552 p2:1 p3:0 p4:0 
+Jul 14 11:19:49 sysinit: Full Name:/tmp/Belkin_settings/zbid.7CE5240000140220
+Jul 14 11:19:49 sysinit: ** LATEST NODE ID zigbeed node_id:0xeb95 
+Jul 14 11:19:49 sysinit: zbdSetTimeToAbort s_TimeToAbort:52073
+Jul 14 11:19:49 sysinit: IPC_CMD_GET_ENDPOINT 
+Jul 14 11:19:49 sysinit: [ZBD_ST_IPC_RECV]--->[ZBD_ST_ZB_GET]
+Jul 14 11:19:49 sysinit: [ZBD_ST_ZB_GET]--->[ZBD_ST_ZB_MSG_SENT_STATUS]
+Jul 14 11:19:49 sysinit: zbdSendGetActiveEndpoint: destination:0xeb95 
+Jul 14 11:19:49 sysinit: zbdSetSourceRoute success
+Jul 14 11:19:49 sysinit: zbdActiveEndpointsRequest: paramNodeId:0xeb95 status:0x0
+Jul 14 11:19:49 sysinit: Ember_Status_Code:0x0 
+Jul 14 11:19:49 dropbear[3488]: Child connection from 192.168.2.4:61054
+Jul 14 11:19:50 sysinit: emberAfMessageSentCallback 
+Jul 14 11:19:50 sysinit: Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+Jul 14 11:19:50 sysinit: Byte Stream:57 fe 00 
+Jul 14 11:19:50 WEMO: [Tue Jul 14 11:19:50 2015 ]:job_id[48]:Receiving discovery request: MX: 2 from: 192.168.2.3
+Jul 14 11:19:50 WEMO:  #########Reply time pass to TimerThreadSchedule =365ms ##########
+Jul 14 11:19:50 WEMO:  ########## Time out set for job =1436897990774 ########### 
+Jul 14 11:19:50 dropbear[3488]: password auth succeeded for 'root' from 192.168.2.4:61054
+Jul 14 11:19:50 syslog: nvram/3490/NvramGet: Error - argument is NULL
+
+
+====cat /var/log/messages.0====:
+
+
+====cat /tmp/Belkin_settings/br_rule====:
+
+
+====cat /tmp/Belkin_settings/ba_rule====:
+cat: can't open '/var/log/messages.0': No such file or directory
+cat: can't open '/tmp/Belkin_settings/br_rule': No such file or directory
+cat: can't open '/tmp/Belkin_settings/ba_rule': No such file or directory
+Plink error: Remote command failed
+(Exit code 1)
+
+====GetMetaInfo====
+Sending GetMetaInfo..., URL:http://192.168.2.2:49153/upnp/control/metainfo1
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <s:Body>
+    <u:GetMetaInfoResponse xmlns:u="urn:Belkin:service:metainfo:1">
+      <MetaInfo>94103ECDA130|231451B01002FC|Plugin Device|WeMo_WW_2.00.9303.DVT-OWRT-Link|WeMo.Link.2FC|Bridge</MetaInfo>
+    </u:GetMetaInfoResponse>
+  </s:Body>
+</s:Envelope>
+
+Action took: 130 Milliseconds
+
+====GetEndDevice(ALL_LIST)====
+UDN:uuid:Bridge-1_0-231451B01002FC
+Sending GetEndDevice(ALL_LIST)...
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <s:Body>
+    <u:GetEndDevicesResponse xmlns:u="urn:Belkin:service:bridge:1">
+      <DeviceLists>
+        <!--<?xml version="1.0" encoding="utf-8"?>-->
+        <DeviceLists>
+          <DeviceList>
+            <DeviceListType>Paired</DeviceListType>
+            <DeviceInfos>
+              <DeviceInfo>
+                <DeviceIndex>0</DeviceIndex>
+                <DeviceID>94103E7AFDD5001B</DeviceID>
+                <FriendlyName>WeMo Room Motion Sensor 01</FriendlyName>
+                <IconVersion>1</IconVersion>
+                <FirmwareVersion>1F</FirmwareVersion>
+                <CapabilityIDs>10500,20500,30501</CapabilityIDs>
+                <CurrentState>9a00,1,0</CurrentState>
+                <Manufacturer>Belkin</Manufacturer>
+                <ModelCode>F7C041</ModelCode>
+                <productName>PIR</productName>
+                <WeMoCertified>YES</WeMoCertified>
+              </DeviceInfo>
+              <DeviceInfo>
+                <DeviceIndex>1</DeviceIndex>
+                <DeviceID>94103E71D61400AF</DeviceID>
+                <FriendlyName>WeMo Alarm Sensor 01</FriendlyName>
+                <IconVersion>1</IconVersion>
+                <FirmwareVersion>1F</FirmwareVersion>
+                <CapabilityIDs>10500,20500,30501</CapabilityIDs>
+                <CurrentState>aa00,1,0</CurrentState>
+                <Manufacturer>Belkin</Manufacturer>
+                <ModelCode>F7C040</ModelCode>
+                <productName>AlarmSensor</productName>
+                <WeMoCertified>YES</WeMoCertified>
+              </DeviceInfo>
+              <DeviceInfo>
+                <DeviceIndex>2</DeviceIndex>
+                <DeviceID>94103E71D6140316</DeviceID>
+                <FriendlyName>WeMo Home and Away Sensor 01</FriendlyName>
+                <IconVersion>1</IconVersion>
+                <FirmwareVersion>1F</FirmwareVersion>
+                <CapabilityIDs>10500,20500,30501,20502</CapabilityIDs>
+                <CurrentState>1,1,0,10</CurrentState>
+                <Manufacturer>Belkin</Manufacturer>
+                <ModelCode>F7C039</ModelCode>
+                <productName>Fob</productName>
+                <WeMoCertified>YES</WeMoCertified>
+              </DeviceInfo>
+            </DeviceInfos>
+            <GroupInfos>
+              <GroupInfo>
+                <GroupID>1436819856</GroupID>
+                <GroupName>Doors and Windows</GroupName>
+                <GroupCapabilityIDs/>
+                <GroupCapabilityValues/>
+                <DeviceInfos/>
+              </GroupInfo>
+            </GroupInfos>
+          </DeviceList>
+        </DeviceLists>
+      </DeviceLists>
+    </u:GetEndDevicesResponse>
+  </s:Body>
+</s:Envelope>
+
+Action took: 39095 Milliseconds

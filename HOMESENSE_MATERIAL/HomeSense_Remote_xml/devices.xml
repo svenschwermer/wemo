@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P"><statusCode>S</statusCode><resultCode><code>PLGN_200</code><description>Successful</description></resultCode><message>Device list retrieved successfully</message><home><homeId>700517209</homeId><description>plugin registration</description><firmwareId>0</firmwareId></home><device><pluginId>1677807</pluginId><macAddress>B4750E1E1D84</macAddress><serialNumber>231347B010015A</serialNumber><uniqueId>uuid:Bridge-1_0-231347B010015A</uniqueId><modelCode>Bridge</modelCode><productType>Bridge</productType><privateKey>c35e3872-d7ec-40ea-baed-ef61a335fa59</privateKey><status>1</status><notificationType>0</notificationType><firmwareVersion>WeMo_WW_2.00.9462.DVT-OWRT-Link</firmwareVersion><hwVersion>v1</hwVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>68</signalStrength><dbVersion>0</dbVersion><customizedState>1</customizedState><attributeLists action="GetAttributes"><attribute><name>hardResetTS</name><value>1438834237186</value></attribute></attributeLists></device><device><pluginId>1677821</pluginId><parentPluginId>1677807</parentPluginId><macAddress>94103E71D61401C6</macAddress><serialNumber>NA</serialNumber><modelCode>F7C038</modelCode><productType>AlertSensor</productType><status>0</status><notificationType>0</notificationType><firmwareVersion>1F</firmwareVersion><hwVersion>v1</hwVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>0</signalStrength><friendlyName>WeMo Door and Window Sensor 02</friendlyName><deviceCapabilityProfiles><deviceCapabilityProfile><capabilityProfile><Id>35</Id><capabilityType><Id>1</Id><type>BinaryCtl</type><description>Binary control</description></capabilityType><capabilityId>10500</capabilityId><profileName>ZigBeeSensor</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capabilityId>10500</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile><deviceCapabilityProfile><capabilityProfile><Id>41</Id><capabilityType><Id>7</Id><type>Sensor Test Mode</type><description>SensorTestMode</description></capabilityType><capabilityId>30501</capabilityId><profileName>SensorTestMode</profileName><specification>0</specification><dataType>1</dataType><allowedValues>1: Sensor Test Mode Start</allowedValues></capabilityProfile><capabilityId>30501</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile><deviceCapabilityProfile><capabilityProfile><Id>43</Id><capabilityType><Id>9</Id><type>Sensor Config</type><description>SensorConfig</description></capabilityType><capabilityId>20500</capabilityId><profileName>SensorConfig</profileName><specification>0</specification><dataType>1</dataType><allowedValues>0: Sensor Disabled,1: Sensor Enabled</allowedValues></capabilityProfile><capabilityId>20500</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile></deviceCapabilityProfiles><customizedState>1</customizedState><manufacturer>Belkin</manufacturer><wemoCertified>yes</wemoCertified></device><device><pluginId>1677819</pluginId><parentPluginId>1677807</parentPluginId><macAddress>94103E71D61401D9</macAddress><serialNumber>NA</serialNumber><modelCode>F7C038</modelCode><productType>AlertSensor</productType><status>0</status><notificationType>0</notificationType><firmwareVersion>1F</firmwareVersion><hwVersion>v1</hwVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><friendlyName>WeMo Door and Window Sensor 01</friendlyName><deviceCapabilityProfiles><deviceCapabilityProfile><capabilityProfile><Id>35</Id><capabilityType><Id>1</Id><type>BinaryCtl</type><description>Binary control</description></capabilityType><capabilityId>10500</capabilityId><profileName>ZigBeeSensor</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capabilityId>10500</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile><deviceCapabilityProfile><capabilityProfile><Id>41</Id><capabilityType><Id>7</Id><type>Sensor Test Mode</type><description>SensorTestMode</description></capabilityType><capabilityId>30501</capabilityId><profileName>SensorTestMode</profileName><specification>0</specification><dataType>1</dataType><allowedValues>1: Sensor Test Mode Start</allowedValues></capabilityProfile><capabilityId>30501</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile><deviceCapabilityProfile><capabilityProfile><Id>43</Id><capabilityType><Id>9</Id><type>Sensor Config</type><description>SensorConfig</description></capabilityType><capabilityId>20500</capabilityId><profileName>SensorConfig</profileName><specification>0</specification><dataType>1</dataType><allowedValues>0: Sensor Disabled,1: Sensor Enabled</allowedValues></capabilityProfile><capabilityId>20500</capabilityId><currentValue>0</currentValue></deviceCapabilityProfile></deviceCapabilityProfiles><customizedState>1</customizedState><manufacturer>Belkin</manufacturer><wemoCertified>yes</wemoCertified></device><groupSSIDs><ssid>VERIK-TPLINK</ssid></groupSSIDs><groupArpMacs><arpMac>10FEEDD31836</arpMac></groupArpMacs></devices>
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<devices
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P">
+    <statusCode>S</statusCode>
+    <resultCode>
+        <code>PLGN_200</code>
+        <description>Successful</description>
+    </resultCode>
+    <message>Device list retrieved successfully</message>
+    <home>
+        <homeId>700517209</homeId>
+        <description>plugin registration</description>
+        <firmwareId>0</firmwareId>
+    </home>
+    <device>
+        <pluginId>1677807</pluginId>
+        <macAddress>B4750E1E1D84</macAddress>
+        <serialNumber>231347B010015A</serialNumber>
+        <uniqueId>uuid:Bridge-1_0-231347B010015A</uniqueId>
+        <modelCode>Bridge</modelCode>
+        <productType>Bridge</productType>
+        <privateKey>c35e3872-d7ec-40ea-baed-ef61a335fa59</privateKey>
+        <status>1</status>
+        <notificationType>0</notificationType>
+        <firmwareVersion>WeMo_WW_2.00.9462.DVT-OWRT-Link</firmwareVersion>
+        <hwVersion>v1</hwVersion>
+        <fwUpgradeStatus>4</fwUpgradeStatus>
+        <signalStrength>68</signalStrength>
+        <dbVersion>0</dbVersion>
+        <customizedState>1</customizedState>
+        <attributeLists action="GetAttributes">
+            <attribute>
+                <name>hardResetTS</name>
+                <value>1438834237186</value>
+            </attribute>
+        </attributeLists>
+    </device>
+    <device>
+        <pluginId>1677821</pluginId>
+        <parentPluginId>1677807</parentPluginId>
+        <macAddress>94103E71D61401C6</macAddress>
+        <serialNumber>NA</serialNumber>
+        <modelCode>F7C038</modelCode>
+        <productType>AlertSensor</productType>
+        <status>0</status>
+        <notificationType>0</notificationType>
+        <firmwareVersion>1F</firmwareVersion>
+        <hwVersion>v1</hwVersion>
+        <fwUpgradeStatus>4</fwUpgradeStatus>
+        <signalStrength>0</signalStrength>
+        <friendlyName>WeMo Door and Window Sensor 02</friendlyName>
+        <deviceCapabilityProfiles>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>35</Id>
+                    <capabilityType>
+                        <Id>1</Id>
+                        <type>BinaryCtl</type>
+                        <description>Binary control</description>
+                    </capabilityType>
+                    <capabilityId>10500</capabilityId>
+                    <profileName>ZigBeeSensor</profileName>
+                    <specification>0</specification>
+                    <dataType>0</dataType>
+                </capabilityProfile>
+                <capabilityId>10500</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>41</Id>
+                    <capabilityType>
+                        <Id>7</Id>
+                        <type>Sensor Test Mode</type>
+                        <description>SensorTestMode</description>
+                    </capabilityType>
+                    <capabilityId>30501</capabilityId>
+                    <profileName>SensorTestMode</profileName>
+                    <specification>0</specification>
+                    <dataType>1</dataType>
+                    <allowedValues>1: Sensor Test Mode Start</allowedValues>
+                </capabilityProfile>
+                <capabilityId>30501</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>43</Id>
+                    <capabilityType>
+                        <Id>9</Id>
+                        <type>Sensor Config</type>
+                        <description>SensorConfig</description>
+                    </capabilityType>
+                    <capabilityId>20500</capabilityId>
+                    <profileName>SensorConfig</profileName>
+                    <specification>0</specification>
+                    <dataType>1</dataType>
+                    <allowedValues>0: Sensor Disabled,1: Sensor Enabled</allowedValues>
+                </capabilityProfile>
+                <capabilityId>20500</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+        </deviceCapabilityProfiles>
+        <customizedState>1</customizedState>
+        <manufacturer>Belkin</manufacturer>
+        <wemoCertified>yes</wemoCertified>
+    </device>
+    <device>
+        <pluginId>1677819</pluginId>
+        <parentPluginId>1677807</parentPluginId>
+        <macAddress>94103E71D61401D9</macAddress>
+        <serialNumber>NA</serialNumber>
+        <modelCode>F7C038</modelCode>
+        <productType>AlertSensor</productType>
+        <status>0</status>
+        <notificationType>0</notificationType>
+        <firmwareVersion>1F</firmwareVersion>
+        <hwVersion>v1</hwVersion>
+        <fwUpgradeStatus>4</fwUpgradeStatus>
+        <signalStrength>100</signalStrength>
+        <friendlyName>WeMo Door and Window Sensor 01</friendlyName>
+        <deviceCapabilityProfiles>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>35</Id>
+                    <capabilityType>
+                        <Id>1</Id>
+                        <type>BinaryCtl</type>
+                        <description>Binary control</description>
+                    </capabilityType>
+                    <capabilityId>10500</capabilityId>
+                    <profileName>ZigBeeSensor</profileName>
+                    <specification>0</specification>
+                    <dataType>0</dataType>
+                </capabilityProfile>
+                <capabilityId>10500</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>41</Id>
+                    <capabilityType>
+                        <Id>7</Id>
+                        <type>Sensor Test Mode</type>
+                        <description>SensorTestMode</description>
+                    </capabilityType>
+                    <capabilityId>30501</capabilityId>
+                    <profileName>SensorTestMode</profileName>
+                    <specification>0</specification>
+                    <dataType>1</dataType>
+                    <allowedValues>1: Sensor Test Mode Start</allowedValues>
+                </capabilityProfile>
+                <capabilityId>30501</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+            <deviceCapabilityProfile>
+                <capabilityProfile>
+                    <Id>43</Id>
+                    <capabilityType>
+                        <Id>9</Id>
+                        <type>Sensor Config</type>
+                        <description>SensorConfig</description>
+                    </capabilityType>
+                    <capabilityId>20500</capabilityId>
+                    <profileName>SensorConfig</profileName>
+                    <specification>0</specification>
+                    <dataType>1</dataType>
+                    <allowedValues>0: Sensor Disabled,1: Sensor Enabled</allowedValues>
+                </capabilityProfile>
+                <capabilityId>20500</capabilityId>
+                <currentValue>0</currentValue>
+            </deviceCapabilityProfile>
+        </deviceCapabilityProfiles>
+        <customizedState>1</customizedState>
+        <manufacturer>Belkin</manufacturer>
+        <wemoCertified>yes</wemoCertified>
+    </device>
+    <groupSSIDs>
+        <ssid>VERIK-TPLINK</ssid>
+    </groupSSIDs>
+    <groupArpMacs>
+        <arpMac>10FEEDD31836</arpMac>
+    </groupArpMacs>
+</devices>

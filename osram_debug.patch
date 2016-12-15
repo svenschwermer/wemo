@@ -1,0 +1,155 @@
+Index: package/UPnP/src/ledLightUPnPHandler.c
+===================================================================
+--- package/UPnP/src/ledLightUPnPHandler.c	(revision 9334)
++++ package/UPnP/src/ledLightUPnPHandler.c	(working copy)
+@@ -1,4 +1,4 @@
+-#ifdef PRODUCT_WeMo_LEDLight
++//#ifdef PRODUCT_WeMo_LEDLight
+ 
+ #include <pthread.h>
+ #include <curl/curl.h>
+@@ -6361,5 +6361,5 @@
+ 
+ //End -- Implementation the UPnP action command of WeMoBridge_LEDLight
+ 
+-#endif
++//#endif
+ 
+Index: package/UPnP/src/ledLightUPnPHandler.h
+===================================================================
+--- package/UPnP/src/ledLightUPnPHandler.h	(revision 9334)
++++ package/UPnP/src/ledLightUPnPHandler.h	(working copy)
+@@ -1,4 +1,4 @@
+-#ifdef PRODUCT_WeMo_LEDLight
++//#ifdef PRODUCT_WeMo_LEDLight
+ 
+ #ifndef _LEDLIGHT_UPNP_HANDLER_H_
+ #define _LEDLIGHT_UPNP_HANDLER_H_
+@@ -153,4 +153,4 @@
+ 
+ #endif  //_LEDLIGHT_UPNP_HANDLER_H_
+ 
+-#endif  //PRODUCT_WeMo_LEDLight
++//#endif  //PRODUCT_WeMo_LEDLight
+Index: package/subdevice/src/sd_device_specific.c
+===================================================================
+--- package/subdevice/src/sd_device_specific.c	(revision 9334)
++++ package/subdevice/src/sd_device_specific.c	(working copy)
+@@ -1184,7 +1184,7 @@
+ 
+     char zbFileName[80] = {0,};
+     char zbBasicFileName[80] = {0,};
+-
++    Debug("sm_ParseZigbeeBasicClusterJSON: %s [dp]\n", pEUID);
+     if( !sm_CheckZigbeeFile(pEUID, zbFileName, sizeof(zbFileName), &end_point) )
+     {
+         Debug("sm_ParseZigbeeBasicClusterJSON: %s.node_id file is not existed...\n", pEUID);
+@@ -1438,11 +1438,18 @@
+     char        *pOSRAMBulbName = NULL;
+ 
+     Debug("sm_GetDeviceInfo Entry.... \n");
++    if(option->DeviceInfo == SCAN_NORMAL){
++         Debug("option->DeviceInfo == SCAN_NORMAL \n");
++    }
++    if(option->DeviceInfo == SCAN_MINIMUM){
++         Debug("option->DeviceInfo == SCAN_MINIMUM \n");
++    }
+ 
+     for (once = 1; once; once--)
+     {
+         if( !(device->Attributes & DA_JOINED) )
+         {
++            Debug("device->Attributes & DA_JOINED\n");
+             device->EUID.Type = SD_DEVICE_EUID;
+             EUI64ToString(device_data->DeviceID.node_eui, device->EUID.Data);
+ 
+@@ -1566,7 +1573,14 @@
+                 device_data->ClusterCount = MIN(param.param1, ZD_MAX_CLUSTER_COUNT);
+                 device_data->Type = param.device_type;
+             }
+-
++            memset(&param, 0x00, sizeof(TZBParam));
++            if( sm_DeviceSendCommand(device_data, &param, ZB_CMD_GET_MODELCODE, 1, 0, 0, 0, RETRY_0, 100) )
++            {
++                Debug("sm_GetDeviceInfo:DA_BASIC_CLUSTER: send ZB_CMD_GET_MODELCODE command... \n");
++            }
++            Debug("sm_DeviceSendCommand called to GET_MODELCODE\n");
++            
++            
+             if( device->DeviceType[0] && !device->FriendlyName[0] )
+             {
+                 SAFE_STRCPY(device->FriendlyName, sm_GetDefaultFriendlyName(device->DeviceType, device->ModelCode));
+@@ -1576,10 +1590,11 @@
+             Debug("sm_GetDeviceInfo:DA_JOINED device->DeviceType = [%s] \n", device->DeviceType);
+             Debug("sm_GetDeviceInfo:DA_JOINED device->FriendlyName = [%s] \n", device->FriendlyName);
+             Debug("sm_GetDeviceInfo:DA_JOINED device->ManufacturerName = [%s] \n", device->ManufacturerName);
++            Debug("sm_GetDeviceInfo:DA_JOINED device->ModelCode = [%s] \n", device->ModelCode);
+ 
+             //Get an end point of Zigbee device
+             result = sm_GetEndPoint(device->EUID.Data, &endpoint);
+-
++            Debug("sm_GetDeviceInfo:DA_JOINED device->ModelCode = [%s] \n", device->ModelCode);
+             if( result )
+             {
+                 device_data->DeviceID.endpoint = endpoint;
+@@ -1591,27 +1606,30 @@
+ 
+             //Set a device udn of zigbee device
+             sm_SetDeviceUDN(device);
+-
++            Debug("sm_GetDeviceInfo:DA_JOINED device->ModelCode = [%s] \n", device->ModelCode);
+             Debug("sm_GetDeviceInfo:DA_ENDPOINT device_data->DeviceID.endpoint = [%d] \n",
+                     device_data->DeviceID.endpoint);
+ 
+             //Set cluster info to the cluster list
+             sm_SetDeviceClusterExtension(device_data);
+-
++            Debug("sm_GetDeviceInfo:DA_JOINED device->ModelCode = [%s] \n", device->ModelCode);
+             device->Attributes |= (DA_JOINED | DA_ENDPOINT | DA_CLUSTER);
+             updated |= (DA_JOINED | DA_ENDPOINT | DA_CLUSTER);
+         }
+-
++        Debug("sm_ParseZigbeeBasicClusterJSON: %s, %s, %s ...dp\n",device->FirmwareVersion, device->ManufacturerName, device->ModelCode);
+         if( option->DeviceInfo != SCAN_MINIMUM )
+         {
++            Debug("option->DeviceInfo != SCAN_MINIMUM\n");
+             if( !(device->Attributes & DA_BASIC_CLUSTER) )
+             {
++                Debug("device->Attributes & DA_BASIC_CLUSTER\n");
+                 result = sm_ParseZigbeeBasicClusterJSON(device->EUID.Data,
+                         device->FirmwareVersion, sizeof(device->FirmwareVersion),
+                         device->ManufacturerName, sizeof(device->ManufacturerName),
+                         device->ModelCode, sizeof(device->ModelCode));
+                 if( !result )
+                 {
++                    Debug("debug point------------\n");
+                     memset(&param, 0x00, sizeof(TZBParam));
+                     if( sm_DeviceSendCommand(device_data, &param, ZB_CMD_GET_MODELCODE, 1, 0, 0, 0, RETRY_0, 100) )
+                     {
+@@ -1635,8 +1653,9 @@
+                 }
+ 
+                 SAFE_STRCPY(device->DeviceType, scZigBeeTypeNamePreset[p].Name);
++               
+                 SAFE_STRCPY(device->FriendlyName, scZigBeeTypeNamePreset[p].Name);
+-
++                 Debug("device->DeviceType = scZigBeeTypeNamePreset[p].Name: %s  ...\n",scZigBeeTypeNamePreset[p].Name);
+                 if( 0 == strcmp(device->DeviceType, ZB_WEMOLINK) )
+                 {
+                     SAFE_STRCPY(device->ModelCode, "Bridge");
+@@ -1650,6 +1669,7 @@
+ 
+                 if( (pOSRAMBulbName = sm_GetOSRAMFriendlyName(device->ModelCode, device->ManufacturerName)) )
+                 {
++                    Debug("device->FriendlyName = pOSRAMBulbName: %s  ...device->ModelCode: %s\n",pOSRAMBulbName,device->ModelCode);
+                     SAFE_STRCPY(device->FriendlyName, pOSRAMBulbName);
+                 }
+ 
+@@ -1665,6 +1685,7 @@
+ 
+             if( !(device->Attributes & DA_FIRMWARE_VERSION) )
+             {
++                Debug("device->Attributes & DA_FIRMWARE_VERSION\n");
+                 if( sm_DeviceSendCommand(device_data, &param, ZB_CMD_GET_APPVERSION, 0,0,0,0,
+                                         option->CommandRetry, option->CommandRetryInterval) )
+                 {

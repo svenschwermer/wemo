@@ -1,0 +1,50 @@
+--- a/upnp/src/genlib/net/http/webserver.c
++++ b/upnp/src/genlib/net/http/webserver.c
+@@ -1459,23 +1459,7 @@ static int http_RecvPostMessage(
+ 	int ret_code = HTTP_OK;
+ 	char buff[ICON_BUF];
+ 
+-	if (0x00 != strstr(filename, "rules.db"))
+-	{
+-		if(gUPnPLogEnable)
+-			printme(LOG_DEBUG, "rules db post request, duplcate to rules1.db");
+-		else
+-			syslog(LOG_DEBUG, "rules db post request, duplcate to rules1.db");
+-
+-		char* cmd = "cp -f /tmp/Belkin_settings/rules.db /tmp/Belkin_settings/rules1.db";
+-		system(cmd);
+-
+-		if(1 == gRestartRuleEngine)
+-		{
+-			printf("\n%s:%s:%d:Restart rules engine now...\n", __FILE__, __FUNCTION__, __LINE__);
+-			gRestartRuleEngine = 2; //RULE_ENGINE_RELOAD
+-		}
+-	}
+-	else if (0x00 != strstr(filename, "icon.jpg"))
++	if (0x00 != strstr(filename, "icon.jpg"))
+ 	{
+ 		if(gUPnPLogEnable)
+ 			printme(LOG_DEBUG, "icon post request: %s", filename);
+@@ -1594,6 +1578,22 @@ ExitFunction:
+ 		fclose(Fp);
+ 	}
+ 
++	if ((0x00 != strstr(filename, "rules.db")) && (ret_code == HTTP_OK))
++		{
++			char* cmd[256] ={};
++			char* dbVer = GetBelkinParameter("RuleDbVersion");
++			char * pUploadEnable = GetBelkinParameter("DB_UPLOAD_ENABLE");
++			int dbVerInt = 0;
++			if((NULL != pUploadEnable) && (((0x00 != strlen(pUploadEnable)) && (atoi(pUploadEnable) == 1))))
++                	{
++				dbVerInt = atoi(dbVer);
++				snprintf(cmd,256,"cp -f /tmp/Belkin_settings/rules.db /tmp/rules_%s_%d.db",GetMACAddress(),dbVerInt+1);
++				system(cmd);
++				printf("\n%s\n", cmd);
++			}
++			printf("\n%s:%s:%d:Restart rules engine now...\n", __FILE__, __FUNCTION__, __LINE__);
++			gRestartRuleEngine = 2; //RULE_ENGINE_RELOAD
++		}
+ 	return ret_code;
+ }
+ 

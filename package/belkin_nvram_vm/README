@@ -1,0 +1,33 @@
+NVRAM implementation for the Virtual device.
+This code structure is doing file operations to simulate the flash implementation
+
+
+************ Commands for the Flash access *************
+===================================================================================
+
+1) To fetch the complete Flash parameters
+    nvram_get
+
+2) To fetch the specific Flash parameter
+    nvram_get <parameter name>
+
+3) To assign the value to the existing Flash parameter, if it exists. Otherwise it will create a new field on the Flash
+    nvram_set <parameter name> <parameter value>
+
+4) To Unset the Flash parameter if it exists, otherwise will do nothing
+    nvram_set <parameter name>
+
+5) To restore the Flash to some specific parameters.
+    List of specific parameters:
+    a) home_id
+    b) SmartDeviceId
+    c) SmartPrivatekey
+    d) plugin_key
+    e) PluginCloudId
+    f) SerialNumber
+    g) wl0_currentChannel
+
+    nvram restore
+
+6) To delete the Complete Flash
+    nvram reset 

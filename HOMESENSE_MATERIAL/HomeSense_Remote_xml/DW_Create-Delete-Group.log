@@ -1,0 +1,75 @@
+WEMO: 17:56:9 | remote.debug <event_queue.c:wait_event:463> [0x2f7ae520:"RemoteWorkerThre"] wait_event: name = group, value = create
+
+WEMO: 17:56:9 | remote.debug <event_queue.c:pop_event:409> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5c2948
+
+WEMO: 17:56:9 | remote.debug <event_queue.c:pop_event:410> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event->pData = 0x595270
+
+WEMO: 17:56:9 | remote.debug <event_queue.c:pop_event:425> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event_queue_no = 3
+
+WEMO: 17:56:9 | remote.debug <event_queue.c:wait_event:467> [0x2f7ae520:"RemoteWorkerThre"] pop_event(name = group, value = create)
+
+WEMO: 17:56:9 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:653> [0x2f7ae520:"RemoteWorkerThre"] Handle groupdevice...
+
+WEMO: 17:56:9 | remote.debug <ledLightRemoteHandler.c:handleGroupDevice:471> [0x2f7ae520:"RemoteWorkerThre"] Create Group in handleGroupDevice...............
+
+WEMO: [SD] GetGroupCapabilityValueCache(1438599353,10500) 
+
+WEMO: [SD] 1438599353 
+
+WEMO: [SD] GetGroupCapabilityValueCache(1438599353,20500) 
+
+WEMO: [SD] 1438599353 1
+
+WEMO: 17:56:9 | remote.debug <ledLightRemoteHandler.c:CreateGroups:1864> [0x2f7ae520:"RemoteWorkerThre"] CreateGroups: URL = https://api.xbcs.net:8443/apis/http/device/groups/1892859
+
+
+WEMO: 17:56:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2f7ae520:"RemoteWorkerThre"] --- inData --- 
+
+WEMO: 17:56:9 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2f7ae520:"RemoteWorkerThre"] inDataLength = 477
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1438599353</referenceId><groupName>Doors and Windows</groupNam [ 1717982455 ]
+WEMO: remote.debug e><iconVersion>1</iconVersion><devices><device><deviceId></deviceId></device><device><deviceId></deviceId></device></devices><ca [ 1717982455 ]
+WEMO: remote.debug pabilities><capability><capabilityId>10500</capabilityId><currentValue></currentValue></capability><capability><capabilityId>205 [ 1717982455 ]
+WEMO: remote.debug 00</capabilityId><currentValue>1</currentValue></capability></capabilities></group></groups>
+
+> POST /apis/http/device/groups/1892859 HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:9BLITnanVG96PCIyxv3COXffr60=:1438599869
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9462.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 477
+
+
+WEMO: remote.debug HTTP/1.1 400 Bad Request
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1
+
+Date: Mon, 03 Aug 2015 10 [ 1717982957 ]
+WEMO: remote.debug :56:13 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 716
+
+Connection: keep-alive
+
+ [ 1717982957 ]
+WEMO: 17:56:14 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:862> [0x2f7ae520:"RemoteWorkerThre"] Data retuned by server
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1717982957 ]
+WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>ERR_FIELD_VALIDATION_ERROR</code><descript [ 1717982957 ]
+WEMO: remote.debug ion>Validation Error: addGroup.plugin.pluginId Field value is nulll|</description></resultCode><referenceId>1438599353</referenc [ 1717982957 ]
+WEMO: remote.debug eId><groupName>Doors and Windows</groupName><iconVersion>1</iconVersion><devices><device/><device/></devices><capabilities><capa [ 1717982957 ]
+WEMO: remote.debug bility><capabilityId>20500</capabilityId><currentValue>1</currentValue></capability><capability><capabilityId>10500</capabilityI [ 1717982957 ]
+WEMO: remote.debug d><currentValue></currentValue></capability></capabilities></group></groups> [ 1717982957 ]

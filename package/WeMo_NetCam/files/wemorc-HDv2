@@ -1,0 +1,31 @@
+# -*- shell-script -*-
+# Configuration settings for WeMo NetCam
+# This version covers HD v2 and LinkSys WNC
+
+# Reading this GPIO line tells whether the setup switch is ON or OFF
+export GPIO_SETUP_SWITCH=20
+
+# Store WLan gateway IP for later use within WeMo application.
+# In HD v2 and LS environments, Seedonk sets the nvram variable wan_if
+# to the wLan interface.
+# Note: they set WAN, not WLAN.  Which is wrong.  WAN is the Internet.
+get_wlan_ip() {
+    wlan_if=$(nvram_get 2860 wan_if)
+    if [ -n "$wlan_if" ]; then 
+        wlan_ip_info=$( ifconfig $wlan_if | \
+                        grep "inet addr:" | \
+                        cut -d':' -f2     | \
+                        cut -d' ' -f1 )
+        if [ -n "$wlan_ip_info" ]; then
+	    update_nvram_value WrxWLanIP $wlan_ip_info
+        fi
+    fi
+}
+
+update_wan_if() {
+   : do nothing
+}
+
+get_wan_ip() {
+   : do nothing
+}

@@ -1,0 +1,18 @@
+# -*- shell-script -*-
+# Configuration settings for WeMo NetCam
+# This version covers the original SD NetCam and HD v1
+
+export GPIO_SETUP_SWITCH=0
+
+# Dummy function for HDv2 compatibility
+get_wlan_ip() {
+    : Do nothing
+}
+
+update_wan_if() {
+    : Do nothing
+}
+
+get_wan_ip() {
+    : Do nothing
+}

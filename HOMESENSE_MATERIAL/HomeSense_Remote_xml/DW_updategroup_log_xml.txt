@@ -1,0 +1,558 @@
+--------------outbound---------------
+<?xml version="1.0" encoding="utf-8"?>
+<groups>
+    <group>
+        <referenceId>1439288289</referenceId>
+        <groupName>Doors and Windows</groupName>
+        <iconVersion>1</iconVersion>
+        <devices>
+            <device>
+                <deviceId>1678585</deviceId>
+            </device>
+            <device>
+                <deviceId>1678587</deviceId>
+            </device>
+        </devices>
+        <capabilities>
+            <capability>
+                <capabilityId>10500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+            <capability>
+                <capabilityId>20500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+        </capabilities>
+    </group>
+</groups>
+
+------------------inbound-------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groups
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/" success="S" fail="F" partial_success="P">
+    <statusCode>F</statusCode>
+    <group>
+        <resultCode>
+            <code>WEMO_001</code>
+            <description>could not insert: [com.belkin.cs.components.wemo.datamodel.er.Group]</description>
+        </resultCode>
+        <referenceId>1439288289</referenceId>
+        <groupName>Doors and Windows</groupName>
+        <iconVersion>1</iconVersion>
+        <devices>
+            <device>
+                <deviceId>1678587</deviceId>
+            </device>
+            <device>
+                <deviceId>1678585</deviceId>
+            </device>
+        </devices>
+        <capabilities>
+            <capability>
+                <capabilityId>20500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+            <capability>
+                <capabilityId>10500</capabilityId>
+                <currentValue>1</currentValue>
+            </capability>
+        </capabilities>
+    </group>
+</groups>
+
+-----------------log------------------------
+
+thready: Destructor freeing name "".
+WEMO: 17:19:58 | remote.debug <event_queue.c:wait_event:463> [0x2f7ae520:"RemoteWorkerThre"] wait_event: name = group, value = update
+
+WEMO: 17:19:59 | remote.debug <event_queue.c:pop_event:409> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x5bc1c0
+
+WEMO: 17:19:59 | remote.debug <event_queue.c:pop_event:410> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event->pData = 0x5944d0
+
+WEMO: 17:19:59 | remote.debug <event_queue.c:pop_event:425> [0x2f7ae520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+
+WEMO: 17:19:59 | remote.debug <event_queue.c:wait_event:467> [0x2f7ae520:"RemoteWorkerThre"] pop_event(name = group, value = update)
+
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:653> [0x2f7ae520:"RemoteWorkerThre"] Handle groupdevice...
+
+WEMO: [SD] GetGroupCapabilityValueCache(1439288289,10500) 
+
+WEMO: [SD] 1439288289 1
+
+WEMO: [SD] GetGroupCapabilityValueCache(1439288289,20500) 
+
+WEMO: [SD] 1439288289 1
+
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:CreateGroups:1862> [0x2f7ae520:"RemoteWorkerThre"] CreateGroups: URL = https://api.xbcs.net:8443/apis/http/device/groups/700517209
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2f7ae520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2f7ae520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2f7ae520:"RemoteWorkerThre"] Key for plug-in device is c35e3872-d7ec-40ea-baed-ef61a335fa59
+
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:19:59.065153]<sigGen.c:createAuthSignature:111> [0x2f7ae520:"RemoteWorkerThre"] Expires before 1439288399
+
+WEMO: wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:19:59.065153]<sigGen.c:createAuthSignature:111> [0x2f7ae520:"RemoteWorkerThre"] Expires before 1439288399
+
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:19:59.066289]<sigGen.c:createAuthSignature:113> [0x2f7ae520:"RemoteWorkerThre"] Expires after 500 1439288899
+
+WEMO: wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:19:59.066289]<sigGen.c:createAuthSignature:113> [0x2f7ae520:"RemoteWorkerThre"] Expires after 500 1439288899
+
+
+Starting IPC Receive:12
+zigbeed node_id:0x0000, endpoint:0
+cmd:105 p1:254 p2:0 p3:0 p4:0 
+Full Name:/tmp/Belkin_settings/zbid.0000000000000000
+No file:[/tmp/Belkin_settings/zbid.0000000000000000]
+zbdSetTimeToAbort s_TimeToAbort:17962
+IPC_CMD_SET_PERMITJOIN 
+WEMO: [Tue Aug 11 17:19:59 2015
+]:job_id[57]:Sent discovery response to device:192.168.0.101
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:19:58.390365]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2ebae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:bridge1, Sid - uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886: success
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:19:58.390365]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2ebae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:bridge1, Sid - uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886: success
+
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2f7ae520:"RemoteWorkerThre"] --- inData --- 
+
+WEMO: 17:19:59 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2f7ae520:"RemoteWorkerThre"] inDataLength = 492
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><groups><group><referenceId>1439288289</referenceId><groupName>Doors and Windows</groupNam [ 1717998873 ]
+WEMO: remote.debug e><iconVersion>1</iconVersion><devices><device><deviceId>1678585</deviceId></device><device><deviceId>1678587</deviceId></device [ 1717998873 ]
+WEMO: remote.debug ></devices><capabilities><capability><capabilityId>10500</capabilityId><currentValue>1</currentValue></capability><capability><c [ 1717998873 ]
+WEMO: remote.debug apabilityId>20500</capabilityId><currentValue>1</currentValue></capability></capabilities></group></groups>
+ [ 1717998873 ]
+pJoin for 254 sec: 0x00
+
+WEMO: [Tue Aug 11 17:19:59 2015
+]:job_id[58]:Sent discovery response to device:192.168.0.101
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:19:58.442888]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x30dae520:""] Action found: GetDeviceStatus
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:19:58.442888]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x30dae520:""] Action found: GetDeviceStatus
+
+emAfPermitJoin duration:254 b_bcast:1 status:0x0 
+Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Leaving zbdReplyGeneralResponse
+Ember_Status_Code:0x0 
+Leaving IPC Receive:12
+WEMO: [Tue Aug 11 17:19:59 2015
+]:job_id[62]:Receiving discovery request: MX: 2 from: 192.168.0.101
+WEMO: 
+#########Reply time pass to TimerThreadSchedule =162ms ##########
+
+WEMO: 
+########## Time out set for job =1439288399923 ########### 
+
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:19:59.081802]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2ebae520:""] Service subscription: urn:Belkin:serviceId:bridge1: success
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:19:59.081802]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2ebae520:""] Service subscription: urn:Belkin:serviceId:bridge1: success
+
+WEMO: 17:19:59 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:19:59.762980]<controlleedevice.c:UPnPTimeSyncStatusNotify:920> [0x2ebae520:""] ###############################Notification: time sync request sent
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:19:59.762980]<controlleedevice.c:UPnPTimeSyncStatusNotify:920> [0x2ebae520:""] ###############################Notification: time sync request sent
+
+clientNetworkPermitJoin:*****result = 0
+WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+
+WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [d1f0 df0114d6713e1094 done
+]
+
+WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+
+WEMO: [SD] SM_UpdateDeviceList 
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+WEMO: [SD] sm_GetDeviceInfo Entry.... 
+
+WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+
+WEMO: 17:19:59 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1414> [0x2e5ae520:""] GetEndDevices: nDeviceCnt(2), nGroupCnt(1)
+
+WEMO: 17:19:59 | upnp.debug <ledLightUPnPHandler.c:CreateEndDeviceListXML:1434> [0x2e5ae520:""] GetEndDevices: nPaired(2), nUnpaired(0), ListType(PAIRED_LIST)
+
+WEMO: 17:19:59 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:849> [0x2e5ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 1,1,0
+
+WEMO: 17:19:59 | upnp.debug <ledLightUPnPHandler.c:GetCacheDeviceCapabilityValues:849> [0x2e5ae520:""] GetCacheDeviceCapabilityValues: CapabilityValues = 1,1,0
+
+WEMO: 17:19:59 | upnp.debug <ledLightUPnPHandler.c:GetEndDevices:1791> [0x2e5ae520:""] GetEndDevices: === pszResponse ===
+
+WEMO: upnp.debug <?xml version="1.0" encoding="utf-8"?><DeviceLists><DeviceList><DeviceListType>Paired</DeviceListType><DeviceInfos /><GroupInfos [ 1717998942 ]
+WEMO: upnp.debug ><GroupInfo><GroupID>1439288289</GroupID><GroupName>Doors and Windows</GroupName><GroupCapabilityIDs>10500,20500,30501</GroupCap [ 1717998942 ]
+WEMO: upnp.debug abilityIDs><GroupCapabilityValues>1,1,0</GroupCapabilityValues><DeviceInfos><DeviceInfo><DeviceIndex>0</DeviceIndex><DeviceID>94 [ 1717998942 ]
+WEMO: upnp.debug 103E71D61401C6</DeviceID><FriendlyName>WeMo Door and Window Sensor 01</FriendlyName><IconVersion>1</IconVersion><FirmwareVersion [ 1717998942 ]
+WEMO: upnp.debug >1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState>1,1,0</CurrentState><Manufacturer>Belkin</Man [ 1717998942 ]
+WEMO: upnp.debug ufacturer><ModelCode>F7C038</ModelCode><productName>DWSensor</productName><WeMoCertified>YES</WeMoCertified></DeviceInfo><Device [ 1717998942 ]
+WEMO: upnp.debug Info><DeviceIndex>1</DeviceIndex><DeviceID>94103E71D61401DF</DeviceID><FriendlyName>WeMo Door and Window Sensor 01</FriendlyName [ 1717998942 ]
+WEMO: upnp.debug ><IconVersion>1</IconVersion><FirmwareVersion>1F</FirmwareVersion><CapabilityIDs>10500,20500,30501</CapabilityIDs><CurrentState> [ 1717998942 ]
+WEMO: upnp.debug 1,1,0</CurrentState><Manufacturer>Belkin</Manufacturer><ModelCode>F7C038</ModelCode><productName>DWSensor</productName><WeMoCert [ 1717998942 ]
+WEMO: upnp.debug ified>YES</WeMoCertified></DeviceInfo></DeviceInfos></GroupInfo></GroupInfos></DeviceList></DeviceLists>
+ [ 1717998942 ]
+
+
+T1C461894:RX len 9, ep 01, clus 0x0500 (IAS Zone) FC 19 seq 1D cmd 00 payload[00 00 00 00 00 00 ]
+
+emberAfPreCommandReceivedCallback
+eui64:94103E71D61401DF seq:0x1D source_nodeid:0xD1F0 clusterId:0x0500, commandId:0x00WEMO: SubscriptionRequest for event URL path: /upnp/event/firmwareupdate1
+WEMO:  from IP : 192.168.0.101
+WEMO: Creating new subscription: uuid:85e257a2-1dd2-11b2-a5a5-8ee619be2886!!!
+WEMO: 17:20:0 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:20:00.448024]<upnpCommon.c:Util_GetFirstDocumentItem:185> [0x30dae520:""] /home/tuan.ngo/wemo_dev_pro_RC_1_14/package/UPnP/src/upnpCommon.c(185): (BUG) ixmlNode_getFirstChild(DeviceIDs) returned NULL
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:20:00.448024]<upnpCommon.c:Util_GetFirstDocumentItem:185> [0x30dae520:""] /home/tuan.ngo/wemo_dev_pro_RC_1_14/package/UPnP/src/upnpCommon.c(185): (BUG) ixmlNode_getFirstChild(DeviceIDs) returned NULL
+
+WEMO: 17:20:0 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2562> [0x30dae520:""] GetDeviceStatus: DeviceIDs is not existed
+
+WEMO: 17:20:0 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:20:00.449050]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1990> [0x30dae520:""] Action GetDeviceStatus: Error = -501, Invalid Argument
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:20:00.449050]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1990> [0x30dae520:""] Action GetDeviceStatus: Error = -501, Invalid Argument
+
+, length:9 
+Byte Stream:19 1d 00 00 00 00 00 00 00 
+ZCL_ZONE_STATUS_CHANGE_NOTIFICATION_COMMAND_ID node:0xD1F0, seq:0x1D, zone_status:0x0000 zone_id:0
+sysevent set zb_zone_status "94103E71D61401DF 0 0" 
+WEMO: [Tue Aug 11 17:20:00 2015
+]:job_id[60]:Sent discovery response to device:192.168.0.101
+WEMO: [Tue Aug 11 17:20:00 2015
+]:job_id[63]:Receiving discovery request: MX: 2 from: 192.168.0.101
+WEMO: 
+#########Reply time pass to TimerThreadSchedule =720ms ##########
+
+WEMO: 
+########## Time out set for job =1439288401198 ########### 
+
+WEMO: [Tue Aug 11 17:20:00 2015
+]:job_id[61]:Sent discovery response to device:192.168.0.101
+WEMO: [Tue Aug 11 17:20:00 2015
+]:job_id[59]:Sent discovery response to device:192.168.0.101
+WEMO: [Tue Aug 11 17:20:00 2015
+]:job_id[62]:Sent discovery response to device:192.168.0.101
+WEMO: 17:20:0 | app.debug <logger.c:pluginLog:330> [0x2c5ae520:""] wemoApp[2711:{}]:[2015-08-11][17:20:00.480932]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2c5ae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:firmwareupdate1, Sid - uuid:85e257a2-1dd2-11b2-a5a5-8ee619be2886: success
+
+WEMO: wemoApp[2711:{}]:[2015-08-11][17:20:00.480932]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2c5ae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:firmwareupdate1, Sid - uuid:85e257a2-1dd2-11b2-a5a5-8ee619be2886: success
+
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+
+Byte Stream:1c fe 00 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: Worker thread started in thread-pool[0x2ad56d40]
+> PUT /apis/http/device/groups/700517209 HTTP/1.1
+
+Host: api.xbcs.net:8443
+
+Content-Type: application/xml
+
+Accept: application/xml
+
+Authorization: B4750E1E1D84:O8Nq+5EpwSzz5z2jJ35p6bORrUk=:1439288899
+
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9526.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+Content-Length: 492
+
+Expect: 100-continue
+
+
+
+WEMO: [SD] sm_EventHandler : Zigbee event received, raw string: zb_zone_status 94103E71D61401DF 0 0
+
+WEMO: 17:20:1 | core.debug <sd_configuration.c:sm_ZoneStatus_Handler:1873> [0x2b7ae520:""] ZoneStatus_Handler
+
+WEMO: [SD] ------------------------
+
+WEMO: [SD] GetDeviceCapabilityValue(94103E71D61401DF,10500, Available=1) 
+
+WEMO: [SD]   Read from cache:(94103E71D61401DF,10500,1)
+
+WEMO: [SD] SM_UpdateSensorCapabilityValue 94103E71D61401DF 10500:0 
+
+WEMO: SubscriptionRequest for event URL path: /upnp/event/deviceinfo1
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x2c5ae520:""] wemoApp[2711:{}]:[2015-08-11][17:20:01.144823]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2c5ae520:""] Service subscription: urn:Belkin:serviceId:firmwareupdate1: success
+
+WEMO: wemoApp[2711:{}]:[2015-08-11][17:20:01.144823]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2c5ae520:""] Service subscription: urn:Belkin:serviceId:firmwareupdate1: success
+
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: 17:20:1 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:406> [0x2b7ae520:""] UpnpNotify: return = 0
+
+WEMO: 17:20:1 | upnp.debug <ledLightUPnPHandler.c:upnp_event_notification:408> [0x2b7ae520:""] UpnpNotify: EventType = SensorChange, Capability = 10500, EventValue = 0
+
+WEMO: upnp.debug &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;StateEvent&gt;&lt;DeviceID
+available=&quot;YES&quot;&gt;9410 [ 1717999080 ]
+WEMO: upnp.debug 3E71D61401DF&lt;/DeviceID&gt;&lt;CapabilityId&gt;10500&lt;/CapabilityId&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;statusTS&gt;143928840 [ 1717999080 ]
+WEMO: upnp.debug 1&lt;/statusTS&gt;&lt;/StateEvent&gt;
+ [ 1717999080 ]
+WEMO: 17:20:1 | remote.debug <event_queue.c:push_event:317> [0x2b7ae520:""] push_event: eventno = [0]
+
+WEMO: 17:20:1 | remote.debug <event_queue.c:push_event:337> [0x2b7ae520:""] push_event: event_queue[0] address = 0x4ccc78
+
+WEMO: 17:20:1 | remote.debug <event_queue.c:push_event:339> [0x2b7ae520:""] push_event: event_queue[0] --> name = device, value = update
+
+WEMO: 17:20:1 | remote.debug <event_queue.c:push_event:347> [0x2b7ae520:""] push_event: event_queue[0] --> data = 0x587cc8, len = 146
+
+
+
+T1C461D14:RX len 30, ep 01, clus 0x0000 (Basic) FC 18 seq 19 cmd 01 payload[01 00 00 20 1F 04 00 00 42 06 42 65 6C 6B 69 6E 05 00 00 42 06 46 37 43 30 33 38 ]
+
+emberAfPreCommandReceivedCallback
+eui64:94103E71D61401DF seq:0x19 source_nodeid:0xD1F0 clusterId:0x0000, commandId:0x01, length:30 
+Byte Stream:18 19 01 01 00 00 20 1f 04 00 00 42 06 42 65 6c 6b 69 6e 05 00 00 42 06 46 37 43 30 33 38 
+attribute:0x0001 cluster:0x0000 status:0x00 
+zbdMakeAttributesFileName fullpath_file:/tmp/Belkin_settings/zbid.94103E71D61401DF.01.0000 
+attribute_id:0x0001 
+ZCL_APPLICATION_VERSION_ATTRIBUTE_ID
+byte_value:0x1F 
+attribute_id:0x0004 
+ZCL_MANUFACTURER_NAME_ATTRIBUTE_ID
+str_buf:Belkin 
+attribute_id:0x0005 
+ZCL_MODEL_IDENTIFIER_ATTRIBUTE_ID
+str_buf:F7C038 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: Worker thread started in thread-pool[0x2ad56d40]
+WEMO:  from IP : 192.168.0.101
+WEMO: Found existing subscription: uuid:843fbec6-1dd2-11b2-a5a5-8ee619be2886, removing it!!!
+WEMO: Creating new subscription: uuid:865284c8-1dd2-11b2-a5a5-8ee619be2886!!!
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x313ae520:""]WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:01.182465]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2731> [0x313ae520:""] Service subscription serviceID - urn:Belkin:serviceId:deviceinfo1 ERROR 1 ####
+
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x313ae520:""] wemoApp[2637:{}]:[2015-08-11][17:20:01.846045]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x313ae520:""] Service subscription: urn:Belkin:serviceId:deviceinfo1: success
+
+WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:01.846045]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x313ae520:""] Service subscription: urn:Belkin:serviceId:deviceinfo1: success
+
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xD1F0 msgLen:0x9
+
+Byte Stream:10 19 00 01 00 04 00 05 00 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: Sending to IP: 192.168.0.101:39500 failed, return_code: -207, SID: uuid:83d38e4a-1dd2-11b2-a5a5-8ee619be2886, key: 0, fail_cnt: 0
+WEMO: Failed 1 to send SID: uuid:83d38e4a-1dd2-11b2-a5a5-8ee619be2886 notification to: 192.168.0.101
+WEMO: sid: uuid:83d38e4a-1dd2-11b2-a5a5-8ee619be2886
+WEMO: 17:20:1 | remote.debug <event_queue.c:push_event:358> [0x2b7ae520:""] sysevent(device, update) : 0
+
+WEMO: 17:20:1 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2b7ae520:""] push_work_event(device, update, 0x5a0548, 146)
+
+< HTTP/1.1 100 Continue
+
+WEMO: [Tue Aug 11 17:20:01 2015
+]:job_id[63]:Sent discovery response to device:192.168.0.101
+
+
+T1C461FC1:RX len 4, ep 01, clus 0x0001 (Unknown clus. [0x0001]) FC 18 seq 1C cmd 07 payload[00 ]
+
+emberAfPreCommandReceivedCallback
+eui64:94103E71D61401DF seq:0x1C source_nodeid:0xD1F0 clusterId:0x0001, commandId:0x07, length:4 
+Byte Stream:18 1c 07 00 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: SubscriptionRequest for event URL path: /upnp/event/bridge1
+WEMO:  from IP : 192.168.0.101
+WEMO: Found existing subscription: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886, removing it!!!
+WEMO: Creating new subscription: uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886!!!
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:20:01.866681]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2ebae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:bridge1, Sid - uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886: success
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:20:01.866681]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2727> [0x2ebae520:""] Service subscription: UDN- uuid:Bridge-1_0-231347B010015A serviceID - urn:Belkin:serviceId:bridge1, Sid - uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886: success
+
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:20:01.867427]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2ebae520:""] Service subscription: urn:Belkin:serviceId:bridge1: success
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:20:01.867427]<controlleedevice.c:PluginDeviceHandleSubscriptionRequest:2754> [0x2ebae520:""] Service subscription: urn:Belkin:serviceId:bridge1: success
+
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x2ebae520:""] wemoApp[2575:{}]:[2015-08-11][17:20:01.868930]<controlleedevice.c:UPnPTimeSyncStatusNotify:920> [0x2ebae520:""] ###############################Notification: time sync request sent
+
+WEMO: wemoApp[2575:{}]:[2015-08-11][17:20:01.868930]<controlleedevice.c:UPnPTimeSyncStatusNotify:920> [0x2ebae520:""] ###############################Notification: time sync request sent
+
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xD1F0 msgLen:0xB
+
+Byte Stream:00 1c 06 00 20 00 20 08 07 08 07 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+
+emberAfPreZDOMessageReceivedCallback emberNodeId:0xd1f0, clusterId:0x8021, length:2
+
+18 00 
+Other Incoming ZDO reponses
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+
+
+T1C461FFC:RX len 7, ep 01, clus 0xFF00 (Unknown clus. [0xFF00]) mfgId 10B4 FC 0C seq 23 cmd 0B payload[10 83 ]
+
+emberAfPreCommandReceivedCallback
+eui64:94103E71D61401DF seq:0x23 source_nodeid:0xD1F0 clusterId:0xFF00, commandId:0x0B, length:7 
+Byte Stream:0c b4 10 23 0b 10 83 
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x0 indexOrDestination:0xD1F0 msgLen:0x6
+
+Byte Stream:15 b4 10 23 10 00 
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:85e257a2-1dd2-11b2-a5a5-8ee619be2886, key: 0
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886, key: 2
+WEMO: sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886, key: 3
+WEMO: sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886, key: 1
+WEMO: sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886
+WEMO: 17:20:1 | app.debug <logger.c:pluginLog:330> [0x2e5ae520:""] wemoApp[2573:{}]:[2015-08-11][17:20:01.979407]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e5ae520:""] Action found: GetInformation
+
+WEMO: wemoApp[2573:{}]:[2015-08-11][17:20:01.979407]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e5ae520:""] Action found: GetInformation
+
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x2e5ae520:""] wemoApp[2573:{}]:[2015-08-11][17:20:02.588013]<controlleedevice.c:handleTimeSync:6820> [0x2e5ae520:""] set time: utc: 1439288406, timezone: 07.0, dst: 0, szIsLocalDst: 0
+
+WEMO: wemoApp[2573:{}]:[2015-08-11][17:20:02.588013]<controlleedevice.c:handleTimeSync:6820> [0x2e5ae520:""] set time: utc: 1439288406, timezone: 07.0, dst: 0, szIsLocalDst: 0
+
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x2e5ae520:""] wemoApp[2573:{}]:[2015-08-11][17:20:02.590070]<controlleedevice.c:getDeviceUDNString:999> [0x2e5ae520:""] Device type: 1 and temp type: 5
+
+WEMO: wemoApp[2573:{}]:[2015-08-11][17:20:02.590070]<controlleedevice.c:getDeviceUDNString:999> [0x2e5ae520:""] Device type: 1 and temp type: 5
+
+WEMO: WDLOG: 2015-08-11T17:20:02+0700|wemoApp[2573:{}]:|getDeviceUDNString|Device type: 1 and temp type: 5
+
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x2e5ae520:""] wemoApp[2573:{}]:[2015-08-11][17:20:02.590992]<controlleedevice.c:getDeviceUDNString:1002> [0x2e5ae520:""] Device UDN: Bridge
+
+WEMO: wemoApp[2573:{}]:[2015-08-11][17:20:02.590992]<controlleedevice.c:getDeviceUDNString:1002> [0x2e5ae520:""] Device UDN: Bridge
+
+WEMO: WDLOG: 2015-08-11T17:20:02+0700|wemoApp[2573:{}]:|getDeviceUDNString|Device UDN: Bridge
+
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x2e5ae520:""] wemoApp[2573:{}]:[2015-08-11][17:20:02.592643]<controlleedevice.c:GetInformation:6897> [0x2e5ae520:""] Device information: <Device><DeviceInformation><firmwareVersion>WeMo_WW_2.00.9526.DVT-OWRT-Link</firmwareVersion><iconVersion>0</iconVersion><iconPort>49153</iconPort><macAddress>B4750E1E1D84</macAddress><FriendlyName>WeMo Link</FriendlyName><binaryState>0</binaryState><hwVersion>v1</hwVersion><CountdownEndTime>0</CountdownEndTime><deviceCurrentTime>1439288402</deviceCurrentTime><productName>Bridge</productName></DeviceInformation></Device>
+
+WEMO: wemoApp[2573:{}]:[2015-08-11][17:20:02.592643]<controlleedevice.c:GetInformation:6897> [0x2e5ae520:""] Device information: <Device><DeviceInformation><firmwareVersion>WeMo_WW_2.00.9526.DVT-OWRT-Link</firmwareVersion><iconVersion>0</iconVersion><iconPort>49153</iconPort><macAddress>B4750E1E1D84</macAddress><FriendlyName>WeMo Link</FriendlyName><binaryState>0</binaryState><hwVersion>v1</hwVersion><CountdownEndTime>0</CountdownEndTime><deviceCurrentTime>1439288402</deviceCurrentTime><productName>Bridge</productName></DeviceInformation></Device>
+
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:20:01.987961]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x30dae520:""] Action found: GetDeviceStatus
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:20:01.987961]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x30dae520:""] Action found: GetDeviceStatus
+
+zbdGetNodeType: index:1, nodeId:0xD1F0, node_type:0x0015 
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886, key: 0
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886, key: 0
+WEMO: sid: uuid:84a87344-1dd2-11b2-a5a5-8ee619be2886
+WEMO: 17:20:2 | app.debug <logger.c:pluginLog:330> [0x315ae520:""] wemoApp[2724:{}]:[2015-08-11][17:20:02.599452]<controlleedevice.c:IsApplyTimeSync:4684> [0x315ae520:""] TimeSync: 1439288406:7.000000:1439288230:7.000000:0
+
+WEMO: wemoApp[2724:{}]:[2015-08-11][17:20:02.599452]<controlleedevice.c:IsApplyTimeSync:4684> [0x315ae520:""] TimeSync: 1439288406:7.000000:1439288230:7.000000:0
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x315ae520:""] wemoApp[2724:{}]:[2015-08-11][17:20:03.269448]<controlleedevice.c:timeSyncThread:6586> [0x315ae520:""] : *****NOT APPLYING TIME SYNC
+
+WEMO: wemoApp[2724:{}]:[2015-08-11][17:20:03.269448]<controlleedevice.c:timeSyncThread:6586> [0x315ae520:""] : *****NOT APPLYING TIME SYNC
+
+thready: Destructor freeing name "".
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886, key: 1
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x2c5ae520:""] wemoApp[2711:{}]:[2015-08-11][17:20:02.669822]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2c5ae520:""] Action found: GetEndDevices
+
+WEMO: wemoApp[2711:{}]:[2015-08-11][17:20:02.669822]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2c5ae520:""] Action found: GetEndDevices
+
+WEMO: Sent to IP: 192.168.0.101:39500 , sid: uuid:86bae52c-1dd2-11b2-a5a5-8ee619be2886, key: 2
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x313ae520:""] wemoApp[2637:{}]:[2015-08-11][17:20:02.695342]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x313ae520:""] Action found: TimeSync
+
+WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:02.695342]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x313ae520:""] Action found: TimeSync
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x313ae520:""] wemoApp[2637:{}]:[2015-08-11][17:20:03.273320]<controlleedevice.c:SyncTime:5372> [0x313ae520:""] set time: utc: 1439288406, timezone: 07.0, dst: 0
+
+WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:03.273320]<controlleedevice.c:SyncTime:5372> [0x313ae520:""] set time: utc: 1439288406, timezone: 07.0, dst: 0
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x313ae520:""] wemoApp[2637:{}]:[2015-08-11][17:20:03.274020]<controlleedevice.c:IsApplyTimeSync:4684> [0x313ae520:""] TimeSync: 1439288406:7.000000:1439288230:7.000000:0
+
+WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:03.274020]<controlleedevice.c:IsApplyTimeSync:4684> [0x313ae520:""] TimeSync: 1439288406:7.000000:1439288230:7.000000:0
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x313ae520:""] wemoApp[2637:{}]:[2015-08-11][17:20:03.274659]<controlleedevice.c:SyncTime:5435> [0x313ae520:""] : *****NOT APPLYING TIME SYNC
+
+WEMO: wemoApp[2637:{}]:[2015-08-11][17:20:03.274659]<controlleedevice.c:SyncTime:5435> [0x313ae520:""] : *****NOT APPLYING TIME SYNC
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:20:03.266267]<upnpCommon.c:Util_GetFirstDocumentItem:185> [0x30dae520:""] /home/tuan.ngo/wemo_dev_pro_RC_1_14/package/UPnP/src/upnpCommon.c(185): (BUG) ixmlNode_getFirstChild(DeviceIDs) returned NULL
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:20:03.266267]<upnpCommon.c:Util_GetFirstDocumentItem:185> [0x30dae520:""] /home/tuan.ngo/wemo_dev_pro_RC_1_14/package/UPnP/src/upnpCommon.c(185): (BUG) ixmlNode_getFirstChild(DeviceIDs) returned NULL
+
+WEMO: 17:20:3 | upnp.debug <ledLightUPnPHandler.c:GetDeviceStatus:2562> [0x30dae520:""] GetDeviceStatus: DeviceIDs is not existed
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x30dae520:""] wemoApp[2578:{}]:[2015-08-11][17:20:03.942793]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1990> [0x30dae520:""] Action GetDeviceStatus: Error = -501, Invalid Argument
+
+WEMO: wemoApp[2578:{}]:[2015-08-11][17:20:03.942793]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1990> [0x30dae520:""] Action GetDeviceStatus: Error = -501, Invalid Argument
+
+< HTTP/1.1 400 Bad Request
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Tue, 11 Aug 2015 10:20:03 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 775
+
+< Connection: keep-alive
+
+< 
+
+WEMO: 17:20:3 | app.debug <logger.c:pluginLog:330> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:20:03.946561]<httpsWrapper.c:webAppSendData:2671> [0x2f7ae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/groups/700517209 requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+
+WEMO: wemoApp[1821:{RemoteWorkerThre}]:[2015-08-11][17:20:03.946561]<httpsWrapper.c:webAppSendData:2671> [0x2f7ae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/groups/700517209 requested flag 2 disableFlag 1 httpsFlag 1 retVal 0 respCode 400
+
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2f7ae520:"RemoteWorkerThre"] Length of HTTP Header = 273 
+
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2f7ae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 400 
+
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2f7ae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2f7ae520:"RemoteWorkerThre"] Header retuned by server
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+HTTP/1.1 400 Bad Request
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1
+
+Da [ 1717999360 ]
+WEMO: remote.debug te: Tue, 11 Aug 2015 10:20:03 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 775
+
+Connect [ 1717999360 ]
+WEMO: remote.debug ion: keep-alive
+
+ [ 1717999360 ]
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2f7ae520:"RemoteWorkerThre"] Data retuned by server
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1717999360 ]
+WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>WEMO_001</code><description>could not inse [ 1717999360 ]
+WEMO: remote.debug rt: [com.belkin.cs.components.wemo.datamodel.er.Group]</description></resultCode><referenceId>1439288289</referenceId><groupName [ 1717999360 ]
+WEMO: remote.debug >Doors and Windows</groupName><iconVersion>1</iconVersion><devices><device><deviceId>1678587</deviceId></device><device><deviceI [ 1717999360 ]
+WEMO: remote.debug d>1678585</deviceId></device></devices><capabilities><capability><capabilityId>20500</capabilityId><currentValue>1</currentValue [ 1717999360 ]
+WEMO: remote.debug ></capability><capability><capabilityId>10500</capabilityId><currentValue>1</currentValue></capability></capabilities></group></ [ 1717999360 ]
+WEMO: remote.debug groups> [ 1717999360 ]
+WEMO: 17:20:3 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:868> [0x2f7ae520:"RemoteWorkerThre"] --- Header Data returned by server ---
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+HTTP/1.1 400 Bad Request
+
+asyncServiceInvoke: false
+
+Content-Type: application/xml;charset=ISO-8859-1
+
+Da [ 1717999360 ]
+WEMO: remote.debug te: Tue, 11 Aug 2015 10:20:03 GMT
+
+Server: Apache-Coyote/1.1
+
+X-Powered-By: Servlet/3.0; JBossAS-6
+
+Content-Length: 775
+
+Connect [ 1717999360 ]
+WEMO: remote.debug ion: keep-alive
+
+ [ 1717999360 ]
+WEMO: 17:20:4 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:877> [0x2f7ae520:"RemoteWorkerThre"] --- Data returned by server ---
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><groups xmlns:modelns="http://datamodel.components.cs.belkin.com/" succes [ 1717999427 ]
+WEMO: remote.debug s="S" fail="F" partial_success="P"><statusCode>F</statusCode><group><resultCode><code>WEMO_001</code><description>could not inse [ 1717999427 ]
+WEMO: remote.debug rt: [com.belkin.cs.components.wemo.datamodel.er.Group]</description></resultCode><referenceId>1439288289</referenceId><groupName [ 1717999427 ]
+WEMO: remote.debug >Doors and Windows</groupName><iconVersion>1</iconVersion><devices><device><deviceId>1678587</deviceId></device><device><deviceI [ 1717999427 ]
+WEMO: remote.debug d>1678585</deviceId></device></devices><capabilities><capability><capabilityId>20500</capabilityId><currentValue>1</currentValue [ 1717999427 ]
+WEMO: remote.debug ></capability><capability><capabilityId>10500</capabilityId><currentValue>1</

@@ -1,0 +1,105 @@
+[Version]
+DLLVer=02.3007.05.0
+PRJVer=1
+
+[PRJKIND]
+mode=1
+
+[CPUTYPE]
+CpuSerise=896
+
+[DirInfo]
+PRJ=D:\Work\Softune\Demo\
+
+[PrjInfo]
+Count=1
+PrjInfo-0=Debug
+Active=Debug
+
+[MEMBER]
+F0=8
+F1=0 f Source Files
+F2=0 c Debug\scr\_f2mc8fx.c
+F3=0 c Debug\scr\main.c
+F4=0 a Debug\scr\startup.asm
+F5=0 c Debug\scr\vectors.c
+F6=0 f Include Files
+F7=0 h Debug\scr\_f2mc8fx.h
+F8=0 h Debug\scr\mb95560.h
+
+[OPTIONFILE]
+FILE=Demo.dat
+
+[CPUTYPE-Debug]
+CsvFile=Lib\896\896.csv
+CpuName=MB95F564K
+Count=0
+
+[DirInfo-Debug]
+CONFIG=Debug\
+OBJ=Debug\OBJ\
+LST=Debug\LST\
+OPT=Debug\OPT\
+
+[MEMBER-Debug]
+F0=5
+F1=0 m 1 Debug\ABS\Demo.abs
+F2=1 c 1 Debug\scr\main.c
+F2-1=- debug\scr\mb95560.h
+F3=0 a 1 Debug\scr\startup.asm
+F4=1 c 1 Debug\scr\vectors.c
+F4-1=- debug\scr\mb95560.h
+F5=2 c 1 Debug\scr\_f2mc8fx.c
+F5-1=- debug\scr\_f2mc8fx.h
+F5-2=- debug\scr\mb95560.h
+
+[BUILDMODE-Debug]
+kernel=1
+
+[RUNSET-Debug]
+CONVERT=1
+CONVERTKIND=0
+
+[DebState-Debug]
+SupCount=1
+Supfile-0=Debug\Demo.sup
+Current=Demo.sup
+AliasFile=
+CPURunMode=
+
+[AsmBefore]
+Count=0
+
+[AsmAfter]
+Count=0
+
+[CcBefore]
+Count=0
+
+[CcAfter]
+Count=0
+
+[LnkBefore]
+Count=0
+
+[LnkAfter]
+Count=0
+
+[LibBefore]
+Count=0
+
+[LibAfter]
+Count=0
+
+[CnvBefore]
+Count=0
+
+[CnvAfter]
+Count=0
+
+[ConfigBefore]
+Count=0
+
+[ConfigAfter]
+Count=0
+

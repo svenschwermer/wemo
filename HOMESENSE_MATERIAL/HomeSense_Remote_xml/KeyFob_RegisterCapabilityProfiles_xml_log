@@ -1,0 +1,185 @@
+
+------------------KeyFob-outbound---------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<capabilityProfiles>
+    <capabilityProfile>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0~4294967295}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{0:Diable, 1:Enable}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Start Test mode}</values>
+    </capabilityProfile>
+    <capabilityProfile>
+        <capabilityType>
+            <type />
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType />
+        <values>{1:Key pressed short, 2: key pressed long}</values>
+    </capabilityProfile>
+</capabilityProfiles>
+
+---------------------inbound-------------------------------
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<capabilityProfiles
+    xmlns:modelns="http://datamodel.components.cs.belkin.com/">
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_INVALID_CAPABILITY_TYPE</code>
+            <description>Capability Profile type not valid</description>
+        </resultCode>
+        <capabilityType>
+            <type>ZoneCtl</type>
+        </capabilityType>
+        <capabilityId>10500</capabilityId>
+        <profileName>IASZone</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20500</capabilityId>
+        <profileName>SensorConfig</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>30501</capabilityId>
+        <profileName>SensorTestMode</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+    <capabilityProfile>
+        <resultCode>
+            <code>ERR_CAPABILITY_ID_ALREADY_EXIST</code>
+            <description>Capability Id already exists</description>
+        </resultCode>
+        <capabilityType>
+            <type></type>
+        </capabilityType>
+        <capabilityId>20502</capabilityId>
+        <profileName>SensorKeyPress</profileName>
+        <specification>0</specification>
+        <dataType>0</dataType>
+    </capabilityProfile>
+</capabilityProfiles>
+
+
+-------------------------------------------------------
+
+
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:RegisterCapabilityProfiles:1119> [0x2f7ae520:"RemoteWorkerThre"] RegisterCapabilityProfiles: URL = https://api.xbcs.net:8443/apis/http/device/capabilityprofiles
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2f7ae520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+
+Cached MAC Address = B4:75:0E:1E:1D:84 
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2f7ae520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2f7ae520:"RemoteWorkerThre"] Key for plug-in device is 5f00da93-f913-460f-865b-59e0828feea2
+
+WEMO: 14:12:52 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][14:12:52.169853]<sigGen.c:createAuthSignature:111> [0x2f7ae520:"RemoteWorkerThre"] Expires before 1438672372
+
+WEMO: 14:12:52 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][14:12:52.170249]<sigGen.c:createAuthSignature:113> [0x2f7ae520:"RemoteWorkerThre"] Expires after 500 1438672872
+
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:783> [0x2f7ae520:"RemoteWorkerThre"] --- inData --- 
+
+WEMO: 14:12:52 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:784> [0x2f7ae520:"RemoteWorkerThre"] inDataLength = 1042
+
+WEMO: remote.debug <?xml version="1.0" encoding="utf-8"?><capabilityProfiles><capabilityProfile><capabilityType><type>ZoneCtl</type></capabilityTyp [ 1717992756 ]
+WEMO: remote.debug e><capabilityId>10500</capabilityId><profileName>IASZone</profileName><specification>0</specification><dataType /><values>{0~429 [ 1717992756 ]
+WEMO: remote.debug 4967295}</values></capabilityProfile><capabilityProfile><capabilityType><type /></capabilityType><capabilityId>20500</capability [ 1717992756 ]
+WEMO: remote.debug Id><profileName>SensorConfig</profileName><specification>0</specification><dataType /><values>{0:Diable, 1:Enable}</values></cap [ 1717992756 ]
+WEMO: remote.debug abilityProfile><capabilityProfile><capabilityType><type /></capabilityType><capabilityId>30501</capabilityId><profileName>Sensor [ 1717992756 ]
+
+WEMO: remote.debug HTTP/1.1 100 Continue
+
+< HTTP/1.1 206 Partial Content
+
+< asyncServiceInvoke: false
+
+< Content-Type: application/xml;charset=ISO-8859-1
+
+< Date: Tue, 04 Aug 2015 07:12:53 GMT
+
+< Server: Apache-Coyote/1.1
+
+< X-Powered-By: Servlet/3.0; JBossAS-6
+
+< Content-Length: 1506
+
+< Connection: keep-alive
+
+< 
+
+WEMO: 14:12:56 | app.debug <logger.c:pluginLog:331> [0x2f7ae520:"RemoteWorkerThre"] wemoApp[1834:{RemoteWorkerThre}]:[2015-08-04][14:12:56.587926]<httpsWrapper.c:webAppSendData:2671> [0x2f7ae520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/capabilityprofiles requested flag 1 disableFlag 1 httpsFlag 1 retVal 0 respCode 206
+
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2f7ae520:"RemoteWorkerThre"] Length of HTTP Header = 278 
+
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:824> [0x2f7ae520:"RemoteWorkerThre"] StatusCode of HTTP Response = 206 
+
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:825> [0x2f7ae520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:852> [0x2f7ae520:"RemoteWorkerThre"] Header retuned by server
+
+
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:862> [0x2f7ae520:"RemoteWorkerThre"] Data retuned by server
+
+WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><capabilityProfiles xmlns:modelns="http://datamodel.components.cs.belkin. [ 1717993198 ]
+WEMO: remote.debug com/"><capabilityProfile><resultCode><code>ERR_INVALID_CAPABILITY_TYPE</code><description>Capability Profile type not valid</des [ 1717993198 ]
+WEMO: remote.debug cription></resultCode><capabilityType><type>ZoneCtl</type></capabilityType><capabilityId>10500</capabilityId><profileName>IASZon [ 1717993198 ]
+WEMO: remote.debug e</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capabilityProfile><resultCode><code>ER [ 1717993198 ]
+WEMO: remote.debug R_CAPABILITY_ID_ALREADY_EXIST</code><description>Capability Id already exists</description></resultCode><capabilityType><type></ [ 1717993198 ]
+WEMO: remote.debug type></capabilityType><capabilityId>20500</capabilityId><profileName>SensorConfig</profileName><specification>0</specification>< [ 1717993198 ]
+WEMO: remote.debug dataType>0</dataType></capabilityProfile><capabilityProfile><resultCode><code>ERR_CAPABILITY_ID_ALREADY_EXIST</code><description [ 1717993198 ]
+WEMO: remote.debug >Capability Id already exists</description></resultCode><capabilityType><type></type></capabilityType><capabilityId>30501</capab [ 1717993198 ]
+WEMO: remote.debug ilityId><profileName>SensorTestMode</profileName><specification>0</specification><dataType>0</dataType></capabilityProfile><capa [ 1717993198 ]
+WEMO: remote.debug bilityProfile><resultCode><code>ERR_CAPABILITY_ID_ALREADY_EXIST</code><description>Capability Id already exists</description></r [ 1717993198 ]
+WEMO: remote.debug esultCode><capabilityType><type></type></capabilityType><capabilityId>20502</capabilityId><profileName>SensorKeyPress</profileNa [ 1717993198 ]
+WEMO: remote.debug me><specification>0</specification><dataType>0</dataType></capabilityProfile></capabilityProfiles> [ 1717993198 ]
+WEMO: 14:12:56 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:870> [0x2f7ae520:"RemoteWorkerThre"] --- Header Data returned by server ---
+
+WEMO: 14:12:57 | remote.debug <ledLightRemoteHandler.c:QueryCapabilityProfileList:1693> [0x2f7ae520:"RemoteWorkerThre"] RegisterCapabilityProfiles(nStatusCode = 206)
+
+WEMO: 14:12:57 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:626> [0x2f7ae520:"RemoteWorkerThre"] QueryCapabilityProfileList(nStatusCode = 206)
+

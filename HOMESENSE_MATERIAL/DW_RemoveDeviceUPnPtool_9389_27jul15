@@ -1,0 +1,327 @@
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:43:51.589613]<watchDog.c:watchDogTask:657> [0x2b5ad520:"detectProcessPar"] MiniServer Health Okay [110]
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:43:51.590656]<watchDog.c:watchDogTask:674> [0x2b5ad520:"detectProcessPar"] Main Health Okay [241]
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:43:51.591246]<watchDog.c:watchDogTask:680> [0x2b5ad520:"detectProcessPar"] remote access status - 1 internet connectivity status - 1
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:43:51.591794]<UDSClientHandler.c:UDS_monitorNATCLStatus:365> [0x2b5ad520:"detectProcessPar"] command:IPC_CMD_MONITOR_NAT_CLIENT_STATUS
+thready: Setting thread name to "ChildFDTask" (tid:731567392).
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:43:51.593189]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:43:51.594945]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.597207]<ipcUDSServer.c:ChildFDTask:183> [0x2b9ad520:"ChildFDTask"] In Child FD Task:8
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:43:51.599395]<ipcUDSClient.c:StartIPCClient:213> [0x2b5ad520:"detectProcessPar"] IPC Client started on Socket:17
+thready: Destructor freeing name "ChildFDTask".
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.600059]<turn_wrapper.c:monitorNATCLStatus:1236> [0x2b9ad520:"ChildFDTask"] Entry NAT Monitor Task ...
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.601917]<turn_wrapper.c:monitorNATCLStatus:1238> [0x2b9ad520:"ChildFDTask"] Both RemoteAccess and NAT Client is ready...1
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.603582]<turn_wrapper.c:monitorNATCLStatus:1242> [0x2b9ad520:"ChildFDTask"] Nat Client is initialized....lastInProgress 0- 								gInitInProgressCounter 0
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.605488]<turn_wrapper.c:monitorNATCLStatus:1244> [0x2b9ad520:"ChildFDTask"] Nat Client is initialized....lastInProgress 0- 								gInitInProgressCounter 0 - gip_same 0
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.607246]<turn_wrapper.c:monitorNATCLStatus:1289> [0x2b9ad520:"ChildFDTask"] Nat...get session info -0:0:0-1
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.608932]<turn_wrapper.c:monitorNATCLStatus:1293> [0x2b9ad520:"ChildFDTask"] In Session info attributes info.state-4 info.last_status-0 								info.conn_type-6 info.lifetime-145 lastLifeTime-117
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3262:{ChildFDTask}]:[2015-07-27][16:43:51.610773]<turn_wrapper.c:monitorNATCLStatus:1301> [0x2b9ad520:"ChildFDTask"] Session info attributes info.state-4 info.last_status-0 						info.conn_type-6 info.lifetime-145 lastLJul 27 16:43:51 thready: Setting thread name to "ChildFDTask" (tid:731567392).
+Jul 27 16:43:51 WEMO: 16:43:51 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:43:51.6
+zigbee_api: zbSendCommand:ZB_CMD_NET_PERMITJOIN
+zbSetPermitJoin:255
+
+Starting IPC Receive:12
+zigbeed node_id:0x0000, endpoint:0
+cmd:105 p1:254 p2:0 p3:0 p4:0 
+Full Name:Jul 27 16:44:10 WEMO: 16:44:10 | app.debug <logger.c:pluginLog:330> [0x2e7ad520:""] wemoApp[2532:{}]:[2015-07-27][16:44:10.282901]<controlleedevice.c:CtrleeDeviceHandleActionRequest:1948> [0x2e7ad520:""] Action found: RemoveDevice
+Jul 27 16:44:10 WEMO: 16:44:10 | upnp.debug <ledLightUPnPHandler.c:RemoveDevice:2091> [0x2e7ad520:""] pDeviceIDs<94103E71D6140189>.....dp
+Jul 27 16:44:10 WEMO: 16:44:10 | upnp.debug <ledLightUPnPHandler.c:RemoveDevice:2113> [0x2e7ad520:""] nDeviceIDs<1>.....dp
+Jul 27 16:44:10 WEMO: 16:44:10 | upnp.debug <ledLightUPnPHandler.c:RemoveDevice:2121> [0x2e7ad520:""] szDeviceIDs[0]<94103E71D6140189>.....dp
+Jul 27 16:44:10 WEMO: [SD] GetDeviceList() 1
+Jul 27 16:44:10 WEMO: [SD] PermitJoin()
+/tmp/Belkin_settings/zbid.0000000000000000
+No file:[/tmp/Belkin_settings/zbid.0000000000000000]
+zbdSetTimeToAbort s_TimeToAbort:58877
+IPC_CMD_SET_PERMITJOIN 
+pJoin for 254 sec: 0x00
+emAfPermitJoin duration:254 b_bcast:1 status:0x0 
+Entering zbdReplyGeneralResponse, respValue:0x00000000, errorCode:0 
+Leaving zbdReplyGeneralResponse
+Ember_Status_Code:0x0 
+Leaving IPC Receive:12
+clientNetworkPermitJoin:*****result = 0
+Jul 27 16:44:10 WEMO: [SD] sm_LoadJoinedDeviceList(): ListProcessed = [1]
+Jul 27 16:44:10 WEMO: [SD] sm_LoadJoinedDeviceList(): field[0] = [44f3 890114d6713e1094 done ]
+Jul 27 16:44:10 WEMO: [SD] SM_AddJoinedDeviceList : LoadJoinedDevice count = 0
+Jul 27 16:44:10 WEMO: [SD] sm_GetDeviceInfo Entry.... 
+Jul 27 16:44:10 WEMO: [SD] sm_GetDeviceInfo Exit : updated = [0x0]... 
+emberAfMessageSentCallback 
+Ember_Status_Code: 0x0 type:0x4 indexOrDestination:0xFFFC msgLen:0x3
+
+Byte Stream:1a fe 00 
+NodeId : 0xFFFC not in the address table.
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:push_event:317> [0x2e7ad520:""] push_event: eventno = [0]
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:push_event:337> [0x2e7ad520:""] push_event: event_queue[0] address = 0x4d2d58
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:push_event:339> [0x2e7ad520:""] push_event: event_queue[0] --> name = device, value = home
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:push_event:347> [0x2e7ad520:""] push_event: event_queue[0] --> data = 0x4cff28, len = 20
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:wait_event:463> [0x2fbad520:"RemoteWorkerThre"] wait_event: name = device, value = home
+zigbee_api: zbSendCommand:ZB_CMD_NET_LEAVE_REQUEST
+Entering clientGeneralCommand:
+node_id:0x44F3 
+node_eui:0x94103E71D6140189
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:push_event:358> [0x2e7ad520:""] sysevent(device, home) : 0
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <remote_event.c:trigger_remote_event:107> [0x2e7ad520:""] push_work_event(device, home, 0x5b59b8, 20)
+Jul 27 16:44:11 WEMO: 16:44:11 | upnp.debug <ledLightUPnPHandler.c:RemoveDevice:2139> [0x2e7ad520:""] SD_RemoveDevice(94103E71D6140189) RegisteredID = 
+Jul 27 16:44:11 WEMO: [SD] RemoveDevice(94103E71D6140189)
+Jul 27 16:44:11 WEMO: [SD] Rejecting Sensor Device 94103E71D6140189:44F3, leave=[0] 
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Cached MAC Address = B4:75:0E:1E:1D:84 
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:pop_event:409> [0x2fbad520:"RemoteWorkerThre"] pop_event: event_queue[0] --> event address = 0x4d2d58
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:pop_event:410> [0x2fbad520:"RemoteWorkerThre"] pop_event: event->pData = 0x4cff28
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:pop_event:425> [0x2fbad520:"RemoteWorkerThre"] pop_event: event_queue_no = 0
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <event_queue.c:wait_event:467> [0x2fbad520:"RemoteWorkerThre"] pop_event(name = device, value = home)
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <ledLightRemoteHandler.c:RemoteWorkerThread:665> [0x2fbad520:"RemoteWorkerThre"] Get HomeDevices...
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <ledLightRemoteHandler.c:GetHomeDevices:2394> [0x2fbad520:"RemoteWorkerThre"] GetHomeDevices: URL = https://api.xbcs.net:8443/apis/http/device/homeDevices/1892859
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:739> [0x2fbad520:"RemoteWorkerThre"] MAC Address of plug-in device is B4:75:0E:1E:1D:84
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:741> [0x2fbad520:"RemoteWorkerThre"] Serial Number of plug-in device is 231347B010015A
+Jul 27 16:44:11 WEMO: 16:44:11 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:743> [0x2fbad520:"RemoteWorkerThre"] Key for plug-in device is 5f00da93-f913-460f-865b-59e0828feea2
+Jul 27 16:44:11 WEMO: 16:44:11 | app.debug <logger.c:pluginLog:330> [0x2fbad520:"RemoteWorkerThre"] wemoApp[1812:{RemoteWorkerThre}]:[2015-07-27][16:44:11.351730]<sigGen.c:createAuthSignature:111> [0x2fbad520:"RemoteWorkerThre"] Expires before 1437990251
+Jul 27 16:44:11 WEMO: 16:44:11 | app.debug <logger.c:pluginLog:330> [0x2fbad520:"RemoteWorkerThre"] wemoApp[1812:{RemoteWorkerThre}]:[2015-07-27][16:44:11.352040]<sigGen.c:createAuthSignature:113> [0x2fbad520:"RemoteWorkerThre"] Expires after 500 1437990751
+
+Starting IPC Receive:12
+zigbeed node_id:0x44f3, endpoint:0
+cmd:106 p1:0 p2:0 p3:0 p4:0 
+Full Name:/tmp/Belkin_settings/zbid.94103E71D6140189
+** LATEST NODE ID zigbeed node_id:0x44f3 
+zbdSetTimeToAbort s_TimeToAbort:58881
+IPC_CMD_SET_LEAVE_REQUEST 
+zbdIsNodeSensor index:0, ret:1, nodeType:0x0015 
+Sensor Type 
+newDeviceLeftHandler 
+ias-zone removeServer i:0
+cmd_str:rm /tmp/Belkin_settings/zbid.94103E71D6140189* 
+Ember_Status_Code:0x0 
+Leaving IPC Receive:12
+Leaving clientGeneralCommand:*****result = 0
+Jul 27 16:44:11 WEMO: 16:44:11 | upnp.debug <ledLightUPnPHandler.c:deleteAllPreset:6299> [0x2e7ad520:""] deleteAllPreset: presetID=94103E71D6140189
+Jul 27 16:44:11 WEMO: 16:44:11 | app.debug <logger.c:pluginLog:330> [0x2e7ad520:""] wemoApp[2532:{}]:[2015-07-27][16:44:11.825788]<WemoDB.c:WeMoDBDeleteEntry:290> [0x2e7ad520:""] SQL Delete statement: DELETE FROM DEVICEPRESETINFO WHERE id="94103E71D6140189";
+Jul 27 16:44:11 WEMO: 16:44:11 | app.debug <logger.c:pluginLog:330> [0x2e7ad520:""] wemoApp[2532:{}]:[2015-07-27][16:44:11.828016]<WemoDB.c:WeMoDBDeleteEntry:290> [0x2e7ad520:""] SQL Delete statement: DELETE FROM DEVICEPRESETVERSIONINFO WHERE id="94103E71D6140189";
+Jul 27 16:44:11 WEMO: 16:44:11 | upnp.debug <ledLightUPnPHandler.c:RemoveDevice:2148> [0x2e7ad520:""] SD_RemoveDevice(94103E71D6140189) is Success...
+> GET /apis/http/device/homeDevices/1892859 HTTP/1.1
+Host: api.xbcs.net:8443
+Content-Type: application/xml
+Accept: application/xml
+Authorization: B4750E1E1D84:tfCEM0zTB0Rnb99KgPY2lRwYHY0=:1437990751
+X-Belkin-Client-Type-Id: WeMo_WW_2.00.9389.DVT-OWRT-Link:52f8-406e-a5a6-5c5a2254868c
+
+< HTTP/1.1 200 OK
+< asyncServiceInvoke: false
+< Content-Type: application/xml;charset=ISO-8859-1
+< Date: Mon, 27 Jul 2015 09:44:12 GMT
+< Server: Apache-Coyote/1.1
+< X-Powered-By: Servlet/3.0; JBossAS-6
+< Content-Length: 7901
+< Connection: keep-alive
+< 
+Jul 27 16:44:12 WEMO: 16:44:12 | app.debug <logger.c:pluginLog:330> [0x2fbad520:"RemoteWorkerThre"] wemoApp[1812:{RemoteWorkerThre}]:[2015-07-27][16:44:12.738061]<httpsWrapper.c:webAppSendData:2667> [0x2fbad520:"RemoteWorkerThre"] HTTP Request URL https://api.xbcs.net:8443/apis/http/device/homeDevices/1892859 requested flag 0 disableFlag 1 httpsFlag 1 retVal 0 respCode 200
+Jul 27 16:44:12 WEMO: 16:44:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:821> [0x2fbad520:"RemoteWorkerThre"] Length of HTTP Header = 242 
+Jul 27 16:44:12 WEMO: 16:44:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:822> [0x2fbad520:"RemoteWorkerThre"] StatusCode of HTTP Response = 200 
+Jul 27 16:44:12 WEMO: 16:44:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:823> [0x2fbad520:"RemoteWorkerThre"] Some response for HTTP request from cloud is received
+Jul 27 16:44:12 WEMO: 16:44:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:850> [0x2fbad520:"RemoteWorkerThre"] Header retuned by server
+Jul 27 16:44:12 WEMO: remote.debug HTTP/1.1 200 OK^M asyncServiceInvoke: false^M Content-Type: application/xml;charset=ISO-8859-1^M Date: Mon, 27 Jul 2015 09:44:12 GM [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug T^M Server: Apache-Coyote/1.1^M X-Powered-By: Servlet/3.0; JBossAS-6^M Content-Length: 7901^M Connection: keep-alive^M  [ 1718204040 ]
+Jul 27 16:44:12 WEMO: 16:44:12 | remote.debug <ledLightRemoteHandler.c:SendHttpRequestWithAuth:860> [0x2fbad520:"RemoteWorkerThre"] Data retuned by server
+Jul 27 16:44:12 WEMO: remote.debug <?xml version="1.0" encoding="UTF-8" standalone="yes"?><devices xmlns:modelns="http://datamodel.components.cs.belkin.com/" succe [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug ss="S" fail="F" partial_success="P"><statusCode>S</statusCode><resultCode><code>PLGN_200</code><description>Successful</descript [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug ion></resultCode><message>Device list retrieved successfully</message><home><homeId>1892859</homeId><description>plugin registra [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug 9578561-eda4-49af-a4e6-ae2de5c7de82</privateKey><status>0</status><notificationType>0</notificationType><firmwareVersion>WeMo_WW [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug _2.00.8876.DVT-OWRT-SNS</firmwareVersion><hwVersion>v1</hwVersion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>0</signalS [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug trength><dbVersion>0</dbVersion><customizedState>1</customizedState><attributeLists action="GetAttributes"><attribute><name>hard [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug ResetTS</name><value>1431916021258</value></attribute></attributeLists></device><device><pluginId>7093635</pluginId><macAddress> [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug 000C437A6DAC</macAddress><serialNumber>231407B0100024</serialNumber><uniqueId>uuid:Bridge-1_0-231407B0100024</uniqueId><modelCod [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug e>Bridge</modelCode><productType>Bridge</productType><privateKey>85b034d1-bad6-48ce-a44c-f392287d09fc</privateKey><status>1</sta [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug tus><notificationType>0</notificationType><firmwareVersion>WeMo_WW_2.00.9356.DVT-OWRT-Link</firmwareVersion><hwVersion>v1</hwVer [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug sion><fwUpgradeStatus>4</fwUpgradeStatus><signalStrength>100</signalStrength><dbVersion>0</dbVersion><customizedState>1</customi [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug zedState><attributeLists action="GetAttributes"><attribute><name>hardResetTS</name><value>1437979075011</value></attribute></att [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug ributeLists></device><device><pluginId>7102863</pluginId><macAddress>000C43143AFC</macAddress><serialNumber>231407B0100089</seri [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug alNumber><uniqueId>uuid:Bridge-1_0-231407B0100089</uniqueId><modelCode>Bridge</modelCode><productType>Bridge</productType><priva [ 1718204040 ]
+Jul 27 16:44:12 WEMO: remote.debug <attributeLists action="GetAttributes"><attribute><name>hardResetTS</name>Jul 27 16:44:12 WEMO: remote.debug ype>Bridge</pJul 27 16:44:12 WEMO: remote.debug </signalStrenJul 27 16:44:12 WEMO: remote.debug Name>SleepFadJul 27 16:44:12 WEMO: [truncated] 16:44:12 | remJul 27 16:44:12 Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 7155565, macAddress = B4750E1E1D84 : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 5994633, macAddress = B4750E7155AC : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 6038327, macAddress = 08863B6CDEF4 : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 7093635, macAddress = 000C437A6DAC : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 7102863, macAddress = 000C43143AFC : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 6625303, macAddress = EC1A59F6E938 : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 3268913, macAddress = 000C43BAA0CC : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:updateRegisteredSubdeviceIDs:2376> [0x2fbad520:"RemoteWorkerThre"] pluginId = 5983449, macAddress = B4750E1B9578006E : is updated failure
+Jul 27 16:44:13 WEMO: 16:44:13 | remote.debug <ledLightRemoteHandler.c:getHomeDevices:563> [0x2fbad520:"RemoteWorkerThre"] GetHomeDevices : StatusCode = 200...
+Jul 27 16:44:22 WEMO: 16:44:22 | app.debug <logger.c:pluginLog:330> [0x30bad520:"InetMonitorTask"] wemoApp[2370:{InetMonitorTask}]:[2015-07-27][16:44:22.801184]<wifiHndlr.c:InetMonitorTask:2464> [0x30bad520:"InetMonitorTask"] Inet connectivity thread health OK [119]...
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.709255]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.709922]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:3
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.710334]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:44:32.712098]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:44:32.713982]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+thready: Setting thread name to "ChildFDTask" (tid:731567392).
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3315:{ChildFDTask}]:[2015-07-27][16:44:32.716146]<ipcUDSServer.c:ChildFDTask:183> [0x2b9ad520:"ChildFDTask"] In Child FD Task:8
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.718459]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x309ad520:"checkInetConnect"] Closed UDS Client Socket:3
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.718827]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x309ad520:"checkInetConnect"] command status =  0
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.719120]<wifiHndlr.c:checkDataBytesFromRouter:3726> [0x309ad520:"checkInetConnect"] Some data bytes received from Router, Local: 407 and Remote: 0
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.719427]<UDSClientHandler.c:UDS_setRemoteDataBytes:343> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_SET_REMOTE_DATA_BYTES
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.719982]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:3
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:44:32.720343]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+thready: Destructor freeing name "ChildFDTask".
+thready: Setting thread name to "ChildFDTask" (tid:733664544).
+getIPAddress : address for apcli0: 10.0.0.102
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:44:32.721910]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:44:32.723707]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:44:32 WEMO: 16:44:32 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3315:{ChildFDTask}]:[2015-07-27][16:44:32.725792]<ipcUDSServer.c:ChildFDTask:222> [0x2b9ad520:"ChildFDTask"] Closing Server Child FD Task:8
+Jul 27 Jul 27 16:44:32 thready: Destructor freeing name "ChildFDTask".
+NodeId : 0x44F3 not in the address table.
+zbdGetNodeType: index:255, node_type:0x0000 
+Jul 27 16:44:43 WEMO: 16:44:43 | app.debug <logger.c:pluginLog:330> [0x301ad520:"uploadLogFileThr"] wemoApp[1815:{uploadLogFileThr}]:[2015-07-27][16:44:43.489910]<remoteUpdate.c:uploadMessageFile:1220> [0x301ad520:"uploadLogFileThr"] Messages log file: /var/log/messages.0 doesn't exists
+Jul 27 16:45:30 WEMO: [SD] Sensor test mode has been terminated, device ID:1437990019
+Jul 27 16:45:30 WEMO: [SD] sm_CheckGroupCapability(1437990019,30501,'RW'): Capability Not Supported 
+thready: Setting thread name to "ChildFDTask" (tid:733664544).
+getIPAddress : address for apcli0: 10.0.0.102
+thready: Destructor freeing name "ChildFDTask".
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.981180]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.981843]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:3
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.982203]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:45:32.983058]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:45:32.984802]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3375:{ChildFDTask}]:[2015-07-27][16:45:32.986955]<ipcUDSServer.c:ChildFDTask:183> [0x2bbad520:"ChildFDTask"] In Child FD Task:9
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.988911]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x309ad520:"checkInetConnect"] Closed UDS Client Socket:3
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.989358]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x309ad520:"checkInetConnect"] command status =  0
+Jul 27 16:45:32 WEMO: 16:45:32 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:32.989687]<wifiHndlr.c:checkDataBytesFromRouter:3733> [0x309ad520:"checkInetConnect"] No Data bytes received from Router..
+Jul 27 16:45:33 WEMO: 16:45:33 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3375:{ChildFDTask}]:[2015-07-27][16:45:33.019495]<ipcUDSServer.c:ChildFDTask:222> [0x2bbad520:"ChildFDTask"] Closing Server Child FD Task:9
+Jul 27 16:45:33 WEMO: 16:45:33 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3375:{ChildFDTask}]:[2015-07-27][16:45:33.021366]<ipcUDSServer.c:ChildFDTask:229> [0x2bbad520:"ChildFDTask"] Exit child FD Task
+GetWanDefaultGateway: line = 10.0.0.1
+
+GetWanDefaultGateway: GATEWAY = 10.0.0.1
+
+Jul 27 16:45:33 WEMO: 16:45:33 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:33.059296]<wifiHndlr.c:checkRouterConnectivity:2162> [0x309ad520:"checkInetConnect"] pGateway is 10.0.0.1
+Jul 27 16:45:33 WEMO: 16:45:33 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:33.059698]<wifiHndlr.c:checkPingStatus:2039> [0x309ad520:"checkInetConnect"] ping 3 10.0.0.1  
+getIPAddress : address for apcli0: 10.0.0.102
+Jul 27 16:45:35 WEMO: 16:45:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:35.126145]<wifiHndlr.c:checkPingStatus:2065> [0x309ad520:"checkInetConnect"] ping 10.0.0.1  packet loss = 0
+Jul 27 16:45:35 WEMO: 16:45:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:35.126586]<wifiHndlr.c:checkPingStatus:2085> [0x309ad520:"checkInetConnect"] packet loss is 0
+Jul 27 16:45:35 WEMO: 16:45:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:45:35.126887]<wifiHndlr.c:checkRouterConnectivity:2166> [0x309ad520:"checkInetConnect"] checkPingStatus(10.0.0.1 ) is alived...
+NodeId : 0x44F3 not in the address table.
+zbdGetNodeType: index:255, node_type:0x0000 
+Jul 27 16:45:43 WEMO: 16:45:43 | app.debug <logger.c:pluginLog:330> [0x301ad520:"uploadLogFileThr"] wemoApp[1815:{uploadLogFileThr}]:[2015-07-27][16:45:43.497813]<remoteUpdate.c:uploadMessageFile:1220> [0x301ad520:"uploadLogFileThr"] Messages log file: /var/log/messages.0 doesn't exists
+ 16:46:16.981 tcprel0x466610  TX 148 bytes STUN message to 54.90.249.132:3478:
+--- begin STUN message ---
+STUN Refresh request
+ Hdr: length=128, magic=2112a442, tsx_id=000006bd75a2a8d4628c8961
+ Attributes:
+  SOFTWARE: length=13, value="pjnath-1.8.10"
+  USERNAME: length=12, value="B4750E1E1D84"
+  REALM: length=10, value="belkin.org"
+  NONCE: length=48, value="55b608cd000000001f0e8e11c8121989191a23563f8cbbe6"
+  MESSAGE-INTEGRITY: length=20, data=3fac2d7972b2567932bfc169609cfbbc67d001ce
+--- end of STUN message ---
+
+ 16:46:16.982 stuntsx0x4b343  STUN client transaction created
+ 16:46:16.983 stuntsx0x4b343  STUN sending message (transmit count=8)
+in func turn_on_send_pkt
+dst addr=54.90.249.132 htons.port=3478 ntwk.port=38413
+check  server_addr.sin_addr=54.90.249.132 .port=38413 
+ 16:46:18.819 tcprel0x466610  RX 80 bytes STUN message from 54.90.249.132:3478:
+--- begin STUN message ---
+STUN Refresh success response
+ Hdr: length=60, magic=2112a442, tsx_id=000006bd75a2a8d4628c8961
+ Attributes:
+  LIFETIME: length=4, value=330 (0x14a)
+  SOFTWARE: length=14, value="TurnServer 0.4"
+  MESSAGE-INTEGRITY: length=20, data=e650f848d7c8406d705a5e60037e0e22c44fb40c
+  FINGERPRINT: length=4, value=2193719987 (0x82c182b3)
+--- end of STUN message ---
+
+ 16:46:20.829 stuntsx0x4b343  STUN client transaction destroyed
+Jul 27 16:46:22 WEMO: 16:46:22 | app.debug <logger.c:pluginLog:330> [0x30bad520:"InetMonitorTask"] wemoApp[2370:{InetMonitorTask}]:[2015-07-27][16:46:22.809268]<wifiHndlr.c:InetMonitorTask:2464> [0x30bad520:"InetMonitorTask"] Inet connectivity thread health OK [117]...
+thready: Setting thread name to "ChildFDTask" (tid:733664544).
+thready: Destructor freeing name "ChildFDTask".
+thready: Setting thread name to "ChildFDTask" (tid:731567392).
+getIPAddress : address for apcli0: 10.0.0.102
+thready: Destructor freeing name "ChildFDTask".
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.405196]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.405911]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:3
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.406283]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:46:35.407166]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:46:35.408921]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3445:{ChildFDTask}]:[2015-07-27][16:46:35.411079]<ipcUDSServer.c:ChildFDTask:183> [0x2bbad520:"ChildFDTask"] In Child FD Task:7
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.413138]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x309ad520:"checkInetConnect"] Closed UDS Client Socket:3
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.413514]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x309ad520:"checkInetConnect"] command status =  80
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.413857]<wifiHndlr.c:checkDataBytesFromRouter:3726> [0x309ad520:"checkInetConnect"] Some data bytes received from Router, Local: 0 and Remote: 80
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.414137]<UDSClientHandler.c:UDS_setRemoteDataBytes:343> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_SET_REMOTE_DATA_BYTES
+Jul 27 16:46:35 WEMO: 16:46:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:46:35.415184]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:3
+Jul 27 16:46:40 WEMO: 16:46:40 | app.debug <logger.c:pluginLog:330> [0x313ad520:"CtrlPtRediscover"] wemoApp[2540:{CtrlPtRediscover}]:[2015-07-27][16:46:40.869233]<plugin_ctrlpoint.c:CtrlPtRediscoverTask:256> [0x313ad520:"CtrlPtRediscover"] ##################### Control point to re-discover: 5/10 ###################
+Jul 27 16:46:40 WEMO: 16:46:40 | app.debug <logger.c:pluginLog:330> [0x313ad520:"CtrlPtRediscover"] wemoApp[2540:{CtrlPtRediscover}]:[2015-07-27][16:46:40.869859]<plugin_ctrlpoint.c:CtrlPointDiscoverDevices:433> [0x313ad520:"CtrlPtRediscover"] sending search request 1
+Jul 27 16:46:40 WEMO:  ########## Time out set for job =1437990402870 ########### 
+Jul 27 16:46:40 WEMO: [Mon Jul 27 16:46:40 2015 ]:job_id[84]:Receiving discovery request: MX: 2 from: 10.0.0.102
+Jul 27 16:46:40 WEMO:  #########Reply time pass to TimerThreadSchedule =842ms ##########
+Jul 27 16:46:40 WEMO:  ########## Time out set for job =1437990401715 ########### 
+Jul 27 16:46:41 WEMO: 16:46:41 | app.debug <logger.c:pluginLog:330> [0x313ad520:"CtrlPtRediscover"] wemoApp[2540:{CtrlPtRediscover}]:[2015-07-27][16:46:41.481180]<plugin_ctrlpoint.c:CtrlPointDiscoverDevices:442> [0x313ad520:"CtrlPtRediscover"] sending search request 2
+Jul 27 16:46:41 WEMO:  ########## Time out set for job =1437990403481 ########### 
+Jul 27 16:46:41 WEMO: [Mon Jul 27 16:46:41 2015 ]:job_id[85]:Receiving discovery request: MX: 2 from: 10.0.0.102
+Jul 27 16:46:41 WEMO:  #########Reply time pass to TimerThreadSchedule =932ms ##########
+Jul 27 16:46:41 WEMO:  ########## Time out set for job =1437990402416 ########### 
+Jul 27 16:46:41 WEMO: [Mon Jul 27 16:46:41 2015 ]:job_id[84]:Sent discovery response to device:10.0.0.102
+Jul 27 16:46:41 WEMO: 16:46:41 | app.debug <logger.c:pluginLog:330> [0x2e1ad520:""] wemoApp[2516:{}]:[2015-07-27][16:46:41.725584]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x2e1ad520:""] Downloading XML document...http://10.0.0.102:49153/setup.xml
+Jul 27 16:46:41 WEMO: 16:46:41 | app.debug <logger.c:pluginLog:330> [0x2e1ad520:""] wemoApp[2516:{}]:[2015-07-27][16:46:41.748940]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x2e1ad520:""] UDN uuid:Bridge-1_0-231347B010015A found
+Jul 27 16:46:41 WEMO: 16:46:41 | app.debug <logger.c:pluginLog:330> [0x311ad520:""] wemoApp[2537:{}]:[2015-07-27][16:46:41.726439]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x311ad520:""] Downloading XML document...http://10.0.0.102:49153/setup.xml
+Jul 27 16:46:41 WEMO: 16:46:41 | app.debug <logger.c:pluginLog:330> [0x311ad520:""] wemoApp[2537:{}]:[2015-07-27][16:46:41.774209]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x311ad520:""] UDN uuid:Bridge-1_0-231347B010015A found
+Jul 27 16:46:42 WEMO: [Mon Jul 27 16:46:42 2015 ]:job_id[85]:Sent discovery response to device:10.0.0.102
+Jul 27 16:46:42 WEMO: 16:46:42 | app.debug <logger.c:pluginLog:330> [0x2e1ad520:""] wemoApp[2516:{}]:[2015-07-27][16:46:42.426018]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x2e1ad520:""] Downloading XML document...http://10.0.0.102:49153/setup.xml
+Jul 27 16:46:42 WEMO: 16:46:42 | app.debug <logger.c:pluginLog:330> [0x2d1ad520:""] wemoApp[2513:{}]:[2015-07-27][16:46:42.433125]<plugin_ctrlpoint.c:CtrlPointCallbackEventHandler:1720> [0x2d1ad520:""] Downloading XML document...http://10.0.0.102:49153/setup.xml
+Jul 27 16:46:42 WEMO: 16:46:42 | app.debug <logger.c:pluginLog:330> [0x2e1ad520:""] wemoApp[2516:{}]:[2015-07-27][16:46:42.451547]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x2e1ad520:""] UDN uuid:Bridge-1_0-231347B010015A found
+Jul 27 16:46:42 WEMO: 16:46:42 | app.debug <logger.c:pluginLog:330> [0x2d1ad520:""] wemoApp[2513:{}]:[2015-07-27][16:46:42.474679]<plugin_ctrlpoint.c:CtrlPointProcessDeviceDiscoveryEx:1299> [0x2d1ad520:""] UDN uuid:Bridge-1_0-231347B010015A found
+Jul 27 16:46:43 WEMO: 16:46:43 | app.debug <logger.c:pluginLog:330> [0x301ad520:"uploadLogFileThr"] wemoApp[1815:{uploadLogFileThr}]:[2015-07-27][16:46:43.505733]<remoteUpdate.c:uploadMessageFile:1220> [0x301ad520:"uploadLogFileThr"] Messages log file: /var/log/messages.0 doesn't exists
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.689180]<UDSClientHandler.c:UDS_getRemoteDataBytes:332> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_GET_REMOTE_DATA_BYTES
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.689845]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:17
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.690210]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:35.691835]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:35.693951]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+thready: Setting thread name to "ChildFDTask" (tid:731567392).
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3505:{ChildFDTask}]:[2015-07-27][16:47:35.696117]<ipcUDSServer.c:ChildFDTask:183> [0x2b9ad520:"ChildFDTask"] In Child FD Task:3
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.698636]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x309ad520:"checkInetConnect"] Closed UDS Client Socket:17
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.699010]<UDSClientHandler.c:UDS_getRemoteDataBytes:337> [0x309ad520:"checkInetConnect"] command status =  0
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.699388]<wifiHndlr.c:checkDataBytesFromRouter:3726> [0x309ad520:"checkInetConnect"] Some data bytes received from Router, Local: 369 and Remote: 0
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.699668]<UDSClientHandler.c:UDS_setRemoteDataBytes:343> [0x309ad520:"checkInetConnect"] command:IPC_CMD_NAT_SET_REMOTE_DATA_BYTES
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.700211]<ipcUDSClient.c:StartIPCClient:213> [0x309ad520:"checkInetConnect"] IPC Client started on Socket:17
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x309ad520:"checkInetConnect"] wemoApp[2369:{checkInetConnect}]:[2015-07-27][16:47:35.700565]<ipcUDSClient.c:SendIPCCommand:240> [0x309ad520:"checkInetConnect"] IPC client Socket Sent success:8, remaining:0
+thready: Destructor freeing name "ChildFDTask".
+thready: Setting thread name to "ChildFDTask" (tid:733664544).
+getIPAddress : address for apcli0: 10.0.0.102
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:35.702139]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:35.703905]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:47:35 WEMO: 16:47:35 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3505:{ChildFDTask}]:[2015-07-27][16:47:35.705813]<ipcUDSServer.c:ChildFDTask:222> [0x2b9ad520:"ChildFDTask"] Closing Server Child FD Task:3
+Jul Jul 27 16:47:35 thready: Destructor freeing name "ChildFDTask".
+NodeId : 0x44F3 not in the address table.
+zbdGetNodeType: index:255, node_type:0x0000 
+Jul 27 16:47:43 WEMO: 16:47:43 | app.debug <logger.c:pluginLog:330> [0x301ad520:"uploadLogFileThr"] wemoApp[1815:{uploadLogFileThr}]:[2015-07-27][16:47:43.513698]<remoteUpdate.c:uploadMessageFile:1220> [0x301ad520:"uploadLogFileThr"] Messages log file: /var/log/messages.0 doesn't exists
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.465429]<watchDog.c:watchDogTask:657> [0x2b5ad520:"detectProcessPar"] MiniServer Health Okay [39]
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.466471]<watchDog.c:watchDogTask:674> [0x2b5ad520:"detectProcessPar"] Main Health Okay [241]
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.467058]<watchDog.c:watchDogTask:680> [0x2b5ad520:"detectProcessPar"] remote access status - 1 internet connectivity status - 1
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.467605]<UDSClientHandler.c:UDS_monitorNATCLStatus:365> [0x2b5ad520:"detectProcessPar"] command:IPC_CMD_MONITOR_NAT_CLIENT_STATUS
+thready: Setting thread name to "ChildFDTask" (tid:733664544).
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:53.468942]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:53.470769]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.472811]<ipcUDSServer.c:ChildFDTask:183> [0x2bbad520:"ChildFDTask"] In Child FD Task:9
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.475042]<ipcUDSClient.c:StartIPCClient:213> [0x2b5ad520:"detectProcessPar"] IPC Client started on Socket:17
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.475705]<turn_wrapper.c:monitorNATCLStatus:1236> [0x2bbad520:"ChildFDTask"] Entry NAT Monitor Task ...
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.477644]<turn_wrapper.c:monitorNATCLStatus:1238> [0x2bbad520:"ChildFDTask"] Both RemoteAccess and NAT Client is ready...1
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.479335]<turn_wrapper.c:monitorNATCLStatus:1242> [0x2bbad520:"ChildFDTask"] Nat Client is initialized....lastInProgress 0- 								gInitInProgressCounter 0
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.481224]<turn_wrapper.c:monitorNATCLStatus:1244> [0x2bbad520:"ChildFDTask"] Nat Client is initialized....lastInProgress 0- 								gInitInProgressCounter 0 - gip_same 0
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.483009]<turn_wrapper.c:monitorNATCLStatus:1289> [0x2bbad520:"ChildFDTask"] Nat...get session info -0:0:0-1
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.484700]<turn_wrapper.c:monitorNATCLStatus:1293> [0x2bbad520:"ChildFDTask"] In Session info attributes info.state-4 info.last_status-0 								info.conn_type-6 info.lifetime-175 lastLifeTime-145
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.486555]<turn_wrapper.c:monitorNATCLStatus:1301> [0x2bbad520:"ChildFDTask"] Session info attributes info.state-4 info.last_status-0 						info.conn_type-6 info.lifetime-175 lastLifeTime-145
+Jul 27 16:47:53 WEMO: 16:47:53 | app.thready: Destructor freeing name "ChildFDTask".
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2bbad520:"ChildFDTask"] natClient[3525:{ChildFDTask}]:[2015-07-27][16:47:53.491801]<ipcUDSServer.c:ChildFDTask:229> [0x2bbad520:"ChildFDTask"] Exit child FD Task
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.494903]<ipcUDSClient.c:SendIPCCommand:240> [0x2b5ad520:"detectProcessPar"] IPC client Socket Sent success:8, remaining:0
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.495376]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2b5ad520:"detectProcessPar"] Closed UDS Client Socket:17
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.495699]<UDSClientHandler.c:UDS_monitorNATCLStatus:370> [0x2b5ad520:"detectProcessPar"] Nat Initialized Status =  0
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.495976]<UDSClientHandler.c:UDS_pluginNatInitialized:310> [0x2b5ad520:"detectProcessPar"] command:IPC_CMD_NAT_INITIALIZED_STATE
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:53.497102]<ipcUDSServer.c:StartIpcUdsServer:149> [0x2aab0310:"StartIpcUdsServe"] Created unix domain child server thread... 
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2aab0310:"StartIpcUdsServe"] natClient[1725:{StartIpcUdsServe}]:[2015-07-27][16:47:53.498873]<ipcUDSServer.c:StartIpcUdsServer:126> [0x2aab0310:"StartIpcUdsServe"] Wait on Accept.
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.501140]<ipcUDSClient.c:StartIPCClient:213> [0x2b5ad520:"detectProcessPar"] IPC Client started on Socket:17
+Jul 27 16:47:53 WEMO: 16:47:53 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:53.501550]<ipcUDSClient.c:SendIPCCommand:240> [0x2b5ad520:"detectProcessPar"] IPC client Socket Sent success:8, remaining:0
+thready: Setting thread name to "ChildFDTask" (tid:731567392).
+thready: Destructor freeing name "ChildFDTask".
+Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3526:{ChildFDTask}]:[2015-07-27][16:47:54.160080]<ipcUDSServer.c:ChildFDTask:183> [0x2b9ad520:"ChildFDTask"] In Child FD Task:7
+Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3526:{ChildFDTask}]:[2015-07-27][16:47:54.162068]<ipcUDSServer.c:ChildFDTask:222> [0x2b9ad520:"ChildFDTask"] Closing Server Child FD Task:7
+Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b9ad520:"ChildFDTask"] natClient[3526:{ChildFDTask}]:[2015-07-27][16:47:54.164237]<ipcUDSServer.c:ChildFDTask:229> [0x2b9ad520:"ChildFDTask"] Exit child FD Task
+thready: Setting thread name to "detectProcessParams" (tid:727373088).
+Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:54.167149]<ipcUDSClient.c:ProcessClientIPCCommand:180> [0x2b5ad520:"detectProcessPar"] Closed UDS Client Socket:17
+Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:54.167528]<UDSClientHandler.c:UDS_pluginNatInitialized:315> [0x2b5ad520:"detectProcessPar"] Nat Initialized Status =  1
+Jul 27 16:Jul 27 16:47:54 WEMO: 16:47:54 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:54.216300]<watchDog.c:detectProcessParams:182> [0x2b5ad520:"detectProcessPar"] numThread = <42> 
+Jul 27 16:47:55 WEMO: 16:47:55 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:55.221576]<watchDog.c:detectCpuParams:220> [0x2b5ad520:"detectProcessPar"] <3908> <0> <11925> <252072> <267905>
+Jul 27 16:47:55 WEMO: 16:47:55 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:55.222313]<watchDog.c:detectParams:254> [0x2b5ad520:"detectProcessPar"] memFree = <6372> 
+Jul 27 16:47:55 WEMO: 16:47:55 | app.debug <logger.c:pluginLog:330> [0x2b5ad520:"detectProcessPar"] wemoApp[1751:{detectProcessPar}]:[2015-07-27][16:47:55.222869]<watchDog.c:detectUptime:291> [0x2b5ad520:"detectProcessPar"] Uptime: 0:44:54

@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+
+WASPD=/usr/sbin/waspd
+START=50
+STOP=50
+
+start()
+{
+   $WASPD -D /dev/ttyS0
+}
+
+stop()
+{
+   $WASPD -e
+}
+
+
