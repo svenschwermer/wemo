@@ -1,0 +1,2 @@
+/lib/modules/2.6.21/rt_rdm.ko
+/etc/modules.d/50-rt_rdm

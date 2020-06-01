@@ -1,0 +1,7 @@
+/sbin/wemoApp
+/sbin/web/setup.xml
+/sbin/web/eventservice.xml
+/sbin/startWemo.sh
+/etc/init.d/wemo
+/etc/ver.txt
+/etc/icon.jpg
